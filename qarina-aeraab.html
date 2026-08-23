@@ -43,9 +43,8 @@ header.q{display:flex; align-items:baseline; justify-content:space-between; gap:
 .brand{display:flex; align-items:baseline; gap:14px;}
 .brand h1{font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-weight:700; font-size:38px; line-height:1.6; margin:0; letter-spacing:0;}
 .brand small{color:var(--muted); font-size:14px;}
-.en{display:block; font-size:10.5px; opacity:.72; font-family:system-ui,sans-serif; direction:ltr; unicode-bidi:isolate;
-  font-weight:500; letter-spacing:.2px; line-height:1.35; margin-top:1px;}
-.eni{font-size:10.5px; opacity:.72; font-family:system-ui,sans-serif; direction:ltr; unicode-bidi:isolate; font-weight:500;}
+
+
 .actions{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
 button.act{font-family:inherit; font-size:15px; cursor:pointer; border-radius:8px;
   border:1px solid var(--line); background:var(--card); color:var(--ink); padding:8px 14px;}
@@ -177,25 +176,46 @@ body.kb-open #qwrap{padding-bottom:420px;}
 .uznav .in{max-width:1240px; margin:0 auto; padding:8px 20px; display:flex; align-items:center; gap:16px;}
 .uznav .brand{font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-weight:700; font-size:19px; line-height:2; text-decoration:none; color:var(--ink); white-space:nowrap; display:inline-block;}
 .uznav .brand small{color:var(--accent); font-family:system-ui,sans-serif; font-size:10.5px; letter-spacing:1.2px; margin:0 6px; direction:ltr; unicode-bidi:isolate;}
-.uznav .links{display:flex; gap:4px 16px; flex-wrap:wrap; margin:0 auto; font-size:14.5px;}
-.uznav .links a{color:var(--muted); text-decoration:none; padding:2px 4px;}
-.uznav .links a:hover,.uznav .links a.on{color:var(--accent);} .uznav .links a.on{font-weight:700;}
+.uznav .navlinks{display:flex; gap:4px 16px; flex-wrap:wrap; margin:0 auto; font-size:14.5px;}
+.uznav .navlinks a{color:var(--muted); text-decoration:none; padding:2px 4px;}
+.uznav .navlinks a:hover,.uznav .navlinks a.on,.uznav .navlinks a.here{color:var(--accent);}
+.uznav .navlinks a.on,.uznav .navlinks a.here{font-weight:700;}
 .uznav .home{border:1.5px solid var(--accent); color:var(--accent); text-decoration:none; border-radius:999px; padding:4px 16px; font-size:14px; font-weight:700; white-space:nowrap;}
 .uznav .home:hover{background:var(--accent); color:var(--accent-ink);}
-@media(max-width:720px){ .uznav .links{display:none} }
+@media(max-width:720px){ .uznav .navlinks{display:none} }
 footer.uzfoot{margin-top:28px; border-top:2px solid var(--accent); padding:16px 0 4px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; color:var(--muted); font-size:14px; line-height:2;}
 footer.uzfoot a{color:var(--accent); text-decoration:none;} footer.uzfoot a:hover{text-decoration:underline;}
+
+/* ── سائٹ کا دو زبانی نظام ── */
+.L-en{display:none !important;}
+body.en-mode .L-ur{display:none !important;}
+body.en-mode .L-en{display:revert !important;}
+body.en-mode{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;}
+.always-ur{direction:rtl; unicode-bidi:isolate;}
+.langbtn{border:1.5px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer;
+  border-radius:999px; padding:4px 16px; font-size:14px; font-weight:700;
+  font-family:"Segoe UI",system-ui,sans-serif; white-space:nowrap;}
+.langbtn:hover{background:var(--accent); color:var(--accent-ink);}
+.qnote{max-width:1240px; margin:14px auto 0; padding:14px 20px; color:var(--muted);
+  font-size:13.5px; line-height:1.95; border-top:1px solid var(--line);}
+footer.uzfoot{margin-top:26px; border-top:2px solid var(--accent); background:var(--card,transparent);}
+footer.uzfoot .in{max-width:1240px; margin:0 auto; padding:18px 20px; display:flex;
+  justify-content:space-between; gap:10px 18px; flex-wrap:wrap; color:var(--muted); font-size:14px;}
+footer.uzfoot a{color:var(--accent); text-decoration:none;}
+footer.uzfoot a:hover{text-decoration:underline;}
 </style>
 
 <nav class="uznav" dir="rtl"><div class="in">
-  <a class="brand" href="index.html">اردو زبان<small>URDUZABAN.COM</small></a>
-  <div class="links">
-    <a href="index.html">گھر</a>
-    <a class="on" href="qarina-aeraab.html">قرینہ</a>
-    <a href="tarjuman.html">ترجمان</a>
-    <a href="lughat.html">لغت</a>
+  <a class="brand always-ur" href="index.html">اردو زبان<small>URDUZABAN.COM</small></a>
+  <div class="navlinks">
+    <a href="index.html"><span class="L-ur">گھر</span><span class="L-en">Home</span></a>
+    <a class="on here" href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a>
+    <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a>
+    <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
+    <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a>
+    <a href="index.html#contact"><span class="L-ur">رابطہ</span><span class="L-en">Contact</span></a>
   </div>
-  <a class="home" href="index.html">← گھر واپس</a>
+  <button class="langbtn" id="langbtn" aria-label="Switch language">English</button>
 </div></nav>
 
 <div id="qwrap" dir="rtl" lang="ur">
@@ -203,16 +223,16 @@ footer.uzfoot a{color:var(--accent); text-decoration:none;} footer.uzfoot a:hove
 <header class="q">
   <div class="brand">
     <h1>قرینہ</h1>
-    <small>اردو متن، خودکار اعراب کے ساتھ — آپ کے اپنے browser میں<span class="en">Qarina — Urdu diacritics (aeraab), automatically, in your own browser</span></small>
+    <small><span class="L-ur">اردو متن، خودکار اعراب کے ساتھ — آپ کے اپنے browser میں</span><span class="L-en">Qarina — Urdu diacritics (aeraab), automatically, in your own browser</span></small>
   </div>
   <div class="actions">
-    <button class="act primary" id="btnCopy">نقل کریں<span class="en">Copy</span></button>
-    <button class="act" id="btnTxt">‎.txt محفوظ کریں<span class="en">Save .txt</span></button>
-    <button class="act" id="btnFont">نسخ / نستعلیق<span class="en">Naskh / Nastaliq</span></button>
-    <button class="act" id="btnExp">لغت برآمد<span class="en">Export dictionary</span></button>
-    <button class="act" id="btnImp">لغت درآمد<span class="en">Import dictionary</span></button>
-    <button class="act" id="btnPlex">🔉 تلفظ کی لغت<span class="en">Pronunciations</span></button>
-    <button class="act" id="btnKb">⌨ اردو تختہ<span class="en">Urdu keyboard</span></button>
+    <button class="act primary" id="btnCopy"><span class="L-ur">نقل کریں</span><span class="L-en">Copy</span></button>
+    <button class="act" id="btnTxt"><span class="L-ur">‎.txt محفوظ کریں</span><span class="L-en">Save .txt</span></button>
+    <button class="act" id="btnFont"><span class="L-ur">نسخ / نستعلیق</span><span class="L-en">Naskh / Nastaliq</span></button>
+    <button class="act" id="btnExp"><span class="L-ur">لغت برآمد</span><span class="L-en">Export dictionary</span></button>
+    <button class="act" id="btnImp"><span class="L-ur">لغت درآمد</span><span class="L-en">Import dictionary</span></button>
+    <button class="act" id="btnPlex"><span class="L-ur">🔉 تلفظ کی لغت</span><span class="L-en">Pronunciations</span></button>
+    <button class="act" id="btnKb"><span class="L-ur">⌨ اردو تختہ</span><span class="L-en">Urdu keyboard</span></button>
   </div>
 </header>
 
@@ -221,79 +241,78 @@ footer.uzfoot a{color:var(--accent); text-decoration:none;} footer.uzfoot a:hove
 
 <main class="q">
   <section class="pane">
-    <div class="cap"><span class="t">متن یہاں ڈالیے<span class="en">Paste your text here</span></span>
+    <div class="cap"><span class="t"><span class="L-ur">متن یہاں ڈالیے</span><span class="L-en">Paste your text here</span></span>
       <span class="ctl">
         <span id="micStat"></span>
-        <button class="mini" id="padSrc" title="دبائے رکھیے — تختہ کھلے گا؛ جس حرف پر چھوڑیں گے وہ لکھا جائے گا">⌨ دبا کر لکھیے<span class="en">Hold to type</span></button>
-        <button class="mini" id="btnMic" title="مائیک سے اردو لکھوائیے — popup کھلے گا">🎙 بولیے<span class="en">Dictate</span></button>
-        <button class="mini" id="btnSpkSrc" title="جو حصہ منتخب ہو وہ سنیے، ورنہ پورا متن">🔊 سنیے<span class="en">Listen</span></button>
+        <button class="mini" id="padSrc" title="دبائے رکھیے — تختہ کھلے گا؛ جس حرف پر چھوڑیں گے وہ لکھا جائے گا"><span class="L-ur">⌨ دبا کر لکھیے</span><span class="L-en">Hold to type</span></button>
+        <button class="mini" id="btnMic" title="مائیک سے اردو لکھوائیے — popup کھلے گا"><span class="L-ur">🎙 بولیے</span><span class="L-en">Dictate</span></button>
+        <button class="mini" id="btnSpkSrc" title="جو حصہ منتخب ہو وہ سنیے، ورنہ پورا متن"><span class="L-ur">🔊 سنیے</span><span class="L-en">Listen</span></button>
       </span></div>
     <textarea id="src" placeholder="اپنی غزل، گیت یا کوئی بھی اردو متن یہاں چسپاں کیجیے…&#10;&#10;مثال:&#10;دل ناداں تجھے ہوا کیا ہے&#10;آخر اس درد کی دوا کیا ہے"></textarea>
   </section>
   <section class="pane">
-    <div class="cap"><span class="t">اعراب کے ساتھ<span class="en">With aeraab</span></span>
+    <div class="cap"><span class="t"><span class="L-ur">اعراب کے ساتھ</span><span class="L-en">With aeraab</span></span>
       <span class="ctl">
         <select class="mini" id="selVoice" title="پڑھنے کی آواز — Voice"></select>
         <select class="mini" id="selRate" title="رفتار — Speed">
-          <option value="0.75">آہستہ — Slow</option>
-          <option value="0.95" selected>درمیانی — Normal</option>
-          <option value="1.15">تیز — Fast</option>
+          <option value="0.75">آہستہ · Slow</option>
+          <option value="0.95" selected>درمیانی · Normal</option>
+          <option value="1.15">تیز · Fast</option>
         </select>
-        <button class="mini" id="btnSpkOut" title="جو حصہ منتخب (highlight) ہو وہ سنیے، ورنہ پورا متن">🔊 سنیے<span class="en">Listen</span></button>
+        <button class="mini" id="btnSpkOut" title="جو حصہ منتخب (highlight) ہو وہ سنیے، ورنہ پورا متن"><span class="L-ur">🔊 سنیے</span><span class="L-en">Listen</span></button>
       </span></div>
-    <div id="out"><div class="hint">جوں ہی آپ دائیں طرف متن ڈالیں گے، یہاں اعراب والا متن بنتا جائے گا۔<br>نارنجی لفظ = دو قرأتیں ممکن ہیں، دبا کر چنیے۔ سرخ لفظ = قرینہ نہیں جانتا، دبا کر سکھا دیجیے — آئندہ خود لگا دے گا۔</div></div>
+    <div id="out"><div class="hint"><span class="L-ur">جوں ہی آپ دائیں طرف متن ڈالیں گے، یہاں اعراب والا متن بنتا جائے گا۔<br>نارنجی لفظ = دو قرأتیں ممکن ہیں، دبا کر چنیے۔ سرخ لفظ = قرینہ نہیں جانتا، دبا کر سکھا دیجیے — آئندہ خود لگا دے گا۔</span><span class="L-en">As soon as you paste text on the right, the marked version appears here.<br>Orange word = two possible readings, click to choose. Red word = Qarina does not know it yet — click to teach it, and it will remember.</span></div></div>
   </section>
 </main>
 
 <div class="legend">
-  <span><span class="k" style="background:var(--ok)"></span>سبز لکیر — اعراب لگا دیے، یقین کے ساتھ (نقطے والی لکیر = آپ کی سکھائی ہوئی لغت سے)</span>
-  <span><span class="k" style="background:var(--warn)"></span>نارنجی — دو قرأتیں ممکن، دبا کر چنیے</span>
-  <span><span class="k" style="background:var(--bad)"></span>سرخ — قرینہ فیصلہ نہیں کر پا رہا، آپ بتائیے</span>
-  <span>سادہ لفظ — معمول کے مطابق، اعراب کی ضرورت نہیں</span>
+  <span><span class="k" style="background:var(--ok)"></span><span class="L-ur">سبز لکیر — اعراب لگا دیے، یقین کے ساتھ (نقطے والی لکیر = آپ کی سکھائی ہوئی لغت سے)</span><span class="L-en">Green underline — marked with confidence (dotted = from your own taught dictionary)</span></span>
+  <span><span class="k" style="background:var(--warn)"></span><span class="L-ur">نارنجی — دو قرأتیں ممکن، دبا کر چنیے</span><span class="L-en">Orange — two readings possible, click to choose</span></span>
+  <span><span class="k" style="background:var(--bad)"></span><span class="L-ur">سرخ — قرینہ فیصلہ نہیں کر پا رہا، آپ بتائیے</span><span class="L-en">Red — Qarina cannot decide; please tell it</span></span>
+  <span><span class="L-ur">سادہ لفظ — معمول کے مطابق، اعراب کی ضرورت نہیں</span><span class="L-en">Plain word — ordinary, needs no marks</span></span>
   <span class="eni">Green underline = marked with confidence · dotted = from your taught dictionary · Orange = two readings, click to choose · Red = unknown, click to teach · Plain = no marks needed</span>
 </div>
 
-<footer class="q">
-آواز نہ آئے تو: آواز کی فہرست میں «اردو — خودکار» چنیے؛ بہترین اردو آواز کے لیے یہی صفحہ <b>Edge browser</b> میں کھولیے (Microsoft Uzma مفت ملتی ہے)، یا Windows Settings → Time &amp; Language → Speech میں اردو voice pack ڈال لیجیے۔ مائیک اور آواز، دونوں اپنے server یا فولڈر والی کاپی پر سب سے بھرپور چلتے ہیں۔<br>
-یہ صفحہ آپ کے اپنے browser میں چلتا ہے — کوئی متن کہیں نہیں جاتا۔ سکھائے ہوئے لفظ اسی browser میں محفوظ رہتے ہیں؛
-«لغت برآمد» سے ان کی فائل بنا کر سنبھال لیجیے یا دوسرے آلے پر «لغت درآمد» کر لیجیے۔
-مشکل شعر جہاں مطلب پر فیصلہ ہو (اِس/اُس، سَحَر/سِحر) — وہ Claude کے پاس لے آئیے، قرینہ اور Claude مل کر پورا کریں گے۔
-</footer>
-<footer class="uzfoot">
-  <span>© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026</span>
-  <span><a href="index.html">گھر</a> · <a href="tarjuman.html">ترجمان</a> · <a href="lughat.html">لغت</a> · <a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> · <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> · <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></span>
-</footer>
+<div class="qnote">
+<span class="L-ur">آواز نہ آئے تو: آواز کی فہرست میں «اردو — خودکار» چنیے؛ بہترین اردو آواز کے لیے یہی صفحہ <b>Edge browser</b> میں کھولیے (Microsoft Uzma مفت ملتی ہے)، یا Windows Settings → Time &amp; Language → Speech میں اردو voice pack ڈال لیجیے۔<br>یہ صفحہ آپ کے اپنے browser میں چلتا ہے — کوئی متن کہیں نہیں جاتا۔ سکھائے ہوئے لفظ اسی browser میں محفوظ رہتے ہیں؛ «لغت برآمد» سے ان کی فائل بنا کر سنبھال لیجیے یا دوسرے آلے پر «لغت درآمد» کر لیجیے۔<br>قرینہ کی اپنی آواز کھلے عام بن رہی ہے — کارخانہ: <a href="https://github.com/farooqmusicai/qarina-voice" target="_blank" rel="noopener">qarina-voice</a></span>
+<span class="L-en">No sound? Pick “Urdu — automatic” from the voice list; for the best Urdu voice open this page in <b>Edge</b> (Microsoft Uzma is free), or add an Urdu voice pack under Windows Settings → Time &amp; Language → Speech.<br>This page runs entirely in your own browser — no text is sent anywhere. Words you teach it stay in this browser; use “Export dictionary” to keep a copy, or “Import dictionary” on another device.<br>Qarina's own voice is being built in the open — workshop: <a href="https://github.com/farooqmusicai/qarina-voice" target="_blank" rel="noopener">qarina-voice</a></span>
+</div>
+<footer class="uzfoot"><div class="in">
+  <span><span class="L-ur">© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026</span><span class="L-en">© 2026 UrduZaban · urduzaban.com — founded 21 August 2026</span></span>
+  <span><a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a> · <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a> · <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a> · <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a></span>
+  <span><a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> · <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> · <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></span>
+</div></footer>
 </div>
 
 <div id="pop"></div>
 <div id="dict"><div class="dbox">
   <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
-    <h3 style="margin:0;">🎙 مائیک سے لکھوائیے<span class="en">Dictate with the microphone</span></h3>
+    <h3 style="margin:0;"><span class="L-ur">🎙 مائیک سے لکھوائیے</span><span class="L-en">Dictate with the microphone</span></h3>
     <button class="mini" id="dictX" title="بند کریں — لکھا ہوا محفوظ رہے گا / Close, draft is kept" style="font-size:17px; line-height:1; padding:6px 12px;">✕</button>
   </div>
   <div class="drow">
-    <button class="mini" id="dictMic">🎙 شروع کیجیے<span class="en">Start</span></button>
-    <button class="mini" id="dictSpk" title="جو لکھا گیا ہے وہ سن لیجیے">🔊 سنیے<span class="en">Listen</span></button>
+    <button class="mini" id="dictMic"><span class="L-ur">🎙 شروع کیجیے</span><span class="L-en">Start</span></button>
+    <button class="mini" id="dictSpk" title="جو لکھا گیا ہے وہ سن لیجیے"><span class="L-ur">🔊 سنیے</span><span class="L-en">Listen</span></button>
     <span id="dictStat"></span>
   </div>
   <textarea id="dictTa" placeholder="بولتے جائیے — یہاں لکھتا جائے گا۔ درستی بھی یہیں کیجیے: ٹائپ سے، تختے سے، یا cursor رکھ کر دوبارہ بول کر۔"></textarea>
   <div class="drow">
-    <span style="color:var(--muted); font-size:14px;">کہاں جوڑیں: <span class="eni">Insert where?</span></span>
+    <span style="color:var(--muted); font-size:14px;"><span class="L-ur">کہاں جوڑیں: </span><span class="L-en">Insert where?</span></span>
     <select class="mini" id="dictWhere"></select>
   </div>
   <div class="drow">
-    <button class="act primary" id="dictAdd">جوڑ دیں<span class="en">Insert</span></button>
-    <button class="act" id="dictCancel">بند کریں — لکھا ہوا رہے گا<span class="en">Close, keep draft</span></button>
+    <button class="act primary" id="dictAdd"><span class="L-ur">جوڑ دیں</span><span class="L-en">Insert</span></button>
+    <button class="act" id="dictCancel"><span class="L-ur">بند کریں — لکھا ہوا رہے گا</span><span class="L-en">Close, keep draft</span></button>
   </div>
 </div></div>
 <div id="plex"><div class="dbox">
   <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
-    <h3 style="margin:0;">🔉 تلفظ کی لغت<span class="en">Pronunciation dictionary — force how words are spoken</span></h3>
+    <h3 style="margin:0;"><span class="L-ur">🔉 تلفظ کی لغت</span><span class="L-en">Pronunciation dictionary — force how words are spoken</span></h3>
     <button class="mini" id="plexX" title="بند کریں / close" style="font-size:17px; line-height:1; padding:6px 12px;">✕</button>
   </div>
   <p style="margin:10px 0 6px; font-size:14.5px; color:var(--muted); line-height:1.9;">
-    ہر سطر میں لکھیے: <b>لفظ = بولنے کا روپ</b> — پردے پر لفظ ویسا ہی رہے گا، بولتے وقت دوسرا روپ لگے گا۔<br>
-    مثال: <span style="font-size:17px;">خود = خُد</span> · <span style="font-size:17px;">خوشی = خُشی</span>
+    <span class="L-ur">ہر سطر میں لکھیے:</span><span class="L-en">One per line:</span> <b>لفظ = بولنے کا روپ</b> — پردے پر لفظ ویسا ہی رہے گا، بولتے وقت دوسرا روپ لگے گا۔<br>
+    <span class="L-ur">مثال:</span><span class="L-en">Example:</span> <span style="font-size:17px;">خود = خُد</span> · <span style="font-size:17px;">خوشی = خُشی</span>
     <span class="en">One per line: word = speech form. The screen keeps the real spelling; the voice is forced to the respelling.</span>
   </p>
   <textarea id="plexTa" placeholder="خود = خُد&#10;خوشی = خُشی"></textarea>
@@ -302,18 +321,18 @@ footer.uzfoot a{color:var(--accent); text-decoration:none;} footer.uzfoot a:hove
     <button class="mini" id="plexHear" title="جو لکھا ہے وہی سنیے">🔊 سنیے</button>
   </div>
   <div class="drow">
-    <button class="act primary" id="plexSave">محفوظ کریں<span class="en">Save all</span></button>
-    <button class="act" id="plexClose">بند کریں<span class="en">Close</span></button>
-    <span style="font-size:13px; color:var(--muted);">بنیادی درستیاں (خود، خوشی…) پہلے سے شامل ہیں — یہ فہرست آپ کی اپنی ہے</span>
+    <button class="act primary" id="plexSave"><span class="L-ur">محفوظ کریں</span><span class="L-en">Save all</span></button>
+    <button class="act" id="plexClose"><span class="L-ur">بند کریں</span><span class="L-en">Close</span></button>
+    <span style="font-size:13px; color:var(--muted);"><span class="L-ur">بنیادی درستیاں (خود، خوشی…) پہلے سے شامل ہیں — یہ فہرست آپ کی اپنی ہے</span><span class="L-en">Basic fixes (khud, khushi…) are built in — this list is your own</span></span>
   </div>
 </div></div>
 <div id="kb">
   <div id="kbBar">
-    <span class="ttl">تختہ — کلک سے لکھیے؛ اعراب والی قطار کسی بھی خانے میں لگتی ہے <span class="eni">On-screen keyboard — click to type; the marks row works in any box</span></span>
+    <span class="ttl"><span class="L-ur"><span class="L-ur">تختہ — کلک سے لکھیے؛ اعراب والی قطار کسی بھی خانے میں لگتی ہے</span><span class="L-en">Keyboard — click to type; the diacritics row works in any field</span> </span><span class="L-en">On-screen keyboard — click to type; the marks row works in any box</span></span>
     <span>
       <button class="act" id="kbLang">English</button>
-      <button class="act" id="kbShift">⇧ مزید حروف</button>
-      <button class="act" id="kbClose">بند کریں<span class="en">Close</span></button>
+      <button class="act" id="kbShift"><span class="L-ur">⇧ مزید حروف</span><span class="L-en">⇧ More letters</span></button>
+      <button class="act" id="kbClose"><span class="L-ur">بند کریں</span><span class="L-en">Close</span></button>
     </span>
   </div>
   <div id="kbRows"></div>
@@ -508,10 +527,10 @@ function renderStats(){
   const unk=w.filter(t=>t.kind==="unk"&&!t.custom).length;
   const ok=w.filter(t=>t.kind==="chg"||t.kind==="learn"||t.custom).length;
   stats.innerHTML =
-    '<span class="chip">الفاظ <span class="eni">Words</span> <b>'+w.length+'</b></span>'+
-    '<span class="chip c-ok">اعراب لگے <span class="eni">Marked</span> <b>'+ok+'</b></span>'+
-    '<span class="chip c-warn" id="jumpAmb" title="اگلے نارنجی لفظ پر جائیے / jump to next orange">نارنجی — چنیے <span class="eni">Choose</span> <b>'+amb+'</b></span>'+
-    '<span class="chip c-bad" id="jumpUnk" title="اگلے سرخ لفظ پر جائیے / jump to next red">سرخ — سکھائیے <span class="eni">Teach</span> <b>'+unk+'</b></span>';
+    '<span class="chip"><span class="L-ur">الفاظ </span><span class="L-en">Words</span> <b>'+w.length+'</b></span>'+
+    '<span class="chip c-ok"><span class="L-ur">اعراب لگے </span><span class="L-en">Marked</span> <b>'+ok+'</b></span>'+
+    '<span class="chip c-warn" id="jumpAmb" title="اگلے نارنجی لفظ پر جائیے / jump to next orange"><span class="L-ur">نارنجی — چنیے </span><span class="L-en">Choose</span> <b>'+amb+'</b></span>'+
+    '<span class="chip c-bad" id="jumpUnk" title="اگلے سرخ لفظ پر جائیے / jump to next red"><span class="L-ur">سرخ — سکھائیے </span><span class="L-en">Teach</span> <b>'+unk+'</b></span>';
   const ja=document.getElementById("jumpAmb"), ju=document.getElementById("jumpUnk");
   ja.onclick=()=>jump("amb"); ju.onclick=()=>jump("unk");
   if(typeof setTopH==="function") setTopH();
@@ -569,20 +588,20 @@ function openPop(n,anchor){
     h+='<div class="rds">'+t.forms.map((f,i)=>
       '<button class="rd'+((!t.custom&&i===t.idx)?" on":"")+'" data-i="'+i+'">'+esc(f[0])+(f[1]?'<small>'+esc(f[1])+'</small>':'')+'</button>').join("")+'</div>';
   }
-  h+='<div class="pophint">حرف چنیے، پھر نیچے سے اعراب لگائیے — بالکل فون والے انداز میں، مگر ماؤس سے<span class="en">Pick a letter, then tap a mark below — like the phone keyboard, with the mouse</span></div>';
+  h+='<div class="pophint"><span class="L-ur">حرف چنیے، پھر نیچے سے اعراب لگائیے — بالکل فون والے انداز میں، مگر ماؤس سے</span><span class="L-en">Pick a letter, then tap a mark below — like the phone keyboard, with the mouse</span></div>';
   h+='<div class="lets"></div>';
   h+='<div class="mks">'+MKDEF.map(m=>'<button class="mk" title="'+m[1]+'">◌'+m[0]+'</button>').join("")+
      '<button class="mk clr" title="اس حرف کے اعراب ہٹائیے">صاف</button></div>';
   h+='<input type="text" id="popIn" value="'+esc(finalOf(t)).replace(/"/g,"&quot;")+'">';
-  h+='<div class="pophint" style="margin:9px 0 3px;">بولنے کا روپ — انجن غلط بولے تو یہاں ہجے بدل دیجیے (خود ← خُد)؛ پردے پر لفظ ویسا ہی رہے گا<span class="en">Speech form — respell to force pronunciation; the display stays unchanged</span></div>';
+  h+='<div class="pophint" style="margin:9px 0 3px;"><span class="L-ur">بولنے کا روپ — انجن غلط بولے تو یہاں ہجے بدل دیجیے (خود ← خُد)؛ پردے پر لفظ ویسا ہی رہے گا</span><span class="L-en">Speech form — respell to force pronunciation; the display stays unchanged</span></div>';
   h+='<div style="display:flex; gap:6px; align-items:center;">'+
      '<input type="text" id="popSpeak" value="'+esc(speakFormOf(t.bare)).replace(/"/g,"&quot;")+'" placeholder="خالی = جیسا لکھا، ویسا بولے">'+
      '<button class="act" id="popSpkTest" title="بولنے کا روپ سن کر جانچیے / test this pronunciation">🔊 جانچیے</button>'+
      '<button class="act" id="popSend" title="یہ لفظ admin کو بھیجیے — تلفظ ٹھیک کروانے کے لیے / report to admin">📨 admin</button></div>';
-  h+='<div class="row"><label><input type="checkbox" id="popRem"'+(t.kind==="unk"?" checked":"")+'> لغت میں یاد رکھیں <span class="eni">Remember</span>'+(t.kind==="amb"?' (سوچ کر — یہ لفظ جگہ جگہ بدلتا ہے)':'')+'</label>'+
+  h+='<div class="row"><label><input type="checkbox" id="popRem"'+(t.kind==="unk"?" checked":"")+'><span class="L-ur"> لغت میں یاد رکھیں </span><span class="L-en">Remember</span>'+(t.kind==="amb"?' (سوچ کر — یہ لفظ جگہ جگہ بدلتا ہے)':'')+'</label>'+
      '<button class="act" id="popPad" title="دبائے رکھیے — تختہ کھلے گا؛ حرف پر چھوڑیے / hold to type">⌨ دبا کر لکھیے</button>'+
      '<button class="act" id="popSpk" title="یہ لفظ سنیے / hear this word">🔊</button>'+
-     '<button class="act" id="popOk">ٹھیک ہے<span class="en">Done</span></button></div>';
+     '<button class="act" id="popOk"><span class="L-ur">ٹھیک ہے</span><span class="L-en">Done</span></button></div>';
   pop.innerHTML=h;
   pop.style.display="block";
   const r=anchor.getBoundingClientRect(), pw=pop.offsetWidth;
@@ -881,7 +900,7 @@ function dictInsert(s){
 }
 function micUi(){
   dictMic.classList.toggle("rec",micOn);
-  dictMic.innerHTML = micOn ? '⏹ رکیے<span class="en">Stop</span>' : '🎙 شروع کیجیے<span class="en">Start</span>';
+  dictMic.innerHTML = micOn ? '<span class="L-ur">⏹ رکیے</span><span class="L-en">Stop</span><span class="L-ur">' : '🎙 شروع کیجیے</span><span class="L-en">Start</span>';
   if(!micOn) dictStat.textContent="";
 }
 function micStart(){
@@ -1072,4 +1091,31 @@ document.getElementById("plexHear").onclick=()=>{ const v=plexTest.value.trim();
 document.addEventListener("keydown",e=>{ if(e.key==="Escape" && plex.classList.contains("open")) plexClose(); });
 
 render();
+</script>
+
+<script>
+/* ── زبان کا بٹن — باقی سائٹ جیسا ── */
+(function(){
+  var b=document.getElementById('langbtn'); if(!b) return;
+  var PH={ src:["اپنی غزل، گیت یا کوئی بھی اردو متن یہاں چسپاں کیجیے…",
+                "Paste your ghazal, song or any Urdu text here…"],
+           dictTa:["بولتے جائیے — یہاں لکھتا جائے گا۔",
+                   "Just speak — it types here."] };
+  function setLang(l,save){
+    var en=(l==='en');
+    document.body.classList.toggle('en-mode',en);
+    document.documentElement.lang=en?'en':'ur';
+    document.documentElement.dir=en?'ltr':'rtl';
+    var w=document.getElementById('qwrap'); if(w){ w.setAttribute('dir', en?'ltr':'rtl'); }
+    b.textContent=en?'اردو':'English';
+    for(var id in PH){ var el=document.getElementById(id);
+      if(el && el.placeholder!==undefined){ el.placeholder = PH[id][en?1:0]; } }
+    if(save){ try{ localStorage.setItem('uz-lang',l); }catch(e){} }
+  }
+  b.addEventListener('click',function(){
+    setLang(document.body.classList.contains('en-mode')?'ur':'en', true);
+  });
+  var s=null; try{ s=localStorage.getItem('uz-lang'); }catch(e){}
+  if(s==='en') setLang('en',false);
+})();
 </script>

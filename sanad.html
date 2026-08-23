@@ -160,6 +160,8 @@ footer a:hover{text-decoration:underline;}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 @media(max-width:600px){ .sanad{padding:14px 13px 10px} .foot{justify-content:center} }
 @media print{ nav,.tools,.more{display:none} }
+
+.navlinks a.on,.navlinks a.here{color:var(--accent); font-weight:700;}
 </style>
 </head>
 <body>
@@ -171,7 +173,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
     <a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a>
     <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a>
     <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
-    <a href="sanad.html" class="here"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a>
+    <a class="on here" href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a>
     <a href="index.html#contact"><span class="L-ur">رابطہ</span><span class="L-en">Contact</span></a>
   </div>
   <button class="langbtn" id="langbtn" aria-label="Switch language">English</button>
@@ -239,11 +241,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 
 <footer><div class="in">
   <span><span class="L-ur">© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026</span><span class="L-en">© 2026 UrduZaban · urduzaban.com — founded 21 August 2026</span></span>
-  <span>
-    <a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> ·
-    <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> ·
-    <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a>
-  </span>
+  <span><a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a> · <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a> · <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a> · <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a></span>
+  <span><a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> · <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> · <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></span>
 </div></footer>
 
 <script>

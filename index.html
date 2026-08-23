@@ -183,25 +183,26 @@ a:focus-visible,.btn:focus-visible,.langbtn:focus-visible{outline:2px solid var(
 .rv{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
 .rv.on{opacity:1; transform:none;}
 @media (prefers-reduced-motion: reduce){ .rv{opacity:1; transform:none; transition:none} }
+
+.navlinks a.on,.navlinks a.here{color:var(--accent); font-weight:700;}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="in">
-    <a class="brand always-ur" href="#top">اردو زبان<small>URDUZABAN.COM</small></a>
-    <div class="navlinks">
-      <a href="#rooms"><span class="L-ur">کمرے</span><span class="L-en">Rooms</span></a>
-      <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a>
-      <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
-      <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a>
-      <a href="#manshoor"><span class="L-ur">منشور</span><span class="L-en">Charter</span></a>
-      <a href="#kahani"><span class="L-ur">کہانی</span><span class="L-en">Story</span></a>
-      <a href="#contact"><span class="L-ur">رابطہ</span><span class="L-en">Contact</span></a>
-    </div>
-    <button class="langbtn" id="langbtn" aria-label="Switch language">English</button>
+<nav><div class="in">
+  <a class="brand always-ur" href="index.html">اردو زبان<small>URDUZABAN.COM</small></a>
+  <div class="navlinks">
+    <a href="#rooms"><span class="L-ur">کمرے</span><span class="L-en">Rooms</span></a>
+    <a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a>
+    <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a>
+    <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
+    <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a>
+    <a href="#manshoor"><span class="L-ur">منشور</span><span class="L-en">Charter</span></a>
+    <a href="#kahani"><span class="L-ur">کہانی</span><span class="L-en">Story</span></a>
+    <a href="#contact"><span class="L-ur">رابطہ</span><span class="L-en">Contact</span></a>
   </div>
-</nav>
+  <button class="langbtn" id="langbtn" aria-label="Switch language">English</button>
+</div></nav>
 
 <section class="hero" id="top">
   <span class="mark m1" aria-hidden="true">ـَ</span>
@@ -264,7 +265,7 @@ a:focus-visible,.btn:focus-visible,.langbtn:focus-visible{outline:2px solid var(
     <div class="room rv">
       <span class="chip soon"><span class="L-ur">اسی مہینے</span><span class="L-en">This month</span></span>
       <div class="top"><span class="ic">🗣</span><span class="nm"><span class="L-ur">آواز — اردو بولنے والا</span><span class="L-en">Voice — Urdu TTS</span></span></div>
-      <p><span class="L-ur">لکھا ہوا متن سنیے — اردو آواز میں، اسی صفحے پر۔ پہلی اپنی آواز آج بھی قرینہ کے اندر بولتی ہے؛ اگلی نسل (neural) تعمیر میں ہے — اور آگے بانی کی اپنی آواز۔</span><span class="L-en">Hear any Urdu text spoken — right on the page. The first self-owned voice already speaks inside Qarina; the neural generation is being built, and after that, the founder's own voice.</span></p>
+      <p><span class="L-ur">لکھا ہوا متن سنیے — اردو آواز میں، اسی صفحے پر۔ پہلی اپنی آواز آج بھی قرینہ کے اندر بولتی ہے؛ اگلی نسل (neural) تعمیر میں ہے — اور آگے بانی کی اپنی آواز۔ کارخانہ کھلا ہے: <a href="https://github.com/farooqmusicai/qarina-voice" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700;">qarina-voice</a>۔</span><span class="L-en">Hear any Urdu text spoken — right on the page. The first self-owned voice already speaks inside Qarina; the neural generation is being built, and after that, the founder's own voice. The workshop is open: <a href="https://github.com/farooqmusicai/qarina-voice" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700;">qarina-voice</a>.</span></p>
     </div>
 
     <div class="room rv">
@@ -351,11 +352,8 @@ a:focus-visible,.btn:focus-visible,.langbtn:focus-visible{outline:2px solid var(
 
 <footer><div class="in">
   <span><span class="L-ur">© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026</span><span class="L-en">© 2026 UrduZaban · urduzaban.com — founded 21 August 2026</span></span>
-  <span>
-    <a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> ·
-    <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> ·
-    <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a>
-  </span>
+  <span><a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a> · <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a> · <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a> · <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a></span>
+  <span><a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> · <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> · <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></span>
 </div></footer>
 
 <script>
