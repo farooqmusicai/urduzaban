@@ -1,0 +1,1075 @@
+<meta charset="utf-8">
+<title>قرینہ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap">
+<style>
+/* مقامی فونٹس — fonts/ فولڈر ساتھ رکھا ہو تو internet کی ضرورت نہیں؛ ورنہ Google Fonts سے آ جاتے ہیں */
+@font-face{font-family:'QNastaliq';font-weight:400 700;src:url(fonts/noto-nastaliq-urdu-400.woff2) format('woff2');font-display:swap;}
+@font-face{font-family:'QNaskh';font-weight:400;src:url(fonts/noto-naskh-arabic-400.woff2) format('woff2');font-display:swap;}
+@font-face{font-family:'QNaskh';font-weight:700;src:url(fonts/noto-naskh-arabic-700.woff2) format('woff2');font-display:swap;}
+:root{
+  --paper:#faf7f0; --card:#ffffff; --ink:#221c13; --muted:#7c7060; --line:#e7dfd0;
+  --accent:#a8731d; --accent-ink:#fff8ec;
+  --ok:#2e7d4f; --ok-wash:rgba(46,125,79,.10);
+  --warn:#c05f00; --warn-wash:rgba(208,122,0,.13);
+  --bad:#bb3a2c; --bad-wash:rgba(187,58,44,.11);
+  --shadow:0 1px 2px rgba(60,45,20,.06), 0 8px 28px rgba(60,45,20,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#171310; --card:#201b15; --ink:#efe7d8; --muted:#a2947d; --line:#352d22;
+    --accent:#d9a441; --accent-ink:#241b0a;
+    --ok:#6fbe8c; --ok-wash:rgba(111,190,140,.13);
+    --warn:#f0a33c; --warn-wash:rgba(240,163,60,.15);
+    --bad:#e5766a; --bad-wash:rgba(229,118,106,.14);
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#171310; --card:#201b15; --ink:#efe7d8; --muted:#a2947d; --line:#352d22;
+  --accent:#d9a441; --accent-ink:#241b0a;
+  --ok:#6fbe8c; --ok-wash:rgba(111,190,140,.13);
+  --warn:#f0a33c; --warn-wash:rgba(240,163,60,.15);
+  --bad:#e5766a; --bad-wash:rgba(229,118,106,.14);
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35);
+}
+body{background:var(--paper); color:var(--ink); margin:0;
+  font-family:"QNaskh", "Noto Naskh Arabic", "QNastaliq", "Noto Nastaliq Urdu", serif;}
+#qwrap{max-width:1240px; margin:0 auto; padding:0 20px 60px;}
+#topbar{position:sticky; top:0; z-index:60; background:var(--paper); padding-top:12px;
+  box-shadow:0 10px 18px -14px rgba(60,45,20,.4);}
+header.q{display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  border-bottom:2px solid var(--accent); padding:2px 2px 10px; margin-bottom:10px;}
+.brand{display:flex; align-items:baseline; gap:14px;}
+.brand h1{font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-weight:700; font-size:38px; line-height:1.6; margin:0; letter-spacing:0;}
+.brand small{color:var(--muted); font-size:14px;}
+.en{display:block; font-size:10.5px; opacity:.72; font-family:system-ui,sans-serif; direction:ltr; unicode-bidi:isolate;
+  font-weight:500; letter-spacing:.2px; line-height:1.35; margin-top:1px;}
+.eni{font-size:10.5px; opacity:.72; font-family:system-ui,sans-serif; direction:ltr; unicode-bidi:isolate; font-weight:500;}
+.actions{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+button.act{font-family:inherit; font-size:15px; cursor:pointer; border-radius:8px;
+  border:1px solid var(--line); background:var(--card); color:var(--ink); padding:8px 14px;}
+button.act.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
+button.act:hover{border-color:var(--accent);}
+button.act:focus-visible, .w:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.stats{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0; padding-bottom:10px;}
+.chip{font-size:14px; padding:5px 12px; border-radius:999px; border:1px solid var(--line);
+  background:var(--card); color:var(--muted); cursor:default;}
+.chip b{color:var(--ink); font-variant-numeric:tabular-nums;}
+.chip.c-ok{border-color:var(--ok); color:var(--ok);}
+.chip.c-warn{border-color:var(--warn); color:var(--warn); cursor:pointer;}
+.chip.c-bad{border-color:var(--bad); color:var(--bad); cursor:pointer;}
+.chip.c-warn b,.chip.c-bad b{color:inherit;}
+main.q{display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start;}
+@media(max-width:900px){ main.q{grid-template-columns:1fr;} }
+.pane{background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);}
+.pane .cap{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;
+  padding:8px 14px; border-bottom:1px solid var(--line); color:var(--muted); font-size:14px;
+  position:sticky; top:var(--topH,132px); z-index:5; background:var(--card); border-radius:14px 14px 0 0;}
+main.q{margin-top:14px;}
+.cap .t{font-weight:700; color:var(--ink);}
+.cap .ctl{display:flex; gap:6px; align-items:center; flex-wrap:wrap;}
+button.mini{font-family:inherit; font-size:14px; cursor:pointer; border-radius:8px;
+  border:1px solid var(--line); background:var(--paper); color:var(--ink); padding:5px 11px;}
+button.mini:hover{border-color:var(--accent);}
+button.mini:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.mini.rec{background:var(--bad-wash); border-color:var(--bad); color:var(--bad); animation:qpulse 1.1s infinite;}
+@keyframes qpulse{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){ button.mini.rec{animation:none;} }
+select.mini{font-family:inherit; font-size:13px; border-radius:8px; border:1px solid var(--line);
+  background:var(--paper); color:var(--ink); padding:4px 6px; max-width:170px;}
+#micStat{font-size:12.5px; color:var(--bad); max-width:220px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+/* مائیک والا popup */
+#dict,#plex{position:fixed; inset:0; z-index:90; background:rgba(22,16,8,.45); display:none; align-items:flex-start; justify-content:center; padding:5vh 16px; overflow:auto;}
+#dict.open,#plex.open{display:flex;}
+#plexTa{width:100%; box-sizing:border-box; min-height:210px; border:1px solid var(--line); border-radius:10px;
+  background:var(--paper); color:var(--ink); padding:12px 14px;
+  font-family:"QNaskh","Noto Naskh Arabic",serif; font-size:20px; line-height:2.1; direction:rtl; resize:vertical;}
+#plexTest{flex:1; min-width:160px; border:1px solid var(--line); border-radius:8px; background:var(--paper);
+  color:var(--ink); padding:7px 10px; font-family:"QNaskh","Noto Naskh Arabic",serif; font-size:19px; direction:rtl;}
+.dbox{background:var(--card); border:1.5px solid var(--accent); border-radius:16px; box-shadow:var(--shadow);
+  width:min(700px,100%); padding:16px 20px 18px; direction:rtl;}
+.dbox h3{margin:0 0 10px; font-size:18px; color:var(--ink);}
+#dictTa{width:100%; box-sizing:border-box; min-height:150px; border:1px solid var(--line); border-radius:10px;
+  background:var(--paper); color:var(--ink); padding:12px 14px;
+  font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-size:24px; line-height:2.3; direction:rtl; resize:vertical;}
+.drow{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:10px;}
+#dictWhere{flex:1; min-width:220px; max-width:100%;}
+#dictStat{font-size:13px; color:var(--bad); flex:1; min-width:120px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+#src{width:100%; box-sizing:border-box; border:0; outline:none; resize:none; min-height:460px; overflow:hidden;
+  background:transparent; color:var(--ink); padding:20px 22px;
+  font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-size:26px; line-height:2.5; direction:rtl;}
+#src::placeholder{color:var(--muted); opacity:.75;}
+#out{min-height:460px; padding:20px 22px; direction:rtl;
+  font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-size:28px; line-height:2.7; overflow-wrap:anywhere;}
+#out.naskh, #src.naskh{font-family:"QNaskh","Noto Naskh Arabic",serif; line-height:2.2;}
+#out .hint{color:var(--muted); font-size:16px; font-family:"QNaskh","Noto Naskh Arabic",serif; line-height:2;}
+.w{border-radius:6px; padding:0 2px;}
+.w.chg{ text-decoration:underline; text-decoration-color:var(--ok); text-decoration-thickness:2px; text-underline-offset:9px;}
+.w.learn{ text-decoration:underline dotted; text-decoration-color:var(--ok); text-decoration-thickness:2px; text-underline-offset:9px;}
+.w.amb{ background:var(--warn-wash); color:var(--warn); cursor:pointer;
+  text-decoration:underline; text-decoration-color:var(--warn); text-decoration-thickness:2px; text-underline-offset:9px;}
+.w.unk{ background:var(--bad-wash); color:var(--bad); cursor:pointer;
+  text-decoration:underline wavy; text-decoration-color:var(--bad); text-decoration-thickness:1.5px; text-underline-offset:9px;}
+.w.plain{cursor:pointer;}
+.w.chg,.w.learn{cursor:pointer;}
+.w.flash{outline:2px solid var(--warn); outline-offset:3px;}
+.legend{display:flex; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:14px; margin:16px 2px 0; line-height:1.9;}
+.legend .k{display:inline-block; width:14px; height:14px; border-radius:4px; vertical-align:-2px; margin-left:6px;}
+footer.q{margin-top:26px; color:var(--muted); font-size:14px; line-height:2; border-top:1px solid var(--line); padding-top:14px;}
+#pop{position:absolute; z-index:50; background:var(--card); border:1px solid var(--accent); border-radius:12px;
+  box-shadow:var(--shadow); padding:12px 14px; display:none; max-width:340px;}
+#pop .rds{display:flex; flex-direction:column; gap:6px; margin-bottom:8px;}
+#pop .rd{font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-size:24px; line-height:2.2; padding:2px 10px; border-radius:8px;
+  border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer; text-align:right;}
+#pop .rd small{font-family:"QNaskh","Noto Naskh Arabic",serif; font-size:13px; color:var(--muted); margin-right:8px;}
+#pop .rd.on{border-color:var(--accent); background:var(--warn-wash);}
+#pop input[type=text]{width:100%; box-sizing:border-box; font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-size:22px;
+  direction:rtl; padding:6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink);}
+#pop .row{display:flex; gap:8px; align-items:center; margin-top:9px; font-size:14px; color:var(--muted); flex-wrap:wrap;}
+#toast{position:fixed; bottom:24px; right:50%; transform:translateX(50%); background:var(--ink); color:var(--paper);
+  padding:9px 20px; border-radius:999px; font-size:15px; opacity:0; pointer-events:none; transition:opacity .25s; z-index:200;}
+@media (prefers-reduced-motion: reduce){ #toast{transition:none;} }
+input[type=file]{display:none;}
+/* حرف بہ حرف اعراب editor */
+.lets{display:flex; flex-direction:row; gap:5px; flex-wrap:wrap; margin-bottom:9px; direction:rtl;}
+.let{min-width:38px; padding:4px 6px 2px; text-align:center; border:1.5px solid var(--line); border-radius:8px;
+  background:var(--paper); color:var(--ink); cursor:pointer; font-family:"QNaskh","Noto Naskh Arabic",serif; font-size:27px; line-height:1.6;}
+.let.on{border-color:var(--accent); background:var(--warn-wash);}
+.mks{display:flex; flex-wrap:wrap; gap:4px; margin-bottom:9px; direction:rtl;}
+.mk{font-family:"QNaskh","Noto Naskh Arabic",serif; font-size:21px; line-height:1.5; min-width:36px; padding:3px 6px;
+  border:1px solid var(--line); border-radius:7px; background:var(--card); color:var(--ink); cursor:pointer;}
+.mk:hover{border-color:var(--accent);}
+.mk.clr{font-size:13px; color:var(--muted);}
+.pophint{font-size:12.5px; color:var(--muted); margin-bottom:8px; line-height:1.8;}
+/* on-screen keyboard */
+#kb{position:fixed; bottom:0; right:0; left:0; z-index:100; background:var(--card); border-top:2px solid var(--accent);
+  box-shadow:0 -8px 30px rgba(0,0,0,.15); padding:8px 10px 12px; display:none; direction:rtl;}
+#kb.open{display:block;}
+body.kb-open #qwrap{padding-bottom:420px;}
+.krow{display:flex; justify-content:center; gap:5px; margin-top:5px;}
+.key{font-family:"QNaskh","Noto Naskh Arabic",serif; font-size:20px; line-height:1.5; min-width:44px; height:44px; padding:0 6px;
+  border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); cursor:pointer;}
+.key:active{background:var(--warn-wash); border-color:var(--accent);}
+.key.sp{min-width:220px;}
+.key.wide{min-width:70px; font-size:15px; color:var(--muted);}
+.key.mkk{background:var(--warn-wash); border-color:var(--warn); font-size:19px;}
+.key.lat{font-family:system-ui,sans-serif;}
+#kbBar{display:flex; justify-content:space-between; align-items:center; gap:8px; max-width:1100px; margin:0 auto;}
+#kbBar .ttl{font-size:13px; color:var(--muted);}
+@media(max-width:700px){ .key{min-width:31px; height:40px; font-size:17px;} .key.sp{min-width:110px;} }
+/* دبا کر لکھنے والا تختہ — hold to type */
+#holdkb{position:fixed; z-index:300; background:var(--card); border:1.6px solid var(--accent); border-radius:14px;
+  box-shadow:0 8px 34px rgba(0,0,0,.28); padding:8px 10px; display:none; direction:rtl; user-select:none;}
+.hkrow{display:flex; gap:4px; justify-content:center; margin-top:4px;}
+.hk{min-width:34px; height:37px; padding:0 4px; display:flex; align-items:center; justify-content:center;
+  font-family:"QNaskh","Noto Naskh Arabic",serif; font-size:19px; border-radius:7px;
+  border:1px solid var(--line); background:var(--paper); color:var(--ink);}
+.hk.mk{background:var(--warn-wash); border-color:var(--warn); font-size:17px;}
+.hk.lat{font-family:system-ui,sans-serif; font-size:16px;}
+.hk.wide{min-width:70px; font-size:15px; color:var(--muted);}
+.hk.hot{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);
+  transform:scale(1.3); font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25);}
+@media (prefers-reduced-motion: reduce){ .hk.hot{transform:none;} }
+
+/* ---------- اردو زبان کا مشترکہ header/footer (باقی صفحوں جیسا) ---------- */
+.uznav{background:var(--paper); border-bottom:1px solid var(--line); direction:rtl;}
+.uznav .in{max-width:1240px; margin:0 auto; padding:8px 20px; display:flex; align-items:center; gap:16px;}
+.uznav .brand{font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-weight:700; font-size:19px; line-height:2; text-decoration:none; color:var(--ink); white-space:nowrap; display:inline-block;}
+.uznav .brand small{color:var(--accent); font-family:system-ui,sans-serif; font-size:10.5px; letter-spacing:1.2px; margin:0 6px; direction:ltr; unicode-bidi:isolate;}
+.uznav .links{display:flex; gap:4px 16px; flex-wrap:wrap; margin:0 auto; font-size:14.5px;}
+.uznav .links a{color:var(--muted); text-decoration:none; padding:2px 4px;}
+.uznav .links a:hover,.uznav .links a.on{color:var(--accent);} .uznav .links a.on{font-weight:700;}
+.uznav .home{border:1.5px solid var(--accent); color:var(--accent); text-decoration:none; border-radius:999px; padding:4px 16px; font-size:14px; font-weight:700; white-space:nowrap;}
+.uznav .home:hover{background:var(--accent); color:var(--accent-ink);}
+@media(max-width:720px){ .uznav .links{display:none} }
+footer.uzfoot{margin-top:28px; border-top:2px solid var(--accent); padding:16px 0 4px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; color:var(--muted); font-size:14px; line-height:2;}
+footer.uzfoot a{color:var(--accent); text-decoration:none;} footer.uzfoot a:hover{text-decoration:underline;}
+</style>
+
+<nav class="uznav" dir="rtl"><div class="in">
+  <a class="brand" href="index.html">اردو زبان<small>URDUZABAN.COM</small></a>
+  <div class="links">
+    <a href="index.html">گھر</a>
+    <a class="on" href="qarina-aeraab.html">قرینہ</a>
+    <a href="tarjuman.html">ترجمان</a>
+    <a href="lughat.html">لغت</a>
+  </div>
+  <a class="home" href="index.html">← گھر واپس</a>
+</div></nav>
+
+<div id="qwrap" dir="rtl" lang="ur">
+<div id="topbar">
+<header class="q">
+  <div class="brand">
+    <h1>قرینہ</h1>
+    <small>اردو متن، خودکار اعراب کے ساتھ — آپ کے اپنے browser میں<span class="en">Qarina — Urdu diacritics (aeraab), automatically, in your own browser</span></small>
+  </div>
+  <div class="actions">
+    <button class="act primary" id="btnCopy">نقل کریں<span class="en">Copy</span></button>
+    <button class="act" id="btnTxt">‎.txt محفوظ کریں<span class="en">Save .txt</span></button>
+    <button class="act" id="btnFont">نسخ / نستعلیق<span class="en">Naskh / Nastaliq</span></button>
+    <button class="act" id="btnExp">لغت برآمد<span class="en">Export dictionary</span></button>
+    <button class="act" id="btnImp">لغت درآمد<span class="en">Import dictionary</span></button>
+    <button class="act" id="btnPlex">🔉 تلفظ کی لغت<span class="en">Pronunciations</span></button>
+    <button class="act" id="btnKb">⌨ اردو تختہ<span class="en">Urdu keyboard</span></button>
+  </div>
+</header>
+
+<div class="stats" id="stats"></div>
+</div>
+
+<main class="q">
+  <section class="pane">
+    <div class="cap"><span class="t">متن یہاں ڈالیے<span class="en">Paste your text here</span></span>
+      <span class="ctl">
+        <span id="micStat"></span>
+        <button class="mini" id="padSrc" title="دبائے رکھیے — تختہ کھلے گا؛ جس حرف پر چھوڑیں گے وہ لکھا جائے گا">⌨ دبا کر لکھیے<span class="en">Hold to type</span></button>
+        <button class="mini" id="btnMic" title="مائیک سے اردو لکھوائیے — popup کھلے گا">🎙 بولیے<span class="en">Dictate</span></button>
+        <button class="mini" id="btnSpkSrc" title="جو حصہ منتخب ہو وہ سنیے، ورنہ پورا متن">🔊 سنیے<span class="en">Listen</span></button>
+      </span></div>
+    <textarea id="src" placeholder="اپنی غزل، گیت یا کوئی بھی اردو متن یہاں چسپاں کیجیے…&#10;&#10;مثال:&#10;دل ناداں تجھے ہوا کیا ہے&#10;آخر اس درد کی دوا کیا ہے"></textarea>
+  </section>
+  <section class="pane">
+    <div class="cap"><span class="t">اعراب کے ساتھ<span class="en">With aeraab</span></span>
+      <span class="ctl">
+        <select class="mini" id="selVoice" title="پڑھنے کی آواز — Voice"></select>
+        <select class="mini" id="selRate" title="رفتار — Speed">
+          <option value="0.75">آہستہ — Slow</option>
+          <option value="0.95" selected>درمیانی — Normal</option>
+          <option value="1.15">تیز — Fast</option>
+        </select>
+        <button class="mini" id="btnSpkOut" title="جو حصہ منتخب (highlight) ہو وہ سنیے، ورنہ پورا متن">🔊 سنیے<span class="en">Listen</span></button>
+      </span></div>
+    <div id="out"><div class="hint">جوں ہی آپ دائیں طرف متن ڈالیں گے، یہاں اعراب والا متن بنتا جائے گا۔<br>نارنجی لفظ = دو قرأتیں ممکن ہیں، دبا کر چنیے۔ سرخ لفظ = قرینہ نہیں جانتا، دبا کر سکھا دیجیے — آئندہ خود لگا دے گا۔</div></div>
+  </section>
+</main>
+
+<div class="legend">
+  <span><span class="k" style="background:var(--ok)"></span>سبز لکیر — اعراب لگا دیے، یقین کے ساتھ (نقطے والی لکیر = آپ کی سکھائی ہوئی لغت سے)</span>
+  <span><span class="k" style="background:var(--warn)"></span>نارنجی — دو قرأتیں ممکن، دبا کر چنیے</span>
+  <span><span class="k" style="background:var(--bad)"></span>سرخ — قرینہ فیصلہ نہیں کر پا رہا، آپ بتائیے</span>
+  <span>سادہ لفظ — معمول کے مطابق، اعراب کی ضرورت نہیں</span>
+  <span class="eni">Green underline = marked with confidence · dotted = from your taught dictionary · Orange = two readings, click to choose · Red = unknown, click to teach · Plain = no marks needed</span>
+</div>
+
+<footer class="q">
+آواز نہ آئے تو: آواز کی فہرست میں «اردو — خودکار» چنیے؛ بہترین اردو آواز کے لیے یہی صفحہ <b>Edge browser</b> میں کھولیے (Microsoft Uzma مفت ملتی ہے)، یا Windows Settings → Time &amp; Language → Speech میں اردو voice pack ڈال لیجیے۔ مائیک اور آواز، دونوں اپنے server یا فولڈر والی کاپی پر سب سے بھرپور چلتے ہیں۔<br>
+یہ صفحہ آپ کے اپنے browser میں چلتا ہے — کوئی متن کہیں نہیں جاتا۔ سکھائے ہوئے لفظ اسی browser میں محفوظ رہتے ہیں؛
+«لغت برآمد» سے ان کی فائل بنا کر سنبھال لیجیے یا دوسرے آلے پر «لغت درآمد» کر لیجیے۔
+مشکل شعر جہاں مطلب پر فیصلہ ہو (اِس/اُس، سَحَر/سِحر) — وہ Claude کے پاس لے آئیے، قرینہ اور Claude مل کر پورا کریں گے۔
+</footer>
+<footer class="uzfoot">
+  <span>© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026</span>
+  <span><a href="index.html">گھر</a> · <a href="tarjuman.html">ترجمان</a> · <a href="lughat.html">لغت</a> · <a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> · <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> · <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></span>
+</footer>
+</div>
+
+<div id="pop"></div>
+<div id="dict"><div class="dbox">
+  <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+    <h3 style="margin:0;">🎙 مائیک سے لکھوائیے<span class="en">Dictate with the microphone</span></h3>
+    <button class="mini" id="dictX" title="بند کریں — لکھا ہوا محفوظ رہے گا / Close, draft is kept" style="font-size:17px; line-height:1; padding:6px 12px;">✕</button>
+  </div>
+  <div class="drow">
+    <button class="mini" id="dictMic">🎙 شروع کیجیے<span class="en">Start</span></button>
+    <button class="mini" id="dictSpk" title="جو لکھا گیا ہے وہ سن لیجیے">🔊 سنیے<span class="en">Listen</span></button>
+    <span id="dictStat"></span>
+  </div>
+  <textarea id="dictTa" placeholder="بولتے جائیے — یہاں لکھتا جائے گا۔ درستی بھی یہیں کیجیے: ٹائپ سے، تختے سے، یا cursor رکھ کر دوبارہ بول کر۔"></textarea>
+  <div class="drow">
+    <span style="color:var(--muted); font-size:14px;">کہاں جوڑیں: <span class="eni">Insert where?</span></span>
+    <select class="mini" id="dictWhere"></select>
+  </div>
+  <div class="drow">
+    <button class="act primary" id="dictAdd">جوڑ دیں<span class="en">Insert</span></button>
+    <button class="act" id="dictCancel">بند کریں — لکھا ہوا رہے گا<span class="en">Close, keep draft</span></button>
+  </div>
+</div></div>
+<div id="plex"><div class="dbox">
+  <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+    <h3 style="margin:0;">🔉 تلفظ کی لغت<span class="en">Pronunciation dictionary — force how words are spoken</span></h3>
+    <button class="mini" id="plexX" title="بند کریں / close" style="font-size:17px; line-height:1; padding:6px 12px;">✕</button>
+  </div>
+  <p style="margin:10px 0 6px; font-size:14.5px; color:var(--muted); line-height:1.9;">
+    ہر سطر میں لکھیے: <b>لفظ = بولنے کا روپ</b> — پردے پر لفظ ویسا ہی رہے گا، بولتے وقت دوسرا روپ لگے گا۔<br>
+    مثال: <span style="font-size:17px;">خود = خُد</span> · <span style="font-size:17px;">خوشی = خُشی</span>
+    <span class="en">One per line: word = speech form. The screen keeps the real spelling; the voice is forced to the respelling.</span>
+  </p>
+  <textarea id="plexTa" placeholder="خود = خُد&#10;خوشی = خُشی"></textarea>
+  <div class="drow">
+    <input type="text" id="plexTest" placeholder="جانچیے — کوئی روپ لکھ کر سنیے">
+    <button class="mini" id="plexHear" title="جو لکھا ہے وہی سنیے">🔊 سنیے</button>
+  </div>
+  <div class="drow">
+    <button class="act primary" id="plexSave">محفوظ کریں<span class="en">Save all</span></button>
+    <button class="act" id="plexClose">بند کریں<span class="en">Close</span></button>
+    <span style="font-size:13px; color:var(--muted);">بنیادی درستیاں (خود، خوشی…) پہلے سے شامل ہیں — یہ فہرست آپ کی اپنی ہے</span>
+  </div>
+</div></div>
+<div id="kb">
+  <div id="kbBar">
+    <span class="ttl">تختہ — کلک سے لکھیے؛ اعراب والی قطار کسی بھی خانے میں لگتی ہے <span class="eni">On-screen keyboard — click to type; the marks row works in any box</span></span>
+    <span>
+      <button class="act" id="kbLang">English</button>
+      <button class="act" id="kbShift">⇧ مزید حروف</button>
+      <button class="act" id="kbClose">بند کریں<span class="en">Close</span></button>
+    </span>
+  </div>
+  <div id="kbRows"></div>
+</div>
+<div id="toast"></div>
+<input type="file" id="impFile" accept=".json,application/json">
+
+<script>
+'use strict';
+/* ============ قرینہ — dictionary-first Urdu diacritizer, fully client-side ============ */
+
+/* دو قرأتوں والے لفظ — default پہلے، اشارہ ساتھ */
+const AMBIG = {
+"اس":[["اُس","دور والا — اُس شخص/چیز کی طرف"],["اِس","قریب والا — اِس شخص/چیز کی طرف"]],
+"ان":[["اُن","دور والے"],["اِن","قریب والے"]],
+"اسے":[["اُسے","دور والے کو"],["اِسے","قریب والے کو"]],
+"اسی":[["اُسی","دور والا ہی"],["اِسی","قریب والا ہی"]],
+"انہیں":[["اُنہیں","دور والوں کو"],["اِنہیں","قریب والوں کو"]],
+"انہی":[["اُنہی","دور والے ہی"],["اِنہی","قریب والے ہی"]],
+"میں":[["میں","اندر — دل میں، گھر میں"],["مَیں","خود — مَیں نے، مَیں ہوں"]],
+"کیا":[["کیا","سوال — کیا ہے؟"],["کِیا","فعل — کام کِیا"]],
+"تو":[["تو","پس — تو پھر"],["تُو","تم — تُو ہی"]],
+"پر":[["پَر","اوپر / لیکن / پنکھ"],["پُر","بھرا ہوا — پُر سکون"]],
+"کل":[["کَل","دن — آنے یا گزرا ہوا"],["کُل","تمام — کُل جہان"]],
+"دم":[["دَم","سانس / لمحہ"],["دُم","پونچھ"]],
+"سحر":[["سَحَر","صبح"],["سِحر","جادو"]],
+"گرد":[["گَرد","دھول"],["گِرد","چاروں طرف"]],
+"مل":[["مِل","ملنا — مِل کر"],["مَل","رگڑنا — ہاتھ مَل"]],
+"ملے":[["مِلے","ملاقات"],["مَلے","رگڑے"]],
+"گلے":[["گَلے","گلا — گَلے لگا"],["گِلے","شکوے"]],
+"کھل":[["کُھل","کھلنا — دروازہ"],["کِھل","پھول کھلنا"]],
+"کھلا":[["کُھلا","کھلا ہوا"],["کِھلا","پھول کی طرح"]],
+"کھلی":[["کُھلی",""],["کِھلی",""]],
+"کھلے":[["کُھلے",""],["کِھلے",""]],
+"دھن":[["دُھن","سُر / لگن"],["دَھن","دولت"]],
+"بل":[["بَل","زور / موڑ"],["بِل","رسید / سوراخ"]],
+"جلا":[["جَلا","آگ سے"],["جِلا","چمک، صیقل"]],
+"اڑ":[["اُڑ","پرواز"],["اَڑ","ڈٹ جانا"]],
+"اڑا":[["اُڑا","پرواز"],["اَڑا","ڈٹا ہوا"]],
+"اڑی":[["اُڑی",""],["اَڑی",""]],
+"اڑے":[["اُڑے",""],["اَڑے",""]],
+"ادھر":[["اِدَھر","اس طرف"],["اُدَھر","اس/اُس طرف"]],
+"سو":[["سو","پس / نیند"],["سَو","سینکڑا — 100"]],
+"حسن":[["حُسن","خوبصورتی"],["حَسَن","نام"]],
+"مرا":[["مِرا","میرا (شاعری)"],["مَرا","موت"]],
+"مرے":[["مِرے","میرے (شاعری)"],["مَرے","موت"]],
+"تری":[["تِری","تیری (شاعری)"],["تَری","نمی / تازگی"]],
+"بنا":[["بَنا","بننا — بَن گیا"],["بِنا","بغیر / بنیاد"]],
+"بن":[["بَن","بننا / جنگل"],["بِن","بغیر — بِن تیرے"]],
+"عالم":[["عالَم","دنیا / کیفیت"],["عالِم","علم والا"]],
+"شکر":[["شُکر","احسان ماننا"],["شَکَر","مٹھاس، چینی"]],
+"سر":[["سَر","head — سَر جھکا"],["سُر","تال، لے"]],
+"دور":[["دُور","فاصلہ"],["دَور","زمانہ / چکر"]],
+"گل":[["گُل","پھول"],["گَل","گلنا"]],
+"دکھا":[["دِکھا","دکھانا"],["دُکھا","دل دُکھا"]],
+"سوئے":[["سوئے","نیند"],["سُوئے","کی طرف — سُوئے حرم"]],
+"جگ":[["جَگ","دنیا"],["جُگ","زمانہ"]],
+"ہوا":[["ہُوا","ہونا — ایسا ہُوا"],["ہَوا","wind — ٹھنڈی ہَوا"]],
+"مٹی":[["مِٹّی","خاک"],["مِٹی","مِٹ جانا"]],
+"پل":[["پَل","لمحہ"],["پُل","bridge"]],
+"بھلا":[["بَھلا","اچھا / بہتری"],["بُھلا","بُھلا دینا"]]
+};
+
+/* معمول کے لفظ — اعراب درکار نہیں، مگر جانے پہچانے */
+const PLAIN=new Set(("کا کی کے کو نے سے پہ تک جو وہ یہ ہی بھی نا رے ارے ہائے او سا سی والا والی والے "+
+"میرا میری میرے تیرا تیری تیرے ہوگا ہوگی ہوگے یوں جوں سارا ساری سارے پیار جاں بات باتیں باتوں "+
+"رات راتیں راتوں کام نام جان شام آج ماہ سال چاہ راہی روز ہار جیتا جیتی جیتے ویران دیدار گویا سامنے "+
+"آگے پاس چاند تارا تارے تاروں خاک آنکھوں دید جیسا اگرچہ حالانکہ کیونکہ تاکہ لیے لئے چاہیے ہائیں "+
+"واہ آہا اچانک یار پی پیا جیا دوا داغ چراغ اثاثہ آسرا سہارا اشارہ اشارے کنایہ ناداں نادان انجان انجانی "+
+"دیوانہ دیوانی دیوانے مستانہ مستانے پروا آواز آوازیں بیمار خوار آرزو نرگسی جاگتی جاگتے یاب غار دوست اے اوے وے").split(" ").filter(Boolean));
+
+/* بیرونی لغت — qarina-dict.json صفحے کے برابر رکھی ہو تو خود جُڑ جاتی ہے (server پر) */
+(async()=>{ try{
+  const r=await fetch('qarina-dict.json',{cache:'no-cache'}); if(!r.ok) return;
+  const j=await r.json(); let n=0;
+  if(j.dict) for(const k in j.dict){ DICT[k]=j.dict[k]; n++; }
+  if(j.ambig) for(const k in j.ambig){ AMBIG[k]=j.ambig[k]; n++; }
+  if(Array.isArray(j.plain)) j.plain.forEach(w=>{ PLAIN.add(w); n++; });
+  if(j.speak) for(const k in j.speak){ SPEAK[k]=j.speak[k]; n++; }
+}catch(e){} })();
+
+/* server کا تلفظ database (uz-data/lexicon.json — admin صفحے سے بھرتا ہے):
+   پوری سائٹ کے ہر مہمان پر لاگو؛ فاروق کی ذاتی browser فہرست اس کے اوپر چلتی ہے */
+(async()=>{ try{
+  const r=await fetch('uz-data/lexicon.json?t='+Date.now(),{cache:'no-cache'}); if(!r.ok) return;
+  const j=await r.json(); let n=0;
+  if(j && j.speak){ for(const k in j.speak){ SPEAK[bare(k)]=j.speak[k]; n++; } }
+  window.__lexExt=n;
+  window.__dictExt=n;
+  if(src && src.value){ analyze(src.value); render(); }
+}catch(e){} })();
+
+/* یقینی اعراب والے لفظ */
+const DICT = {
+"اب":"اَب","اگر":"اَگَر","مگر":"مَگَر","لیکن":"لیکِن","اور":"اَور","پھر":"پِھر","جب":"جَب","تب":"تَب","کب":"کَب","سب":"سَب","کچھ":"کُچھ","ہر":"ہَر","بہت":"بَہُت","کم":"کَم","زیادہ":"زِیادہ","نہیں":"نَہیں","نہ":"نَہ","بس":"بَس","صرف":"صِرف","خود":"خُود","ساتھ":"ساتھ","بغیر":"بَغَیر","بعد":"بَعد","پہلے":"پَہلے","ابھی":"اَبھی","کبھی":"کَبھی","جہاں":"جَہاں","وہاں":"وَہاں","یہاں":"یَہاں","کہاں":"کَہاں","کیوں":"کیوں","کیسے":"کَیسے","کیسا":"کَیسا","کیسی":"کَیسی","جیسا":"جَیسا","جیسی":"جَیسی","جیسے":"جَیسے","ایسا":"اَیسا","ایسی":"اَیسی","ایسے":"اَیسے","ویسا":"وَیسا","ویسے":"وَیسے","اتنا":"اِتنا","اتنی":"اِتنی","اتنے":"اِتنے","جتنا":"جِتنا","کتنا":"کِتنا","کتنی":"کِتنی","کتنے":"کِتنے","اک":"اِک","ایک":"ایک","مجھ":"مُجھ","مجھے":"مُجھے","تجھ":"تُجھ","تجھے":"تُجھے","تم":"تُم","تمہیں":"تُمہیں","تمہارا":"تُمہارا","تمہاری":"تُمہاری","تمہارے":"تُمہارے","ہم":"ہَم","ہمیں":"ہَمیں","ہمارا":"ہَمارا","ہماری":"ہَماری","ہمارے":"ہَمارے","اپنا":"اَپنا","اپنی":"اَپنی","اپنے":"اَپنے","جس":"جِس","کس":"کِس","جن":"جِن","کن":"کِن","جسے":"جِسے","کسے":"کِسے","کسی":"کِسی","کوئی":"کوئی","کئی":"کَئی","سبھی":"سَبھی","ترا":"تِرا","ترے":"تِرے",
+"دل":"دِل","دلوں":"دِلوں","نظر":"نَظَر","نظریں":"نَظَریں","نگاہ":"نِگاہ","نگاہیں":"نِگاہیں","پلک":"پَلَک","پلکیں":"پَلکیں","زلف":"زُلف","زلفیں":"زُلفیں","لب":"لَب","رخ":"رُخ","چہرہ":"چِہرہ","چہرے":"چِہرے","سانس":"سانس","سانسیں":"سانسیں","دھڑکن":"دَھڑکَن","مسکان":"مُسکان","مسکرا":"مُسکرا","مسکرائے":"مُسکرائے","اشک":"اَشک","قدم":"قَدَم","قدموں":"قَدموں","ہاتھوں":"ہاتھوں","بازو":"بازُو",
+"محبت":"مُحَبَّت","عشق":"عِشق","الفت":"اُلفَت","چاہت":"چاہَت","وفا":"وَفا","جفا":"جَفا","ستم":"سِتَم","کرم":"کَرَم","رحم":"رَحَم","غم":"غَم","خوشی":"خُوشی","درد":"دَرد","زخم":"زَخم","زخموں":"زَخموں","مرہم":"مَرہَم","سکون":"سُکون","قرار":"قَرار","بے قرار":"بے قَرار","انتظار":"اِنتِظار","اقرار":"اِقرار","انکار":"اِنکار","اظہار":"اِظہار","خمار":"خُمار","نشہ":"نَشہ","ہوش":"ہوش","جنون":"جُنون","جنوں":"جُنوں","وحشت":"وَحشَت","حسرت":"حَسرَت","ارمان":"اَرمان","ارماں":"اَرماں","امید":"اُمّید","مایوسی":"مایُوسی","تنہا":"تَنہا","تنہائی":"تَنہائی","جدائی":"جُدائی","فرقت":"فُرقَت","وصل":"وَصل","ہجر":"ہِجر","ملن":"مِلَن","یادوں":"یادوں","خواب":"خواب","خوابوں":"خوابوں","خیال":"خَیال","خیالوں":"خَیالوں","تصور":"تَصَوُّر","احساس":"اِحساس","جذبہ":"جَذبہ","جذبات":"جَذبات","روح":"رُوح","دعا":"دُعا","دعائیں":"دُعائیں","سجدہ":"سَجدہ","قسمت":"قِسمَت","نصیب":"نَصیب","تقدیر":"تَقدیر","مقدر":"مُقَدَّر","قسم":"قَسَم","بھرم":"بَھرَم","صنم":"صَنَم","حرم":"حَرَم","عدم":"عَدَم",
+"غزل":"غَزَل","شعر":"شِعر","شاعر":"شاعِر","شاعری":"شاعِری","محفل":"مَحفِل","بزم":"بَزم","شمع":"شَمع","پروانہ":"پَروانہ","پروانے":"پَروانے","بلبل":"بُلبُل","صیاد":"صَیّاد","قفس":"قَفَس","آشیانہ":"آشِیانہ","آشیاں":"آشِیاں","چمن":"چَمَن","گلشن":"گُلشَن","گلستاں":"گُلِستاں","باغ":"باغ","ساقی":"ساقی","مے":"مَے","جام":"جام","پیمانہ":"پَیمانہ","میخانہ":"مَیخانہ","مسجد":"مَسجِد","کعبہ":"کَعبہ","بت":"بُت","کافر":"کافِر","مومن":"مومِن","رند":"رِند","زاہد":"زاہِد","واعظ":"واعِظ","ناصح":"ناصِح","رقیب":"رَقیب","حبیب":"حَبیب","محبوب":"مَحبوب","دلبر":"دِلبَر","دلدار":"دِلدار","دشمن":"دُشمَن","غیر":"غَیر","اغیار":"اَغیار","ہمدم":"ہَمدَم","ہمسفر":"ہَمسَفَر","ہمراز":"ہَمراز",
+"دن":"دِن","دنوں":"دِنوں","صبح":"صُبح","شب":"شَب","سویرا":"سَویرا","دوپہر":"دوپَہَر","سورج":"سُورَج","ستارہ":"سِتارہ","ستارے":"سِتارے","ستاروں":"سِتاروں","زمین":"زَمین","زمیں":"زَمیں","بادل":"بادَل","بارش":"بارِش","ہوائیں":"ہَوائیں","آندھی":"آندھی","طوفان":"طُوفان","طوفاں":"طُوفاں","دریا":"دَریا","سمندر":"سَمُندَر","ساحل":"ساحِل","لہر":"لَہَر","لہریں":"لَہریں","موج":"مَوج","موجوں":"مَوجوں","کنارہ":"کِنارہ","کنارے":"کِنارے","صحرا":"صَحرا","پہاڑ":"پَہاڑ","وادی":"وادی","پھول":"پُھول","پھولوں":"پُھولوں","کانٹا":"کانٹا","کانٹے":"کانٹے","گلاب":"گُلاب","خوشبو":"خُوشبُو","مہک":"مَہَک","بہار":"بَہار","خزاں":"خِزاں","موسم":"مَوسَم","سایہ":"سایہ","دھوپ":"دُھوپ","چاندنی":"چاندنی","اندھیرا":"اَندھیرا","اجالا":"اُجالا","روشنی":"روشنی","کرن":"کِرَن","کرنیں":"کِرنیں","شبنم":"شَبنَم","قطرہ":"قَطرہ","بوند":"بُوند",
+"زندگی":"زِندَگی","موت":"مَوت","دنیا":"دُنیا","جہان":"جَہان","سفر":"سَفَر","منزل":"مَنزِل","منزلیں":"مَنزِلیں","رستہ":"رَستہ","رستے":"رَستے","راستہ":"راستہ","راستے":"راستے","راہ":"راہ","راہیں":"راہیں","مسافر":"مُسافِر","سنگ":"سَنگ","اکیلا":"اَکیلا","اکیلے":"اَکیلے","مجبور":"مَجبُور","مجبوری":"مَجبُوری","قید":"قَید","قیدی":"قَیدی","زنجیر":"زَنجیر","رہائی":"رِہائی","فیصلہ":"فَیصلہ","انصاف":"اِنصاف","ظلم":"ظُلم","ظالم":"ظالِم","صبر":"صَبر","حوصلہ":"حَوصَلہ","ہمت":"ہِمَّت","طاقت":"طاقَت","کمزور":"کَمزور","جیت":"جِیت","فتح":"فَتح","شکست":"شِکَست","عروج":"عُروج","زوال":"زَوال","پہچان":"پَہچان","مقام":"مَقام","عزت":"عِزَّت","غیرت":"غَیرَت","فخر":"فَخر","ناز":"ناز","انداز":"اَنداز","ادا":"اَدا","ادائیں":"اَدائیں",
+"تھا":"تھا","تھی":"تھی","تھے":"تھے","ہے":"ہے","ہیں":"ہیں","ہوں":"ہوں","ہو":"ہو","گا":"گا","گی":"گی","گے":"گے","رہا":"رَہا","رہی":"رَہی","رہے":"رَہے","گیا":"گَیا","گئی":"گَئی","گئے":"گَئے","لیا":"لِیا","دیا":"دِیا","ہوئی":"ہُوئی","ہوئے":"ہُوئے","لگا":"لَگا","لگی":"لَگی","لگے":"لَگے","لگتا":"لَگتا","لگتی":"لَگتی","بجا":"بَجا","بجے":"بَجے","جلے":"جَلے","جلی":"جَلی","بھر":"بَھر","ذرا":"ذَرا","طرح":"طَرَح","نیند":"نِیند","خواہش":"خواہِش","اندر":"اَندَر","باہر":"باہَر","اوپر":"اُوپَر","نیچے":"نِیچے","پیچھے":"پِیچھے","اونچا":"اُونچا","اونچی":"اُونچی","چلا":"چَلا","چلی":"چَلی","چلے":"چَلے","ملا":"مِلا","ملی":"مِلی","آیا":"آیا","آئی":"آئی","آئے":"آئے","کرتا":"کَرتا","کرتی":"کَرتی","کرتے":"کَرتے","کروں":"کَروں","کرو":"کَرو","کریں":"کَریں","کرے":"کَرے","کرکے":"کَرکے","جاتا":"جاتا","جاتی":"جاتی","جاتے":"جاتے","جاؤں":"جاؤں","جائیں":"جائیں","جائے":"جائے","آتا":"آتا","آتی":"آتی","آتے":"آتے","آؤں":"آؤں","دیتا":"دیتا","دیتی":"دیتی","دیتے":"دیتے","لیتا":"لیتا","لیتی":"لیتی","لیتے":"لیتے","کہنا":"کَہنا","کہتا":"کَہتا","کہتی":"کَہتی","کہتے":"کَہتے","کہا":"کَہا","کہو":"کَہو","کہیں":"کَہیں","کہے":"کَہے","کہوں":"کَہوں","سنا":"سُنا","سنو":"سُنو","سنیں":"سُنیں","سنے":"سُنے","سنتا":"سُنتا","سنتے":"سُنتے","دیکھا":"دیکھا","دیکھو":"دیکھو","دیکھے":"دیکھے","دیکھیں":"دیکھیں","سوچا":"سوچا","سوچو":"سوچو","سوچتا":"سوچتا","سوچتے":"سوچتے","سمجھ":"سَمَجھ","سمجھا":"سَمجھا","سمجھو":"سَمجھو","سمجھے":"سَمجھے","روتا":"روتا","روئے":"روئے","ہنسی":"ہَنسی","ہنسے":"ہَنسے","ہنستا":"ہَنستا","چلتا":"چَلتا","چلتی":"چَلتی","چلتے":"چَلتے","چلو":"چَلو","چلیں":"چَلیں","چل":"چَل","رک":"رُک","رکا":"رُکا","رکو":"رُکو","تھم":"تَھم","تھما":"تَھما","بیٹھا":"بَیٹھا","بیٹھے":"بَیٹھے","بیٹھ":"بَیٹھ","اٹھ":"اُٹھ","اٹھا":"اُٹھا","اٹھے":"اُٹھے","اٹھو":"اُٹھو","گر":"گِر","گرا":"گِرا","گرے":"گِرے","گرتا":"گِرتا","جاگ":"جاگ","جاگا":"جاگا","بھرا":"بَھرا","بھری":"بَھری","بھرے":"بَھرے","چاہا":"چاہا","چاہے":"چاہے","چاہوں":"چاہوں","چاہتا":"چاہتا","چاہتے":"چاہتے","پایا":"پایا","پائے":"پائے","کھویا":"کھویا","کھوئے":"کھوئے","بھولا":"بُھولا","بھولے":"بُھولے","بھول":"بُھول","ٹوٹ":"ٹُوٹ","ٹوٹا":"ٹُوٹا","ٹوٹے":"ٹُوٹے","ٹوٹتا":"ٹُوٹتا","جڑ":"جُڑ","جڑا":"جُڑا","جڑے":"جُڑے","بنے":"بَنے","بنی":"بَنی","بنتا":"بَنتا","بنایا":"بَنایا","بنائے":"بَنائے","رکھ":"رَکھ","رکھا":"رَکھا","رکھو":"رَکھو","رکھے":"رَکھے","لکھ":"لِکھ","لکھا":"لِکھا","لکھے":"لِکھے","لکھوں":"لِکھوں","پڑھ":"پَڑھ","پڑھا":"پَڑھا","پڑھے":"پَڑھے","بولا":"بولا","بولے":"بولے","بول":"بول","پوچھا":"پُوچھا","پوچھو":"پُوچھو","مانگا":"مانگا","مانگے":"مانگے","مانگوں":"مانگوں","سجا":"سَجا","سجے":"سَجے","جلایا":"جَلایا","جلاؤ":"جَلاؤ","بجھا":"بُجھا","بجھے":"بُجھے","مٹ":"مِٹ","مٹا":"مِٹا","مٹے":"مِٹے","لٹا":"لُٹا","لٹے":"لُٹے","سہا":"سَہا","سہے":"سَہے","سہوں":"سَہوں","جھک":"جُھک","جھکا":"جُھکا","جھکتا":"جُھکتا","جھوم":"جُھوم","ڈوب":"ڈُوب","ڈوبا":"ڈُوبا","ڈوبے":"ڈُوبے","تڑپ":"تَڑَپ","تڑپا":"تَڑپا","ترس":"تَرَس","ترسے":"تَرسے","بکھر":"بِکھَر","بکھرے":"بِکھرے","سنور":"سَنوَر","سنورے":"سَنورے","نکھر":"نِکھَر","نکھرے":"نِکھرے","ٹھہر":"ٹھَہر","ٹھہرا":"ٹھَہرا",
+"محبتوں":"مُحَبَّتوں","نغمہ":"نَغمہ","نغمے":"نَغمے","گیت":"گِیت","سنگیت":"سَنگِیت","ساز":"ساز","آہنگ":"آہَنگ","ترنم":"تَرَنُّم","صدا":"صَدا","صدائیں":"صَدائیں","خاموشی":"خاموشی","خاموش":"خاموش","سناٹا":"سَنّاٹا","شور":"شور","فریاد":"فَریاد","نالہ":"نالہ","آہ":"آہ","واہ":"واہ","حال":"حال","حالات":"حالات","سوال":"سَوال","جواب":"جَواب","وجہ":"وَجہ","مطلب":"مَطلَب","معنی":"مَعنی","لفظ":"لَفظ","لفظوں":"لَفظوں","زبان":"زَبان","کہانی":"کَہانی","قصہ":"قِصّہ","افسانہ":"اَفسانہ","فسانہ":"فَسانہ","داستان":"داستان","حقیقت":"حَقیقَت","سچ":"سَچ","جھوٹ":"جُھوٹ","سچا":"سَچّا","سچی":"سَچّی","سچے":"سَچّے","جھوٹا":"جُھوٹا","اچھا":"اَچّھا","اچھی":"اَچّھی","اچھے":"اَچّھے","برا":"بُرا","بری":"بُری","برے":"بُرے","نیا":"نَیا","نئی":"نَئی","نئے":"نَئے","پرانا":"پُرانا","پرانی":"پُرانی","پرانے":"پُرانے","بلند":"بُلَند","پست":"پَست","سخت":"سَخت","نرم":"نَرم","گرم":"گَرم","سرد":"سَرد","ٹھنڈا":"ٹھَنڈا","ٹھنڈی":"ٹھَنڈی","میٹھا":"مِیٹھا","میٹھی":"مِیٹھی","کڑوا":"کَڑوا","تلخ":"تَلخ","شیریں":"شِیریں","حسین":"حَسِین","خوبصورت":"خُوبصُورَت","پیارا":"پیارا","پیاری":"پیاری","مست":"مَست","مدہوش":"مَدہوش","بے خبر":"بے خَبَر","خبر":"خَبَر","اثر":"اَثَر","قمر":"قَمَر","نظارہ":"نَظارہ","منظر":"مَنظَر","جلوہ":"جَلوہ","جھلک":"جَھلَک","عکس":"عَکس","سیرت":"سِیرَت","صورت":"صُورَت","مورت":"مُورَت",
+"عادت":"عادَت","سہارا":"سَہارا","سہارے":"سَہارے","سہاروں":"سَہاروں","ضرورت":"ضَرُورَت","حاجت":"حاجَت","اذیت":"اَذِیَّت","محبتاں":"مُحَبَّتاں","برسے":"بَرسے","برسا":"بَرسا","ابر":"اَبر","چیختے":"چِیختے","چیخ":"چِیخ","رہیں":"رَہیں","فرصتیں":"فُرصَتیں","فرصت":"فُرصَت","شفا":"شِفا","صحبت":"صُحبَت","بدتر":"بَدتَر","غیروں":"غَیروں","چٹان":"چَٹّان","فولاد":"فَولاد","کھڑا":"کھَڑا","کھڑی":"کھَڑی","کھڑے":"کھَڑے","شک":"شَک","کر":"کَر","دھجیاں":"دَھجِّیاں","یقین":"یَقین","بھروسہ":"بَھروسہ","اعتبار":"اِعتِبار","غرور":"غُرور","تکبر":"تَکَبُّر","عاجزی":"عاجِزی","بندگی":"بَندَگی","زہر":"زَہر","امرت":"اَمرِت","شہد":"شَہد","نمک":"نَمَک","آنچ":"آنچ","شعلہ":"شُعلہ","شعلے":"شُعلے","چنگاری":"چِنگاری","راکھ":"راکھ","دھواں":"دُھواں","دھند":"دُھند","غبار":"غُبار","منظور":"مَنظُور","نامنظور":"نامَنظُور","قبول":"قَبُول","رد":"رَد","حد":"حَد","حدیں":"حَدیں","بے حد":"بے حَد","لازم":"لازِم","ممکن":"مُمکِن","ناممکن":"نامُمکِن","بھٹی":"بَھٹّی","کندن":"کُندَن","مشکل":"مُشکِل","مشکلیں":"مُشکِلیں","آسان":"آسان","وقت":"وَقت","لمحہ":"لَمحہ","لمحے":"لَمحے","صدی":"صَدی","زمانہ":"زَمانہ","زمانے":"زَمانے","دہر":"دَہر","عمر":"عُمر","بچپن":"بَچپَن","جوانی":"جَوانی","بڑھاپا":"بُڑھاپا","ماضی":"ماضی","مستقبل":"مُستَقبِل","آغاز":"آغاز","انجام":"اَنجام","آخر":"آخِر","آخری":"آخِری","پہلا":"پَہلا","پہلی":"پَہلی","دوسرا":"دُوسرا","دوسری":"دُوسری","دوسرے":"دُوسرے","تیسرا":"تِیسرا","ہزار":"ہَزار","لاکھ":"لاکھ","دو":"دو","تین":"تِین","چار":"چار","پانچ":"پانچ",
+"گھر":"گَھر","در":"دَر","دروازہ":"دَروازہ","دیوار":"دِیوار","چھت":"چَھت","آنگن":"آنگَن","گلی":"گَلی","شہر":"شَہر","گاؤں":"گاؤں","نگر":"نَگَر","ڈگر":"ڈَگَر","بازار":"بازار","مکان":"مَکان","محل":"مَحَل","جھونپڑی":"جھونپَڑی","مسکن":"مَسکَن","وطن":"وَطَن","دیس":"دیس","پردیس":"پَردیس","سرحد":"سَرحَد","دھرتی":"دَھرتی","جنت":"جَنَّت","دوزخ":"دوزَخ","فلک":"فَلَک","عرش":"عَرش","نور":"نُور","اندھیرے":"اَندھیرے","اجالے":"اُجالے"
+};
+
+/* ---------- helpers ---------- */
+const MARKS=/[ً-ٰٕ]/;
+const STRIP=/[ً-ٰٕـ]/g;
+const WORDCHAR=/[ء-ٰٕ-ۓەـ‌]/;
+const norm=s=>s.replace(/ي/g,"ی").replace(/ك/g,"ک").replace(/[أإٱ]/g,"ا").replace(/ۀ/g,"ۂ");
+const bare=s=>norm(s).replace(STRIP,"");
+let PDICT={};
+try{ PDICT=JSON.parse(localStorage.getItem("qarina-dict")||"{}")||{}; }catch(e){ PDICT={}; }
+function savePD(){ try{ localStorage.setItem("qarina-dict", JSON.stringify(PDICT)); }catch(e){} }
+
+/* بول چال کی لغت — پردے پر لفظ اصلی، بولنے کے لیے بدلا ہوا روپ (فاروق کا Suno والا نسخہ)
+   مثال: خود ← خُد، خوشی ← خُشی — انجن کو مجبور کیا جاتا ہے کہ صحیح بولے */
+const SPEAK={"خود":"خُد","خوش":"خُش","خوشی":"خُشی","خوشیاں":"خُشیاں","خوشبو":"خُشبو","خودی":"خُدی",
+"بالکل":"بِلکُل","بالآخر":"بِلآخِر"};
+let SPEAKDICT={};
+try{ SPEAKDICT=JSON.parse(localStorage.getItem("qarina-speak")||"{}")||{}; }catch(e){ SPEAKDICT={}; }
+function saveSpeak(){ try{ localStorage.setItem("qarina-speak", JSON.stringify(SPEAKDICT)); }catch(e){} }
+function speakFormOf(b){ return SPEAKDICT[b] || SPEAK[b] || ""; }
+function speakText(text){
+  let outT="", i=0; text=String(text);
+  while(i<text.length){
+    const ch=text[i];
+    if(WORDCHAR.test(ch)){
+      let j=i; while(j<text.length && WORDCHAR.test(text[j])) j++;
+      const raw=text.slice(i,j), f=speakFormOf(bare(raw));
+      outT+= f || raw; i=j;
+    } else { outT+=ch; i++; }
+  }
+  return outT;
+}
+try{ window.__speakText=speakText; }catch(e){}
+
+const SUF=["وں","یں","ئیں"];
+function derive(b){
+  for(const s of SUF){
+    if(b.length>s.length+2 && b.endsWith(s)){
+      const st=b.slice(0,-s.length);
+      if(DICT[st] && !AMBIG[st]) return DICT[st]+s;
+    }
+  } return null;
+}
+
+/* ---------- model ---------- */
+let toks=[];
+function analyze(text){
+  toks=[]; let i=0;
+  while(i<text.length){
+    const ch=text[i];
+    if(WORDCHAR.test(ch)){
+      let j=i; while(j<text.length && WORDCHAR.test(text[j])) j++;
+      const raw=text.slice(i,j), b=bare(raw);
+      let t={type:"w", raw, bare:b, custom:null, idx:0};
+      if(MARKS.test(raw)) t.kind="kept";
+      else if(PDICT[b]) { t.kind="learn"; t.marked=PDICT[b]; }
+      else if(AMBIG[b]) { t.kind="amb"; t.forms=AMBIG[b]; }
+      else if(DICT[b]) { t.kind = DICT[b]===b ? "plain" : "chg"; t.marked=DICT[b]; }
+      else if(PLAIN.has(b)) { t.kind="plain"; }
+      else { const d=derive(b); if(d){ t.kind="chg"; t.marked=d; } else { t.kind="unk"; } }
+      toks.push(t); i=j;
+    } else {
+      let j=i; while(j<text.length && !WORDCHAR.test(text[j])) j++;
+      toks.push({type:"x", raw:text.slice(i,j)}); i=j;
+    }
+  }
+}
+const finalOf=t=> t.type==="x" ? t.raw : (t.custom || (t.kind==="amb" ? t.forms[t.idx][0] : (t.marked||t.raw)));
+
+/* ---------- render ---------- */
+const out=document.getElementById("out"), src=document.getElementById("src"), stats=document.getElementById("stats");
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function render(){
+  if(!toks.length){ out.innerHTML='<div class="hint">جوں ہی آپ دائیں طرف متن ڈالیں گے، یہاں اعراب والا متن بنتا جائے گا۔</div>'; renderStats(); return; }
+  let h=""; toks.forEach((t,n)=>{
+    if(t.type==="x"){ h+=esc(t.raw).replace(/\n/g,"<br>"); return; }
+    const f=esc(finalOf(t));
+    let cls="w "+(t.custom?"learn":t.kind), tip="";
+    if(t.kind==="amb"&&!t.custom){ tip=' title="'+esc(t.forms[t.idx][1]||"دو قرأتیں — دبا کر بدلیے")+'"'; }
+    if(t.kind==="unk"&&!t.custom){ tip=' title="قرینہ اس لفظ کو نہیں جانتا — دبا کر سکھا دیجیے"'; }
+    h+='<span class="'+cls+'" data-n="'+n+'" tabindex="0"'+tip+'>'+f+'</span>';
+  });
+  out.innerHTML=h; renderStats();
+}
+function renderStats(){
+  const w=toks.filter(t=>t.type==="w");
+  const amb=w.filter(t=>t.kind==="amb"&&!t.custom).length;
+  const unk=w.filter(t=>t.kind==="unk"&&!t.custom).length;
+  const ok=w.filter(t=>t.kind==="chg"||t.kind==="learn"||t.custom).length;
+  stats.innerHTML =
+    '<span class="chip">الفاظ <span class="eni">Words</span> <b>'+w.length+'</b></span>'+
+    '<span class="chip c-ok">اعراب لگے <span class="eni">Marked</span> <b>'+ok+'</b></span>'+
+    '<span class="chip c-warn" id="jumpAmb" title="اگلے نارنجی لفظ پر جائیے / jump to next orange">نارنجی — چنیے <span class="eni">Choose</span> <b>'+amb+'</b></span>'+
+    '<span class="chip c-bad" id="jumpUnk" title="اگلے سرخ لفظ پر جائیے / jump to next red">سرخ — سکھائیے <span class="eni">Teach</span> <b>'+unk+'</b></span>';
+  const ja=document.getElementById("jumpAmb"), ju=document.getElementById("jumpUnk");
+  ja.onclick=()=>jump("amb"); ju.onclick=()=>jump("unk");
+  if(typeof setTopH==="function") setTopH();
+}
+let jumpAt=-1;
+function jump(kind){
+  const els=[...out.querySelectorAll(".w."+kind)];
+  if(!els.length) return;
+  jumpAt=(jumpAt+1)%els.length;
+  const el=els[jumpAt];
+  el.scrollIntoView({block:"center",behavior:"smooth"});
+  el.classList.add("flash"); setTimeout(()=>el.classList.remove("flash"),1100);
+}
+
+/* ---------- popover: قرأتیں + حرف بہ حرف اعراب ---------- */
+const pop=document.getElementById("pop");
+let popN=-1, popCl=[], popSel=0;
+const MKDEF=[["َ","زبر"],["ِ","زیر"],["ُ","پیش"],["ّ","تشدید"],["ْ","جزم"],["ً","دو زبر"],["ٍ","دو زیر"],["ٌ","دو پیش"],["ٰ","کھڑی زبر"]];
+const VGROUP=new Set(["َ","ِ","ُ","ً","ٍ","ٌ","ٰ","ْ"]);
+function parseClusters(w){
+  const cl=[];
+  for(const ch of w){
+    if(/[ً-ٰٕ]/.test(ch) && cl.length) cl[cl.length-1].m.push(ch);
+    else cl.push({b:ch,m:[]});
+  }
+  return cl;
+}
+const clWord=()=>popCl.map(c=>c.b+c.m.join("")).join("");
+function drawLets(){
+  const box=pop.querySelector(".lets"); if(!box) return;
+  box.innerHTML=popCl.map((c,i)=>'<button class="let'+(i===popSel?" on":"")+'" data-i="'+i+'">'+esc(c.b+c.m.join(""))+'</button>').join("");
+  box.querySelectorAll(".let").forEach(b=>b.onclick=e=>{ e.stopPropagation(); popSel=+b.dataset.i; drawLets(); });
+}
+function syncFromClusters(){
+  const inp=pop.querySelector("#popIn"); if(inp){ inp.value=clWord(); }
+  drawLets();
+}
+function applyMark(mk){
+  const c=popCl[popSel]; if(!c) return;
+  if(mk==="CLR"){ c.m=[]; }
+  else if(mk==="ّ"){ const j=c.m.indexOf(mk); j>=0 ? c.m.splice(j,1) : c.m.unshift(mk); }
+  else if(VGROUP.has(mk)){
+    const had=c.m.includes(mk);
+    c.m=c.m.filter(x=>!VGROUP.has(x));
+    if(!had) c.m.push(mk);
+    if(!had && popSel<popCl.length-1){ popSel++; }
+  }
+  syncFromClusters();
+}
+function openPop(n,anchor){
+  const t=toks[n]; popN=n;
+  popCl=parseClusters(finalOf(t)); popSel=0;
+  let h="";
+  if(t.kind==="amb"){
+    h+='<div class="rds">'+t.forms.map((f,i)=>
+      '<button class="rd'+((!t.custom&&i===t.idx)?" on":"")+'" data-i="'+i+'">'+esc(f[0])+(f[1]?'<small>'+esc(f[1])+'</small>':'')+'</button>').join("")+'</div>';
+  }
+  h+='<div class="pophint">حرف چنیے، پھر نیچے سے اعراب لگائیے — بالکل فون والے انداز میں، مگر ماؤس سے<span class="en">Pick a letter, then tap a mark below — like the phone keyboard, with the mouse</span></div>';
+  h+='<div class="lets"></div>';
+  h+='<div class="mks">'+MKDEF.map(m=>'<button class="mk" title="'+m[1]+'">◌'+m[0]+'</button>').join("")+
+     '<button class="mk clr" title="اس حرف کے اعراب ہٹائیے">صاف</button></div>';
+  h+='<input type="text" id="popIn" value="'+esc(finalOf(t)).replace(/"/g,"&quot;")+'">';
+  h+='<div class="pophint" style="margin:9px 0 3px;">بولنے کا روپ — انجن غلط بولے تو یہاں ہجے بدل دیجیے (خود ← خُد)؛ پردے پر لفظ ویسا ہی رہے گا<span class="en">Speech form — respell to force pronunciation; the display stays unchanged</span></div>';
+  h+='<div style="display:flex; gap:6px; align-items:center;">'+
+     '<input type="text" id="popSpeak" value="'+esc(speakFormOf(t.bare)).replace(/"/g,"&quot;")+'" placeholder="خالی = جیسا لکھا، ویسا بولے">'+
+     '<button class="act" id="popSpkTest" title="بولنے کا روپ سن کر جانچیے / test this pronunciation">🔊 جانچیے</button>'+
+     '<button class="act" id="popSend" title="یہ لفظ admin کو بھیجیے — تلفظ ٹھیک کروانے کے لیے / report to admin">📨 admin</button></div>';
+  h+='<div class="row"><label><input type="checkbox" id="popRem"'+(t.kind==="unk"?" checked":"")+'> لغت میں یاد رکھیں <span class="eni">Remember</span>'+(t.kind==="amb"?' (سوچ کر — یہ لفظ جگہ جگہ بدلتا ہے)':'')+'</label>'+
+     '<button class="act" id="popPad" title="دبائے رکھیے — تختہ کھلے گا؛ حرف پر چھوڑیے / hold to type">⌨ دبا کر لکھیے</button>'+
+     '<button class="act" id="popSpk" title="یہ لفظ سنیے / hear this word">🔊</button>'+
+     '<button class="act" id="popOk">ٹھیک ہے<span class="en">Done</span></button></div>';
+  pop.innerHTML=h;
+  pop.style.display="block";
+  const r=anchor.getBoundingClientRect(), pw=pop.offsetWidth;
+  let x=r.left+window.scrollX+r.width/2-pw/2;
+  x=Math.max(8,Math.min(x,document.documentElement.clientWidth-pw-8));
+  pop.style.left=x+"px";
+  pop.style.top=(r.bottom+window.scrollY+8)+"px";
+  pop.querySelectorAll(".rd").forEach(btn=>btn.onclick=()=>{
+    t.idx=+btn.dataset.i; t.custom=null; closePop(); render();
+  });
+  pop.querySelectorAll(".mk").forEach(btn=>btn.onmousedown=e=>e.preventDefault());
+  pop.querySelectorAll(".mk").forEach((btn,i)=>btn.onclick=e=>{
+    e.stopPropagation(); applyMark(btn.classList.contains("clr")?"CLR":MKDEF[i][0]);
+  });
+  const inp=pop.querySelector("#popIn"), spIn=pop.querySelector("#popSpeak");
+  inp.addEventListener("input",()=>{ popCl=parseClusters(inp.value); if(popSel>=popCl.length)popSel=Math.max(0,popCl.length-1); drawLets(); });
+  pop.querySelector("#popSpk").onmousedown=e=>e.preventDefault();
+  pop.querySelector("#popSpk").onclick=e=>{ e.stopPropagation(); speak(inp.value); };
+  pop.querySelector("#popSpkTest").onmousedown=e=>e.preventDefault();
+  pop.querySelector("#popSpkTest").onclick=e=>{ e.stopPropagation(); speakRaw(spIn.value.trim() || inp.value); };
+  pop.querySelector("#popSend").onclick=async e=>{
+    e.stopPropagation();
+    try{
+      const body=new URLSearchParams();
+      body.set("action","suggest"); body.set("word",t.bare); body.set("form",finalOf(t));
+      const r=await fetch("api/lexicon.php",{method:"POST",body});
+      const j=await r.json();
+      say(j&&j.ok ? "«"+t.bare+"» admin کو پہنچ گیا — تلفظ درست کرایا جائے گا" : "نہ بھیجا جا سکا");
+    }catch(err){ say("نہ بھیجا جا سکا — یہ سہولت server والے صفحے پر چلتی ہے"); }
+  };
+  pop.querySelector("#popPad").addEventListener("pointerdown",e=>{
+    e.stopPropagation(); inp.focus(); kbT=inp; startHold(e);
+  });
+  pop.querySelector("#popOk").onclick=()=>{
+    const v=inp.value.trim();
+    if(v){ t.custom=v;
+      if(pop.querySelector("#popRem").checked){ PDICT[t.bare]=v; savePD(); reanalyzeKeepChoices(); } }
+    /* بولنے کا روپ — بدلا ہو تو ہمیشہ کے لیے یاد */
+    const sv=spIn.value.trim();
+    if(sv && sv!==(v||finalOf(t))){ if(SPEAKDICT[t.bare]!==sv){ SPEAKDICT[t.bare]=sv; saveSpeak(); say("تلفظ یاد رکھ لیا — پردے پر "+t.bare+"، بولے گا "+sv); } }
+    else if(!sv && SPEAKDICT[t.bare]){ delete SPEAKDICT[t.bare]; saveSpeak(); say("تلفظ کی درستی ہٹا دی"); }
+    closePop(); render();
+  };
+  drawLets();
+  inp.focus();
+}
+function closePop(){ pop.style.display="none"; popN=-1; }
+document.addEventListener("click",e=>{
+  if(Date.now()-(window.__justHeld||0)<450) return;   /* دبا کر چھوڑنے کے فوراً بعد کا click نظرانداز */
+  const w=e.target.closest(".w");
+  if(w && out.contains(w)){ openPop(+w.dataset.n, w); e.stopPropagation(); return; }
+  const kbEl=document.getElementById("kb"), hkEl=document.getElementById("holdkb");
+  if(!pop.contains(e.target) && !(kbEl&&kbEl.contains(e.target)) && !(hkEl&&hkEl.contains(e.target))) closePop();
+});
+out.addEventListener("keydown",e=>{
+  const w=e.target.closest(".w");
+  if(w && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); openPop(+w.dataset.n,w); }
+});
+function reanalyzeKeepChoices(){
+  const keep=toks.map(t=>t.type==="w"?{bare:t.bare,custom:t.custom,idx:t.idx}:null);
+  analyze(src.value);
+  toks.forEach((t,i)=>{
+    const k=keep[i];
+    if(t.type==="w" && k && k.bare===t.bare){ t.custom=k.custom; t.idx=k.idx||0; }
+  });
+}
+
+/* ---------- input ---------- */
+const topbarEl=document.getElementById("topbar");
+function setTopH(){ try{ document.documentElement.style.setProperty("--topH",(topbarEl.offsetHeight+2)+"px"); }catch(e){} }
+window.addEventListener("resize",setTopH); setTimeout(setTopH,50);
+function grow(){ src.style.height="auto"; src.style.height=Math.max(460, src.scrollHeight+4)+"px"; }
+let deb=null;
+src.addEventListener("input",()=>{ grow(); clearTimeout(deb); deb=setTimeout(()=>{ analyze(src.value); render(); },350); });
+
+/* ---------- actions ---------- */
+const toast=document.getElementById("toast");
+let sayT=null;
+function say(m){ toast.textContent=m; toast.style.opacity=1;
+  clearTimeout(sayT); sayT=setTimeout(()=>toast.style.opacity=0, m.length>60?5000:1900); }
+function fullText(){ return toks.map(finalOf).join(""); }
+document.getElementById("btnCopy").onclick=async()=>{
+  const t=fullText(); if(!t.trim()){ say("پہلے متن ڈالیے"); return; }
+  try{ await navigator.clipboard.writeText(t); say("نقل ہو گیا ✓ Copied"); }
+  catch(e){
+    const ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta);
+    ta.select(); try{ document.execCommand("copy"); say("نقل ہو گیا"); }catch(_){ say("نقل نہ ہو سکی — متن منتخب کر کے خود نقل کیجیے"); }
+    ta.remove();
+  }
+};
+document.getElementById("btnFont").onclick=()=>{ out.classList.toggle("naskh"); src.classList.toggle("naskh"); };
+
+let DL=null;
+(async()=>{ try{ if(typeof claude!=="undefined"&&claude&&claude.use){ DL=await claude.use("downloads"); } }catch(e){ DL=null; } })();
+async function saveFile(name,data,mime){
+  if(DL){ try{ await DL.save({filename:name,data:data}); say("فائل محفوظ"); return; }catch(e){ if(e&&e.code==="user_denied"){return;} } }
+  try{
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(new Blob([data],{type:mime||"text/plain"}));
+    a.download=name; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+  }catch(e){ say("محفوظ نہ ہو سکی — نقل کر لیجیے"); }
+}
+document.getElementById("btnTxt").onclick=()=>{ const t=fullText(); if(!t.trim()){say("پہلے متن ڈالیے");return;} saveFile("aeraab.txt",t,"text/plain;charset=utf-8"); };
+document.getElementById("btnExp").onclick=()=>{ saveFile("qarina-my-dict.json",
+  JSON.stringify({name:"qarina-user-dict", dict:PDICT, speak:SPEAKDICT}, null, 1), "application/json"); };
+const impFile=document.getElementById("impFile");
+document.getElementById("btnImp").onclick=()=>impFile.click();
+impFile.onchange=()=>{ const f=impFile.files[0]; if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{ try{ const j=JSON.parse(r.result); let n=0;
+      const d = j.dict || j;   /* پرانا سادہ format بھی چلے */
+      for(const k in d){ if(typeof d[k]==="string"){ PDICT[k]=d[k]; n++; } }
+      if(j.speak){ for(const k in j.speak){ if(typeof j.speak[k]==="string"){ SPEAKDICT[k]=j.speak[k]; n++; } } saveSpeak(); }
+      savePD(); analyze(src.value); render(); say(n+" اندراج لغت میں شامل");
+    }catch(e){ say("فائل پڑھی نہ جا سکی"); } };
+  r.readAsText(f); impFile.value="";
+};
+
+/* ---------- on-screen keyboard ---------- */
+const kb=document.getElementById("kb"), kbRows=document.getElementById("kbRows");
+/* پورا اردو تختہ ایک ہی نظر میں — shift کی ضرورت نہیں */
+const URFULL=[["ق","و","ع","ر","ت","ے","ی","ئ","ہ","پ"],
+              ["ا","س","د","ف","گ","ح","ج","ک","ل","ں"],
+              ["ز","ش","چ","ط","ب","ن","م","ھ","ۂ","ء"],
+              ["آ","ض","ص","ث","ظ","غ","خ","ٹ","ڈ","ڑ"],
+              ["ذ","ژ","أ","ؤ","ۃ","۔","،","؟","!","٭"],
+              ["«","»","(",")","'","\"","ـ","؎"]];
+const EN1=[["q","w","e","r","t","y","u","i","o","p"],
+           ["a","s","d","f","g","h","j","k","l"],
+           ["z","x","c","v","b","n","m",".",","]];
+let kbLayer="ur", kbShift=false, kbT=src;
+document.addEventListener("focusin",e=>{ if(e.target===src||e.target.id==="popIn"||e.target.id==="popSpeak"||e.target.id==="dictTa"||e.target.id==="plexTa"||e.target.id==="plexTest") kbT=e.target; });
+function kbLive(){ return (kbT&&document.contains(kbT))?kbT:src; }
+function kbIns(s){ const el=kbLive(); const st=el.selectionStart??el.value.length, en=el.selectionEnd??st;
+  el.value=el.value.slice(0,st)+s+el.value.slice(en); const p=st+s.length;
+  el.focus(); el.setSelectionRange(p,p); el.dispatchEvent(new Event("input",{bubbles:true})); }
+function kbDel(){ const el=kbLive(); let st=el.selectionStart??el.value.length, en=el.selectionEnd??st;
+  if(st===en&&st>0) st--;
+  el.value=el.value.slice(0,st)+el.value.slice(en);
+  el.focus(); el.setSelectionRange(st,st); el.dispatchEvent(new Event("input",{bubbles:true})); }
+function renderKb(){
+  const rows=[];
+  if(kbLayer==="ur"){
+    rows.push(MKDEF.map(m=>({l:"◌"+m[0], c:"key mkk", t:m[1], f:()=>kbIns(m[0])})));
+    URFULL.forEach(r=>rows.push(r.map(ch=>({l:ch, c:"key", f:()=>kbIns(ch)}))));
+  } else {
+    EN1.forEach(r=>rows.push(r.map(ch=>({l:kbShift?ch.toUpperCase():ch, c:"key lat", f:()=>kbIns(kbShift?ch.toUpperCase():ch)}))));
+  }
+  rows.push([
+    {l:"⌫", c:"key wide", f:kbDel},
+    {l:"خالی جگہ", c:"key sp", f:()=>kbIns(" ")},
+    {l:"⏎ نئی سطر", c:"key wide", f:()=>kbIns("\n")}
+  ]);
+  kbRows.innerHTML=rows.map(r=>'<div class="krow">'+r.map(k=>'<button class="'+k.c+'"'+(k.t?' title="'+k.t+'"':'')+'>'+esc(k.l)+'</button>').join("")+'</div>').join("");
+  const flat=rows.flat();
+  [...kbRows.querySelectorAll("button")].forEach((b,i)=>{
+    b.onmousedown=e=>e.preventDefault();
+    b.onclick=e=>{ e.stopPropagation(); flat[i].f(); };
+  });
+  document.getElementById("kbLang").textContent = kbLayer==="ur" ? "English" : "اردو";
+  const shiftBtn=document.getElementById("kbShift");
+  shiftBtn.style.display = kbLayer==="ur" ? "none" : "inline-block";
+  shiftBtn.textContent = kbShift ? "⇧ small" : "⇧ CAPS";
+}
+document.getElementById("kbLang").onmousedown=e=>e.preventDefault();
+document.getElementById("kbLang").onclick=()=>{ kbLayer=kbLayer==="ur"?"en":"ur"; kbShift=false; renderKb(); };
+document.getElementById("kbShift").onmousedown=e=>e.preventDefault();
+document.getElementById("kbShift").onclick=()=>{ kbShift=!kbShift; renderKb(); };
+document.getElementById("kbClose").onclick=()=>setKb(false);
+function setKb(open){
+  kb.classList.toggle("open",open); document.body.classList.toggle("kb-open",open);
+  try{ localStorage.setItem("qarina-kb", open?"1":"0"); }catch(e){}
+}
+document.getElementById("btnKb").onclick=()=>setKb(!kb.classList.contains("open"));
+renderKb();
+try{ if(localStorage.getItem("qarina-kb")==="1") setKb(true); }catch(e){}
+
+/* ---------- آواز: پڑھ کر سنانا ---------- */
+const selVoice=document.getElementById("selVoice"), selRate=document.getElementById("selRate");
+let VOICES=[];
+/* قرینہ کی اپنی آواز (espeak-ng WASM) — qarina-tts فولڈر صفحے کے برابر ہو تو خود جُڑ جاتی ہے */
+let QTTS=null;
+(async()=>{ try{
+  const m=await import('./qarina-tts/qarina-tts.js');
+  if(await m.ready()){ QTTS=m; loadVoices(); }
+}catch(e){} })();
+const vShort=n=>n.replace(/Microsoft |Google |Online \(Natural\)| - .*$|Desktop/g,"").trim();
+function loadVoices(){
+  try{ VOICES=speechSynthesis.getVoices()||[]; }catch(e){ VOICES=[]; }
+  /* فہرست صاف: صرف اردو (مرد/عورت) + English — باقی زبانیں فہرست سے باہر
+     (اندرونی fallback اب بھی بہترین آواز خود ڈھونڈتا ہے) */
+  const ur=VOICES.filter(v=>/^ur/i.test(v.lang));
+  const en=VOICES.filter(v=>/^en/i.test(v.lang)).slice(0,4);
+  const gender=n=>/uzma|zira|aria|jenny|sonia|libby|female|salma|hoda/i.test(n)?" — عورت (female)":(/asad|david|mark|guy|ryan|male/i.test(n)?" — مرد (male)":"");
+  let o=(QTTS?'<option value="__qarina__">اردو — اپنی آواز (قرینہ، built-in)</option>':'')
+       +'<option value="__auto__">اردو — خودکار (بہترین دستیاب)</option>';
+  ur.forEach(v=>o+='<option value="'+esc(v.name)+'">اردو — '+esc(vShort(v.name))+gender(v.name)+'</option>');
+  en.forEach(v=>o+='<option value="'+esc(v.name)+'">English — '+esc(vShort(v.name))+'</option>');
+  selVoice.innerHTML=o;
+  let set=false;
+  try{ const saved=localStorage.getItem("qarina-voice");
+    if(saved && [...selVoice.options].some(x=>x.value===saved)){ selVoice.value=saved; set=true; } }catch(e){}
+  if(!set){ selVoice.value = QTTS ? "__qarina__" : (ur.length ? ur[0].name : "__auto__"); }
+}
+if("speechSynthesis" in window){
+  loadVoices();
+  speechSynthesis.onvoiceschanged=loadVoices;
+}else{
+  document.getElementById("btnSpkOut").style.display="none";
+  document.getElementById("btnSpkSrc").style.display="none";
+  selVoice.style.display="none"; selRate.style.display="none";
+}
+selVoice.onchange=()=>{ try{ localStorage.setItem("qarina-voice", selVoice.value); }catch(e){} };
+let toldNoUr=false;
+function pickVoice(){
+  if(selVoice.value!=="__auto__"){
+    const v=VOICES.find(x=>x.name===selVoice.value); if(v) return v;
+  }
+  return VOICES.find(x=>/^ur/i.test(x.lang)) || VOICES.find(x=>/^ar/i.test(x.lang))
+      || VOICES.find(x=>/^hi/i.test(x.lang)) || VOICES[0] || null;
+}
+let spkAlive=null, spkStarted=false;
+function spkCleanup(){ if(spkAlive){ clearInterval(spkAlive); spkAlive=null; } }
+let toldQ=false;
+/* speak(): پہلے بول چال کی لغت لگتی ہے (خود←خُد)، پھر آواز۔ speakRaw(): جوں کا توں بولے (جانچ کے لیے)۔ */
+function speak(text){ return speakRaw(speakText(text||"")); }
+function speakRaw(text){
+  /* پہلی ترجیح: اپنی آواز — server والی کاپی پر ہمیشہ موجود، کسی browser یا OS کی محتاج نہیں */
+  if(selVoice.value==="__qarina__" && QTTS){
+    if(QTTS.isSpeaking()){ QTTS.stop(); return; }
+    text=(text||"").trim(); if(!text){ say("پہلے متن ڈالیے یا حصہ منتخب کیجیے / paste or select text first"); return; }
+    if(!toldQ){ toldQ=true; say("قرینہ کی اپنی آواز — آپ کے اپنے server سے، بغیر کسی API کے"); }
+    const wpm={"0.75":118,"0.95":145,"1.15":172}[selRate.value]||145;
+    QTTS.speak(text,{wpm},{}); return;
+  }
+  if(!("speechSynthesis" in window)){ say("اس browser میں آواز کا نظام ہی نہیں / No speech engine in this browser"); return; }
+  if(speechSynthesis.speaking||speechSynthesis.pending){ try{speechSynthesis.cancel();}catch(e){} spkCleanup(); return; }
+  text=(text||"").trim(); if(!text){ say("پہلے متن ڈالیے یا حصہ منتخب کیجیے / paste or select text first"); return; }
+  if(!VOICES.length) loadVoices();
+  const v=pickVoice();
+  if(!toldNoUr && v && !/^ur/i.test(v.lang)){ toldNoUr=true;
+    say("اردو آواز نہیں ملی — "+vShort(v.name)+" سے سنا رہا ہوں۔ اصل اردو: Edge browser (Uzma مفت) یا Windows اردو speech pack"); }
+  try{ speechSynthesis.cancel(); }catch(e){}
+  /* لمبے متن کو ٹکڑوں میں توڑیے — ورنہ browser بیچ میں رک جاتا ہے */
+  const parts=[]; let buf="";
+  text.split(/(?<=[۔؟!\n])/).forEach(s=>{
+    if((buf+s).length>170){ if(buf.trim())parts.push(buf); buf=s; } else buf+=s;
+  }); if(buf.trim())parts.push(buf);
+  spkStarted=false;
+  parts.forEach((p,i)=>{
+    const u=new SpeechSynthesisUtterance(p);
+    if(v) u.voice=v;
+    u.lang=v?v.lang:"ur-PK";
+    u.rate=parseFloat(selRate.value)||0.95;
+    u.onstart=()=>{ spkStarted=true; };
+    if(i===parts.length-1){ u.onend=spkCleanup; u.onerror=spkCleanup; }
+    speechSynthesis.speak(u);
+  });
+  /* Chrome کا مشہور مسئلہ: لمبی آواز بیچ میں pause ہو جاتی ہے — ہر 3 سیکنڈ جگاتے رہیے */
+  spkCleanup(); spkAlive=setInterval(()=>{ try{ speechSynthesis.resume(); }catch(e){} },3000);
+  /* خود تشخیص: 2 سیکنڈ میں آواز شروع نہ ہو تو وجہ بتائیے */
+  setTimeout(()=>{
+    if(!spkStarted){
+      spkCleanup(); try{speechSynthesis.cancel();}catch(e){}
+      say("آواز یہاں رکی ہوئی ہے — فولڈر والی qarina فائل کھول کر آزمائیے، یا Edge browser میں / Speech seems blocked on this page — open the file from your folder, or try Edge");
+    }
+  },2000);
+}
+function outSelection(){
+  try{ const s=window.getSelection();
+    if(s && !s.isCollapsed && out.contains(s.anchorNode)) return s.toString(); }catch(e){}
+  return "";
+}
+document.getElementById("btnSpkOut").onclick=()=>speak(outSelection()||fullText());
+document.getElementById("btnSpkSrc").onmousedown=e=>e.preventDefault();
+document.getElementById("btnSpkSrc").onclick=()=>{
+  const st=src.selectionStart, en=src.selectionEnd;
+  speak(st!==en ? src.value.slice(st,en) : src.value);
+};
+
+/* ---------- مائیک: popup میں لکھوائیے، پھر جہاں چاہیں جوڑیے ---------- */
+const btnMic=document.getElementById("btnMic");
+const dict=document.getElementById("dict"), dictTa=document.getElementById("dictTa"),
+      dictMic=document.getElementById("dictMic"), dictSpk=document.getElementById("dictSpk"),
+      dictStat=document.getElementById("dictStat"), dictWhere=document.getElementById("dictWhere"),
+      dictAdd=document.getElementById("dictAdd"), dictCancel=document.getElementById("dictCancel");
+const SRCls=window.SpeechRecognition||window.webkitSpeechRecognition;
+let micOn=false, rec=null;
+function dictInsert(s){
+  const st=dictTa.selectionStart??dictTa.value.length, en=dictTa.selectionEnd??st;
+  const before=dictTa.value.slice(0,st);
+  const pad=(before && !/[\s\n]$/.test(before)) ? " " : "";
+  dictTa.value=before+pad+s+dictTa.value.slice(en);
+  const p=st+pad.length+s.length;
+  dictTa.setSelectionRange(p,p);
+}
+function micUi(){
+  dictMic.classList.toggle("rec",micOn);
+  dictMic.innerHTML = micOn ? '⏹ رکیے<span class="en">Stop</span>' : '🎙 شروع کیجیے<span class="en">Start</span>';
+  if(!micOn) dictStat.textContent="";
+}
+function micStart(){
+  if(!rec) return;
+  try{ rec.start(); micOn=true; dictStat.textContent="سن رہا ہوں…"; }catch(e){}
+  micUi();
+}
+function micStop(){ micOn=false; try{ rec&&rec.stop(); }catch(e){} micUi(); }
+function fillWhere(){
+  const lines=src.value.split("\n");
+  let o='<option value="end">سب سے آخر میں (at the end)</option><option value="-1">سب سے شروع میں (at the top)</option>';
+  lines.forEach((L,i)=>{
+    const p=L.trim();
+    o+='<option value="'+i+'">سطر '+(i+1)+' کے بعد (after line '+(i+1)+') — '+(p?esc(p.slice(0,26))+(p.length>26?"…":""):"(خالی سطر)")+'</option>';
+  });
+  dictWhere.innerHTML=o; dictWhere.value="end";
+}
+function dictOpen(){
+  fillWhere();
+  dict.classList.add("open");
+  dictTa.focus();
+  if(rec) micStart();
+}
+function dictClose(){ try{ micStop(); }catch(e){} dict.classList.remove("open"); }
+if(!SRCls){
+  btnMic.disabled=true;
+  btnMic.title="یہ browser بول کر لکھوانا نہیں جانتا — Chrome یا Edge استعمال کیجیے";
+}else{
+  rec=new SRCls();
+  rec.lang="ur-PK"; rec.continuous=true; rec.interimResults=true;
+  rec.onresult=e=>{
+    let interim="";
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      const r=e.results[i];
+      if(r.isFinal){ const t=(r[0]&&r[0].transcript||"").trim(); if(t) dictInsert(t); }
+      else interim+=r[0]&&r[0].transcript||"";
+    }
+    if(micOn) dictStat.textContent="سن رہا ہوں… "+interim.slice(-28);
+  };
+  rec.onerror=e=>{
+    if(e.error==="not-allowed"||e.error==="service-not-allowed"){
+      micOn=false; micUi();
+      dictStat.textContent="مائیک کی اجازت نہیں ملی";
+      say("مائیک کی اجازت نہیں ملی — Chrome/Edge میں، اور اپنے server یا فولڈر والی کاپی پر یہ پورا چلتا ہے");
+    }
+  };
+  rec.onend=()=>{ if(micOn){ try{ rec.start(); }catch(e){} } };
+}
+btnMic.onclick=dictOpen;
+dictMic.onclick=()=>{ micOn ? micStop() : micStart(); };
+dictSpk.onmousedown=e=>e.preventDefault();
+dictSpk.onclick=()=>{
+  const st=dictTa.selectionStart, en=dictTa.selectionEnd;
+  speak(st!==en ? dictTa.value.slice(st,en) : dictTa.value);
+};
+dictAdd.onclick=()=>{
+  const t=dictTa.value.replace(/\s+$/,"");
+  if(!t){ say("ابھی کچھ لکھوایا نہیں"); return; }
+  const w=dictWhere.value;
+  let lines=src.value.length ? src.value.split("\n") : [];
+  let msg;
+  if(!lines.length){ lines=[t]; msg="متن شروع ہو گیا"; }
+  else if(w==="end"){ lines.push(t); msg="سب سے آخر میں جڑ گیا"; }
+  else if(w==="-1"){ lines.unshift(t); msg="سب سے شروع میں جڑ گیا"; }
+  else { const i=Math.min(parseInt(w,10), lines.length-1); lines.splice(i+1,0,t); msg="سطر "+(i+1)+" کے بعد جڑ گیا"; }
+  src.value=lines.join("\n");
+  src.dispatchEvent(new Event("input",{bubbles:true}));
+  dictTa.value="";
+  dictClose(); say(msg);
+};
+/* بند کرنا ہمیشہ فوراً — لکھا ہوا محفوظ رہتا ہے، اگلی بار وہیں ملے گا */
+dictCancel.onclick=dictClose;
+document.getElementById("dictX").onclick=dictClose;
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && dict.classList.contains("open")) dictClose(); });
+
+/* ---------- دبا کر لکھنے والا تختہ (hold-to-type — موبائل طرز) ----------
+   نیا: کسی بھی لفظ پر long-press (دبائے رکھیں) تو تختہ وہیں کھل جاتا ہے؛
+   ABC خانے پر چھوڑنے سے English تختہ، «اردو» پر چھوڑنے سے واپس۔ */
+const holdkb=document.createElement("div"); holdkb.id="holdkb"; document.body.appendChild(holdkb);
+const HOLD_EN=[["1","2","3","4","5","6","7","8","9","0"],
+               ["q","w","e","r","t","y","u","i","o","p"],
+               ["a","s","d","f","g","h","j","k","l","'"],
+               ["z","x","c","v","b","n","m",".",",","-"],
+               ["A","B","C","D","E","F","G","H","I","J"],
+               ["K","L","M","N","O","P","Q","R","S","T"],
+               ["U","V","W","X","Y","Z","?","!","(",")"]];
+let holdMode="ur";
+function buildHold(){
+  let h="";
+  if(holdMode==="ur"){
+    h+='<div class="hkrow">'+MKDEF.map(m=>'<span class="hk mk" data-ch="'+m[0]+'" title="'+m[1]+'">◌'+m[0]+'</span>').join("")+'</div>';
+    URFULL.forEach(r=>{ h+='<div class="hkrow">'+r.map(ch=>'<span class="hk" data-ch="'+esc(ch)+'">'+esc(ch)+'</span>').join("")+'</div>'; });
+    h+='<div class="hkrow"><span class="hk wide" data-act="mode">ABC</span><span class="hk wide" data-act="sp">فاصلہ</span><span class="hk wide" data-act="del">⌫ مٹائیے</span></div>';
+  } else {
+    HOLD_EN.forEach(r=>{ h+='<div class="hkrow">'+r.map(ch=>'<span class="hk lat" data-ch="'+esc(ch)+'">'+esc(ch)+'</span>').join("")+'</div>'; });
+    h+='<div class="hkrow"><span class="hk wide" data-act="mode">اردو</span><span class="hk wide" data-act="sp">space</span><span class="hk wide" data-act="del">⌫</span></div>';
+  }
+  holdkb.innerHTML=h;
+}
+buildHold();
+let holding=false, hotEl=null, lastPX=0, lastPY=0;
+function setHot(el){ if(hotEl===el) return; if(hotEl) hotEl.classList.remove("hot"); hotEl=el; if(hotEl) hotEl.classList.add("hot"); }
+function startHold(e){
+  if(e.preventDefault) e.preventDefault();
+  holding=true; setHot(null);
+  holdkb.style.display="block";
+  const r=holdkb.getBoundingClientRect();
+  let left=Math.max(8, Math.min(e.clientX-r.width/2, innerWidth-r.width-8));
+  let top=e.clientY-r.height-20; if(top<8) top=Math.min(e.clientY+26, innerHeight-r.height-8);
+  holdkb.style.left=left+"px"; holdkb.style.top=top+"px";
+}
+/* لفظ یا متن پر long-press */
+let lpTimer=null, lpStart=null, srcAnchor=null;
+function lpCancel(){ if(lpTimer){ clearTimeout(lpTimer); lpTimer=null; } lpStart=null; }
+out.addEventListener("pointerdown",e=>{
+  const w=e.target.closest(".w"); if(!w) return;
+  lastPX=e.clientX; lastPY=e.clientY; lpStart={x:e.clientX,y:e.clientY};
+  lpTimer=setTimeout(()=>{
+    lpTimer=null;
+    openPop(+w.dataset.n, w);
+    const inp=pop.querySelector("#popIn");
+    if(inp){ inp.focus(); kbT=inp; }
+    startHold({clientX:lastPX, clientY:lastPY});
+  },450);
+});
+src.addEventListener("pointerdown",e=>{
+  lastPX=e.clientX; lastPY=e.clientY; lpStart={x:e.clientX,y:e.clientY};
+  lpTimer=setTimeout(()=>{
+    lpTimer=null;
+    const a=src.selectionStart??src.value.length;
+    try{ src.setSelectionRange(a,a); }catch(err){}
+    srcAnchor=a; kbT=src;
+    startHold({clientX:lastPX, clientY:lastPY});
+  },500);
+});
+document.addEventListener("pointermove",e=>{
+  lastPX=e.clientX; lastPY=e.clientY;
+  if(lpStart && (Math.abs(e.clientX-lpStart.x)>10 || Math.abs(e.clientY-lpStart.y)>10)) lpCancel();
+  if(!holding) return;
+  /* دائیں panel میں hold کے دوران selection نہ گھسٹے */
+  if(kbT===src && srcAnchor!=null){ try{ src.setSelectionRange(srcAnchor,srcAnchor); }catch(err){} }
+  const el=document.elementFromPoint(e.clientX,e.clientY);
+  setHot(el && el.classList && el.classList.contains("hk") ? el : null);
+});
+document.addEventListener("pointerup",()=>{
+  lpCancel(); srcAnchor=null;
+  if(!holding) return;
+  holding=false; holdkb.style.display="none";
+  window.__justHeld=Date.now();
+  if(hotEl){
+    const a=hotEl.dataset.act, ch=hotEl.dataset.ch;
+    if(a==="del") kbDel();
+    else if(a==="sp") kbIns(" ");
+    else if(a==="mode"){ holdMode = holdMode==="ur" ? "en" : "ur"; buildHold();
+      say(holdMode==="en" ? "English تختہ — اب دبا کر لکھیے" : "اردو تختہ واپس"); }
+    else if(ch) kbIns(ch);
+  }
+  setHot(null);
+});
+document.getElementById("padSrc").addEventListener("pointerdown",e=>{ src.focus(); kbT=src; startHold(e); });
+
+/* ---------- تلفظ کی لغت کا دفتر (لکھ کر سکھائیے، تھوک میں) ---------- */
+const plex=document.getElementById("plex"), plexTa=document.getElementById("plexTa"),
+      plexTest=document.getElementById("plexTest");
+function plexOpen(){
+  plexTa.value=Object.keys(SPEAKDICT).map(k=>k+" = "+SPEAKDICT[k]).join("\n");
+  plex.classList.add("open"); plexTa.focus();
+}
+function plexClose(){ plex.classList.remove("open"); }
+document.getElementById("btnPlex").onclick=plexOpen;
+document.getElementById("plexX").onclick=plexClose;
+document.getElementById("plexClose").onclick=plexClose;
+document.getElementById("plexSave").onclick=()=>{
+  const obj={}; let bad=0;
+  plexTa.value.split("\n").forEach(line=>{
+    const L=line.trim(); if(!L || L.startsWith("#")) return;
+    const m=L.match(/^(.+?)\s*[=:←→]\s*(.+)$/);
+    if(!m){ bad++; return; }
+    const k=bare(m[1].trim()), v=m[2].trim();
+    if(k && v) obj[k]=v;
+  });
+  SPEAKDICT=obj; saveSpeak();
+  say(Object.keys(obj).length+" تلفظ محفوظ"+(bad?(" — "+bad+" سطریں سمجھ نہ آئیں"):""));
+  plexClose();
+};
+document.getElementById("plexHear").onmousedown=e=>e.preventDefault();
+document.getElementById("plexHear").onclick=()=>{ const v=plexTest.value.trim(); if(v) speakRaw(v); else say("پہلے کچھ لکھیے"); };
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && plex.classList.contains("open")) plexClose(); });
+
+render();
+</script>

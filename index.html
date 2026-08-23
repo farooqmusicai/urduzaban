@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اردو زبان — Urdu Zaban | لکھیے، بولیے، سنیے، سیکھیے</title>
+<meta name="description" content="اردو زبان — اپنی زبان کا اپنا گھر: خودکار اعراب (قرینہ)، رومن ⇄ اردو، اپنی اردو آوازیں، لغت، کتابیں اور سیکھنے کے اوزار — سب مفت، سب آپ کے اپنے browser میں۔ UrduZaban: the Urdu language's own home — aeraab, Roman⇄Urdu, self-owned voices, dictionary and learning tools. Free, private, offline-first.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.urduzaban.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%2314110c'/%3E%3Ctext%20x='32'%20y='46'%20font-size='40'%20text-anchor='middle'%20fill='%23d9a441'%20font-family='serif'%3E%D8%A7%D9%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UrduZaban — اردو زبان">
+<meta property="og:url" content="https://www.urduzaban.com/">
+<meta property="og:title" content="اردو زبان — اپنی زبان کا اپنا گھر">
+<meta property="og:description" content="لکھیے، بولیے، سنیے، سیکھیے — اعراب، رومن⇄اردو، اپنی آوازیں، لغت، کتابیں۔ نہ کوئی API، نہ subscription — سب آپ کے اپنے browser میں۔">
+<meta property="og:locale" content="ur_PK">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap">
+<style>
+/* اپنے فونٹ پہلے — offline-first؛ Google صرف پشت پناہ */
+@font-face{font-family:"UZ Nastaliq"; src:url("fonts/noto-nastaliq-urdu-400.woff2") format("woff2"); font-weight:400 700; font-display:swap;}
+@font-face{font-family:"UZ Naskh"; src:url("fonts/noto-naskh-arabic-400.woff2") format("woff2"); font-weight:400; font-display:swap;}
+@font-face{font-family:"UZ Naskh"; src:url("fonts/noto-naskh-arabic-700.woff2") format("woff2"); font-weight:600 800; font-display:swap;}
+
+:root{
+  --paper:#faf6ed; --card:#fffdf8; --card2:#f4eddc; --ink:#251f14; --muted:#7c7060; --line:#e6ddc9;
+  --accent:#a8731d; --accent-hi:#d9a441; --accent-ink:#fff8ec; --accent-soft:rgba(168,115,29,.08);
+  --ok:#2e7d4f; --ok-soft:rgba(46,125,79,.10); --soon:#8a7c50;
+  --shadow:0 1px 2px rgba(60,45,20,.06), 0 12px 36px rgba(60,45,20,.09);
+  --nastaliq:"UZ Nastaliq","Noto Nastaliq Urdu",serif;
+  --naskh:"UZ Naskh","Noto Naskh Arabic",serif;
+  --latin:Georgia,"Times New Roman",serif;
+  --latin-ui:"Segoe UI",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#14110c; --card:#1e1912; --card2:#181410; --ink:#f0e8d8; --muted:#a89a82; --line:#382f21;
+    --accent:#d9a441; --accent-hi:#f0c46a; --accent-ink:#241b0a; --accent-soft:rgba(217,164,65,.10);
+    --ok:#6fbe8c; --ok-soft:rgba(111,190,140,.12); --soon:#b3a375;
+    --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 36px rgba(0,0,0,.42);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#14110c; --card:#1e1912; --card2:#181410; --ink:#f0e8d8; --muted:#a89a82; --line:#382f21;
+  --accent:#d9a441; --accent-hi:#f0c46a; --accent-ink:#241b0a; --accent-soft:rgba(217,164,65,.10);
+  --ok:#6fbe8c; --ok-soft:rgba(111,190,140,.12); --soon:#b3a375;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 36px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--naskh); line-height:2.05; font-size:16.5px;}
+
+/* ---------- زبان کا نظام: default اردو؛ body.en-mode میں English ---------- */
+.L-en{display:none !important;}
+body.en-mode .L-ur{display:none !important;}
+body.en-mode .L-en{display:revert !important;}
+body.en-mode{font-family:var(--latin-ui); line-height:1.68; font-size:16px;}
+body.en-mode h1,body.en-mode h2,body.en-mode h3{font-family:var(--latin); letter-spacing:.2px;}
+.always-ur{font-family:var(--nastaliq) !important; direction:rtl; unicode-bidi:isolate;}
+
+/* ---------- nav ---------- */
+nav{position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+nav .in{max-width:1100px; margin:0 auto; padding:8px 20px; display:flex; align-items:center; gap:16px;}
+.brand{font-family:var(--nastaliq); font-weight:700; font-size:19px; line-height:2; text-decoration:none; color:var(--ink); white-space:nowrap;}
+.brand small{color:var(--accent); font-family:var(--latin-ui); font-size:10.5px; letter-spacing:1.2px; margin:0 6px;}
+.navlinks{display:flex; gap:4px 16px; flex-wrap:wrap; margin:0 auto; font-size:14.5px;}
+.navlinks a{color:var(--muted); text-decoration:none; padding:2px 4px;}
+.navlinks a:hover{color:var(--accent);}
+.langbtn{border:1.5px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer;
+  border-radius:999px; padding:4px 16px; font-size:14px; font-weight:700; font-family:var(--latin-ui); white-space:nowrap;}
+.langbtn:hover{background:var(--accent-soft);}
+@media(max-width:720px){ .navlinks{display:none} }
+
+/* ---------- hero ---------- */
+.hero{position:relative; max-width:1100px; margin:0 auto; padding:56px 20px 44px; text-align:center; overflow:hidden;}
+.mark{position:absolute; font-family:var(--naskh); color:var(--accent); opacity:.15;
+  line-height:1; pointer-events:none; user-select:none; animation:float 10s ease-in-out infinite;}
+.m1{top:26px; right:7%; font-size:76px;}
+.m2{top:130px; left:9%; font-size:54px; animation-delay:-3s;}
+.m3{bottom:150px; right:15%; font-size:46px; animation-delay:-5s;}
+.m4{bottom:80px; left:18%; font-size:64px; animation-delay:-7s;}
+.m5{top:60px; left:38%; font-size:40px; animation-delay:-2s; opacity:.10;}
+.m6{bottom:40px; right:36%; font-size:52px; animation-delay:-8s; opacity:.12;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+@media (prefers-reduced-motion: reduce){ .mark{animation:none} }
+h1.word{font-family:var(--nastaliq); font-weight:700; margin:0;
+  font-size:clamp(64px, 12vw, 128px); line-height:1.72;
+  background:linear-gradient(100deg, #7a5210 5%, var(--accent) 25%, var(--accent-hi) 48%, #e9cd85 60%, var(--accent) 88%);
+  -webkit-background-clip:text; background-clip:text; color:transparent; text-wrap:balance;}
+.tagline{font-family:var(--nastaliq); font-size:clamp(20px, 3.4vw, 30px); line-height:2.35; margin:4px 0 0;}
+body.en-mode .tagline{font-family:var(--latin); line-height:1.5; font-size:clamp(19px,3vw,27px); margin-top:14px;}
+.hero .sub{color:var(--muted); font-size:15px; margin:8px 0 0;}
+.ctas{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
+.btn{display:inline-block; text-decoration:none; border-radius:999px; padding:12px 30px;
+  font-size:17.5px; font-weight:700; line-height:1.9;}
+.btn.primary{background:var(--accent); color:var(--accent-ink); box-shadow:var(--shadow);}
+.btn.primary:hover{background:var(--accent-hi);}
+.btn.ghost{border:1.6px solid var(--accent); color:var(--accent);}
+.btn.ghost:hover{background:var(--accent-soft);}
+
+/* ---------- زندہ گنتی ---------- */
+.stats{max-width:900px; margin:34px auto 0; display:grid; grid-template-columns:repeat(4,1fr); gap:10px; text-align:center;}
+.stat{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px 8px 8px; box-shadow:var(--shadow);}
+.stat .big{font-size:22px; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums; line-height:1.6;}
+.stat .lbl{font-size:12.5px; color:var(--muted); line-height:1.7;}
+@media(max-width:640px){ .stats{grid-template-columns:repeat(2,1fr)} }
+
+/* ---------- اصولوں کی پٹی ---------- */
+.principles{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--accent-soft); margin-top:44px;}
+.principles .in{max-width:1100px; margin:0 auto; padding:13px 20px; display:flex; gap:8px 32px;
+  justify-content:center; flex-wrap:wrap; font-size:15px; color:var(--muted);}
+.principles b{color:var(--ink);}
+.principles a{color:var(--accent); text-decoration:none; font-weight:700;}
+
+/* ---------- sections عام ---------- */
+section.blk{max-width:1100px; margin:0 auto; padding:52px 20px 8px;}
+h2.sec{font-family:var(--nastaliq); font-size:clamp(28px,4.5vw,36px); font-weight:700; text-align:center; margin:0 0 2px; line-height:2; text-wrap:balance;}
+p.secsub{text-align:center; color:var(--muted); margin:0 0 28px; font-size:15.5px;}
+
+/* ---------- کمرے ---------- */
+.grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;}
+.room{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 20px 16px;
+  box-shadow:var(--shadow); position:relative; display:block; text-decoration:none; color:var(--ink);
+  transition:transform .18s ease, border-color .18s ease;}
+a.room:hover{transform:translateY(-4px); border-color:var(--accent);}
+@media (prefers-reduced-motion: reduce){ .room{transition:none} a.room:hover{transform:none} }
+.room .top{display:flex; align-items:baseline; gap:11px;}
+.room .ic{font-size:24px;}
+.room .nm{font-family:var(--nastaliq); font-size:23px; font-weight:700; line-height:2;}
+body.en-mode .room .nm{font-family:var(--latin); font-size:20px;}
+.room p{margin:7px 0 0; font-size:14.8px; color:var(--muted); line-height:1.95;}
+.chip{position:absolute; top:15px; font-size:12px; font-weight:700; padding:2px 12px; border-radius:999px; border:1.4px solid;}
+html[dir="rtl"] .chip{left:15px;} html[dir="ltr"] .chip{right:15px;}
+.chip.ok{color:var(--ok); border-color:var(--ok); background:var(--ok-soft);}
+.chip.soon{color:var(--soon); border-color:var(--soon); opacity:.9;}
+
+/* ---------- منشور ---------- */
+.mgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:12px;}
+.m-item{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 16px;
+  display:flex; gap:14px; align-items:flex-start; box-shadow:var(--shadow);}
+.m-item .num{font-family:var(--latin); font-size:21px; font-weight:700; color:var(--accent);
+  min-width:30px; text-align:center; line-height:1.9; font-variant-numeric:tabular-nums;}
+.m-item .tx{font-size:15.3px; line-height:2;}
+.m-item .tx b{display:block;}
+.m-item .tx span.d{color:var(--muted); font-size:13.8px;}
+
+/* ---------- کہانی ---------- */
+.story{max-width:760px; margin:0 auto; position:relative; padding:6px 0 0;}
+.st{display:flex; gap:18px; margin-bottom:6px; align-items:flex-start;}
+.st .dot{min-width:44px; height:44px; border-radius:50%; background:var(--card); border:2px solid var(--accent);
+  display:flex; align-items:center; justify-content:center; font-size:19px; margin-top:8px; box-shadow:var(--shadow);}
+.st .tx{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px 18px; flex:1; box-shadow:var(--shadow);}
+.st .tx b{font-family:var(--nastaliq); font-size:18.5px; line-height:2.1; color:var(--accent);}
+body.en-mode .st .tx b{font-family:var(--latin); font-size:17px;}
+.st .tx p{margin:2px 0 0; font-size:14.8px; color:var(--muted); line-height:1.95;}
+.stline{width:2px; background:var(--line); margin:0 21px; height:18px;}
+
+/* ---------- founder / رابطہ / footer ---------- */
+.founder{max-width:780px; margin:26px auto 0; padding:0 20px; text-align:center; color:var(--muted); font-size:15.5px;}
+.founder b{color:var(--ink);}
+.founder a{color:var(--accent); text-decoration:none; font-weight:700;}
+.founder a:hover{text-decoration:underline;}
+.crow{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:4px;}
+.cbtn{display:inline-flex; align-items:center; gap:9px; text-decoration:none; color:var(--ink);
+  background:var(--card); border:1.4px solid var(--line); border-radius:999px; padding:9px 20px;
+  font-size:15px; box-shadow:var(--shadow);}
+.cbtn:hover{border-color:var(--accent); color:var(--accent);}
+.cbtn .ic{font-size:17px;}
+.cbtn small{font-family:var(--latin-ui); direction:ltr; unicode-bidi:isolate; color:var(--muted); font-size:12.5px;}
+.cbtn.wa{background:#25D366; border-color:#25D366; color:#fff; font-weight:700;}
+.cbtn.wa:hover{background:#1DA851; border-color:#1DA851; color:#fff;}
+footer{margin-top:56px; border-top:2px solid var(--accent); background:var(--card);}
+footer .in{max-width:1100px; margin:0 auto; padding:20px; display:flex; justify-content:space-between;
+  gap:12px; flex-wrap:wrap; color:var(--muted); font-size:14px;}
+footer a{color:var(--accent); text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+a:focus-visible,.btn:focus-visible,.langbtn:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+/* ظاہر ہونے کی حرکت */
+.rv{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+.rv.on{opacity:1; transform:none;}
+@media (prefers-reduced-motion: reduce){ .rv{opacity:1; transform:none; transition:none} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="in">
+    <a class="brand always-ur" href="#top">اردو زبان<small>URDUZABAN.COM</small></a>
+    <div class="navlinks">
+      <a href="#rooms"><span class="L-ur">کمرے</span><span class="L-en">Rooms</span></a>
+      <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a>
+      <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
+      <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a>
+      <a href="#manshoor"><span class="L-ur">منشور</span><span class="L-en">Charter</span></a>
+      <a href="#kahani"><span class="L-ur">کہانی</span><span class="L-en">Story</span></a>
+      <a href="#contact"><span class="L-ur">رابطہ</span><span class="L-en">Contact</span></a>
+    </div>
+    <button class="langbtn" id="langbtn" aria-label="Switch language">English</button>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <span class="mark m1" aria-hidden="true">ـَ</span>
+  <span class="mark m2" aria-hidden="true">ـِ</span>
+  <span class="mark m3" aria-hidden="true">ـُ</span>
+  <span class="mark m4" aria-hidden="true">ـّ</span>
+  <span class="mark m5" aria-hidden="true">ـٰ</span>
+  <span class="mark m6" aria-hidden="true">ـً</span>
+  <h1 class="word always-ur">اردو زبان</h1>
+  <p class="tagline"><span class="L-ur">اپنی زبان کا اپنا گھر — لکھیے، بولیے، سنیے، سیکھیے</span><span class="L-en">The Urdu language's own home — write it, speak it, hear it, learn it.</span></p>
+  <p class="sub"><span class="L-ur">نہ کوئی API، نہ subscription، نہ اشتہار — سب کچھ آپ کے اپنے browser میں</span><span class="L-en">No third-party APIs, no subscriptions, no ads — everything runs in your own browser.</span></p>
+  <div class="ctas">
+    <a class="btn primary" href="qarina-aeraab.html"><span class="L-ur">قرینہ کھولیے — اعراب ساز</span><span class="L-en">Open Qarina — automatic aeraab</span></a>
+    <a class="btn ghost" href="#rooms"><span class="L-ur">گھر کے کمرے دیکھیے</span><span class="L-en">See the rooms</span></a>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="big">9,899</div><div class="lbl"><span class="L-ur">لغت کے اندراج — ہر لفظ کا شجرہ</span><span class="L-en">dictionary records — every word's record</span></div></div>
+    <div class="stat"><div class="big"><span class="L-ur">اپنی آواز</span><span class="L-en">Own voice</span></div><div class="lbl"><span class="L-ur">آپ کے browser کے اندر بولتی ہے</span><span class="L-en">speaks inside your browser</span></div></div>
+    <div class="stat"><div class="big">100%</div><div class="lbl"><span class="L-ur">اپنی ملکیت — کوئی بیرونی سہارا نہیں</span><span class="L-en">self-owned — no outside dependence</span></div></div>
+    <div class="stat"><div class="big">0</div><div class="lbl"><span class="L-ur">اشتہار · فیس · نگرانی</span><span class="L-en">ads · fees · tracking</span></div></div>
+  </div>
+</section>
+
+<div class="principles"><div class="in">
+  <span><b><span class="L-ur">سب اپنا</span><span class="L-en">Self-owned</span></b> — <span class="L-ur">مفت اور آزاد</span><span class="L-en">free and independent</span></span>
+  <span><b><span class="L-ur">آپ کا متن آپ کے پاس</span><span class="L-en">Your text stays with you</span></b> — <span class="L-ur">کہیں نہیں جاتا</span><span class="L-en">it never leaves your device</span></span>
+  <span><b><span class="L-ur">اردو + English + رومن</span><span class="L-en">Urdu + English + Roman</span></b> — <span class="L-ur">تینوں برابر</span><span class="L-en">all first-class</span></span>
+  <a href="#manshoor"><span class="L-ur">پورا منشور ↓</span><span class="L-en">Full charter ↓</span></a>
+</div></div>
+
+<section class="blk" id="rooms">
+  <h2 class="sec"><span class="L-ur">گھر کے کمرے</span><span class="L-en">The rooms of the house</span></h2>
+  <p class="secsub"><span class="L-ur">چار کمرے کھلے ہیں — باقی اسی مہینے کھل رہے ہیں: روز ایک اینٹ</span><span class="L-en">Four rooms are open; the rest open this month — one brick a day.</span></p>
+  <div class="grid">
+
+    <a class="room rv" href="qarina-aeraab.html">
+      <span class="chip ok"><span class="L-ur">کھلا ہے ✔</span><span class="L-en">Open ✔</span></span>
+      <div class="top"><span class="ic">🖋</span><span class="nm"><span class="L-ur">قرینہ — اعراب ساز</span><span class="L-en">Qarina — Aeraab Maker</span></span></div>
+      <p><span class="L-ur">اردو متن ڈالیے، زبر زیر پیش خود لگیں۔ دو قرأتوں پر نارنجی، انجان پر سرخ — دبا کر سکھائیے، ہمیشہ یاد رکھے گا۔ گانوں کے لیے تیار متن ایک click پر۔</span><span class="L-en">Paste Urdu text and the diacritics appear automatically. Orange marks words with two readings, red marks unknowns — teach it once, it remembers forever.</span></p>
+    </a>
+
+    <a class="room rv" href="tarjuman.html">
+      <span class="chip ok"><span class="L-ur">کھلا ہے ✔</span><span class="L-en">Open ✔</span></span>
+      <div class="top"><span class="ic">🔁</span><span class="nm"><span class="L-ur">ترجمان — رومن ⇄ اردو</span><span class="L-en">Tarjuman — Roman ⇄ Urdu</span></span></div>
+      <p><span class="L-ur">Roman Urdu سے اردو، اردو سے Roman — فوراً، مفت، آپ کے اپنے browser میں۔ اب اپنے کمرے میں: اعراب سمجھتا ہے، اور نتیجے کا ہر لفظ دبائیے تو اس کا شجرہ کھلے۔</span><span class="L-en">Roman Urdu to Urdu script and back — instant, free, inside your own browser. Now in its own room: it reads diacritics, and every word of the result opens its dictionary card.</span></p>
+    </a>
+
+    <a class="room rv" href="lughat.html">
+      <span class="chip ok"><span class="L-ur">کھلا ہے ✔ (alpha)</span><span class="L-en">Open ✔ (alpha)</span></span>
+      <div class="top"><span class="ic">📖</span><span class="nm"><span class="L-ur">لغت — ہر لفظ کا شجرہ</span><span class="L-en">Dictionary</span></span></div>
+      <p><span class="L-ur">اردو، رومن یا English — کسی بھی طرح لکھیے، لفظ ملے۔ ہر لفظ کا مکمل record: اعراب، رومن، معنی، قسم، بولنے کا روپ، سند — اور 🔊 سنیے۔</span><span class="L-en">Search in Urdu, Roman or English — all three work. Every word with its full record: diacritics, Roman, meanings, part of speech, speak-form, sources — and hear it spoken.</span></p>
+    </a>
+
+    <a class="room rv" href="sanad.html">
+      <span class="chip ok"><span class="L-ur">کھلا ہے ✔ (v1)</span><span class="L-en">Open ✔ (v1)</span></span>
+      <div class="top"><span class="ic">📜</span><span class="nm"><span class="L-ur">سند — ہر لفظ کا ثبوت</span><span class="L-en">Sanad — proof for every word</span></span></div>
+      <p><span class="L-ur">منشور کا ساتواں اصول، کمرے کی شکل میں: حوالے کے بغیر دعویٰ نہیں۔ غالب، میر، اقبال، داغ سے 28 اسناد — ہر لفظ کے ساتھ اس کی گواہی، سب عوامی ورثہ۔</span><span class="L-en">The seventh principle, turned into a room: no claim without a source. 28 citations from Ghalib, Mir, Iqbal and Daagh — every word with its witness, all public domain.</span></p>
+    </a>
+
+    <div class="room rv">
+      <span class="chip soon"><span class="L-ur">اسی مہینے</span><span class="L-en">This month</span></span>
+      <div class="top"><span class="ic">🗣</span><span class="nm"><span class="L-ur">آواز — اردو بولنے والا</span><span class="L-en">Voice — Urdu TTS</span></span></div>
+      <p><span class="L-ur">لکھا ہوا متن سنیے — اردو آواز میں، اسی صفحے پر۔ پہلی اپنی آواز آج بھی قرینہ کے اندر بولتی ہے؛ اگلی نسل (neural) تعمیر میں ہے — اور آگے بانی کی اپنی آواز۔</span><span class="L-en">Hear any Urdu text spoken — right on the page. The first self-owned voice already speaks inside Qarina; the neural generation is being built, and after that, the founder's own voice.</span></p>
+    </div>
+
+    <div class="room rv">
+      <span class="chip soon"><span class="L-ur">اسی مہینے</span><span class="L-en">This month</span></span>
+      <div class="top"><span class="ic">🎙</span><span class="nm"><span class="L-ur">کان — بول کر لکھوائیے</span><span class="L-en">Ear — Urdu dictation</span></span></div>
+      <p><span class="L-ur">مائیک سے اردو بولیے، لکھا ہوا متن پائیے — غزل، خط، کتاب کا باب۔ منزل: مکمل offline۔</span><span class="L-en">Speak Urdu into the mic and get written text — heading fully offline.</span></p>
+    </div>
+
+    <div class="room rv">
+      <span class="chip soon"><span class="L-ur">اسی مہینے</span><span class="L-en">This month</span></span>
+      <div class="top"><span class="ic">🏛</span><span class="nm"><span class="L-ur">کتب خانہ — پڑھیے</span><span class="L-en">Library</span></span></div>
+      <p><span class="L-ur">اردو کتابیں اپنے فونٹ، اپنے حجم، دن اور رات کے موڈ میں پڑھیے — اور پرانی کتابوں کا ورثہ ڈیجیٹل ہوتا جائے۔</span><span class="L-en">Read Urdu books beautifully — and watch the written heritage come online, page by page.</span></p>
+    </div>
+
+    <div class="room rv">
+      <span class="chip soon"><span class="L-ur">اسی مہینے</span><span class="L-en">This month</span></span>
+      <div class="top"><span class="ic">✍</span><span class="nm"><span class="L-ur">قلم — شاعری کے اوزار</span><span class="L-en">Qalam — Poetry tools</span></span></div>
+      <p><span class="L-ur">قافیہ تلاش، تقطیع، بحر کی جانچ — گانا، غزل، مضمون: لکھنے والوں کی پوری میز۔</span><span class="L-en">Rhyme finder, scansion, meter — a full desk for poets and songwriters.</span></p>
+    </div>
+
+    <div class="room rv">
+      <span class="chip soon"><span class="L-ur">اسی مہینے</span><span class="L-en">This month</span></span>
+      <div class="top"><span class="ic">🔊</span><span class="nm"><span class="L-ur">کتاب ساز — آواز والی کتابیں</span><span class="L-en">Book Maker — audiobooks</span></span></div>
+      <p><span class="L-ur">کوئی بھی اردو کتاب یا تحریر → مکمل audiobook، چنی ہوئی آواز میں۔</span><span class="L-en">Turn any Urdu text into a complete audiobook, in a voice of your choosing.</span></p>
+    </div>
+
+    <div class="room rv">
+      <span class="chip soon"><span class="L-ur">اسی مہینے</span><span class="L-en">This month</span></span>
+      <div class="top"><span class="ic">📚</span><span class="nm"><span class="L-ur">استاد — سیکھیے سکھائیے</span><span class="L-en">Ustaad — learn Urdu</span></span></div>
+      <p><span class="L-ur">جو اردو بولتے ہیں مگر پڑھ نہیں سکتے — حرف پہچاننا، سن کر پڑھنا، اعراب کی مشق، روز کا ایک شعر۔</span><span class="L-en">For those who speak Urdu but can't yet read it — letters, listening, aeraab practice, a verse a day.</span></p>
+    </div>
+
+  </div>
+</section>
+
+<section class="blk" id="manshoor">
+  <h2 class="sec"><span class="L-ur">منشور — دس اصول</span><span class="L-en">The Charter — ten principles</span></h2>
+  <p class="secsub"><span class="L-ur">یہ گھر جن بنیادوں پر کھڑا ہے — لکھ کر، تاکہ کبھی نہ ہلیں</span><span class="L-en">The foundations this house stands on — written down so they never move.</span></p>
+  <div class="mgrid">
+    <div class="m-item rv"><div class="num">1</div><div class="tx"><b><span class="L-ur">سب اپنا</span><span class="L-en">Everything self-owned</span></b><span class="d"><span class="L-ur">کوئی بیرونی API نہیں، کسی کمپنی کا سہارا نہیں — engine بھی اپنا، لغت بھی اپنی۔</span><span class="L-en">No third-party APIs, no dependence on anyone's servers — our own engines, our own dictionary.</span></span></div></div>
+    <div class="m-item rv"><div class="num">2</div><div class="tx"><b><span class="L-ur">Offline-first</span><span class="L-en">Offline-first</span></b><span class="d"><span class="L-ur">internet بند ہو تب بھی کام جاری رہے — جہاں تک بس چلے۔</span><span class="L-en">Wherever possible, the tools keep working with the internet off.</span></span></div></div>
+    <div class="m-item rv"><div class="num">3</div><div class="tx"><b><span class="L-ur">بنیادی چیزیں ہمیشہ مفت</span><span class="L-en">The essentials stay free</span></b><span class="d"><span class="L-ur">نہ اشتہار، نہ فیس، نہ «premium» کا تالا بنیاد پر۔</span><span class="L-en">No ads, no fees, no paywall on the fundamentals.</span></span></div></div>
+    <div class="m-item rv"><div class="num">4</div><div class="tx"><b><span class="L-ur">آپ کا متن آپ کے پاس</span><span class="L-en">Your text stays yours</span></b><span class="d"><span class="L-ur">جو آپ لکھتے ہیں وہ آپ کے browser میں رہتا ہے — نہ جمع، نہ نگرانی۔</span><span class="L-en">What you write stays in your browser — no collection, no tracking.</span></span></div></div>
+    <div class="m-item rv"><div class="num">5</div><div class="tx"><b><span class="L-ur">دو زبانی</span><span class="L-en">Bilingual</span></b><span class="d"><span class="L-ur">اردو پہلے، English ساتھ ساتھ — تاکہ دنیا بھی پڑھ سکے۔</span><span class="L-en">Urdu first, English alongside — so the whole world can read.</span></span></div></div>
+    <div class="m-item rv"><div class="num">6</div><div class="tx"><b><span class="L-ur">رومن اردو برابر کی شہری</span><span class="L-en">Roman Urdu is first-class</span></b><span class="d"><span class="L-ur">جو رومن میں لکھتے ہیں وہ بھی اتنے ہی اردو والے ہیں۔</span><span class="L-en">Those who write Urdu in Roman letters belong here just as much.</span></span></div></div>
+    <div class="m-item rv"><div class="num">7</div><div class="tx"><b><span class="L-ur">سند اوّل</span><span class="L-en">Citations first</span></b><span class="d"><span class="L-ur">حوالے کے بغیر دعویٰ نہیں — لغت ہو یا AI کا جواب۔</span><span class="L-en">No claim without a source — in the dictionary and in every AI answer.</span></span></div></div>
+    <div class="m-item rv"><div class="num">8</div><div class="tx"><b><span class="L-ur">فیصلہ ہمیشہ انسان کا</span><span class="L-en">Humans decide</span></b><span class="d"><span class="L-ur">AI رفتار دیتا ہے؛ سند انسان دیتا ہے — مقبولیت سند نہیں۔</span><span class="L-en">AI brings speed; people bring authority — popularity is not proof.</span></span></div></div>
+    <div class="m-item rv"><div class="num">9</div><div class="tx"><b><span class="L-ur">ہر لفظ کا شجرہ محفوظ</span><span class="L-en">Provenance preserved</span></b><span class="d"><span class="L-ur">ہر اندراج کے ساتھ: کہاں سے آیا، کس نے جانچا، کب بدلا۔</span><span class="L-en">Every entry keeps its history: where it came from, who checked it, when it changed.</span></span></div></div>
+    <div class="m-item rv"><div class="num">10</div><div class="tx"><b><span class="L-ur">ہر دعوے کو ناپ کر</span><span class="L-en">Every claim measured</span></b><span class="d"><span class="L-ur">«ہو گیا» تب کہا جائے جب جانچ ہو چکی ہو — ثبوت کے ساتھ۔</span><span class="L-en">"Done" is said only after it has been tested — with proof.</span></span></div></div>
+  </div>
+</section>
+
+<section class="blk" id="kahani">
+  <h2 class="sec"><span class="L-ur">کہانی — یہ گھر کیسے بنا</span><span class="L-en">The story of this house</span></h2>
+  <p class="secsub"><span class="L-ur">آغاز گانوں سے ہوا — منزل: اردو بولنے والوں کی ہر ضرورت</span><span class="L-en">It began with songs; the destination is everything an Urdu speaker needs.</span></p>
+  <div class="story">
+    <div class="st rv"><div class="dot">🎵</div><div class="tx"><b><span class="L-ur">Farooq Music — سفر کی جڑ</span><span class="L-en">Farooq Music — the root of the journey</span></b><p><span class="L-ur">گانوں اور شاعری سے آغاز — اردو گیتوں کے لیے تلفظ کی وہ محنت جس نے آگے سب کچھ جنم دیا۔</span><span class="L-en">Songs and poetry came first — and with them, the long struggle to make machines pronounce Urdu correctly.</span></p></div></div>
+    <div class="stline"></div>
+    <div class="st rv"><div class="dot">ـَ</div><div class="tx"><b><span class="L-ur">اعراب کا درد</span><span class="L-en">The pain of the diacritics</span></b><p><span class="L-ur">ہر گانے کے لیے زبر، زیر، پیش ہاتھ سے — تین جگہ سے copy کر کے۔ سوال پیدا ہوا: یہ خودکار کیوں نہیں ہو سکتا؟</span><span class="L-en">Every song meant placing marks by hand, copying across three apps. A question was born: why can't this be automatic?</span></p></div></div>
+    <div class="stline"></div>
+    <div class="st rv"><div class="dot">🖋</div><div class="tx"><b><span class="L-ur">قرینہ اور اپنی آوازیں</span><span class="L-en">Qarina, and voices of our own</span></b><p><span class="L-ur">ایک ہی لمبی نشست میں قرینہ بنا — خودکار اعراب، سکھانے والی لغت — اور پھر اپنی آواز، browser کے اندر، کسی کے سہارے کے بغیر۔</span><span class="L-en">In one long sitting Qarina was built — automatic aeraab with a teachable dictionary — and then a self-owned voice, running in the browser, beholden to no one.</span></p></div></div>
+    <div class="stline"></div>
+    <div class="st rv"><div class="dot">🏠</div><div class="tx"><b><span class="L-ur">21 اگست 2026 — گھر کی بنیاد</span><span class="L-en">21 August 2026 — the foundation</span></b><p><span class="L-ur">اوزار بڑھتے گئے تو خواب بھی بڑا ہوا: صرف صفحے نہیں، پورا گھر۔ اسی دن urduzaban.com کی بنیاد رکھی گئی — اور اب روز ایک اینٹ رکھی جاتی ہے۔</span><span class="L-en">As the tools grew, so did the dream: not scattered pages, but a whole house. urduzaban.com was founded that day — and now a brick is laid every single day.</span></p></div></div>
+  </div>
+
+  <p class="founder"><span class="L-ur">یہ گھر <b>محمد فاروق</b> بنا رہے ہیں — قطر سے، اپنی زبان کے لیے:
+  پنجابی گھرانہ، اردو کی پرورش، عربی کا پڑوس۔ سفر کا آغاز
+  <b><a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a></b> سے ہوا —
+  اور ساتھ وہی ہاتھ ہیں جو
+  <b><a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a></b> اور
+  <b><a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></b> بناتے ہیں۔</span><span class="L-en">This house is being built by <b>Mohammad Farooq</b> — from Qatar, for his language: a Punjabi home, an Urdu upbringing, an Arabic neighbourhood. The journey began at <b><a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a></b> — and these are the same hands behind <b><a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a></b> and <b><a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></b>.</span></p>
+</section>
+
+<section class="blk" id="contact" style="text-align:center;">
+  <h2 class="sec"><span class="L-ur">رابطہ کیجیے</span><span class="L-en">Get in touch</span></h2>
+  <p class="secsub"><span class="L-ur">سوال، مشورہ، فرمائش — دروازہ کھلا ہے</span><span class="L-en">Questions, ideas, requests — the door is open.</span></p>
+  <div class="crow">
+    <a class="cbtn" href="mailto:urdu@urduzaban.com"><span class="ic">📧</span> Email <small>urdu@urduzaban.com</small></a>
+    <a class="cbtn wa" href="https://wa.me/97455868026" target="_blank" rel="noopener"><span class="ic">💬</span> <span class="L-ur">WhatsApp پر بات کیجیے</span><span class="L-en">Chat on WhatsApp</span></a>
+    <a class="cbtn" href="https://whatsapp.com/channel/0029VbBsDpm2f3EL51meaF0x" target="_blank" rel="noopener"><span class="ic">🎵</span> Farooq Music — <span class="L-ur">WhatsApp channel</span><span class="L-en">WhatsApp channel</span></a>
+    <a class="cbtn" href="https://whatsapp.com/channel/0029Vb96DEK5a23zWZFxd91H" target="_blank" rel="noopener"><span class="ic">✨</span> FarooqStars — <span class="L-ur">WhatsApp channel</span><span class="L-en">WhatsApp channel</span></a>
+  </div>
+</section>
+
+<footer><div class="in">
+  <span><span class="L-ur">© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026</span><span class="L-en">© 2026 UrduZaban · urduzaban.com — founded 21 August 2026</span></span>
+  <span>
+    <a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> ·
+    <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> ·
+    <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a>
+  </span>
+</div></footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('langbtn');
+  function setLang(l, save){
+    var en = (l==='en');
+    document.body.classList.toggle('en-mode', en);
+    document.documentElement.lang = en ? 'en' : 'ur';
+    document.documentElement.dir  = en ? 'ltr' : 'rtl';
+    btn.textContent = en ? 'اردو' : 'English';
+    btn.style.fontFamily = en ? 'var(--naskh)' : 'var(--latin-ui)';
+    if(save){ try{ localStorage.setItem('uz-lang', l); }catch(e){} }
+  }
+  btn.addEventListener('click', function(){
+    setLang(document.body.classList.contains('en-mode') ? 'ur' : 'en', true);
+  });
+  var saved=null; try{ saved=localStorage.getItem('uz-lang'); }catch(e){}
+  if(saved==='en') setLang('en', false);
+
+  /* ظاہر ہونے کی نرم حرکت */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('on'); });
+  }
+})();
+</script>
+
+</body>
+</html>

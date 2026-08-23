@@ -1,0 +1,7 @@
+# اردو زبان — urduzaban.com
+# سب کچھ کھلا ہے: کوئی صفحہ چھپا ہوا نہیں۔
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.urduzaban.com/sitemap.xml

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ترجمان — رومن ⇄ اردو | اردو زبان</title>
+<meta name="description" content="ترجمان — Roman Urdu سے اردو، اردو سے Roman Urdu: فوراً، مفت، آپ کے اپنے browser میں۔ ہر لفظ دبائیے تو اس کا شجرہ (اعراب، رومن، معنی، سند) کھلے۔ Tarjuman — Roman Urdu ⇄ Urdu script converter, offline, with a dictionary card for every word.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.urduzaban.com/tarjuman.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%2314110c'/%3E%3Ctext%20x='32'%20y='46'%20font-size='40'%20text-anchor='middle'%20fill='%23d9a441'%20font-family='serif'%3E%D8%A7%D9%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UrduZaban — اردو زبان">
+<meta property="og:url" content="https://www.urduzaban.com/tarjuman.html">
+<meta property="og:title" content="ترجمان — رومن ⇄ اردو">
+<meta property="og:description" content="Roman Urdu ⇄ Urdu — فوراً، مفت، offline۔ ہر لفظ کا شجرہ ساتھ۔">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap">
+<style>
+@font-face{font-family:"UZ Nastaliq"; src:url("fonts/noto-nastaliq-urdu-400.woff2") format("woff2"); font-weight:400 700; font-display:swap;}
+@font-face{font-family:"UZ Naskh"; src:url("fonts/noto-naskh-arabic-400.woff2") format("woff2"); font-weight:400; font-display:swap;}
+@font-face{font-family:"UZ Naskh"; src:url("fonts/noto-naskh-arabic-700.woff2") format("woff2"); font-weight:600 800; font-display:swap;}
+:root{
+  --paper:#faf6ed; --card:#fffdf8; --card2:#f4eddc; --ink:#251f14; --muted:#7c7060; --line:#e6ddc9;
+  --accent:#a8731d; --accent-hi:#d9a441; --accent-ink:#fff8ec; --accent-soft:rgba(168,115,29,.08);
+  --ok:#2e7d4f; --ok-soft:rgba(46,125,79,.10); --warn:#c05f00; --warn-soft:rgba(208,122,0,.12); --bad:#bb3a2c;
+  --shadow:0 1px 2px rgba(60,45,20,.06), 0 12px 36px rgba(60,45,20,.09);
+  --nastaliq:"UZ Nastaliq","Noto Nastaliq Urdu",serif; --naskh:"UZ Naskh","Noto Naskh Arabic",serif;
+  --latin:Georgia,"Times New Roman",serif; --latin-ui:"Segoe UI",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#14110c; --card:#1e1912; --card2:#181410; --ink:#f0e8d8; --muted:#a89a82; --line:#382f21;
+  --accent:#d9a441; --accent-hi:#f0c46a; --accent-ink:#241b0a; --accent-soft:rgba(217,164,65,.10);
+  --ok:#6fbe8c; --ok-soft:rgba(111,190,140,.12); --warn:#f0a33c; --warn-soft:rgba(240,163,60,.14); --bad:#e5766a;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 36px rgba(0,0,0,.42);}}
+:root[data-theme="dark"]{
+  --paper:#14110c; --card:#1e1912; --card2:#181410; --ink:#f0e8d8; --muted:#a89a82; --line:#382f21;
+  --accent:#d9a441; --accent-hi:#f0c46a; --accent-ink:#241b0a; --accent-soft:rgba(217,164,65,.10);
+  --ok:#6fbe8c; --ok-soft:rgba(111,190,140,.12); --warn:#f0a33c; --warn-soft:rgba(240,163,60,.14); --bad:#e5766a;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 36px rgba(0,0,0,.42);}
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--naskh); line-height:2; font-size:16.5px;}
+.L-en{display:none !important;} body.en-mode .L-ur{display:none !important;} body.en-mode .L-en{display:revert !important;}
+body.en-mode{font-family:var(--latin-ui); line-height:1.65; font-size:16px;}
+body.en-mode h1,body.en-mode h2{font-family:var(--latin);}
+.always-ur{font-family:var(--nastaliq) !important; direction:rtl; unicode-bidi:isolate;}
+.ltr{direction:ltr; unicode-bidi:isolate; font-family:var(--latin-ui);}
+nav{position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+nav .in{max-width:1180px; margin:0 auto; padding:8px 20px; display:flex; align-items:center; gap:16px;}
+.brand{font-family:var(--nastaliq); font-weight:700; font-size:19px; line-height:2; text-decoration:none; color:var(--ink); white-space:nowrap;}
+.brand small{color:var(--accent); font-family:var(--latin-ui); font-size:10.5px; letter-spacing:1.2px; margin:0 6px;}
+.navlinks{display:flex; gap:4px 16px; flex-wrap:wrap; margin:0 auto; font-size:14.5px;}
+.navlinks a{color:var(--muted); text-decoration:none; padding:2px 4px;} .navlinks a:hover,.navlinks a.on{color:var(--accent);}
+.navlinks a.on{font-weight:700;}
+.langbtn{border:1.5px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; border-radius:999px; padding:4px 16px; font-size:14px; font-weight:700; font-family:var(--latin-ui); white-space:nowrap;}
+.langbtn:hover{background:var(--accent-soft);}
+@media(max-width:720px){ .navlinks{display:none} }
+main{max-width:1180px; margin:0 auto; padding:26px 20px 90px;}
+h1{font-family:var(--nastaliq); font-size:clamp(30px,5vw,42px); font-weight:700; margin:0; line-height:1.9;
+  background:linear-gradient(100deg,#7a5210 5%,var(--accent) 30%,var(--accent-hi) 55%,var(--accent) 90%); -webkit-background-clip:text; background-clip:text; color:transparent;}
+.sub{color:var(--muted); margin:2px 0 18px; font-size:15.5px;}
+.stats{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 16px;}
+.chip{font-size:13px; padding:3px 12px; border-radius:999px; border:1px solid var(--line); background:var(--card); color:var(--muted);}
+.chip b{color:var(--ink); font-variant-numeric:tabular-nums; font-family:var(--latin-ui);}
+.chip.ok{border-color:var(--ok); color:var(--ok);}
+.bar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:12px;}
+.pill{border:1.5px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; border-radius:999px; padding:6px 16px; font-family:inherit; font-size:15px; line-height:1.8;}
+.pill.on{border-color:var(--accent); background:var(--accent); color:var(--accent-ink); font-weight:700;}
+.pill:hover:not(.on){border-color:var(--accent);}
+.pill.swap{font-size:18px; padding:4px 14px;}
+.work{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start;}
+@media(max-width:900px){ .work{grid-template-columns:1fr;} }
+.pane{background:var(--card); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden;}
+.cap{display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; padding:8px 14px; border-bottom:1px solid var(--line); color:var(--muted); font-size:14px; background:var(--card2);}
+.cap b{color:var(--ink);}
+.cap .ctl{display:flex; gap:6px; flex-wrap:wrap; align-items:center;}
+button.mini{font-family:inherit; font-size:14px; cursor:pointer; border-radius:8px; border:1px solid var(--line); background:var(--card); color:var(--ink); padding:4px 11px; line-height:1.8;}
+button.mini:hover{border-color:var(--accent);} button.mini.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
+button.mini:disabled{opacity:.45; cursor:default;}
+textarea#inp{width:100%; min-height:260px; border:0; outline:none; resize:vertical; background:transparent; color:var(--ink); padding:16px 18px;
+  font-family:var(--nastaliq); font-size:24px; line-height:2.4;}
+textarea#inp.roman{font-family:var(--latin-ui); font-size:19px; line-height:1.9;}
+textarea#inp::placeholder{color:var(--muted); opacity:.7; font-family:var(--naskh); font-size:17px;}
+#out{min-height:260px; padding:16px 18px; font-family:var(--nastaliq); font-size:26px; line-height:2.6; overflow-wrap:anywhere;}
+#out.roman{font-family:var(--latin-ui); font-size:19px; line-height:2; direction:ltr; text-align:left;}
+#out .hint{color:var(--muted); font-family:var(--naskh); font-size:15.5px; line-height:2;}
+#out .w{border-radius:6px; padding:0 3px; cursor:pointer; transition:background .15s;}
+#out .w:hover{background:var(--accent-soft);}
+#out .w.known{text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:8px; text-decoration-thickness:1.5px;}
+#out .w.sel{background:var(--accent-soft); outline:1.5px solid var(--accent);}
+.counter{font-size:12.5px; color:var(--muted); padding:4px 14px 8px; text-align:end;}
+.note{color:var(--muted); font-size:14px; margin:14px 0 0; line-height:1.9;}
+/* شجرہ */
+.shajra{margin-top:18px; background:var(--card); border:1.5px solid var(--accent); border-radius:16px; box-shadow:var(--shadow); padding:14px 18px 16px; display:none;}
+.shajra.open{display:block;}
+.shajra .hd{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;}
+.shajra h2{margin:0; font-family:var(--nastaliq); font-size:34px; line-height:1.9; color:var(--accent);}
+.shajra .rom{font-family:var(--latin-ui); direction:ltr; unicode-bidi:isolate; font-size:19px; color:var(--ink); font-weight:600;}
+.sg{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:8px 18px; margin-top:10px;}
+.sg .f{border-top:1px solid var(--line); padding-top:6px;}
+.sg .k{font-size:12.5px; color:var(--muted); display:block; line-height:1.6;}
+.sg .v{font-size:17px; line-height:1.9;} .sg .v.en{font-family:var(--latin-ui); direction:ltr; unicode-bidi:isolate; text-align:left;}
+.sg .v.ar{font-family:var(--nastaliq); font-size:22px;}
+.pos{display:inline-block; font-size:12.5px; padding:0 10px; border-radius:999px; border:1px solid var(--accent); color:var(--accent); line-height:1.7; margin-inline-start:8px; vertical-align:middle;}
+.shajra .acts{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+.shajra a.mini{text-decoration:none; font-size:14px; border-radius:8px; border:1px solid var(--line); background:var(--card); color:var(--ink); padding:4px 11px; line-height:1.8;}
+.shajra a.mini:hover{border-color:var(--accent); color:var(--accent);}
+.teach{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px;}
+.teach input{flex:1; min-width:160px; font-family:var(--latin-ui); direction:ltr; font-size:16px; padding:6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink);}
+.status{font-size:14px; color:var(--ok); min-height:1.4em; margin-top:8px;} .status.bad{color:var(--bad);}
+footer{margin-top:40px; border-top:2px solid var(--accent); background:var(--card);}
+footer .in{max-width:1180px; margin:0 auto; padding:16px 20px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; color:var(--muted); font-size:14px;}
+footer a{color:var(--accent); text-decoration:none;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+</style>
+</head>
+<body>
+<nav><div class="in">
+  <a class="brand always-ur" href="index.html">اردو زبان<small>URDUZABAN.COM</small></a>
+  <div class="navlinks">
+    <a href="index.html"><span class="L-ur">گھر</span><span class="L-en">Home</span></a>
+    <a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a>
+    <a class="on" href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a>
+    <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
+  </div>
+  <button class="langbtn" id="langbtn" aria-label="Switch language">English</button>
+</div></nav>
+
+<main>
+  <h1 class="always-ur">ترجمان — رومن ⇄ اردو</h1>
+  <p class="sub"><span class="L-ur">Roman Urdu لکھیے، اردو پائیے — یا اردو لکھیے، Roman پائیے۔ فوراً، مفت، سب کچھ آپ کے اپنے browser میں۔ نتیجے کا کوئی لفظ دبائیے تو اس کا شجرہ کھلتا ہے۔</span><span class="L-en">Type Roman Urdu and get Urdu script — or the other way round. Instant, free, entirely inside your browser. Tap any word of the result to open its dictionary card.</span></p>
+
+  <div class="stats">
+    <span class="chip ok" id="chipEngine"><span class="L-ur">engine تیار</span><span class="L-en">engine ready</span></span>
+    <span class="chip" id="chipDict"><span class="L-ur">لغت: <b id="nDict">…</b> لفظ</span><span class="L-en">dictionary: <b id="nDictEn">…</b> words</span></span>
+    <span class="chip"><span class="L-ur">آپ کا متن کہیں نہیں جاتا</span><span class="L-en">your text never leaves this device</span></span>
+  </div>
+
+  <div class="bar" id="dirbar">
+    <button class="pill on" data-dir="auto"><span class="L-ur">خودکار پہچان</span><span class="L-en">Auto-detect</span></button>
+    <button class="pill" data-dir="r2u"><span class="L-ur">رومن → اردو</span><span class="L-en">Roman → Urdu</span></button>
+    <button class="pill" data-dir="u2r"><span class="L-ur">اردو → رومن</span><span class="L-en">Urdu → Roman</span></button>
+    <button class="pill swap" id="swapBtn" title="الٹ دیں / swap">⇄</button>
+  </div>
+
+  <div class="work">
+    <section class="pane">
+      <div class="cap"><b id="capIn"><span class="L-ur">لکھیے</span><span class="L-en">Type here</span></b>
+        <div class="ctl">
+          <button class="mini" id="pasteBtn"><span class="L-ur">چسپاں</span><span class="L-en">Paste</span></button>
+          <button class="mini" id="clearBtn"><span class="L-ur">صاف</span><span class="L-en">Clear</span></button>
+        </div></div>
+      <textarea id="inp" dir="auto" spellcheck="false" placeholder="yahan likhiye… / یہاں لکھیے…"></textarea>
+      <div class="counter" id="counter"></div>
+    </section>
+    <section class="pane">
+      <div class="cap"><b id="capOut"><span class="L-ur">نتیجہ</span><span class="L-en">Result</span></b>
+        <div class="ctl">
+          <button class="mini" id="spkBtn" title="سنیے / listen">🔊 <span class="L-ur">سنیے</span><span class="L-en">Listen</span></button>
+          <button class="mini primary" id="copyBtn"><span class="L-ur">نقل</span><span class="L-en">Copy</span></button>
+          <button class="mini" id="useBtn"><span class="L-ur">الٹا چلائیے</span><span class="L-en">Use as input</span></button>
+        </div></div>
+      <div id="out"><span class="hint"><span class="L-ur">یہاں اردو یا رومن نتیجہ آئے گا — ہر لفظ دبانے سے اس کا شجرہ کھلے گا۔</span><span class="L-en">The converted text appears here — tap a word to open its card.</span></span></div>
+      <div class="counter" id="counterOut"></div>
+    </section>
+  </div>
+  <div class="status" id="status" aria-live="polite"></div>
+
+  <section class="shajra" id="shajra" aria-live="polite">
+    <div class="hd">
+      <div><h2 id="sjWord">—</h2><span class="rom" id="sjRoman"></span><span class="pos" id="sjPos"></span></div>
+      <div class="acts">
+        <button class="mini" id="sjSpk">🔊 <span class="L-ur">سنیے</span><span class="L-en">Listen</span></button>
+        <a class="mini" id="sjLink" href="lughat.html" target="_blank" rel="noopener"><span class="L-ur">لغت میں کھولیے ↗</span><span class="L-en">Open in dictionary ↗</span></a>
+        <button class="mini" id="sjClose">✕</button>
+      </div>
+    </div>
+    <div class="sg" id="sjGrid"></div>
+    <div class="teach" id="teachRow">
+      <span class="L-ur">رومن غلط ہے؟ صحیح لکھ کر سکھائیے:</span><span class="L-en">Wrong Roman? Teach the right one:</span>
+      <input id="teachIn" placeholder="e.g. khud">
+      <button class="mini primary" id="teachBtn"><span class="L-ur">سکھائیے</span><span class="L-en">Teach</span></button>
+      <button class="mini" id="suggestBtn"><span class="L-ur">لغت کے لیے بھیجیے 📨</span><span class="L-en">Send to dictionary 📨</span></button>
+    </div>
+  </section>
+
+  <p class="note"><span class="L-ur">طریقہ: اردو کے <b>1,245</b> عام لفظ engine کی اپنی لغت میں ہیں — وہ بالکل ٹھیک نکلتے ہیں؛ باقی لفظ حرف بہ حرف بنتے ہیں اور اعراب ہوں تو زبر زیر پیش سے (مُحَبَّت → muhabbat)۔ کوئی لفظ غلط نکلے تو اس کا شجرہ کھول کر صحیح رومن سکھا دیجیے — یہ browser یاد رکھے گا؛ «لغت کے لیے بھیجیے» دبائیں تو انتظامیہ کو تجویز پہنچ جاتی ہے۔ بنیاد: MyMandoob کا اپنا ترجمان engine — یہاں اردو زبان کا الگ نسخہ۔</span><span class="L-en">How it works: <b>1,245</b> common words sit in the engine's own dictionary and come out exactly right; other words are built letter by letter, and when diacritics are present they are read too (مُحَبَّت → muhabbat). If a word comes out wrong, open its card and teach the right Roman — this browser remembers it; "Send to dictionary" passes it to the admin queue. Built on MyMandoob's own converter engine, as UrduZaban's separate copy.</span></p>
+</main>
+
+<footer><div class="in">
+  <span><span class="L-ur">© 2026 اردو زبان · urduzaban.com</span><span class="L-en">© 2026 UrduZaban · urduzaban.com</span></span>
+  <span><a href="index.html"><span class="L-ur">گھر</span><span class="L-en">Home</span></a> · <a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a> · <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a></span>
+</div></footer>
+
+<script src="uz-translit.js"></script>
+<script src="uz-keyboard.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id);};
+var T=window.UZTranslit;
+/* ---- زبان ---- */
+var btn=$('langbtn');
+function setLang(l,save){ var en=(l==='en'); document.body.classList.toggle('en-mode',en);
+  document.documentElement.lang=en?'en':'ur'; document.documentElement.dir=en?'ltr':'rtl';
+  btn.textContent=en?'اردو':'English'; btn.style.fontFamily=en?'var(--naskh)':'var(--latin-ui)';
+  if(save){ try{localStorage.setItem('uz-lang',l);}catch(e){} } }
+btn.addEventListener('click',function(){ setLang(document.body.classList.contains('en-mode')?'ur':'en',true); });
+var saved=null; try{saved=localStorage.getItem('uz-lang');}catch(e){} if(saved==='en') setLang('en',false);
+var isEn=function(){ return document.body.classList.contains('en-mode'); };
+var say=function(t,bad){ $('status').textContent=t||''; $('status').className='status'+(bad?' bad':''); };
+
+/* ---- لغت (uz-lughat.json) ---- */
+var LUG=null, BYW={}, POSL={}, POSE={};
+fetch('uz-lughat.json',{cache:'force-cache'}).then(function(r){return r.json();}).then(function(j){
+  LUG=j; POSL=j.pos_labels||{}; POSE=j.pos_labels_en||{};
+  j.entries.forEach(function(e){ (BYW[e.w]=BYW[e.w]||[]).push(e); });
+  var n=Object.keys(BYW).length; $('nDict').textContent=n; $('nDictEn').textContent=n;
+  T.loadLughat(j); markKnown();
+}).catch(function(){ $('nDict').textContent='0'; $('nDictEn').textContent='0'; });
+
+/* ---- سکھائے ہوئے لفظ (اسی browser کی یاد) ---- */
+var LEARNT={}; try{ LEARNT=JSON.parse(localStorage.getItem('uz-tarjuman-learnt')||'{}')||{}; }catch(e){}
+Object.keys(LEARNT).forEach(function(k){ T.learn(k,LEARNT[k]); });
+
+/* ---- سمت ---- */
+var dir='auto'; try{ dir=localStorage.getItem('uz-tarjuman-dir')||'auto'; }catch(e){}
+function setDir(d){ dir=d; document.querySelectorAll('#dirbar .pill[data-dir]').forEach(function(p){ p.classList.toggle('on',p.dataset.dir===d); });
+  try{localStorage.setItem('uz-tarjuman-dir',d);}catch(e){} styleInput(); run(); }
+document.querySelectorAll('#dirbar .pill[data-dir]').forEach(function(p){ p.addEventListener('click',function(){ setDir(p.dataset.dir); }); });
+function effective(){ if(dir!=='auto') return dir; var s=T.detect($('inp').value); return s==='ur'?'u2r':'r2u'; }
+function styleInput(){ var e=effective(); $('inp').classList.toggle('roman',e==='r2u'); $('inp').dir=(e==='r2u')?'ltr':'rtl'; }
+
+/* ---- چلائیے ---- */
+var timer=null, lastOut='';
+function runSoon(){ clearTimeout(timer); timer=setTimeout(run,120); }
+function run(){
+  var text=$('inp').value, e=effective(); styleInput();
+  $('counter').textContent=text.length?(text.length+(isEn()?' characters':' حروف')):'';
+  if(!text.trim()){ $('out').innerHTML='<span class="hint">'+(isEn()?'The converted text appears here — tap a word to open its card.':'یہاں اردو یا رومن نتیجہ آئے گا — ہر لفظ دبانے سے اس کا شجرہ کھلے گا۔')+'</span>'; lastOut=''; $('counterOut').textContent=''; $('out').className=''; return; }
+  var out = (e==='r2u') ? T.romanToUr(text) : T.urToRoman(text);
+  lastOut=out; $('out').className=(e==='r2u')?'':'roman'; $('out').dir=(e==='r2u')?'rtl':'ltr';
+  renderOut(out, e);
+  $('counterOut').textContent=out.length+(isEn()?' characters':' حروف');
+}
+var WORD_RE=/[ء-يً-ْٰٹپچڈڑژکگںھہۂۃیےۓآؤئ]+|[A-Za-z][A-Za-z'\-]*/g;
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+function renderOut(out, e){
+  var html='', last=0, m; WORD_RE.lastIndex=0;
+  while((m=WORD_RE.exec(out))){
+    html+=esc(out.slice(last,m.index));
+    var w=m[0], key = (e==='r2u') ? T.bare(w) : romanToWord(w);
+    var known = key && BYW[key] ? ' known' : '';
+    html+='<span class="w'+known+'" data-w="'+esc(key||'')+'" data-t="'+esc(w)+'">'+esc(w)+'</span>';
+    last=m.index+w.length;
+  }
+  html+=esc(out.slice(last));
+  $('out').innerHTML=html;
+}
+/* رومن نتیجے کے لفظ کے لیے اصل اردو لفظ ڈھونڈیے (input سے) */
+var srcWords=[];
+function romanToWord(rw){
+  var b=T.bare(T.romanToUr(rw)); if(BYW[b]) return b;
+  var lw=rw.toLowerCase();
+  for(var i=0;i<srcWords.length;i++){ if(T.wordToRoman(srcWords[i]).toLowerCase()===lw) return T.bare(srcWords[i]); }
+  return b;
+}
+function markKnown(){ run(); }
+$('inp').addEventListener('input',function(){ srcWords=($('inp').value.match(WORD_RE)||[]).filter(function(w){return /[؀-ۿ]/.test(w);}); runSoon(); });
+
+/* ---- بٹن ---- */
+$('clearBtn').addEventListener('click',function(){ $('inp').value=''; srcWords=[]; run(); closeShajra(); $('inp').focus(); });
+$('pasteBtn').addEventListener('click',function(){ if(navigator.clipboard&&navigator.clipboard.readText){ navigator.clipboard.readText().then(function(t){ $('inp').value=(t||''); $('inp').dispatchEvent(new Event('input')); }).catch(function(){ say(isEn()?'Paste with Ctrl+V inside the box':'خانے میں Ctrl+V سے چسپاں کیجیے',true); }); } else { say(isEn()?'Paste with Ctrl+V inside the box':'خانے میں Ctrl+V سے چسپاں کیجیے',true); } });
+$('copyBtn').addEventListener('click',function(){ if(!lastOut) return; var done=function(){ say(isEn()?'Copied ✔':'نقل ہو گئی ✔'); setTimeout(function(){say('');},1800); };
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(lastOut).then(done).catch(function(){ fallbackCopy(lastOut); done(); }); } else { fallbackCopy(lastOut); done(); } });
+function fallbackCopy(t){ var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta); }
+function swap(){ if(!lastOut) return; var e=effective(); $('inp').value=lastOut; srcWords=(lastOut.match(WORD_RE)||[]).filter(function(w){return /[؀-ۿ]/.test(w);});
+  if(dir!=='auto') setDir(e==='r2u'?'u2r':'r2u'); else run(); closeShajra(); }
+$('useBtn').addEventListener('click',swap); $('swapBtn').addEventListener('click',swap);
+
+/* ---- آواز: پہلے قرینہ کی اپنی آواز، ورنہ browser کی ---- */
+var QTTS=null; (async function(){ try{ var m=await import('./qarina-tts/qarina-tts.js'); if(await m.ready()) QTTS=m; }catch(e){} })();
+function speak(text){
+  text=(text||'').trim(); if(!text){ say(isEn()?'Nothing to read yet':'ابھی سنانے کو کچھ نہیں',true); return; }
+  if(!/[؀-ۿ]/.test(text)){ text=T.romanToUr(text); }
+  if(QTTS){ if(QTTS.isSpeaking()){ QTTS.stop(); return; } QTTS.speak(text,{wpm:145},{}); return; }
+  if(!('speechSynthesis' in window)){ say(isEn()?'No speech engine in this browser':'اس browser میں آواز کا نظام نہیں',true); return; }
+  if(speechSynthesis.speaking){ speechSynthesis.cancel(); return; }
+  var u=new SpeechSynthesisUtterance(text); var vs=speechSynthesis.getVoices()||[]; var v=vs.find(function(x){return /^ur/i.test(x.lang);})||vs.find(function(x){return /^(ar|hi)/i.test(x.lang);});
+  if(v) u.voice=v; u.lang=v?v.lang:'ur-PK'; u.rate=.95; speechSynthesis.speak(u);
+}
+$('spkBtn').addEventListener('click',function(){ var sel=''; try{ var s=window.getSelection(); if(s&&!s.isCollapsed&&$('out').contains(s.anchorNode)) sel=s.toString(); }catch(e){} speak(sel||lastOut); });
+
+/* ---- شجرہ ---- */
+var curW='', curT='';
+function posLabel(p){ return isEn()?(POSE[p]||p):(POSL[p]||p); }
+function field(k,v,cls){ if(!v) return ''; return '<div class="f"><span class="k">'+k+'</span><span class="v '+(cls||'')+'">'+esc(v)+'</span></div>'; }
+function openShajra(w, token){
+  curW=w; curT=token; var list=BYW[w]||[]; var box=$('shajra'); box.classList.add('open');
+  document.querySelectorAll('#out .w.sel').forEach(function(x){x.classList.remove('sel');});
+  $('sjLink').href='lughat.html?q='+encodeURIComponent(w||token);
+  if(!list.length){
+    $('sjWord').textContent=/[؀-ۿ]/.test(token)?token:(T.romanToUr(token)); $('sjRoman').textContent=/[؀-ۿ]/.test(token)?T.wordToRoman(token):token; $('sjPos').textContent='';
+    $('sjGrid').innerHTML='<div class="f"><span class="v">'+(isEn()?'Not in the dictionary yet — the engine made this word letter by letter. Teach the right Roman below, or send it to the dictionary.':'ابھی لغت میں نہیں — یہ لفظ engine نے حرف بہ حرف بنایا ہے۔ نیچے صحیح رومن سکھائیے، یا لغت کے لیے بھیج دیجیے۔')+'</span></div>';
+    $('teachIn').value=T.wordToRoman(/[؀-ۿ]/.test(token)?token:T.romanToUr(token));
+    box.scrollIntoView({behavior:'smooth',block:'nearest'}); return;
+  }
+  var e=list[0]; $('sjWord').textContent=e.a; $('sjRoman').textContent=e.r; $('sjPos').textContent=posLabel(e.pos);
+  var en=isEn(), h='';
+  h+=field(en?'Meaning (English)':'معنی (English)', e.en, 'en');
+  if(e.ur) h+=field(en?'Meaning / hint (Urdu)':'معنی / اشارہ (اردو)', e.ur);
+  if(e.alt&&e.alt.length) h+=field(en?'Other Roman spellings':'رومن کے دوسرے املا', e.alt.join(' · '), 'en');
+  if(e.s) h+=field(en?'Speak-form (for the voice engine)':'بولنے کا روپ (آواز کے لیے)', e.s, 'ar');
+  if(list.length>1){ h+='<div class="f"><span class="k">'+(en?'Two readings — '+list.length+' senses':'دو قرأتیں — '+list.length+' معنی')+'</span>'+list.map(function(x){ return '<div class="v"><span class="ar" style="font-family:var(--nastaliq);font-size:21px">'+esc(x.a)+'</span> <span class="ltr" style="color:var(--accent)">'+esc(x.r)+'</span> — '+esc(x.en)+(x.note?' <span style="color:var(--muted)">('+esc(x.note)+')</span>':'')+'</div>'; }).join('')+'</div>'; }
+  var S=(LUG&&LUG.sources&&LUG.sources[e.src])||{name:e.src,by:''};
+  h+=field(en?'Source (sanad)':'سند — کہاں سے آیا', S.name);
+  h+=field(en?'Written / checked by':'کس نے لکھا / جانچا', S.by);
+  h+=field(en?'Date':'تاریخ', e.t, 'en');
+  $('sjGrid').innerHTML=h; $('teachIn').value=LEARNT[w]||'';
+  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function closeShajra(){ $('shajra').classList.remove('open'); document.querySelectorAll('#out .w.sel').forEach(function(x){x.classList.remove('sel');}); }
+$('sjClose').addEventListener('click',closeShajra);
+$('out').addEventListener('click',function(ev){ var t=ev.target.closest('.w'); if(!t) return; t.classList.add('sel'); openShajra(t.dataset.w, t.dataset.t); });
+$('sjSpk').addEventListener('click',function(){ var list=BYW[curW]||[]; speak(list.length?(list[0].s||list[0].a):(/[؀-ۿ]/.test(curT)?curT:T.romanToUr(curT))); });
+$('teachBtn').addEventListener('click',function(){
+  var r=$('teachIn').value.trim(), w=curW||T.bare(/[؀-ۿ]/.test(curT)?curT:T.romanToUr(curT));
+  if(!w||!r){ say(isEn()?'Write the Roman spelling first':'پہلے رومن لکھیے',true); return; }
+  LEARNT[w]=r; try{localStorage.setItem('uz-tarjuman-learnt',JSON.stringify(LEARNT));}catch(e){}
+  T.learn(w,r); run(); say((isEn()?'Learnt: ':'سیکھ لیا: ')+w+' → '+r);
+});
+$('suggestBtn').addEventListener('click',function(){
+  var w=curW||T.bare(/[؀-ۿ]/.test(curT)?curT:T.romanToUr(curT)); var r=$('teachIn').value.trim();
+  if(!w){ return; }
+  var body=new URLSearchParams({action:'suggest', word:w, form:'لغت/ترجمان: '+(r||'')}).toString();
+  fetch('api/lexicon.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(function(x){return x.json();}).then(function(j){
+    say(j&&j.ok?(isEn()?'Sent to the admin queue ✔':'انتظامیہ کی فہرست میں پہنچ گیا ✔'):(isEn()?'Could not send':'نہیں بھیج سکا'),!(j&&j.ok)); }).catch(function(){ say(isEn()?'Could not send (offline?)':'نہیں بھیج سکا (internet؟)',true); });
+});
+
+/* ---- پتے سے ---- */
+try{ var q=new URLSearchParams(location.search); var x=q.get('text'); var f=q.get('from');
+  if(f==='roman') setDir('r2u'); else if(f==='ur') setDir('u2r'); else setDir(dir);
+  if(x){ $('inp').value=x; $('inp').dispatchEvent(new Event('input')); }
+}catch(e){ setDir('auto'); }
+$('inp').focus();
+})();
+</script>
+</body>
+</html>

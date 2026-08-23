@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اردو زبان — انتظامیہ</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap">
+<style>
+:root{ --paper:#faf7f0; --card:#fff; --ink:#221c13; --muted:#7c7060; --line:#e7dfd0;
+  --accent:#a8731d; --accent-ink:#fff8ec; --ok:#2e7d4f; --bad:#bb3a2c;
+  --warn:#c05f00; --warn-wash:rgba(208,122,0,.13); }
+@media (prefers-color-scheme: dark){ :root{ --paper:#171310; --card:#201b15; --ink:#efe7d8;
+  --muted:#a2947d; --line:#352d22; --accent:#d9a441; --accent-ink:#241b0a; --ok:#6fbe8c; --bad:#e5766a;
+  --warn:#f0a33c; --warn-wash:rgba(240,163,60,.15); } }
+*{box-sizing:border-box;}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Naskh Arabic",serif; line-height:2;}
+#w{max-width:900px; margin:0 auto; padding:26px 20px 90px;}
+h1{font-family:"Noto Nastaliq Urdu",serif; font-size:34px; font-weight:700; margin:0; line-height:2;}
+.en{display:block; font-size:12px; color:var(--muted); font-family:system-ui,sans-serif; direction:ltr;}
+.top{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;
+  border-bottom:2px solid var(--accent); padding-bottom:10px; margin-bottom:16px;}
+.top a{color:var(--accent); text-decoration:none; font-size:14.5px;}
+.card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 20px; margin:14px 0;
+  box-shadow:0 1px 2px rgba(60,45,20,.05), 0 8px 26px rgba(60,45,20,.06);}
+label{font-size:14.5px; color:var(--muted);}
+input[type=password], input[type=text]{border:1px solid var(--line); border-radius:9px;
+  background:var(--paper); color:var(--ink); padding:9px 12px; font-size:17px;
+  font-family:"Noto Naskh Arabic",serif; direction:rtl;}
+input.ltr{direction:ltr; font-family:system-ui,monospace; width:100%;}
+textarea{width:100%; box-sizing:border-box; min-height:300px; border:1px solid var(--line); border-radius:10px;
+  background:var(--paper); color:var(--ink); padding:14px 16px;
+  font-family:"Noto Naskh Arabic",serif; font-size:21px; line-height:2.2; direction:rtl; resize:vertical;}
+.row{display:flex; gap:9px; align-items:center; flex-wrap:wrap; margin-top:12px;}
+button{font-family:inherit; font-size:15.5px; cursor:pointer; border-radius:9px;
+  border:1px solid var(--line); background:var(--card); color:var(--ink); padding:8px 16px;}
+button.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
+button:hover{border-color:var(--accent);}
+button.rec{background:rgba(187,58,44,.12); border-color:var(--bad); color:var(--bad); animation:pl 1.1s infinite;}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.55}}
+select{font-family:inherit; font-size:14px; border:1px solid var(--line); border-radius:9px;
+  background:var(--paper); color:var(--ink); padding:7px 8px; max-width:210px;}
+#stat{font-size:14.5px;} #stat.ok{color:var(--ok);} #stat.bad{color:var(--bad);}
+.hint{font-size:14px; color:var(--muted); line-height:1.95;}
+/* درخواستیں */
+#reqList{display:flex; flex-direction:column; gap:9px; margin-top:10px;}
+.req{display:flex; align-items:center; gap:10px; flex-wrap:wrap; border:1px solid var(--warn);
+  background:var(--warn-wash); border-radius:11px; padding:8px 14px;}
+.req .w{font-family:"Noto Nastaliq Urdu",serif; font-size:24px; line-height:2;}
+.req .meta{font-size:12.5px; color:var(--muted);}
+.req button{padding:5px 12px; font-size:14px;}
+/* تختے */
+#kb{position:fixed; bottom:0; right:0; left:0; z-index:100; background:var(--card); border-top:2px solid var(--accent);
+  box-shadow:0 -8px 30px rgba(0,0,0,.15); padding:8px 10px 12px; display:none; direction:rtl;}
+#kb.open{display:block;}
+body.kb-open #w{padding-bottom:430px;}
+.krow{display:flex; justify-content:center; gap:5px; margin-top:5px;}
+.key{font-family:"Noto Naskh Arabic",serif; font-size:19px; min-width:42px; height:42px; padding:0 6px;
+  border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); cursor:pointer;}
+.key:active{background:var(--warn-wash); border-color:var(--accent);}
+.key.sp{min-width:200px;} .key.wide{min-width:66px; font-size:14px; color:var(--muted);}
+.key.mkk{background:var(--warn-wash); border-color:var(--warn); font-size:18px;}
+.key.lat{font-family:system-ui,sans-serif;}
+@media(max-width:700px){ .key{min-width:30px; height:38px; font-size:16px;} .key.sp{min-width:100px;} }
+#holdkb{position:fixed; z-index:300; background:var(--card); border:1.6px solid var(--accent); border-radius:14px;
+  box-shadow:0 8px 34px rgba(0,0,0,.28); padding:8px 10px; display:none; direction:rtl; user-select:none;}
+.hkrow{display:flex; gap:4px; justify-content:center; margin-top:4px;}
+.hk{min-width:33px; height:36px; padding:0 4px; display:flex; align-items:center; justify-content:center;
+  font-family:"Noto Naskh Arabic",serif; font-size:18px; border-radius:7px;
+  border:1px solid var(--line); background:var(--paper); color:var(--ink);}
+.hk.mk{background:var(--warn-wash); border-color:var(--warn); font-size:16px;}
+.hk.lat{font-family:system-ui,sans-serif; font-size:15px;}
+.hk.wide{min-width:66px; font-size:14px; color:var(--muted);}
+.hk.hot{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);
+  transform:scale(1.3); font-weight:700;}
+#toast{position:fixed; bottom:20px; right:50%; transform:translateX(50%); background:var(--ink); color:var(--paper);
+  padding:9px 20px; border-radius:999px; font-size:15px; opacity:0; pointer-events:none; transition:opacity .25s; z-index:400;}
+</style>
+</head>
+<body>
+<div id="w">
+  <div class="top">
+    <h1>🔉 تلفظ کا database<span class="en">UrduZaban admin — pronunciation lexicon + incoming requests</span></h1>
+    <span><a href="index.html">گھر</a> · <a href="qarina-aeraab.html">قرینہ</a></span>
+  </div>
+
+  <div class="card">
+    <label>انتظامی چابی (ایک بار — یاد رہے گی) <span class="en">Admin key</span></label>
+    <input type="password" id="key" class="ltr" placeholder="admin key">
+  </div>
+
+  <div class="card" id="reqCard">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+      <b style="font-size:17px;">📨 آئی ہوئی درخواستیں <span id="reqCount" style="color:var(--warn);"></span><span class="en">Requests sent from Qarina — words whose pronunciation needs fixing</span></b>
+      <button id="reqReload">تازہ کریں</button>
+    </div>
+    <div id="reqList"><span class="hint">چابی ڈالیے تو درخواستیں یہاں آئیں گی…</span></div>
+  </div>
+
+  <div class="card">
+    <b style="font-size:17px;">🔎 لفظ تلاش کیجیے<span class="en">Search the database — view, hear, edit, delete</span></b>
+    <div class="row" style="margin-top:8px;">
+      <input type="text" id="q" placeholder="لفظ لکھیے — لکھے یا بولے ہوئے روپ کا کوئی حصہ" style="flex:1; min-width:200px;">
+    </div>
+    <div id="qRes" style="margin-top:10px;"></div>
+  </div>
+
+  <div class="card">
+    <p class="hint" style="margin:0 0 8px;">
+      ہر سطر: <b>لفظ = بولنے کا روپ</b> — مثلاً «خود = خُد»، «بالکل = بِلکُل»۔ محفوظ کرتے ہی پوری سائٹ پر لاگو؛
+      جس لفظ کی درستی لغت میں آ جائے، اس کی درخواست خودبخود صاف ہو جاتی ہے۔ پرانا نسخہ server پر محفوظ رہتا ہے۔
+      <span class="en">One rule per line. Saving applies site-wide; matching requests auto-clear; previous version auto-backed-up.</span>
+    </p>
+    <textarea id="ta" placeholder="خود = خُد&#10;بالکل = بِلکُل"></textarea>
+    <div class="row">
+      <select id="vsel" title="آواز"></select>
+      <input type="text" id="test" placeholder="جانچیے — روپ لکھ کر سنیے" style="flex:1; min-width:170px;">
+      <button id="hear" title="جو لکھا ہے وہی سنیے">🔊 سنیے</button>
+      <button id="mic" title="بول کر لکھیے — جس خانے میں cursor ہو">🎙 بولیے</button>
+      <button id="padBtn" title="دبائے رکھیے، حرف پر چھوڑیے">⌨ دبا کر لکھیے</button>
+      <button id="kbBtn" title="نیچے مکمل تختہ">⌨ تختہ</button>
+    </div>
+    <div class="row">
+      <button class="primary" id="save">محفوظ کریں — پوری سائٹ کے لیے<span class="en">Save site-wide</span></button>
+      <button id="reload">تازہ کریں</button>
+      <span id="stat"></span>
+    </div>
+  </div>
+
+  <p class="hint">تختہ اور «دبا کر لکھیے» دونوں لغت اور جانچ کے خانوں میں لکھتے ہیں — جس میں آخری بار cursor تھا۔ لغت اور جانچ کے خانوں میں <b>long-press</b> بھی چلتا ہے۔</p>
+</div>
+
+<div id="kb">
+  <div style="display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:0 auto;">
+    <span class="hint">تختہ — کلک سے لکھیے</span>
+    <span><button id="kbLang">English</button> <button id="kbClose">بند کریں</button></span>
+  </div>
+  <div id="kbRows"></div>
+</div>
+<div id="toast"></div>
+
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const bare=s=>String(s).replace(/[ً-ٰٕـ]/g,"").trim();
+let sayT=null; function say(m){ const t=$("toast"); t.textContent=m; t.style.opacity=1;
+  clearTimeout(sayT); sayT=setTimeout(()=>t.style.opacity=0, m.length>60?4500:1900); }
+
+try{ $("key").value=localStorage.getItem("uz-admin-key")||""; }catch(e){}
+const KEYV=()=>$("key").value.trim();
+
+/* ---------- خانوں کا نشانہ ---------- */
+const ta=$("ta"), test=$("test");
+let taT=ta;
+[ta,test].forEach(el=>el.addEventListener("focus",()=>taT=el));
+function ins(s){ const el=taT||ta; const st=el.selectionStart??el.value.length, en=el.selectionEnd??st;
+  el.value=el.value.slice(0,st)+s+el.value.slice(en); const p=st+s.length;
+  el.focus(); el.setSelectionRange(p,p); }
+function del(){ const el=taT||ta; let st=el.selectionStart??el.value.length, en=el.selectionEnd??st;
+  if(st===en&&st>0) st--; el.value=el.value.slice(0,st)+el.value.slice(en);
+  el.focus(); el.setSelectionRange(st,st); }
+
+/* ---------- آواز (اپنی آواز + browser) ---------- */
+let QTTS=null, VOICES=[];
+(async()=>{ try{ const m=await import("./qarina-tts/qarina-tts.js"); if(await m.ready()){ QTTS=m; mkVoices(); } }catch(e){} })();
+function lv(){ try{ VOICES=speechSynthesis.getVoices()||[]; }catch(e){ VOICES=[]; } mkVoices(); }
+if("speechSynthesis" in window){ lv(); speechSynthesis.onvoiceschanged=lv; }
+const vShort=n=>n.replace(/Microsoft |Google |Online \(Natural\)| - .*$|Desktop/g,"").trim();
+function mkVoices(){
+  const ur=VOICES.filter(v=>/^ur/i.test(v.lang)), en=VOICES.filter(v=>/^en/i.test(v.lang)).slice(0,3);
+  let o=(QTTS?'<option value="__q__">اردو — اپنی آواز (قرینہ)</option>':'')+'<option value="__a__">اردو — خودکار</option>';
+  ur.forEach(v=>o+='<option value="'+esc(v.name)+'">اردو — '+esc(vShort(v.name))+'</option>');
+  en.forEach(v=>o+='<option value="'+esc(v.name)+'">English — '+esc(vShort(v.name))+'</option>');
+  const cur=$("vsel").value; $("vsel").innerHTML=o;
+  if(cur && [...$("vsel").options].some(x=>x.value===cur)) $("vsel").value=cur;
+  else $("vsel").value = QTTS ? "__q__" : "__a__";
+}
+mkVoices();
+let alive=null;
+function speakA(text){
+  text=(text||"").trim(); if(!text){ say("پہلے کچھ لکھیے"); return; }
+  if($("vsel").value==="__q__" && QTTS){ if(QTTS.isSpeaking()){QTTS.stop();return;} QTTS.speak(text,{wpm:145},{}); return; }
+  if(!("speechSynthesis" in window)) return;
+  if(speechSynthesis.speaking||speechSynthesis.pending){ speechSynthesis.cancel(); if(alive){clearInterval(alive);alive=null;} return; }
+  const v = $("vsel").value==="__a__"
+    ? (VOICES.find(x=>/^ur/i.test(x.lang))||VOICES.find(x=>/^ar/i.test(x.lang))||VOICES.find(x=>/^hi/i.test(x.lang))||VOICES[0])
+    : VOICES.find(x=>x.name===$("vsel").value);
+  const parts=[]; let buf="";
+  text.split(/(?<=[۔؟!\n])/).forEach(s=>{ if((buf+s).length>170){ if(buf.trim())parts.push(buf); buf=s; } else buf+=s; });
+  if(buf.trim())parts.push(buf);
+  parts.forEach((p,i)=>{ const u=new SpeechSynthesisUtterance(p);
+    if(v){u.voice=v;u.lang=v.lang;} else u.lang="ur-PK"; u.rate=.95;
+    if(i===parts.length-1){ u.onend=()=>{ if(alive){clearInterval(alive);alive=null;} }; }
+    speechSynthesis.speak(u); });
+  if(alive) clearInterval(alive); alive=setInterval(()=>{ try{speechSynthesis.resume();}catch(e){} },3000);
+}
+$("hear").onmousedown=e=>e.preventDefault();
+$("hear").onclick=()=>speakA(test.value.trim()||"");
+
+/* ---------- مائیک ---------- */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+let rec=null, micOn=false;
+if(SR){ rec=new SR(); rec.lang="ur-PK"; rec.continuous=true; rec.interimResults=false;
+  rec.onresult=e=>{ for(let i=e.resultIndex;i<e.results.length;i++){ if(e.results[i].isFinal){
+    const t=(e.results[i][0].transcript||"").trim(); if(t) ins((taT.value&&!/[\s\n]$/.test(taT.value.slice(0,taT.selectionStart)))?" "+t:t); } } };
+  rec.onend=()=>{ if(micOn){ try{rec.start();}catch(e){} } };
+  rec.onerror=e=>{ if(e.error==="not-allowed"){ micOn=false; $("mic").classList.remove("rec"); say("مائیک کی اجازت نہیں ملی"); } };
+} else { $("mic").disabled=true; }
+$("mic").onclick=()=>{
+  if(!rec) return;
+  if(micOn){ micOn=false; try{rec.stop();}catch(e){} $("mic").classList.remove("rec"); $("mic").textContent="🎙 بولیے"; return; }
+  try{ rec.start(); micOn=true; $("mic").classList.add("rec"); $("mic").textContent="⏹ رکیے"; }catch(e){}
+};
+
+/* ---------- تختے (fixed + hold) ---------- */
+const MKS=[["َ","زبر"],["ِ","زیر"],["ُ","پیش"],["ّ","تشدید"],["ْ","جزم"],["ً","دو زبر"],["ٍ","دو زیر"],["ٌ","دو پیش"],["ٰ","کھڑی زبر"]];
+const URF=[["ق","و","ع","ر","ت","ے","ی","ئ","ہ","پ"],["ا","س","د","ف","گ","ح","ج","ک","ل","ں"],
+["ز","ش","چ","ط","ب","ن","م","ھ","ۂ","ء"],["آ","ض","ص","ث","ظ","غ","خ","ٹ","ڈ","ڑ"],
+["ذ","ژ","أ","ؤ","ۃ","۔","،","؟","!","٭"],["«","»","(",")","'","\"","ـ","=","؎"]];
+const ENR=[["1","2","3","4","5","6","7","8","9","0"],["q","w","e","r","t","y","u","i","o","p"],
+["a","s","d","f","g","h","j","k","l","'"],["z","x","c","v","b","n","m",".",",","="],
+["A","B","C","D","E","F","G","H","I","J"],["K","L","M","N","O","P","Q","R","S","T"],["U","V","W","X","Y","Z","?","!","(",")"]];
+let kbLayer="ur";
+function renderKb(){
+  const rows=[];
+  if(kbLayer==="ur"){ rows.push(MKS.map(m=>({l:"◌"+m[0],c:"key mkk",f:()=>ins(m[0])})));
+    URF.forEach(r=>rows.push(r.map(ch=>({l:ch,c:"key",f:()=>ins(ch)})))); }
+  else ENR.forEach(r=>rows.push(r.map(ch=>({l:ch,c:"key lat",f:()=>ins(ch)}))));
+  rows.push([{l:"⌫",c:"key wide",f:del},{l:"خالی جگہ",c:"key sp",f:()=>ins(" ")},{l:"⏎",c:"key wide",f:()=>ins("\n")}]);
+  $("kbRows").innerHTML=rows.map(r=>'<div class="krow">'+r.map(k=>'<button class="'+k.c+'">'+esc(k.l)+'</button>').join("")+'</div>').join("");
+  const flat=rows.flat();
+  [...$("kbRows").querySelectorAll("button")].forEach((b,i)=>{ b.onmousedown=e=>e.preventDefault(); b.onclick=()=>flat[i].f(); });
+  $("kbLang").textContent=kbLayer==="ur"?"English":"اردو";
+}
+$("kbLang").onmousedown=e=>e.preventDefault();
+$("kbLang").onclick=()=>{ kbLayer=kbLayer==="ur"?"en":"ur"; renderKb(); };
+$("kbBtn").onclick=()=>{ $("kb").classList.toggle("open"); document.body.classList.toggle("kb-open"); };
+$("kbClose").onclick=()=>{ $("kb").classList.remove("open"); document.body.classList.remove("kb-open"); };
+renderKb();
+
+const holdkb=document.createElement("div"); holdkb.id="holdkb"; document.body.appendChild(holdkb);
+let holdMode="ur";
+function buildHold(){
+  let h="";
+  if(holdMode==="ur"){ h+='<div class="hkrow">'+MKS.map(m=>'<span class="hk mk" data-ch="'+m[0]+'">◌'+m[0]+'</span>').join("")+'</div>';
+    URF.forEach(r=>{ h+='<div class="hkrow">'+r.map(ch=>'<span class="hk" data-ch="'+esc(ch)+'">'+esc(ch)+'</span>').join("")+'</div>'; });
+    h+='<div class="hkrow"><span class="hk wide" data-act="mode">ABC</span><span class="hk wide" data-act="sp">فاصلہ</span><span class="hk wide" data-act="del">⌫</span></div>'; }
+  else { ENR.forEach(r=>{ h+='<div class="hkrow">'+r.map(ch=>'<span class="hk lat" data-ch="'+esc(ch)+'">'+esc(ch)+'</span>').join("")+'</div>'; });
+    h+='<div class="hkrow"><span class="hk wide" data-act="mode">اردو</span><span class="hk wide" data-act="sp">space</span><span class="hk wide" data-act="del">⌫</span></div>'; }
+  holdkb.innerHTML=h;
+}
+buildHold();
+let holding=false, hot=null, lastX=0, lastY=0, lpT=null, lpS=null;
+function setHot(el){ if(hot===el)return; if(hot)hot.classList.remove("hot"); hot=el; if(hot)hot.classList.add("hot"); }
+function startHold(x,y){ holding=true; setHot(null); holdkb.style.display="block";
+  const r=holdkb.getBoundingClientRect();
+  holdkb.style.left=Math.max(8,Math.min(x-r.width/2,innerWidth-r.width-8))+"px";
+  let top=y-r.height-20; if(top<8) top=Math.min(y+26,innerHeight-r.height-8);
+  holdkb.style.top=top+"px"; }
+$("padBtn").addEventListener("pointerdown",e=>{ e.preventDefault(); (taT||ta).focus(); startHold(e.clientX,e.clientY); });
+[ta,test].forEach(el=>el.addEventListener("pointerdown",e=>{
+  lastX=e.clientX; lastY=e.clientY; lpS={x:e.clientX,y:e.clientY};
+  lpT=setTimeout(()=>{ lpT=null; const a=el.selectionStart??0; try{el.setSelectionRange(a,a);}catch(err){}
+    taT=el; startHold(lastX,lastY); },500);
+}));
+document.addEventListener("pointermove",e=>{
+  lastX=e.clientX; lastY=e.clientY;
+  if(lpS && (Math.abs(e.clientX-lpS.x)>10||Math.abs(e.clientY-lpS.y)>10)){ if(lpT){clearTimeout(lpT);lpT=null;} lpS=null; }
+  if(!holding) return;
+  const el=document.elementFromPoint(e.clientX,e.clientY);
+  setHot(el&&el.classList&&el.classList.contains("hk")?el:null);
+});
+document.addEventListener("pointerup",()=>{
+  if(lpT){clearTimeout(lpT);lpT=null;} lpS=null;
+  if(!holding) return;
+  holding=false; holdkb.style.display="none";
+  if(hot){ const a=hot.dataset.act, ch=hot.dataset.ch;
+    if(a==="del") del(); else if(a==="sp") ins(" ");
+    else if(a==="mode"){ holdMode=holdMode==="ur"?"en":"ur"; buildHold(); say(holdMode==="en"?"English — دبا کر لکھیے":"اردو تختہ واپس"); }
+    else if(ch) ins(ch); }
+  setHot(null);
+});
+
+/* ---------- لغت: پڑھنا لکھنا ---------- */
+function setStat(m,ok){ const s=$("stat"); s.textContent=m; s.className=ok?"ok":"bad"; }
+async function load(){
+  try{ const r=await fetch("api/lexicon.php?action=get&t="+Date.now());
+    const j=await r.json(); const sp=(j&&j.speak)||{};
+    ta.value=Object.keys(sp).map(k=>k+" = "+sp[k]).join("\n");
+    setStat(Object.keys(sp).length+" اندراج موجود", true);
+  }catch(e){ setStat("database پڑھا نہ جا سکا — کیا api upload ہے؟", false); }
+}
+$("reload").onclick=load; load();
+$("save").onclick=async()=>{
+  const speak={}; let badL=0;
+  ta.value.split("\n").forEach(line=>{ const L=line.trim(); if(!L||L.startsWith("#"))return;
+    const m=L.match(/^(.+?)\s*[=:←→]\s*(.+)$/); if(!m){badL++;return;}
+    const k=bare(m[1]), v=m[2].trim(); if(k&&v) speak[k]=v; });
+  try{
+    const body=new URLSearchParams();
+    body.set("action","save"); body.set("key",KEYV()); body.set("data",JSON.stringify({speak}));
+    const r=await fetch("api/lexicon.php",{method:"POST",body}); const j=await r.json();
+    if(j.ok){ setStat("✔ محفوظ — "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):"")+(badL?(" ("+badL+" سطریں سمجھ نہ آئیں)"):""), true); loadReq(); }
+    else setStat(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا", false);
+  }catch(e){ setStat("server تک بات نہ پہنچی", false); }
+};
+
+/* ---------- درخواستیں ---------- */
+async function loadReq(){
+  if(!KEYV()){ $("reqList").innerHTML='<span class="hint">چابی ڈالیے تو درخواستیں یہاں آئیں گی…</span>'; $("reqCount").textContent=""; return; }
+  try{
+    const body=new URLSearchParams(); body.set("action","suggestions"); body.set("key",KEYV());
+    const r=await fetch("api/lexicon.php",{method:"POST",body}); const j=await r.json();
+    const items=(j&&j.items)||[];
+    $("reqCount").textContent=items.length?("("+items.length+")"):"";
+    if(!items.length){ $("reqList").innerHTML='<span class="hint">کوئی درخواست نہیں — سب صاف ✔</span>'; return; }
+    $("reqList").innerHTML=items.map((it,i)=>
+      '<div class="req"><span class="w">'+esc(it.w)+'</span>'+
+      '<span class="meta">×'+(it.n||1)+(it.t?(' · '+String(it.t).slice(0,10)):'')+'</span>'+
+      '<button data-a="hear" data-i="'+i+'">🔊 سنیں</button>'+
+      '<button data-a="fix" data-i="'+i+'">لغت میں لکھیں ↓</button>'+
+      '<button data-a="del" data-i="'+i+'" title="بغیر درستی کے ہٹائیے">❌</button></div>').join("");
+    [...$("reqList").querySelectorAll("button")].forEach(b=>b.onclick=async()=>{
+      const it=items[+b.dataset.i];
+      if(b.dataset.a==="hear") speakA(it.w);
+      else if(b.dataset.a==="fix"){
+        if(!ta.value.split("\n").some(l=>l.trim().startsWith(it.w+" ")||l.trim().startsWith(it.w+"="))){
+          ta.value=it.w+" = \n"+ta.value; }
+        ta.focus(); ta.setSelectionRange((it.w+" = ").length,(it.w+" = ").length);
+        say("اب بولنے کا روپ لکھیے، پھر محفوظ کریں");
+      } else if(b.dataset.a==="del"){
+        const body=new URLSearchParams(); body.set("action","resolve"); body.set("key",KEYV()); body.set("word",it.w);
+        await fetch("api/lexicon.php",{method:"POST",body}); loadReq();
+      }
+    });
+  }catch(e){ $("reqList").innerHTML='<span class="hint">درخواستیں نہ مل سکیں</span>'; }
+}
+$("reqReload").onclick=loadReq;
+
+/* ---------- تلاش، ترمیم، حذف ---------- */
+const BUILTIN={"خود":"خُد","خوش":"خُش","خوشی":"خُشی","خوشیاں":"خُشیاں","خوشبو":"خُشبو","خودی":"خُدی","بالکل":"بِلکُل","بالآخر":"بِلآخِر"};
+function parseTa(){
+  const out=[];
+  ta.value.split("\n").forEach((line,idx)=>{
+    const L=line.trim(); if(!L||L.startsWith("#")) return;
+    const m=L.match(/^(.+?)\s*[=:←→]\s*(.+)$/); if(!m) return;
+    out.push({k:bare(m[1]), v:m[2].trim(), idx});
+  });
+  return out;
+}
+function selectLine(idx){
+  const lines=ta.value.split("\n");
+  let start=0; for(let i=0;i<idx;i++) start+=lines[i].length+1;
+  const end=start+lines[idx].length;
+  ta.focus(); ta.setSelectionRange(start,end);
+  const lh=parseFloat(getComputedStyle(ta).lineHeight)||44;
+  ta.scrollTop=Math.max(0, idx*lh - ta.clientHeight/2);
+  ta.scrollIntoView({block:"center",behavior:"smooth"});
+}
+function removeLine(idx){
+  const lines=ta.value.split("\n"); lines.splice(idx,1); ta.value=lines.join("\n");
+}
+function doSearch(){
+  const q=bare($("q").value); const box=$("qRes");
+  if(!q){ box.innerHTML=""; return; }
+  const entries=parseTa();
+  const hits=entries.filter(e=>e.k.includes(q)||bare(e.v).includes(q)).slice(0,8);
+  let h="";
+  hits.forEach(e=>{
+    h+='<div class="req" style="border-color:var(--accent); background:transparent;">'+
+       '<span class="w">'+esc(e.k)+'</span><span style="color:var(--muted);">←</span>'+
+       '<span class="w" style="color:var(--accent);">'+esc(e.v)+'</span>'+
+       '<button data-a="hear" data-i="'+e.idx+'" data-v="'+esc(e.v)+'">🔊 سنیں</button>'+
+       '<button data-a="edit" data-i="'+e.idx+'">✏️ ترمیم</button>'+
+       '<button data-a="del" data-i="'+e.idx+'" data-k="'+esc(e.k)+'">🗑 حذف</button></div>';
+  });
+  if(!hits.length){
+    if(BUILTIN[q]){
+      h+='<div class="req"><span class="w">'+esc(q)+'</span>'+
+         '<span class="meta">بنیادی لغت میں پکا ہے ← '+esc(BUILTIN[q])+' — server میں اوپر لکھ سکتے ہیں</span>'+
+         '<button data-a="hear2" data-v="'+esc(BUILTIN[q])+'">🔊</button>'+
+         '<button data-a="add" data-k="'+esc(q)+'" data-v="'+esc(BUILTIN[q])+'">اوپر لکھیں ↓</button></div>';
+    } else {
+      h+='<div class="hint">«'+esc($("q").value.trim())+'» database میں نہیں۔ '+
+         '<button data-a="add" data-k="'+esc(q)+'" data-v="">نیا اندراج بنائیں ↓</button></div>';
+    }
+  }
+  box.innerHTML=h;
+  [...box.querySelectorAll("button")].forEach(b=>b.onclick=async()=>{
+    const a=b.dataset.a;
+    if(a==="hear"||a==="hear2") speakA(b.dataset.v);
+    else if(a==="edit"){ selectLine(+b.dataset.i); say("سطر منتخب — ترمیم کر کے «محفوظ کریں» دبائیے"); }
+    else if(a==="del"){
+      removeLine(+b.dataset.i);
+      $("save").click();
+      say("«"+b.dataset.k+"» حذف — پچھلا نسخہ server پر محفوظ ہے (lexicon.prev.json)");
+      setTimeout(doSearch,600);
+    }
+    else if(a==="add"){
+      const line=b.dataset.k+" = "+(b.dataset.v||"");
+      ta.value=line+"\n"+ta.value;
+      ta.focus(); ta.setSelectionRange(line.length,line.length);
+      say("روپ لکھ کر «محفوظ کریں» دبائیے");
+    }
+  });
+}
+let qDeb=null;
+$("q").addEventListener("input",()=>{ clearTimeout(qDeb); qDeb=setTimeout(doSearch,250); });
+let keyDeb=null;
+$("key").addEventListener("input",()=>{ try{ localStorage.setItem("uz-admin-key",$("key").value); }catch(e){}
+  clearTimeout(keyDeb); keyDeb=setTimeout(loadReq,600); });
+loadReq();
+</script>
+</body>
+</html>
