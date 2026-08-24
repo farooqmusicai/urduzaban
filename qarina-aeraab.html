@@ -115,6 +115,13 @@ select.mini{font-family:inherit; font-size:13px; border-radius:8px; border:1px s
 .w.flash{outline:2px solid var(--warn); outline-offset:3px;}
 .legend{display:flex; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:14px; margin:16px 2px 0; line-height:1.9;}
 .legend .k{display:inline-block; width:14px; height:14px; border-radius:4px; vertical-align:-2px; margin-left:6px;}
+/* قرینہ کی اپنی نیورل آواز — پہلے نمونے */
+#nvoice{margin-top:18px;}
+#nvoice .nvrows{display:grid; gap:12px; padding:14px 16px 4px;}
+.nvrow{display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
+.nvline{font-family:"QNastaliq","Noto Nastaliq Urdu",serif; font-size:21px; line-height:2.2; direction:rtl; unicode-bidi:isolate; flex:1; min-width:220px;}
+.nvrow audio{height:36px; max-width:100%; direction:ltr;}
+#nvoice .nvfoot{color:var(--muted); font-size:14px; line-height:2; margin:6px 16px 14px; padding-top:10px; border-top:1px dashed var(--line);}
 footer.q{margin-top:26px; color:var(--muted); font-size:14px; line-height:2; border-top:1px solid var(--line); padding-top:14px;}
 #pop{position:absolute; z-index:50; background:var(--card); border:1px solid var(--accent); border-radius:12px;
   box-shadow:var(--shadow); padding:12px 14px; display:none; max-width:340px;}
@@ -272,6 +279,21 @@ footer.uzfoot a:hover{text-decoration:underline;}
   <span><span class="L-ur">سادہ لفظ — معمول کے مطابق، اعراب کی ضرورت نہیں</span><span class="L-en">Plain word — ordinary, needs no marks</span></span>
   <span class="eni">Green underline = marked with confidence · dotted = from your taught dictionary · Orange = two readings, click to choose · Red = unknown, click to teach · Plain = no marks needed</span>
 </div>
+
+<section class="pane" id="nvoice">
+  <div class="cap"><span class="t">🎙 <span class="L-ur">قرینہ کی اپنی آواز — پہلے نمونے</span><span class="L-en">Qarina&rsquo;s own voice &mdash; first samples</span></span>
+    <span class="ctl"><span class="chip"><span class="L-ur">نیورل آواز · تجرباتی</span><span class="L-en">Neural voice &middot; experimental</span></span></span>
+  </div>
+  <div class="nvrows">
+    <div class="nvrow"><span class="nvline">مَیں چَلتا ہوں تَنہا یَہاں، چَٹّان سا کھَڑا ہوں مَیں</span>
+      <audio controls preload="none"><source src="qarina-tts/neural1.wav" type="audio/wav"><source src="https://raw.githubusercontent.com/farooqmusicai/qarina-voice/main/samples/sample1-chattan.wav" type="audio/wav"></audio></div>
+    <div class="nvrow"><span class="nvline">آسمان جھوٹ نہیں بولتا۔ ستارے اپنی چال سے پیغام دیتے ہیں</span>
+      <audio controls preload="none"><source src="qarina-tts/neural2.wav" type="audio/wav"><source src="https://raw.githubusercontent.com/farooqmusicai/qarina-voice/main/samples/sample2-aasman.wav" type="audio/wav"></audio></div>
+    <div class="nvrow"><span class="nvline">عِشق کے دَرد کا بیمار ہوں، اِک غَم خوار کی ہے آرزو</span>
+      <audio controls preload="none"><source src="qarina-tts/neural3.wav" type="audio/wav"><source src="https://raw.githubusercontent.com/farooqmusicai/qarina-voice/main/samples/sample3-ishq.wav" type="audio/wav"></audio></div>
+  </div>
+  <p class="nvfoot"><span class="L-ur">یہ قرینہ کی اپنی نیورل آواز کی پہلی جھلک ہے — Meta کی کھلی MMS تحقیق (اردو) سے، شکریے کے ساتھ۔ اگلا قدم: یہی آواز اِسی صفحے کے «سنیے» بٹن میں، آپ کے اپنے browser کے اندر، بغیر internet۔</span><span class="L-en">A first glimpse of Qarina&rsquo;s own neural voice &mdash; built on Meta&rsquo;s open MMS research (Urdu), with thanks. Next step: this voice behind the &ldquo;Listen&rdquo; buttons of this very page, fully offline in your own browser.</span></p>
+</section>
 
 <div class="qnote">
 <span class="L-ur">آواز نہ آئے تو: آواز کی فہرست میں «اردو — خودکار» چنیے؛ بہترین اردو آواز کے لیے یہی صفحہ <b>Edge browser</b> میں کھولیے (Microsoft Uzma مفت ملتی ہے)، یا Windows Settings → Time &amp; Language → Speech میں اردو voice pack ڈال لیجیے۔<br>یہ صفحہ آپ کے اپنے browser میں چلتا ہے — کوئی متن کہیں نہیں جاتا۔ سکھائے ہوئے لفظ اسی browser میں محفوظ رہتے ہیں؛ «لغت برآمد» سے ان کی فائل بنا کر سنبھال لیجیے یا دوسرے آلے پر «لغت درآمد» کر لیجیے۔<br>قرینہ کی اپنی آواز کھلے عام بن رہی ہے — کارخانہ: <a href="https://github.com/farooqmusicai/qarina-voice" target="_blank" rel="noopener">qarina-voice</a></span>
