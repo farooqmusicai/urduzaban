@@ -39,6 +39,15 @@
   ol.lines li{color:var(--mut);padding:2px 6px;border-radius:6px}
   ol.lines li.done{color:var(--fg)}
   ol.lines li.now{color:var(--fg);background:var(--hl)}
+  .lug{margin-top:12px;border:1px solid var(--line);border-radius:10px;padding:12px;display:none}
+  .lug.open{display:block}
+  .lug table{width:100%;border-collapse:collapse;font-size:.95rem}
+  .lug td{padding:4px 6px;border-bottom:1px solid var(--line)}
+  .lug td.w{font-family:'Noto Nastaliq Urdu',serif;font-size:1.15rem;line-height:2.2}
+  .lug input{width:100%;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);
+             font-family:'Noto Nastaliq Urdu','Noto Naskh Arabic',serif;font-size:1.1rem}
+  .lug .x{border:none;background:transparent;color:var(--err);cursor:pointer;font-size:1rem;padding:0 6px}
+  .chk{display:flex;align-items:center;gap:7px;font-size:.86rem;color:var(--mut);margin-top:10px}
   .vrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
   .vb{background:transparent;border:1px solid var(--line);color:var(--fg);font-size:.95rem;padding:7px 16px;border-radius:99px}
   .vb.on{border-color:var(--acc);background:var(--hl);color:var(--acc);font-weight:600}
@@ -71,6 +80,28 @@
       <button class="tb" data-pause="3">3 سیکنڈ</button>
       <span class="tsep"></span>
       <button class="tb" id="clr">نشان ہٹائیں</button>
+      <span class="tsep"></span>
+      <button class="tb" id="fixw">🔊 اِس لفظ کا تلفظ</button>
+      <button class="tb" id="lugbtn">تلفظ کی لغت</button>
+    </div>
+
+    <div class="lug" id="lug">
+      <div style="font-size:.86rem;color:var(--mut);margin-bottom:8px">
+        بائیں لفظ، دائیں «ایسے بولو»۔ ایک بار ٹھیک کر دیں — ہمیشہ ٹھیک بولے گا۔
+        آپ کا متن نہیں بدلتا، صرف آواز بدلتی ہے۔
+      </div>
+      <table><tbody id="lugrows"></tbody></table>
+      <div class="row">
+        <input id="lugk" placeholder="لفظ" style="max-width:190px">
+        <input id="lugv" placeholder="ایسے بولو (اعراب کے ساتھ)" style="max-width:260px">
+        <button class="tb" id="lugadd">شامل کریں</button>
+        <span class="tsep"></span>
+        <button class="tb" id="lugexp">لغت برآمد</button>
+        <button class="tb" id="lugimp">لغت درآمد</button>
+        <button class="tb" id="lugreset">اصل حالت</button>
+      </div>
+      <label class="chk"><input type="checkbox" id="safai" checked>
+        اعراب خودکار درست کریں <span style="opacity:.7">(کِتَاب → «کِتاب» — ورنہ eSpeak «کِ‌تا‌آب» بولتا ہے)</span></label>
     </div>
     <textarea id="txt" spellcheck="false">مُنتشِر ہوتا تو ہے لیکِن سَاں وَر جاتا ہے کون
 ریزہ ریزہ ہو کے بھی یکسر نِکھَر جاتا ہے کون</textarea>
@@ -128,6 +159,17 @@ const VOICES=[
 ];
 let voice=VOICES.find(v=>{try{return v.id===localStorage.getItem('qarina-voice')}catch{return false}})||VOICES[0];
 let INFO={};
+/* ---------- talaffuz ki lughat ----------
+   NAAPA HUA: eSpeak ki Urdu lugat achhi hai magar zabar/zer/pesh jab LAMBI
+   awaz (ا و ی ے) ya tashdeed se pehle aayen to woh do awazein bana deta hai:
+     کِتَاب -> "ki-ta-AAB"  (ghalat)      کِتاب -> "kitaab" (theek)
+     مُحَبَّت -> "mo-ha-BAAT" (ghalat)    مُحَبّت -> "mohabbat" (theek)
+   Isi liye safai sirf IN DO surton mein hoti hai - baqi aeraab MADAD karte
+   hain (دَم = dam, magar دم = dʌm). Aur jo lafz phir bhi ghalat rahe, uske
+   liye yeh lughat hai: ek baar theek karein, hamesha theek. */
+const LUG_KEY='qarina-talaffuz-v1';
+let LUG={}, LUGDEF={};
+const lugKey=w=>w.replace(/[^\p{L}]/gu,'');
 let loadedId=null,cfg=null,vocab=null,sr=16000;
 let ctx=null,sources=[],playHead=0,abort=false,busy=false,allPcm=[];
 
@@ -263,6 +305,69 @@ async function ready(){
   $('#state').innerHTML=`آواز: <b>${voice.label}</b> · ماڈل <b>${mb} MB</b> · ${sr} Hz · الگ worker میں ✅ (صفحہ کبھی نہیں جمے گا)`;
 }
 
+/* ---------- talaffuz ki lughat ---------- */
+async function lugLoad(){
+  try{ LUGDEF=await (await fetch('qarina-tts/talaffuz.json',{cache:'no-cache'})).json(); }catch{ LUGDEF={}; }
+  delete LUGDEF._;
+  let mine={}; try{ mine=JSON.parse(localStorage.getItem(LUG_KEY)||'{}'); }catch{}
+  LUG={...LUGDEF, ...mine};
+  lugPaint();
+}
+function lugSave(){
+  const mine={};
+  for(const [k,v] of Object.entries(LUG)) if(LUGDEF[k]!==v) mine[k]=v;
+  try{ localStorage.setItem(LUG_KEY, JSON.stringify(mine)); }catch{}
+  lugPaint();
+}
+function lugPaint(){
+  const tb=$('#lugrows'); tb.innerHTML='';
+  const ks=Object.keys(LUG).sort();
+  if(!ks.length){ tb.innerHTML='<tr><td style="color:var(--mut)">ابھی کوئی لفظ نہیں</td></tr>'; return; }
+  for(const k of ks){
+    const tr=document.createElement('tr');
+    const a=document.createElement('td'); a.className='w'; a.textContent=k;
+    const b=document.createElement('td'); b.className='w'; b.textContent=LUG[k];
+    const c=document.createElement('td'); c.style.width='1%';
+    const x=document.createElement('button'); x.className='x'; x.textContent='\u2715'; x.title='ہٹائیں';
+    x.onclick=()=>{ delete LUG[k]; lugSave(); };
+    c.appendChild(x); tr.append(a,b,c); tb.appendChild(tr);
+  }
+}
+$('#lugbtn').onclick=()=>$('#lug').classList.toggle('open');
+$('#lugadd').onclick=()=>{
+  const k=lugKey($('#lugk').value), v=$('#lugv').value.trim();
+  if(!k||!v){ msg('لفظ اور اُس کا تلفظ، دونوں لکھیں۔','warn'); return; }
+  LUG[k]=v; $('#lugk').value='';$('#lugv').value=''; lugSave();
+  msg(`«${k}» اب «${v}» بولا جائے گا۔`,'ok');
+};
+$('#fixw').onclick=()=>{
+  const ta=$('#txt'); let a=ta.selectionStart,z=ta.selectionEnd;
+  if(a===z){                                   // kuch chuna nahi -> jahan cursor hai wahan ka lafz
+    const t=ta.value;
+    while(a>0 && /[\p{L}\p{M}]/u.test(t[a-1])) a--;
+    while(z<t.length && /[\p{L}\p{M}]/u.test(t[z])) z++;
+  }
+  const w=lugKey(ta.value.slice(a,z));
+  if(!w){ msg('پہلے کوئی لفظ منتخب کریں یا اُس پر cursor رکھیں۔','warn'); ta.focus(); return; }
+  $('#lug').classList.add('open');
+  $('#lugk').value=w; $('#lugv').value=LUG[w]||ta.value.slice(a,z).trim();
+  $('#lugv').focus(); $('#lugv').select();
+  msg(`«${w}» — دائیں خانے میں لکھیں کہ یہ کیسے بولا جائے۔`);
+};
+$('#lugexp').onclick=()=>{
+  save(new Blob([JSON.stringify(LUG,null,1)],{type:'application/json'}),'qarina-talaffuz.json');
+};
+$('#lugimp').onclick=()=>{
+  const i=document.createElement('input'); i.type='file'; i.accept='.json,application/json';
+  i.onchange=async()=>{ try{
+      const o=JSON.parse(await i.files[0].text());
+      let n=0; for(const [k,v] of Object.entries(o)) if(k!=='_'&&typeof v==='string'){ LUG[lugKey(k)]=v; n++; }
+      lugSave(); msg(`${n} الفاظ لغت میں شامل ہو گئے۔`,'ok');
+    }catch(e){ msg('لغت کی فائل پڑھی نہیں جا سکی۔','err'); } };
+  i.click();
+};
+$('#lugreset').onclick=()=>{ LUG={...LUGDEF}; try{localStorage.removeItem(LUG_KEY)}catch{} lugPaint(); msg('لغت اصل حالت پر آ گئی۔'); };
+
 /* ---------- awaz ka intikhab ---------- */
 function paintVoices(){
   const box=$('#voices');
@@ -370,7 +475,7 @@ $('#go').addEventListener('click',async()=>{
       msg('تلفظ تیار ہو رہا ہے…');
       const texts=segs.filter(x=>x.text).map(x=>x.text);
       if(texts.length){
-        const r=await call({t:'phon',segs:texts});
+        const r=await call({t:'phon',segs:texts,lughat:LUG,safai:$('#safai').checked});
         let k=0; for(const x of segs) if(x.text) x.ids=r.ids[k++];
       }
     }
@@ -475,6 +580,7 @@ $('#mp3').addEventListener('click',()=>{
 });
 
 paintVoices();
+lugLoad();
 
 for(const t of ['سلام','اردو زبان','آسمان جھوٹ نہیں بولتا','دل ناداں تجھے ہوا کیا ہے']){
   const b=document.createElement('button');b.className='ex';b.textContent=t;
