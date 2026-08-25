@@ -1,0 +1,62 @@
+# لغت — رومن کی دوسری املا جوڑنا
+#
+# uz-lughat-alt.json (id → ["املا", ...]) کو uz-lughat.json کے alt خانے میں
+# جوڑ دیتا ہے۔ اصل فائل ہاتھ سے نہیں بدلی جاتی — یہ کام یہیں CI میں ہوتا ہے،
+# تاکہ ہر تبدیلی GitHub پر نظر آئے اور واپس بھی کی جا سکے۔
+#
+# پہرے: اندراج کی تعداد بدلے تو رک جاتا ہے؛ w/a/r/en/pos کو ہاتھ نہیں لگاتا۔
+name: Lughat - roman imla joro
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'uz-lughat-alt.json'
+      - '.github/workflows/lughat-alt.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Joro
+        run: |
+          python3 - <<'PY'
+          import json, sys, collections
+          BASE='uz-lughat.json'; PATCH='uz-lughat-alt.json'
+          d=json.load(open(BASE,encoding='utf-8'))
+          p=json.load(open(PATCH,encoding='utf-8'))
+          alt=p.get('alt') or {}
+          E=d['entries']; n0=len(E)
+          byid={str(it['id']):it for it in E}
+          added=0; words=0; skipped=0
+          for k,vs in alt.items():
+              it=byid.get(k)
+              if it is None: skipped+=1; continue
+              have={x.strip().lower() for x in (it.get('alt') or [])}
+              have.add((it.get('r') or '').strip().lower())
+              new=[v for v in vs if v.strip().lower() not in have]
+              if not new: continue
+              it['alt']=sorted(set((it.get('alt') or []))|set(new))
+              added+=len(new); words+=1
+          assert len(d['entries'])==n0, 'aندراجات کی تعداد بدل گئی — روک دیا'
+          d['updated']=p.get('updated') or d.get('updated')
+          json.dump(d, open(BASE,'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
+          have_alt=sum(1 for it in E if it.get('alt'))
+          print(f'jori gayin: {added} imla · {words} alfaz par · nahi mila id: {skipped}')
+          print(f'ab alt wale andraaj: {have_alt} / {n0}')
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name  "qarina-bot"
+          git config user.email "qarina-bot@users.noreply.github.com"
+          git add uz-lughat.json
+          git diff --cached --quiet && { echo "kuch naya nahi"; exit 0; }
+          git commit -m "lughat: roman ki doosri imla jori (uz-lughat-alt.json se)"
+          git pull --rebase --autostash
+          git push
