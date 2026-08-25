@@ -31,6 +31,9 @@ jobs:
               except Exception as e:
                   return 0, str(e).encode('utf-8', 'replace')
 
+          os.makedirs('uz-data', exist_ok=True)
+          with open('uz-data/platts-sample.txt','w',encoding='utf-8') as fh: fh.write('(khali)\n')
+
           rep = []
           rep.append("# Platts (1884) — سروے / SURVEY\n")
           rep.append("> یہ صرف **جانچ** ہے۔ لغت میں ایک لفظ بھی نہیں ڈالا گیا۔\n")
@@ -148,6 +151,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add PLATTS-SURVEY.md uz-data/platts-sample.txt 2>/dev/null || true
+          git add -A
+          git status --short
           git commit -m "platts: survey (sirf ginti aur namoona, kuch jora nahi)" || echo "no change"
-          git push
+          git push || echo "push skipped"
