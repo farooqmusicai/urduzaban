@@ -39,6 +39,9 @@
   ol.lines li{color:var(--mut);padding:2px 6px;border-radius:6px}
   ol.lines li.done{color:var(--fg)}
   ol.lines li.now{color:var(--fg);background:var(--hl)}
+  .vrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  .vb{background:transparent;border:1px solid var(--line);color:var(--fg);font-size:.95rem;padding:7px 16px;border-radius:99px}
+  .vb.on{border-color:var(--acc);background:var(--hl);color:var(--acc);font-weight:600}
   dl{margin:0;font-size:.86rem;color:var(--mut)} dt{float:right;clear:right;margin-left:8px;opacity:.75} dd{margin:0 0 2px}
 </style>
 <script src="qarina-tts/lib/lame.min.js"></script>
@@ -47,6 +50,7 @@
   <div class="sub">ماڈل آپ کے براؤزر میں چلتا ہے · کوئی سرور نہیں</div>
 
   <div class="card">
+    <div class="vrow" id="voices"><span class="tlbl">آواز:</span></div>
     <div class="tools">
       <span class="tlbl">منتخب کر کے:</span>
       <button class="tb" data-tag="بہت سست">بہت سست</button>
@@ -114,7 +118,17 @@ function wk(){
 }
 const call=(m,tr=[])=>new Promise((res,rej)=>{const id=++rpcId;pending.set(id,{res,rej});wk().postMessage({...m,id},tr);});
 
-let loaded=false,cfg=null,vocab=null,sr=16000;
+// Teen awazein. Piper wali (aurat + mard) eSpeak ke phonemes leti hain aur
+// 22050 Hz par bolti hain; purani MMS raw huroof leti hai aur 16000 Hz par.
+// Naapa hua farq (ek hi browser, ek hi matn): MMS rtf 2.73, Piper 0.38.
+const VOICES=[
+  {id:'aurat', label:'عورت',        kind:'piper', model:'piper/female.onnx', cfg:'piper/female.json'},
+  {id:'mard',  label:'مرد',          kind:'piper', model:'piper/male.onnx',   cfg:'piper/male.json'},
+  {id:'mms',   label:'مرد — پرانی',  kind:'mms',   model:'model.onnx'},
+];
+let voice=VOICES.find(v=>{try{return v.id===localStorage.getItem('qarina-voice')}catch{return false}})||VOICES[0];
+let INFO={};
+let loadedId=null,cfg=null,vocab=null,sr=16000;
 let ctx=null,sources=[],playHead=0,abort=false,busy=false,allPcm=[];
 
 const j=async p=>{const r=await fetch(BASE+p,{cache:'no-cache'});if(!r.ok)throw new Error(p+' — HTTP '+r.status);return r.json();};
@@ -158,7 +172,9 @@ function splitLines(t){                     // misra / jumla ba jumla; nl = nayi
 // noon ya "بولتا" ka alif jaise naram aakhri huroof us se neeche hote hain, is liye
 // woh KAT jaate the (napa: 0.25 sec tak asli awaz). Ab 20ms ke tukdon ka RMS dekha
 // jaata hai: asli awaz ~0.15 hoti hai, khamoshi ~0.001. Had 0.003 - beech mein.
-function trim(p,win=320,thr=0.003,padA=480,padB=1600){
+// win/padA/padB ab sample rate ke hisaab se (Piper 22050, MMS 16000) - warna
+// 22 kHz par yeh sab chhote par jaate aur aakhri lafz phir kat sakta tha.
+function trim(p,win=Math.round(0.02*sr),thr=0.003,padA=Math.round(0.03*sr),padB=Math.round(0.10*sr)){
   const n=Math.floor(p.length/win); if(n<2) return p;
   let first=-1,last=-1;
   for(let k=0;k<n;k++){
@@ -205,9 +221,9 @@ function ids(t){
   return {a,drop:[...new Set(drop)].filter(c=>c.trim())};
 }
 
-async function getModel(){
-  const info=await j('info.json').catch(()=>({}));
-  const url=BASE+'model.onnx', key=url+'#'+(info.sha256||'x');
+async function getModel(url,ver){
+  const info=INFO[ver]||{};
+  const key=url+'#'+(info.sha256||'x');
   const cache=await caches.open(CACHE).catch(()=>null);
   if(cache){const hit=await cache.match(key);if(hit){msg('ماڈل cache سے…');return hit.arrayBuffer();}}
   const res=await fetch(url);
@@ -226,20 +242,50 @@ async function getModel(){
 }
 
 async function ready(){
-  if(loaded)return;
-  [cfg,vocab]=await Promise.all([j('config.json'),j('vocab.json')]);
+  if(loadedId===voice.id)return;
+  INFO=await j('info.json').catch(()=>({}));
+  if(voice.kind==='piper'){
+    const c=await j(voice.cfg);
+    cfg={sampling_rate:c.audio.sample_rate, add_blank:0,
+         noise_scale:c.inference?.noise_scale??0.667,
+         length_scale:c.inference?.length_scale??1.0,
+         noise_scale_w:c.inference?.noise_w??0.8};
+    vocab=null;
+  }else{
+    [cfg,vocab]=await Promise.all([j('config.json'),j('vocab.json')]);
+  }
   sr=cfg.sampling_rate;
-  const buf=await getModel();
+  const buf=await getModel(BASE+voice.model, voice.model);
   const mb=(buf.byteLength/1048576).toFixed(1);
   msg('ماڈل کھل رہا ہے…');
-  await call({t:'init',buf},[buf]);
-  loaded=true;
-  $('#state').innerHTML=`ماڈل: <b>${mb} MB</b> · الگ worker میں چل رہا ہے ✅ (صفحہ کبھی نہیں جمے گا)`;
+  await call({t:'init',buf,kind:voice.kind},[buf]);
+  loadedId=voice.id;
+  $('#state').innerHTML=`آواز: <b>${voice.label}</b> · ماڈل <b>${mb} MB</b> · ${sr} Hz · الگ worker میں ✅ (صفحہ کبھی نہیں جمے گا)`;
 }
 
-async function say(text,ls){
-  const {a,drop}=ids(text);
-  if(a.length<3)return{pcm:new Float32Array(0),drop};
+/* ---------- awaz ka intikhab ---------- */
+function paintVoices(){
+  const box=$('#voices');
+  [...box.querySelectorAll('button')].forEach(b=>b.remove());
+  for(const v of VOICES){
+    const b=document.createElement('button');
+    b.className='vb'+(v.id===voice.id?' on':'');
+    b.textContent=v.label;
+    b.onclick=()=>{
+      if(busy){msg('پہلے موجودہ آواز مکمل ہونے دیں۔','warn');return;}
+      voice=v; try{localStorage.setItem('qarina-voice',v.id)}catch{}
+      paintVoices(); stopAll();
+      msg(`آواز بدل دی: ${v.label} — "بولیں" دبائیں۔`);
+    };
+    box.appendChild(b);
+  }
+}
+
+async function say(sg,ls){
+  let a,drop=[];
+  if(voice.kind==='piper') a=sg.ids;              // phonemes pehle hi ban chuke
+  else ({a,drop}=ids(sg.text));
+  if(!a||a.length<3)return{pcm:new Float32Array(0),drop};
   const r=await call({t:'say',ids:a,ns:cfg.noise_scale,ls,nsw:cfg.noise_scale_w});
   return {pcm:r.pcm,drop};
 }
@@ -318,6 +364,17 @@ $('#go').addEventListener('click',async()=>{
     const segs=parse($('#txt').value, base);
     if(!segs.length){msg('پہلے کچھ لکھیں۔','warn');return;}
 
+    // Piper: saari satron ka talaffuz EK hi baar mein - eSpeak 18.5 MB ka hai,
+    // har satar par alag chalate to bura waqt lagta.
+    if(voice.kind==='piper'){
+      msg('تلفظ تیار ہو رہا ہے…');
+      const texts=segs.filter(x=>x.text).map(x=>x.text);
+      if(texts.length){
+        const r=await call({t:'phon',segs:texts});
+        let k=0; for(const x of segs) if(x.text) x.ids=r.ids[k++];
+      }
+    }
+
     const ol=$('#lines');ol.innerHTML='';
     const lis=segs.map(sg=>{
       const li=document.createElement('li');
@@ -346,7 +403,7 @@ $('#go').addEventListener('click',async()=>{
       lis[i].classList.add('now');
       bar((i+1)/segs.length);
       msg(`آواز بن رہی ہے… ${i+1} / ${segs.length}`);
-      const {pcm,drop}=await say(sg.text,sg.ls);
+      const {pcm,drop}=await say(sg,sg.ls);
       if(abort)break;
       drop.forEach(d=>drops.add(d));
       if(pcm.length){
@@ -416,6 +473,8 @@ $('#mp3').addEventListener('click',()=>{
   const f=enc.flush();if(f.length)parts.push(new Uint8Array(f));
   save(new Blob(parts,{type:'audio/mpeg'}),'qarina.mp3');
 });
+
+paintVoices();
 
 for(const t of ['سلام','اردو زبان','آسمان جھوٹ نہیں بولتا','دل ناداں تجھے ہوا کیا ہے']){
   const b=document.createElement('button');b.className='ex';b.textContent=t;
