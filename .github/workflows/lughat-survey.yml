@@ -1,0 +1,136 @@
+# لغت — کتنے الفاظ کہاں سے مل سکتے ہیں (صرف گنتی، کچھ جوڑتا نہیں)
+#
+# فاروق: «450,000 الفاظ دیکھے ہیں مگر download نہیں کر پاتا»
+# جواب: آپ کو کچھ download نہیں کرنا — GitHub خود جا کر لاتا ہے۔
+#
+# یہ workflow صرف جا کر دیکھتا اور گنتا ہے:
+#   کون سا ماخذ کھلتا ہے · کتنے الفاظ ہیں · کتنے آپ کے پاس پہلے سے ہیں ·
+#   کتنے نئے · کتنوں کے پاس معنی ہیں · کتنے صرف «روپ» ہیں (بولتا/بولتی/بولتے)
+#
+# *** یہ لغت میں کچھ نہیں ڈالتا۔ صرف رپورٹ لکھتا ہے: LUGHAT-SURVEY.md ***
+name: Lughat - kitne alfaz mil sakte hain (sirf ginti)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Har maakhaz ka darwaza khatkhatao
+        run: |
+          set +e
+          mkdir -p src
+          probe () {   # naam url
+            code=$(curl -sSL -o /dev/null -m 60 -w '%{http_code}' --head "$2")
+            size=$(curl -sSL -o /dev/null -m 60 -w '%{size_download}' --head "$2")
+            echo "$1|$2|$code" >> src/probe.txt
+            echo "  $1 -> HTTP $code"
+          }
+          echo "== darwaze =="
+          probe kaikki-ur   "https://kaikki.org/dictionary/Urdu/kaikki.org-dictionary-Urdu.jsonl"
+          probe kaikki-raw  "https://kaikki.org/dictionary/downloads/ur/ur-extract.jsonl.gz"
+          probe wikt-titles "https://dumps.wikimedia.org/urwiktionary/latest/urwiktionary-latest-all-titles-in-ns0.gz"
+          probe wikt-pages  "https://dumps.wikimedia.org/urwiktionary/latest/urwiktionary-latest-pages-articles.xml.bz2"
+          probe urduhack    "https://raw.githubusercontent.com/urduhack/urdu-words/master/urdu-words.txt"
+          probe platts-dsal "https://dsal.uchicago.edu/dictionaries/platts/"
+          cat src/probe.txt
+
+      - name: Jo khula, woh utaaro
+        run: |
+          set +e
+          get () { curl -sSL -m 900 --retry 2 -o "src/$1" "$2" && ls -l "src/$1"; }
+          get kaikki.jsonl    "https://kaikki.org/dictionary/Urdu/kaikki.org-dictionary-Urdu.jsonl"
+          get wikt-titles.gz  "https://dumps.wikimedia.org/urwiktionary/latest/urwiktionary-latest-all-titles-in-ns0.gz"
+          get urduhack.txt    "https://raw.githubusercontent.com/urduhack/urdu-words/master/urdu-words.txt"
+          ls -lh src || true
+          exit 0
+
+      - name: Gino aur report likho
+        run: |
+          python3 - <<'PY'
+          import json, gzip, os, re, collections, io
+
+          # --- aap ki maujooda lughat ---
+          d=json.load(open('uz-lughat.json',encoding='utf-8')); E=d['entries']
+          HAVE={(it.get('w') or '').strip() for it in E if it.get('w')}
+          HAVE_EN={(it.get('w') or '').strip() for it in E if it.get('en')}
+          print('maujooda andraaj:',len(E),'· alag alfaz:',len(HAVE))
+
+          URDU=re.compile(r'^[؀-ۿݐ-ݿ\s‌]+$')
+          SUF=['وں','یں','ے','ی','ا','تا','تی','تے','نا','نے','نی','گا','گی','گے','ہا','ہی','ات','ان']
+
+          rows=[]
+          def report(name, words, with_meaning=None, note=''):
+              words={w.strip() for w in words if w and URDU.match(w.strip()) and len(w.strip())>1}
+              new=words-HAVE
+              forms=sum(1 for w in new if len(w)>3 and any(w.endswith(s) and w[:-len(s)] in words for s in SUF))
+              rows.append(dict(name=name, total=len(words), already=len(words&HAVE), new=len(new),
+                               forms=forms, real_new=len(new)-forms,
+                               meaning=(with_meaning if with_meaning is not None else '—'), note=note))
+              print(f'{name}: kul {len(words)} · pehle se {len(words&HAVE)} · naye {len(new)} · un mein roop {forms}')
+
+          # --- kaikki (Wiktionary ka machine-readable roop) ---
+          p='src/kaikki.jsonl'
+          if os.path.exists(p) and os.path.getsize(p)>1000:
+              ws=set(); withmean=0; pos=collections.Counter()
+              for line in open(p,encoding='utf-8',errors='replace'):
+                  try: j=json.loads(line)
+                  except: continue
+                  w=(j.get('word') or '').strip()
+                  if not w: continue
+                  ws.add(w); pos[j.get('pos') or '?']+=1
+                  if j.get('senses') and any(s.get('glosses') for s in j['senses']): withmean+=1
+              report('Wiktionary (kaikki)', ws, withmean, 'قسم: '+', '.join(f'{k} {v}' for k,v in pos.most_common(6)))
+
+          # --- Wiktionary ke saare unwan ---
+          p='src/wikt-titles.gz'
+          if os.path.exists(p) and os.path.getsize(p)>1000:
+              ws=set()
+              with gzip.open(p,'rt',encoding='utf-8',errors='replace') as f:
+                  for line in f: ws.add(line.strip())
+              report('Wiktionary (saare unwan)', ws, 0, 'sirf unwan — maani saath nahi')
+
+          # --- urduhack ---
+          p='src/urduhack.txt'
+          if os.path.exists(p) and os.path.getsize(p)>1000:
+              ws={l.strip() for l in open(p,encoding='utf-8',errors='replace')}
+              report('urduhack/urdu-words', ws, 0, 'sirf imla — maani saath nahi')
+
+          # --- report ---
+          L=['# لغت — کہاں سے کتنے الفاظ مل سکتے ہیں','',
+             f'**آپ کی موجودہ لغت:** {len(E):,} اندراج · {len(HAVE):,} الگ الفاظ · {len(HAVE_EN):,} کے پاس انگریزی معنی','',
+             '> یہ صرف **گنتی** ہے۔ لغت میں کچھ نہیں ڈالا گیا۔','',
+             '| ماخذ | کل | آپ کے پاس پہلے سے | نئے | اُن میں «روپ» | **اصل نئے الفاظ** | معنی والے |',
+             '|---|---|---|---|---|---|---|']
+          for r in rows:
+              L.append(f"| {r['name']} | {r['total']:,} | {r['already']:,} | {r['new']:,} | {r['forms']:,} | **{r['real_new']:,}** | {r['meaning']} |")
+          L += ['','## دروازوں کی حالت','','| ماخذ | جواب |','|---|---|']
+          if os.path.exists('src/probe.txt'):
+              for line in open('src/probe.txt'):
+                  n,u,c=line.strip().split('|'); L.append(f'| {n} | HTTP {c} |')
+          L += ['','## «روپ» کیا ہیں','',
+                'بولنا · بولتا · بولتی · بولتے · بولنے — یہ **ایک** لفظ کے روپ ہیں، پانچ الفاظ نہیں۔',
+                'اِنہیں الگ اندراج بنانا لغت کو بڑا کرتا ہے، بہتر نہیں۔ اِنہیں اپنے اصل لفظ سے **جوڑنا** چاہیے۔','',
+                '*یہ رپورٹ خودکار بنی — GitHub Actions نے خود جا کر گنا۔ فاروق نے کچھ download نہیں کیا۔*']
+          open('LUGHAT-SURVEY.md','w',encoding='utf-8').write('\n'.join(L)+'\n')
+          print('\n'.join(L))
+          with open(os.environ.get('GITHUB_STEP_SUMMARY','/dev/null'),'a',encoding='utf-8') as f:
+              f.write('\n'.join(L)+'\n')
+          PY
+
+      - name: Report commit
+        run: |
+          git config user.name  "qarina-bot"
+          git config user.email "qarina-bot@users.noreply.github.com"
+          git add LUGHAT-SURVEY.md
+          git diff --cached --quiet && { echo "kuch naya nahi"; exit 0; }
+          git commit -m "lughat: maakhazon ki ginti (sirf report, kuch jora nahi)"
+          git pull --rebase --autostash
+          git push
