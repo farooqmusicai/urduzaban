@@ -82,7 +82,8 @@ jobs:
           ex = []
           if best:
               iid, tname, tsize = best
-              url = 'https://archive.org/download/%s/%s' % (iid, tname)
+              from urllib.parse import quote
+              url = 'https://archive.org/download/%s/%s' % (quote(iid), quote(tname))
               code, body = get(url, timeout=300)
               doors.append(('ia-text', code))
               if code == 200:
