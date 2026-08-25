@@ -3,18 +3,34 @@ name: Neural awaz - model laao
 # Yeh workflow qarina-voice ke Release se model uthata hai aur ISI repo mein
 # commit kar deta hai. Phir Hostinger khud deploy kar deta hai.
 # Koi token, koi haath ka kaam nahi.
+#
+# Teen awazein aati hain:
+#   qarina-tts/neural/model.onnx          -> purani MMS (mard, 16000 Hz)
+#   qarina-tts/neural/piper/female.onnx   -> AURAT   (22050 Hz)
+#   qarina-tts/neural/piper/male.onnx     -> mard    (22050 Hz)
+# Piper wali awazein eSpeak ke phonemes leti hain - un ki id list bhi
+# (phoneme_ids.json) yahin se aati hai, taake safha aur factory hamesha
+# ek doosre se mele rahein.
 
 on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "qarina-voice ka release tag"
+        description: "qarina-voice ka release tag (purani MMS awaz)"
         default: "models-v1"
       variant:
-        description: "kaun sa model (hybrid = behtareen)"
+        description: "kaun sa MMS model (hybrid = behtareen)"
         default: "hybrid"
         type: choice
         options: [hybrid, q8]
+      piper_tag:
+        description: "Piper (aurat + mard) ka release tag"
+        default: "piper-urdu"
+      piper_variant:
+        description: "Piper ka nuskha (fp32 = browser mein sab se TEZ, aur chhota bhi)"
+        default: "fp32"
+        type: choice
+        options: [fp32, hybrid, q8]
 
 permissions:
   contents: write
@@ -31,31 +47,62 @@ jobs:
           SRC=farooqmusicai/qarina-voice
           TAG='${{ inputs.tag }}'
           VAR='${{ inputs.variant }}'
-          mkdir -p qarina-tts/neural
+          PTAG='${{ inputs.piper_tag }}'
+          PVAR='${{ inputs.piper_variant }}'
+          mkdir -p qarina-tts/neural/piper
 
+          # ---- 1) purani MMS awaz (mard, 16000 Hz) ----
           curl -fsSL -o qarina-tts/neural/model.onnx \
             "https://github.com/$SRC/releases/download/$TAG/model.$VAR.onnx"
-
           for f in vocab.json config.json test_vectors.json; do
             curl -fsSL -o "qarina-tts/neural/$f" \
               "https://raw.githubusercontent.com/$SRC/main/models-web/$f"
           done
 
-          BYTES=$(stat -c%s qarina-tts/neural/model.onnx)
-          # GitHub 100 MB se bari file qubool nahi karta - push se PEHLE rok do,
-          # warna push reject hoga aur mehnat zaya jaayegi (wahi purani ghalti).
-          if [ "$BYTES" -gt 99000000 ]; then
-            echo "::error::model.$VAR.onnx $((BYTES/1048576)) MB hai - GitHub ki 100 MB had se bara. 'hybrid' ya 'q8' chunein."
-            exit 1
-          fi
+          # ---- 2) nayi Piper awazein (aurat + mard, 22050 Hz) ----
+          curl -fsSL -o qarina-tts/neural/piper/female.onnx \
+            "https://github.com/$SRC/releases/download/$PTAG/female.$PVAR.onnx"
+          curl -fsSL -o qarina-tts/neural/piper/male.onnx \
+            "https://github.com/$SRC/releases/download/$PTAG/male.$PVAR.onnx"
+          curl -fsSL -o qarina-tts/neural/piper/female.json \
+            "https://github.com/$SRC/releases/download/$PTAG/female.config.json"
+          curl -fsSL -o qarina-tts/neural/piper/male.json \
+            "https://github.com/$SRC/releases/download/$PTAG/male.config.json"
+          curl -fsSL -o qarina-tts/neural/piper/phoneme_ids.json \
+            "https://raw.githubusercontent.com/$SRC/main/models-web/piper_phoneme_ids.json"
 
-          printf '{"variant":"%s","tag":"%s","bytes":%s,"sha256":"%s"}\n' \
-            "$VAR" "$TAG" "$BYTES" \
-            "$(sha256sum qarina-tts/neural/model.onnx | cut -d' ' -f1)" \
-            > qarina-tts/neural/info.json
+          # ---- 3) had ki jaanch: GitHub 100 MB se bari file qubool nahi karta.
+          # Push se PEHLE rok do, warna push reject hoga aur mehnat zaya jaayegi
+          # (wahi purani ghalti). ----
+          for m in qarina-tts/neural/model.onnx \
+                   qarina-tts/neural/piper/female.onnx \
+                   qarina-tts/neural/piper/male.onnx; do
+            B=$(stat -c%s "$m")
+            if [ "$B" -gt 99000000 ]; then
+              echo "::error::$m $((B/1048576)) MB hai - GitHub ki 100 MB had se bara. chhota nuskha chunein."
+              exit 1
+            fi
+          done
 
-          # onnxruntime-web (sirf wasm build - jsep 26 MB wala NAHI chahiye)
-          # + MP3 encoder. Sab repo mein, taake CDN par bharosa na karna pare.
+          # ---- 4) info.json: har model ka size aur sha256 (safha isi se cache
+          # taaza rakhta hai - naya model aaye to purana khud hat jaata hai) ----
+          {
+            printf '{\n'
+            first=1
+            for m in model.onnx piper/female.onnx piper/male.onnx; do
+              p="qarina-tts/neural/$m"
+              [ $first -eq 1 ] || printf ',\n'
+              first=0
+              printf ' "%s": {"bytes": %s, "sha256": "%s"}' \
+                "$m" "$(stat -c%s "$p")" "$(sha256sum "$p" | cut -d' ' -f1)"
+            done
+            printf '\n}\n'
+          } > qarina-tts/neural/info.json
+          cat qarina-tts/neural/info.json
+
+          # ---- 5) onnxruntime-web (sirf wasm build - jsep 26 MB wala NAHI
+          # chahiye) + MP3 encoder. Sab repo mein, taake CDN par bharosa na
+          # karna pare. ----
           ORT=1.27.0
           mkdir -p qarina-tts/lib
           for f in ort.wasm.min.mjs ort-wasm-simd-threaded.mjs ort-wasm-simd-threaded.wasm; do
@@ -65,7 +112,7 @@ jobs:
           curl -fsSL -o qarina-tts/lib/lame.min.js \
             "https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"
 
-          ls -lh qarina-tts/neural qarina-tts/lib
+          ls -lh qarina-tts/neural qarina-tts/neural/piper qarina-tts/lib
 
       - name: Repo mein commit
         run: |
@@ -73,6 +120,6 @@ jobs:
           git config user.email "qarina-bot@users.noreply.github.com"
           git add qarina-tts/neural qarina-tts/lib
           git diff --cached --quiet && { echo "kuch naya nahi"; exit 0; }
-          git commit -m "neural awaz: model.${{ inputs.variant }} (${{ inputs.tag }})"
+          git commit -m "neural awaz: MMS ${{ inputs.variant }} + Piper aurat/mard ${{ inputs.piper_variant }}"
           git pull --rebase --autostash
           git push
