@@ -1,0 +1,15 @@
+# Sirf do kaam - koi khatre wali cheez nahi. Baaki site par asar nahi.
+
+<IfModule mod_mime.c>
+  # Apache ko .mjs / .wasm ka pata nahi hota. In ke baghair model load hi nahi hoga.
+  AddType text/javascript        .mjs
+  AddType application/wasm       .wasm
+  AddType application/octet-stream .onnx
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Model aur wasm kabhi kabhar hi badalte hain - browser ko kehdo saal bhar rakhe.
+  <FilesMatch "\.(onnx|wasm)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
