@@ -12,4 +12,11 @@
   <FilesMatch "\.(onnx|wasm)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+
+  # Chhoti files (safha, script, lughat) — browser har baar poochh le: nayi hai ya nahi?
+  # Isi liye site update hote hi sab ko turant nazar aati hai. Model (.onnx/.wasm) upar wale
+  # niyam se saal bhar mehfooz rehta hai — dobara nahi utarta.
+  <FilesMatch "\.(html|js|mjs|json|tsv|css)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
 </IfModule>
