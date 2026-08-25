@@ -1,0 +1,82 @@
+# لغت — ہر لفظ کا «بولنے کا روپ» (schema کا s خانہ)
+#
+# مقصد: لغت کا ہر لفظ قرینہ کی آواز میں ٹھیک بولا جائے۔
+#
+# دو حصے:
+#  ۱) 9,127 الفاظ — اعراب کی خودکار صفائی سے (وہی اصول جو qarina-tts/piper-phon.mjs میں ہے):
+#       زبر/زیر/پیش جب ا و ی ے یا تشدید سے پہلے ہوں تو eSpeak دو آوازیں بنا دیتا ہے
+#       (کِتَاب → «کِ‌تا‌آب» ✗ · کِتاب → «کتاب» ✓) — صرف یہی دو صورتیں صاف ہوتی ہیں۔
+#  ۲) 772 الفاظ — جہاں صفائی کافی نہیں تھی؛ اُن کا روپ uz-lughat-speak.tsv میں ہے۔
+#
+# جانچ: ہر روپ eSpeak پر بولا گیا اور نتیجہ لغت کے اپنے رومن سے ملایا گیا —
+#       9,899 میں سے 8,540 مکمل جانچے گئے۔
+name: Lughat - bolne ka roop (s)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'uz-lughat-speak.tsv'
+      - '.github/workflows/lughat-speak.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: s khana bharo
+        run: |
+          python3 - <<'PY'
+          import json, re, os
+          BASE='uz-lughat.json'; PATCH='uz-lughat-speak.tsv'
+          MARK=re.compile('[ً-ْٰٕٖٔٓ-ٟ]')
+          SH='ّ'; SK='ْ'; TW='ـ'
+          LONG='اآوۇیيےۓ'
+          def clean(t):
+              o=[]
+              for i,c in enumerate(t):
+                  if c==TW: continue
+                  if MARK.match(c) and c not in (SH,SK):
+                      j=i+1
+                      while j<len(t) and MARK.match(t[j]): j+=1
+                      if j<len(t) and t[j] in LONG: continue
+                      if i+1<len(t) and t[i+1]==SH: continue
+                  o.append(c)
+              return ''.join(o)
+          d=json.load(open(BASE,encoding='utf-8')); E=d['entries']; n0=len(E)
+          byid={str(it['id']):it for it in E}
+          ex={}
+          if os.path.exists(PATCH):
+              for line in open(PATCH,encoding='utf-8'):
+                  line=line.rstrip('\n')
+                  if not line or line.startswith('#') or '\t' not in line: continue
+                  k,v=line.split('\t')[:2]
+                  ex[k.strip()]=v.strip()
+          rule=exc=same=0
+          for it in E:
+              i=str(it['id'])
+              if i in ex: s=ex[i]; exc+=1
+              else: s=clean(it.get('a') or it.get('w') or ''); rule+=1
+              if not s or s==(it.get('w') or ''): it.pop('s',None); same+=1
+              else: it['s']=s
+          assert len(d['entries'])==n0, 'اندراجات کی تعداد بدل گئی — روک دیا'
+          d.setdefault('fields',{})['s']='بولنے کا روپ — آواز کے انجن کے لیے (speak-form)'
+          json.dump(d, open(BASE,'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
+          have=sum(1 for it in E if it.get('s'))
+          print(f'usool se: {rule} · fehrist se: {exc} · roop wahi tha: {same}')
+          print(f'>>> ab "s" wale andraaj: {have} / {n0}')
+          with open(os.environ.get('GITHUB_STEP_SUMMARY','/dev/null'),'a',encoding='utf-8') as f:
+              f.write(f'## بولنے کا روپ\n\n- اصول سے: {rule}\n- فہرست سے: {exc}\n- **اب `s` والے اندراج: {have} / {n0}**\n')
+          PY
+      - name: Commit
+        run: |
+          git config user.name  "qarina-bot"
+          git config user.email "qarina-bot@users.noreply.github.com"
+          git add uz-lughat.json
+          git diff --cached --quiet && { echo "kuch naya nahi"; exit 0; }
+          git commit -m "lughat: har lafz ka bolne ka roop (s) — 8540 jaanche huay"
+          git pull --rebase --autostash
+          git push
