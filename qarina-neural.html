@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>قرینہ — نیورل آواز (آزمائش)</title>
+<style>
+  @font-face{font-family:'Noto Nastaliq Urdu';src:url('fonts/noto-nastaliq-urdu-400.woff2') format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:'Noto Naskh Arabic';src:url('fonts/noto-naskh-arabic-400.woff2') format('woff2');font-weight:400;font-display:swap}
+  :root{--bg:#fbfaf7;--fg:#1b1b1a;--mut:#6b6a66;--line:#e2ded4;--card:#fff;--ok:#1f7a4d;--warn:#8a6116;--err:#a3242b;--accent:#0f5c4a}
+  @media(prefers-color-scheme:dark){:root{--bg:#14150f;--fg:#eceadf;--mut:#9a988e;--line:#2e3026;--card:#1c1e17;--ok:#63c08d;--warn:#d6a94a;--err:#e0787d;--accent:#63c0a8}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:'Noto Naskh Arabic',system-ui,sans-serif;line-height:1.9}
+  .wrap{max-width:760px;margin:0 auto;padding:24px 18px 64px}
+  h1{font-family:'Noto Nastaliq Urdu','Noto Naskh Arabic',serif;font-size:1.9rem;line-height:2.4;margin:.2em 0 .1em}
+  .sub{color:var(--mut);font-size:.92rem;margin-bottom:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+  textarea{width:100%;min-height:110px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg);
+           font-family:'Noto Nastaliq Urdu','Noto Naskh Arabic',serif;font-size:1.3rem;line-height:2.6;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  button{font-family:inherit;font-size:1rem;padding:11px 22px;border-radius:10px;border:1px solid var(--accent);
+         background:var(--accent);color:#fff;cursor:pointer}
+  button.ghost{background:transparent;color:var(--accent)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  .bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:12px;display:none}
+  .bar>i{display:block;height:100%;width:0;background:var(--accent);transition:width .15s}
+  .msg{margin-top:10px;font-size:.92rem;color:var(--mut);min-height:1.6em}
+  .msg.ok{color:var(--ok)} .msg.warn{color:var(--warn)} .msg.err{color:var(--err)}
+  audio{width:100%;margin-top:14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .chip{font-size:.8rem;padding:4px 11px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
+  .ex{background:transparent;border:1px solid var(--line);color:var(--fg);font-family:'Noto Nastaliq Urdu',serif;
+      font-size:1rem;padding:7px 14px;line-height:2.2}
+  dl{margin:0;font-size:.88rem;color:var(--mut)} dt{float:right;clear:right;margin-left:10px;opacity:.75} dd{margin:0 0 2px}
+  a{color:var(--accent)}
+</style>
+<div class="wrap">
+  <h1>قرینہ — نیورل آواز</h1>
+  <div class="sub">آزمائشی صفحہ · ماڈل آپ کے براؤزر میں چلتا ہے، کوئی سرور نہیں</div>
+
+  <div class="card">
+    <textarea id="txt" spellcheck="false">قرینہ آپ کی خدمت میں حاضر ہے</textarea>
+    <div class="chips" id="examples"></div>
+    <div class="row">
+      <button id="go">آواز بنائیں</button>
+      <button id="dl" class="ghost" disabled>محفوظ کریں (WAV)</button>
+    </div>
+    <div class="bar" id="bar"><i></i></div>
+    <div class="msg" id="msg">تیار</div>
+    <audio id="au" controls hidden></audio>
+  </div>
+
+  <div class="card">
+    <dl id="info">
+      <dt>حالت</dt><dd id="i-state">ماڈل ابھی لوڈ نہیں ہوا</dd>
+    </dl>
+  </div>
+</div>
+
+<script type="module">
+import * as ort from 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.27.0/dist/ort.min.mjs';
+
+const BASE  = 'qarina-tts/neural/';
+const CACHE = 'qarina-neural-v1';
+const $ = s => document.querySelector(s);
+const msg = (t, k='') => { const m=$('#msg'); m.textContent=t; m.className='msg '+k; };
+const setBar = r => { const b=$('#bar'); b.style.display = r==null?'none':'block'; if(r!=null) b.firstElementChild.style.width=(r*100).toFixed(1)+'%'; };
+
+ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.27.0/dist/';
+// Threads sirf cross-origin-isolated page par miltay hain. Na milein to 1 thread —
+// awaz phir bhi banegi, bas thori sust.
+ort.env.wasm.numThreads = self.crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency||1) : 1;
+ort.env.logLevel = 'error';
+
+let session=null, cfg=null, vocab=null, lastWav=null;
+
+const j = async p => { const r = await fetch(BASE+p, {cache:'no-cache'}); if(!r.ok) throw new Error(p+' — HTTP '+r.status); return r.json(); };
+
+function textToIds(t){
+  const kept=[], dropped=[];
+  for (const ch of t.toLowerCase()) (ch in vocab ? kept : dropped).push(ch);
+  let ids = kept.map(c=>vocab[c]);
+  if (cfg.add_blank){ const o=new Array(2*ids.length+1).fill(0); for(let i=0;i<ids.length;i++) o[2*i+1]=ids[i]; ids=o; }
+  return {ids, dropped:[...new Set(dropped)].filter(c=>c.trim())};
+}
+
+async function getModel(){
+  const info = await j('info.json').catch(()=>({}));
+  const url  = BASE+'model.onnx';
+  const key  = url+'#'+(info.sha256||'x');
+  const cache = await caches.open(CACHE).catch(()=>null);
+  if (cache){
+    const hit = await cache.match(key);
+    if (hit){ msg('ماڈل cache سے مل گیا…'); return hit.arrayBuffer(); }
+  }
+  const res = await fetch(url);
+  if(!res.ok) throw new Error('model.onnx — HTTP '+res.status+' (کیا workflow چلایا؟)');
+  const total = Number(res.headers.get('content-length'))||info.bytes||0;
+  const chunks=[]; let got=0;
+  const rd = res.body.getReader();
+  setBar(0);
+  for(;;){ const {done,value}=await rd.read(); if(done) break;
+    chunks.push(value); got+=value.byteLength;
+    if(total) setBar(got/total);
+    msg(`ماڈل آ رہا ہے… ${(got/1048576).toFixed(1)} MB${total?' / '+(total/1048576).toFixed(1)+' MB':''}`);
+  }
+  setBar(null);
+  const buf = await new Blob(chunks).arrayBuffer();
+  if (cache){
+    for (const k of await cache.keys()) if (k.url.startsWith(url) && k.url!==key) await cache.delete(k);
+    await cache.put(key, new Response(buf)).catch(()=>{});
+  }
+  return buf;
+}
+
+async function ready(){
+  if (session) return;
+  [cfg, vocab] = await Promise.all([j('config.json'), j('vocab.json')]);
+  const buf = await getModel();
+  msg('ماڈل کھل رہا ہے…');
+  session = await ort.InferenceSession.create(buf, {executionProviders:['wasm']});
+  const iso = self.crossOriginIsolated;
+  $('#i-state').innerHTML =
+    `ماڈل: <b>${(buf.byteLength/1048576).toFixed(1)} MB</b> · `+
+    `دھاگے (threads): <b>${ort.env.wasm.numThreads}</b> `+
+    (iso ? '✅' : '⚠️ (headers نہیں لگے — آواز تقریباً دگنی سست بنے گی)');
+}
+
+function toWav(f32, sr){
+  const n=f32.length, b=new ArrayBuffer(44+n*2), v=new DataView(b);
+  const s=(o,t)=>{for(let i=0;i<t.length;i++) v.setUint8(o+i,t.charCodeAt(i));};
+  s(0,'RIFF'); v.setUint32(4,36+n*2,true); s(8,'WAVEfmt '); v.setUint32(16,16,true);
+  v.setUint16(20,1,true); v.setUint16(22,1,true); v.setUint32(24,sr,true);
+  v.setUint32(28,sr*2,true); v.setUint16(32,2,true); v.setUint16(34,16,true);
+  s(36,'data'); v.setUint32(40,n*2,true);
+  let peak=0; for(const x of f32) peak=Math.max(peak,Math.abs(x));
+  const g=0.9/Math.max(1e-9,peak);
+  for(let i=0;i<n;i++) v.setInt16(44+i*2, Math.max(-32768,Math.min(32767, f32[i]*g*32767)), true);
+  return new Blob([b], {type:'audio/wav'});
+}
+
+$('#go').addEventListener('click', async () => {
+  const btn=$('#go'); btn.disabled=true; $('#dl').disabled=true;
+  try{
+    await ready();
+    const text=$('#txt').value.trim();
+    if(!text){ msg('پہلے کچھ لکھیں۔','warn'); return; }
+    const {ids,dropped}=textToIds(text);
+    if(ids.length<3){ msg('اس متن کا کوئی حرف ماڈل کی لغت میں نہیں۔','err'); return; }
+    msg('آواز بن رہی ہے…');
+    const t0=performance.now();
+    const out = await session.run({
+      x:             new ort.Tensor('int64', BigInt64Array.from(ids.map(BigInt)), [1, ids.length]),
+      x_length:      new ort.Tensor('int64', BigInt64Array.from([BigInt(ids.length)]), [1]),
+      noise_scale:   new ort.Tensor('float32', Float32Array.from([cfg.noise_scale]),   [1]),
+      length_scale:  new ort.Tensor('float32', Float32Array.from([cfg.length_scale]),  [1]),
+      noise_scale_w: new ort.Tensor('float32', Float32Array.from([cfg.noise_scale_w]), [1]),
+    });
+    const wall=(performance.now()-t0)/1000;
+    const pcm=out.y.data, sr=cfg.sampling_rate, secs=pcm.length/sr;
+    lastWav=toWav(pcm, sr);
+    const au=$('#au'); au.hidden=false;
+    if(au.src) URL.revokeObjectURL(au.src);
+    au.src=URL.createObjectURL(lastWav); au.play().catch(()=>{});
+    $('#dl').disabled=false;
+    msg(`تیار — ${secs.toFixed(1)} سیکنڈ آواز، ${wall.toFixed(1)} سیکنڈ میں بنی (rtf ${(wall/secs).toFixed(2)})`
+        + (dropped.length? ` · لغت سے باہر: ${dropped.join(' ')}` : ''), 'ok');
+  }catch(e){ msg('خرابی: '+e.message,'err'); console.error(e); setBar(null); }
+  finally{ btn.disabled=false; }
+});
+
+$('#dl').addEventListener('click', ()=>{
+  if(!lastWav) return;
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(lastWav); a.download='qarina-neural.wav'; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+});
+
+for (const t of ['سلام','اردو زبان','آسمان جھوٹ نہیں بولتا','دل ناداں تجھے ہوا کیا ہے','ایک دو تین چار پانچ']){
+  const b=document.createElement('button');
+  b.className='ex'; b.textContent=t;
+  b.onclick=()=>{ $('#txt').value=t; };
+  $('#examples').appendChild(b);
+}
+</script>
+</html>
