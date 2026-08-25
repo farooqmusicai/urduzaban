@@ -1,87 +1,88 @@
-# عربی + فارسی — سروے / SURVEY
+# عربی + فارسی — دور ۲ (جانچ)
 
-> یہ صرف **جانچ** ہے۔ لغت میں ایک لفظ بھی نہیں ڈالا گیا۔
+> لغت میں اب بھی **ایک لفظ بھی نہیں ڈالا گیا**۔ یہ تجویزی فائلیں ہیں۔
 
-**آپ کی لغت:** 9899 اندراج · 9658 الگ کنجیاں
-
-
-**عربی — نئے الفاظ:** 53091 (اُن میں معنی والے 22560) — یہ *زیرِ غور* فہرست ہے، لغت میں نہیں جائیں گے
+**آپ کی لغت:** 9899 اندراج · 9658 کنجیاں
 
 
-**فارسی — نئے الفاظ:** 13852 (اُن میں معنی والے 13848) — یہ *زیرِ غور* فہرست ہے، لغت میں نہیں جائیں گے
+## گنتی — دور ۲
 
+| زبان | ملے | 🟢 محفوظ | 🟡 مشکوک | 🔴 رد | **اعراب تیار** | رومن جانچے | رومن ملے | نئے (چھنے ہوئے) |
+|---|---|---|---|---|---|---|---|---|
+| عربی | 2588 | **251** | 955 | 1382 | **251** | 2317 | 381 | 14039 |
+| فارسی | 3196 | **2107** | 70 | 1019 | **58** | 94 | 1 | 10085 |
 
-## گنتی
+## نمونہ
 
-| زبان | کل اندراج | الگ کنجیاں | **آپ کے الفاظ سے ملے** | **اعراب ملے گا** | جانچے گئے | معنی ملے | **⭐ ملاپ** |
-|---|---|---|---|---|---|---|---|
-| عربی | 77339 | 55679 | **2588** | **0** | 2405 | 918 | **38.2%** |
-| فارسی | 20215 | 17048 | **3196** | **0** | 3183 | 2227 | **70.0%** |
+| زبان | درجہ | لفظ | اعراب | آپ کا رومن | آپ کا معنی | اُن کا معنی |
+|---|---|---|---|---|---|---|
+| عربی | 🔴 | آنا | أَنَا | ana | to come, to arrive; to know | I (first person singular subject pronoun) |
+| عربی | 🔴 | ہل | هَلْ | hal | plough | introduces a positive yes-no question |
+| عربی | 🟡 | حلال | حَلَال | halal | halal; lawful, permissible; rightful | allowed, permitted, allowable, admissible, pe |
+| عربی | 🟡 | جہاد | جِهَاد | jihad | jihad, holy war, crusade; fight, struggle, ba | struggle, effort |
+| عربی | 🔴 | حماس | حَمَاس | hamas | Hamas (a Palestinian Islamist militant group  | excitement; enthusiasm; zeal |
+| عربی | 🟡 | خلیفہ | خَلِيفَة | khaleefa | caliph; successor; the most gifted wrestler ( | a successor |
+| عربی | 🟡 | فاس | فَاس | fas | Fez (the capital city of the region of Fez-Me | Fez (the capital city of the region of Fez-Me |
+| عربی | 🟡 | مؤذن | مُؤَذِّن | muazzin | muezzin (the person who issues the call to pr | muezzin (the person who issues the call to pr |
+| عربی | 🔴 | ملا | مُلَّا | mila | met; got; was found (m.) | mullah, mollah, mulla, moolah |
+| عربی | 🟡 | فلسطین | فِلَسْطِين | filisteen | Palestine (the region in Western Asia in the  | Palestine (a country in Western Asia, in the  |
+| عربی | 🔴 | شیخ | شَيْخ | Sheikh | elder; chief; scholar (title) | old man |
+| عربی | 🔴 | مزاج | مِزَاج | mizaj | humor; temperament | mixture, medley, blend |
+| عربی | 🔴 | حسن | حَسُنَ | husn | beauty | to be or become good, to better, to improve |
+| عربی | 🟢 | کلب | كَلْب | klab | club; nightclub; dog | dog |
+| عربی | 🟢 | شجرہ | شَجَرَة | shajra | shajra, family tree | tree |
+| عربی | 🟢 | شمس | شَمْس | Shams | sun | sun |
+| عربی | 🟡 | ایران | إِيرَان | eeran | Iran (a country in West Asia) | Iran (a country in West Asia) |
+| عربی | 🟢 | مصر | مِصْر | misr | Egypt (a country in North Africa and West Asi | Egypt (a country in North Africa and West Asi |
+| عربی | 🟡 | اسرائیل | إِسْرَائِيل | israeel | Israel (a country in Asia) | Israel (the Hebrew patriarch Jacob) |
+| عربی | 🟡 | الجزائر | الْجَزَائِر | aljazair | Algeria (a country in North Africa) | Algeria (a country in North Africa) |
+| عربی | 🟢 | تل ابیب | تَلّ أَبِيب | tal abeeb | Tel Aviv (a city in central Israel); Tel Aviv | Tel Aviv (a city in Israel) |
+| عربی | 🟡 | مسجد | مَسْجِد | masjid | mosque | mosque |
+| عربی | 🟡 | حمار | حِمَار | himar | male donkey, ass | ass, donkey |
+| عربی | 🔴 | مسلم | مُسْلِم | Muslim | one who submits to God | Muslim |
+| عربی | 🔴 | سلام | سَلَام | salam | interjection used to greet or often fare adie | peace |
+| عربی | 🔴 | سنت | سَنْت | sunnat | tradition; habit; custom | cent |
+| عربی | 🔴 | عربی | عَرَبِيّ | arbi | Arabic | Arab |
+| عربی | 🟡 | نام | نَامَ | naam | name | to sleep |
+| عربی | 🟢 | اسم | اِسْم | ism | name, appellation, designation; noun; substan | name |
+| عربی | 🟡 | بیت المقدس | بَيْت الْمَقْدِس | bait-ul-muqaddas | Jerusalem (a city in Israel; a city in Palest | the Temple in Jerusalem |
+| عربی | 🔴 | نسخ | نَسَخَ | naskh | abolition; annulment; recantation | to transcribe, to copy |
+| عربی | 🟢 | نستعلیق | نَسْتَعْلِيق | nastaleeq | Nastaliq, Nastaleeq (style of calligraphy) | Nastaliq, Nastaleeq or Nastaʿlīq: A style of  |
+| عربی | 🟡 | موسیقی | مُوسِيقَى | mooseeqi | music | music |
+| عربی | 🟢 | عین | عَيْن | ain | eye; spring, fountain, source, sight | eye (organ) |
+| عربی | 🔴 | بنت | بِنْت | bint | daughter | female equivalent of اِبْن (ibn, “son, descen |
+| عربی | 🟡 | فارسی | فَارِسِيّ | farsi | Persian, Persic; Persianate; Persian (languag | a Persian |
+| عربی | 🟡 | مترجم | مُتَرْجِم | mutarjim | translator; interpreter | translator; interpreter |
+| عربی | 🔴 | واحد | وَاحِد | vahid | single | one |
+| عربی | 🟡 | اللہ | اللّٰه | alla | Allah; God | God |
+| عربی | 🟡 | نجار | نَجَّار | najjar | carpenter | carpenter |
+| عربی | 🟢 | فیل | فِيل | feel | elephant; alfil or bishop | elephant |
+| عربی | 🟡 | ملکہ | مَلِكَة | malika | queen; the queen bee | queen |
+| عربی | 🟡 | جمال | جَمَال | Jamal | beauty; grace | beauty |
+| عربی | 🟡 | شجر | شَجَرَ | shajar | tree | to occur, to happen |
+| عربی | 🟡 | رمضان | رَمَضَان | Ramzan | the month of fasting; (lit.) intense heat | Ramadan (the holy ninth month of the Islamic  |
+| عربی | 🔴 | من | مِنْ | man | maund (unit of mass) | having partitive effect: of, some of, parts o |
+| عربی | 🟡 | قاموس | قَامُوس | qamoos | dictionary; encyclopedia; ocean | dictionary, lexicon |
+| عربی | 🔴 | جدا | جِدًّا | juda | separate, apart, split; different, unrelated | very |
+| عربی | 🔴 | سیارہ | سَيَّارَة | sayyara | planet | automobile, car, motorcar |
+| عربی | 🟡 | کتاب | كِتَاب | kitab | book, manuscript, volume | book |
+| عربی | 🔴 | حرف | حَرَفَ | harf | letter, character (of an alphabet); particle | to turn to the opposite side |
+| عربی | 🟡 | معجم | مُعْجَم | mujam | encyclopaedia, lexicon, dictionary; a dotted  | dictionary |
+| عربی | 🔴 | مخزن | مَخْزَن | makhzan | a repository; warehouse; granary; armoury; a  | storeroom, storehouse |
+| عربی | 🟡 | ترکیہ | تُرْكِيَّة | turkiya | synonym of ترکی (turkī, “Turkey”) | female equivalent of تُرْكِيّ (turkiyy, “Turk |
+| عربی | 🟡 | قمر | قَمَرَ | qamar | moon | to gamble |
+| عربی | 🔴 | صدر | صَدَرَ | sadr | president; chief, head; host (of an event etc | to emerge; to come up; to spring; to issue; t |
+| عربی | 🟡 | بات | بَاتّ | baat | talk; matter; thing said | definite, definitive |
+| عربی | 🟢 | قواعد | قَوَاعِد | qavaid | plural of قَاعِدَہ (qā'ida); grammar |  |
+| عربی | 🟡 | ولد | وَلَدَ | valad | son; offspring; boy | to bear, to beget |
+| عربی | 🔴 | رجل | رَجِلَ | rajul | man | to go on foot, to walk |
 
-## نمونہ — اپنی آنکھ سے دیکھیں
+## تیار فائلیں (لغت میں نہیں — صرف تجویز)
 
-| زبان | آپ کا لفظ | اعراب والی شکل | آپ کا معنی | اُن کا معنی | فیصلہ |
-|---|---|---|---|---|---|
-| عربی | آنا | أَنَا | to come, to arrive; to know | I (first person singular subject pronoun) | ⚠ ٹکراؤ |
-| عربی | ہل | هَلْ | plough | introduces a positive yes-no question | ⚠ ٹکراؤ |
-| عربی | حلال | حَلَال | halal; lawful, permissible; rightful | allowed, permitted, allowable, admissible, permissible. | ملتا ہے |
-| عربی | جہاد | جِهَاد | jihad, holy war, crusade; fight, struggle, battle | verbal noun of جَاهَدَ (jāhada) (form III) | ⚠ ٹکراؤ |
-| عربی | حماس | حَمَاس | Hamas (a Palestinian Islamist militant group and political o | excitement; enthusiasm; zeal | ⚠ ٹکراؤ |
-| عربی | خلیفہ | خَلِيفَة | caliph; successor; the most gifted wrestler (after the teach | a successor | ملتا ہے |
-| عربی | فاس | فَاس | Fez (the capital city of the region of Fez-Meknes, Morocco) | Fez (the capital city of the region of Fez-Meknes, Morocco) | ملتا ہے |
-| عربی | مؤذن | مُؤَذِّن | muezzin (the person who issues the call to prayer from one o | muezzin (the person who issues the call to prayer from one o | ملتا ہے |
-| عربی | ملا | مُلَّا | met; got; was found (m.) | mullah, mollah, mulla, moolah | ⚠ ٹکراؤ |
-| عربی | فلسطین | فِلَسْطِين | Palestine (the region in Western Asia in the Middle East bet | Palestine (a country in Western Asia, in the Middle East; th | ملتا ہے |
-| عربی | شیخ | شَيْخ | elder; chief; scholar (title) | old man | ⚠ ٹکراؤ |
-| عربی | مزاج | مِزَاج | humor; temperament | mixture, medley, blend | ⚠ ٹکراؤ |
-| عربی | حسن | حَسُنَ | beauty | to be or become good, to better, to improve | ⚠ ٹکراؤ |
-| عربی | کلب | كَلْب | club; nightclub; dog | dog | ملتا ہے |
-| عربی | شجرہ | شَجَرَة | shajra, family tree | tree | ملتا ہے |
-| عربی | شمس | شَمْس | sun | sun | ملتا ہے |
-| عربی | ایران | إِيرَان | Iran (a country in West Asia) | Iran (a country in West Asia) | ملتا ہے |
-| عربی | مصر | مِصْر | Egypt (a country in North Africa and West Asia); cities sout | Egypt (a country in North Africa and West Asia) | ملتا ہے |
-| عربی | اسرائیل | إِسْرَائِيل | Israel (a country in Asia) | Israel (the Hebrew patriarch Jacob) | ملتا ہے |
-| عربی | الجزائر | الْجَزَائِر | Algeria (a country in North Africa) | Algeria (a country in North Africa) | ملتا ہے |
-| عربی | تل ابیب | تَلّ أَبِيب | Tel Aviv (a city in central Israel); Tel Aviv (a district in | Tel Aviv (a city in Israel) | ملتا ہے |
-| عربی | مسجد | مَسْجِد | mosque | mosque | ملتا ہے |
-| عربی | حمار | حِمَار | male donkey, ass | ass, donkey | ملتا ہے |
-| عربی | مسلم | مُسْلِم | one who submits to God | Muslim | ⚠ ٹکراؤ |
-| عربی | سلام | سَلَام | interjection used to greet or often fare adieu to someone.;  | verbal noun of سَلِمَ (salima) (form I), well-being | ⚠ ٹکراؤ |
-| عربی | سنت | سَنْت | tradition; habit; custom | cent | ⚠ ٹکراؤ |
-| عربی | عربی | عَرَبِيّ | Arabic | Arab | ⚠ ٹکراؤ |
-| عربی | نام | نَامَ | name | to sleep | ⚠ ٹکراؤ |
-| عربی | اسم | اِسْم | name, appellation, designation; noun; substantive; unequal | name | ملتا ہے |
-| عربی | بیت المقدس | بَيْت الْمَقْدِس | Jerusalem (a city in Israel; a city in Palestine); Jerusalem | the Temple in Jerusalem | ملتا ہے |
-| عربی | نسخ | نَسَخَ | abolition; annulment; recantation | to transcribe, to copy | ⚠ ٹکراؤ |
-| عربی | نستعلیق | نَسْتَعْلِيق | Nastaliq, Nastaleeq (style of calligraphy) | Nastaliq, Nastaleeq or Nastaʿlīq: A style of Persian calligr | ملتا ہے |
-| عربی | موسیقی | مُوسِيقَى | music | music | ملتا ہے |
-| عربی | عین | عَيْن | eye; spring, fountain, source, sight | eye (organ) | ملتا ہے |
-| عربی | بنت | بِنْت | daughter | female equivalent of اِبْن (ibn, “son, descendant”): | ⚠ ٹکراؤ |
-| عربی | فارسی | فَارِسِيّ | Persian, Persic; Persianate; Persian (language); Hijra Farsi | a Persian | ملتا ہے |
-| عربی | مترجم | مُتَرْجِم | translator; interpreter | translator; interpreter | ملتا ہے |
-| عربی | واحد | وَاحِد | single | one | ⚠ ٹکراؤ |
-| عربی | اللہ | اللّٰه | Allah; God | God | ملتا ہے |
-| عربی | نجار | نَجَّار | carpenter | carpenter | ملتا ہے |
-| فارسی | اب | — | now | father | ⚠ ٹکراؤ |
-| فارسی | آیا | — | came (m.) | interrogative particle used to introduce yes-no questions | ⚠ ٹکراؤ |
-| فارسی | ہل | — | plough | push, shove | ⚠ ٹکراؤ |
-| فارسی | حلال | — | halal; lawful, permissible; rightful | halal | ملتا ہے |
-| فارسی | جہاد | — | jihad, holy war, crusade; fight, struggle, battle | jihad, holy war, crusade | ملتا ہے |
-| فارسی | حماس | — | Hamas (a Palestinian Islamist militant group and political o | Hamas (a Palestinian Islamist militant group and political o | ملتا ہے |
-| فارسی | فاس | — | Fez (the capital city of the region of Fez-Meknes, Morocco) | Fez (the capital city of the region of Fez-Meknes, Morocco) | ملتا ہے |
-| فارسی | امام | — | imam | imam | ملتا ہے |
-| فارسی | مؤذن | — | muezzin (the person who issues the call to prayer from one o | muezzin (the person who issues the call to prayer from one o | ملتا ہے |
-| فارسی | ملا | — | met; got; was found (m.) | mullah | ⚠ ٹکراؤ |
+- `uz-data/tajweez-aeraab.tsv` — **309** الفاظ جن کا اعراب محفوظ ہے
 
-## دروازوں کی حالت
+- `uz-data/tajweez-farsi-naye.tsv` — **10085** نئے فارسی الفاظ، معنی سمیت (نام، جگہیں اور گردانیں نکال دی گئیں)
 
-| ماخذ | جواب |
-|---|---|
-| Arabic | HTTP 200 |
-| Persian | HTTP 200 |
 
 ---
-**قُفل کا اصول (ابھی صرف تجویز، لاگو نہیں):** اردو لفظ اور اردو معنی مقفل۔ عربی/فارسی صرف *اعراب*، *اشتقاق* اور *اصل زبان کا معنی* بھر سکتے ہیں۔ جہاں دونوں انگریزی معنی ٹکرائیں، **اردو جیتے گی** اور عربی معنی الگ خانے میں رکھا جائے گا۔
-
-
-*یہ رپورٹ خودکار بنی — GitHub Actions خود گیا اور گِنا۔ فاروق نے کچھ download نہیں کیا۔ لغت میں کچھ نہیں ملایا گیا۔*
+*خودکار رپورٹ — فاروق نے کچھ download نہیں کیا۔ لغت میں کچھ نہیں ملایا گیا۔*
