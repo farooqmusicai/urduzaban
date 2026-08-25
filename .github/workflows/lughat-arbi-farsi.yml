@@ -1,0 +1,196 @@
+name: lughat-arbi-farsi
+
+# Arabi + Farsi ka survey — SIRF ginti aur namoona. Lughat me kuch nahi milaya jata.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ginti aur namoona
+        run: |
+          python3 - <<'PY'
+          import json, re, os, urllib.request, collections
+
+          UA={'User-Agent':'urduzaban-survey/1.0 (+https://www.urduzaban.com)'}
+
+          # ---------- normalise: arabi/farsi imla -> urdu skeleton ----------
+          MARKS = re.compile(r'[ً-ْٓ-ٰٟۖ-ۭـ]')
+          TRANS = {
+            'ي':'ی', 'ى':'ی', 'ے':'ی', 'ۓ':'ی',   # ي ى ے -> ی
+            'ك':'ک',                                                            # ك -> ک
+            'ه':'ہ', 'ة':'ہ', 'ۃ':'ہ',                      # ه ة -> ہ
+            'أ':'ا', 'إ':'ا', 'آ':'ا', 'ٱ':'ا',   # أ إ آ -> ا
+            'ؤ':'و', 'ۇ':'و',                                         # ؤ -> و
+            'ئ':'ی',                                                            # ئ -> ی
+            'ء':'',                                                                  # ء hataa do
+          }
+          def key(w):
+              w = MARKS.sub('', w or '')
+              w = ''.join(TRANS.get(c, c) for c in w)
+              w = re.sub(r'[^؀-ۿ]', '', w)
+              return w
+
+          HAS_MARK = re.compile(r'[ً-ْٰ]')
+
+          # ---------- aap ki lughat ----------
+          d = json.load(open('uz-lughat.json', encoding='utf-8'))
+          E = d['entries']
+          MINE = {}
+          for it in E:
+              k = key(it.get('w') or '')
+              if k: MINE.setdefault(k, it)
+          print('lughat:', len(E), 'entries ·', len(MINE), 'keys')
+
+          STOP = set('a an the of to in and or for with is are be by on at as from that it its  '.split())
+          def words_en(s):
+              return {t for t in re.findall(r"[a-z']+", (s or '').lower()) if len(t) > 2 and t not in STOP}
+
+          SRC = [
+            ('عربی',  'Arabic',  'https://kaikki.org/dictionary/Arabic/kaikki.org-dictionary-Arabic.jsonl'),
+            ('فارسی', 'Persian', 'https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl'),
+          ]
+
+          rep = []
+          rep.append('# عربی + فارسی — سروے / SURVEY\n')
+          rep.append('> یہ صرف **جانچ** ہے۔ لغت میں ایک لفظ بھی نہیں ڈالا گیا۔\n')
+          rep.append('**آپ کی لغت:** %d اندراج · %d الگ کنجیاں\n' % (len(E), len(MINE)))
+
+          rows_tbl = []
+          samples = []
+          doors = []
+
+          for ur_name, lang, url in SRC:
+              seen_keys = set()
+              matched = {}           # key -> dict
+              new_with_meaning = 0
+              new_keys = set()
+              total = 0
+              try:
+                  req = urllib.request.Request(url, headers=UA)
+                  r = urllib.request.urlopen(req, timeout=300)
+                  doors.append((lang, 'HTTP %s' % r.getcode()))
+              except Exception as e:
+                  doors.append((lang, 'nahi pahuncha: %s' % str(e)[:60]))
+                  continue
+
+              for raw in r:
+                  total += 1
+                  try:
+                      j = json.loads(raw)
+                  except Exception:
+                      continue
+                  w = j.get('word') or ''
+                  k = key(w)
+                  if not k or len(k) < 2:
+                      continue
+                  seen_keys.add(k)
+
+                  # aeraab: word ya forms me se koi shakl jis me harkaat hon
+                  vocal = ''
+                  if HAS_MARK.search(w):
+                      vocal = w
+                  else:
+                      for f in (j.get('forms') or []):
+                          fw = f.get('form') or ''
+                          if HAS_MARK.search(fw) and key(fw) == k:
+                              vocal = fw; break
+                      if not vocal:
+                          for h in (j.get('head_templates') or []):
+                              for tok in re.findall(r'[؀-ۿً-ْٰ]+', h.get('expansion') or ''):
+                                  if HAS_MARK.search(tok) and key(tok) == k:
+                                      vocal = tok; break
+                              if vocal: break
+
+                  gl = ''
+                  for s in (j.get('senses') or []):
+                      g = (s.get('glosses') or [])
+                      if g: gl = g[0]; break
+
+                  if k in MINE:
+                      cur = matched.get(k)
+                      if cur is None or (not cur['vocal'] and vocal) or (not cur['gl'] and gl):
+                          matched[k] = {'vocal': vocal, 'gl': gl, 'w': w}
+                  else:
+                      if k not in new_keys:
+                          new_keys.add(k)
+                          if gl: new_with_meaning += 1
+
+              # ---- ginti ----
+              gain_aeraab = 0
+              agree = disagree = judged = 0
+              for k, m in matched.items():
+                  it = MINE[k]
+                  if m['vocal'] and not (it.get('s') or it.get('a')):
+                      gain_aeraab += 1
+                  mine_en = words_en(it.get('en'))
+                  their_en = words_en(m['gl'])
+                  if mine_en and their_en:
+                      judged += 1
+                      if mine_en & their_en: agree += 1
+                      else: disagree += 1
+
+              pct = (100.0 * agree / judged) if judged else 0.0
+              rows_tbl.append((ur_name, total, len(seen_keys), len(matched), gain_aeraab, judged, agree, '%.1f%%' % pct))
+              print(ur_name, total, len(seen_keys), len(matched), gain_aeraab, judged, agree, pct)
+
+              # ---- namoona ----
+              n = 0
+              for k, m in matched.items():
+                  if n >= 40: break
+                  it = MINE[k]
+                  mine_en = words_en(it.get('en')); their_en = words_en(m['gl'])
+                  if not (mine_en and their_en): continue
+                  ok = 'ملتا ہے' if (mine_en & their_en) else '⚠ ٹکراؤ'
+                  samples.append((ur_name, it.get('w',''), m['vocal'] or '—', (it.get('en') or '')[:60], (m['gl'] or '')[:60], ok))
+                  n += 1
+
+              rep.append('\n**%s — نئے الفاظ:** %d (اُن میں معنی والے %d) — یہ *زیرِ غور* فہرست ہے، لغت میں نہیں جائیں گے\n' % (ur_name, len(new_keys - set(MINE)), new_with_meaning))
+
+          rep.append('\n## گنتی\n')
+          rep.append('| زبان | کل اندراج | الگ کنجیاں | **آپ کے الفاظ سے ملے** | **اعراب ملے گا** | جانچے گئے | معنی ملے | **⭐ ملاپ** |')
+          rep.append('|---|---|---|---|---|---|---|---|')
+          for t in rows_tbl:
+              rep.append('| %s | %d | %d | **%d** | **%d** | %d | %d | **%s** |' % t)
+
+          rep.append('\n## نمونہ — اپنی آنکھ سے دیکھیں\n')
+          rep.append('| زبان | آپ کا لفظ | اعراب والی شکل | آپ کا معنی | اُن کا معنی | فیصلہ |')
+          rep.append('|---|---|---|---|---|---|')
+          for s in samples[:50]:
+              rep.append('| %s | %s | %s | %s | %s | %s |' % s)
+
+          rep.append('\n## دروازوں کی حالت\n')
+          rep.append('| ماخذ | جواب |')
+          rep.append('|---|---|')
+          for n_, c in doors:
+              rep.append('| %s | %s |' % (n_, c))
+
+          rep.append('\n---\n**قُفل کا اصول (ابھی صرف تجویز، لاگو نہیں):** اردو لفظ اور اردو معنی مقفل۔ عربی/فارسی صرف *اعراب*، *اشتقاق* اور *اصل زبان کا معنی* بھر سکتے ہیں۔ جہاں دونوں انگریزی معنی ٹکرائیں، **اردو جیتے گی** اور عربی معنی الگ خانے میں رکھا جائے گا۔\n')
+          rep.append('\n*یہ رپورٹ خودکار بنی — GitHub Actions خود گیا اور گِنا۔ فاروق نے کچھ download نہیں کیا۔ لغت میں کچھ نہیں ملایا گیا۔*\n')
+
+          os.makedirs('uz-data', exist_ok=True)
+          with open('uz-data/arbi-farsi-namoona.tsv', 'w', encoding='utf-8') as fh:
+              fh.write('zaban\tlafz\taeraab\taap_ka_maani\tun_ka_maani\tfaisla\n')
+              for s in samples:
+                  fh.write('\t'.join(str(x).replace('\t',' ') for x in s) + '\n')
+
+          with open('ARBI-FARSI-SURVEY.md', 'w', encoding='utf-8') as fh:
+              fh.write('\n'.join(rep))
+          print('\n'.join(rep)[:3000])
+          PY
+
+      - name: Commit report
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "arbi-farsi: survey (sirf ginti aur namoona, kuch jora nahi)" || echo "no change"
+          git push || echo "push skipped"
