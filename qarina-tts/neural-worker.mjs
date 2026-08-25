@@ -43,6 +43,8 @@ self.onmessage = async (e) => {
     } else if (m.t === 'phon') {
       // saari satrein EK hi baar mein - taake 18.5 MB wala eSpeak baar baar na chale
       await ensurePhonemizer();
+      toIds.setLughat(m.lughat || null);
+      toIds.setSafai(m.safai !== false);
       postMessage({ t: 'ids', id: m.id, ids: await toIds(m.segs) });
 
     } else if (m.t === 'say') {

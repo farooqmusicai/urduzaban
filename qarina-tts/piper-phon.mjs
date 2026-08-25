@@ -34,7 +34,55 @@ export function splitClauses(text){
   return out;
 }
 
+
+/* ---------- Urdu ke aeraab: kya rakhna hai, kya girana hai ----------
+   NAAPA HUA (eSpeak-ng 1.52 ki Urdu lugat par):
+     kitaab  کِتَاب  ->  aeraab ke saath "ki-ta-AAB"  (ghalat)
+                          zabar hata kar     "kitaab"  (theek)
+     mohabbat مُحَبَّت -> "mo-ha-BAAT" (ghalat) -> "mohabbat" (theek)
+   Yani: zabar/zer/pesh jab LAMBI awaz (ا و ی ے) se pehle aayen, ya
+   tashdeed se pehle aayen, to eSpeak do awazein bana deta hai.
+   Baqi jagah aeraab MADAD karte hain:
+     دَم -> dam (theek) jabke bila-aeraab دم -> dʌm
+     پھِر -> pʰɪr (theek) jabke بلا اعراب پھر -> p+h alag
+   Is liye sab aeraab girana bhi ghalat hai, sab rakhna bhi. Sirf yeh do
+   surtein giraayi jaati hain. Matn aap ka jaisa hai waisa hi rehta hai -
+   yeh safai sirf awaz banate waqt hoti hai.                            */
+const MARK   = /[\u064B-\u0652\u0654-\u0655\u0670\u0653\u0656-\u065F]/;
+const SHADDA = '\u0651', SUKOON = '\u0652', TATWEEL = '\u0640';
+const LONG   = '\u0627\u0622\u0648\u06C7\u06CC\u064A\u06D2\u06D3';   // ا آ و ۇ ی ي ے ۓ
+
+export function cleanAeraab(t){
+  const o=[];
+  for(let i=0;i<t.length;i++){
+    const c=t[i];
+    if(c===TATWEEL) continue;
+    if(MARK.test(c) && c!==SHADDA && c!==SUKOON){
+      let j=i+1; while(j<t.length && MARK.test(t[j])) j++;
+      if(j<t.length && LONG.includes(t[j])) continue;   // zabar + lambi awaz
+      if(t[i+1]===SHADDA) continue;                      // zabar + tashdeed
+    }
+    o.push(c);
+  }
+  return o.join('');
+}
+
+// lughat ka key: lafz bila aeraab, bila viraam
+export const keyOf = w => w.replace(/[^\p{L}]/gu,'');
+
+// Lughat lagao: har lafz dekho, agar lughat mein hai to us ki jagah
+// aap ka likha hua talaffuz bol do.
+export function applyLughat(t, lughat){
+  if(!lughat) return t;
+  return t.replace(/[\p{L}\p{M}]+/gu, w => {
+    const k = keyOf(w);
+    return (k && Object.prototype.hasOwnProperty.call(lughat,k)) ? lughat[k] : w;
+  });
+}
+
 export function makePhonemizer(ESpeakNG, wasmBinary, idMap){
+  let lughat = null;
+  let safai = true;
   let compiled = null;
   async function espeak(text){
     if(!compiled) compiled = await WebAssembly.compile(wasmBinary);
@@ -51,10 +99,12 @@ export function makePhonemizer(ESpeakNG, wasmBinary, idMap){
   }
 
   // segments: ["satar 1","satar 2",...]  ->  [[id,...],[id,...]]
-  return async function toIds(segments){
+  const toIds = async function(segments){
     const plan=[];                       // har segment ke clauses
     const flat=[];                       // saare clauses ek qatar mein
-    for(const s of segments){
+    for(const s0 of segments){
+      let s = safai ? cleanAeraab(s0) : s0;
+      s = applyLughat(s, lughat);
       const cs = splitClauses(s);
       plan.push(cs);
       for(const c of cs) flat.push(c.t);
@@ -80,4 +130,7 @@ export function makePhonemizer(ESpeakNG, wasmBinary, idMap){
       return ids;
     });
   };
+  toIds.setLughat = m => { lughat = m; };
+  toIds.setSafai  = v => { safai = !!v; };
+  return toIds;
 }
