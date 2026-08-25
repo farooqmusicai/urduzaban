@@ -1,0 +1,67 @@
+name: Neural awaz - model laao
+
+# Yeh workflow qarina-voice ke Release se model uthata hai aur ISI repo mein
+# commit kar deta hai. Phir Hostinger khud deploy kar deta hai.
+# Koi token, koi haath ka kaam nahi.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "qarina-voice ka release tag"
+        default: "models-v1"
+      variant:
+        description: "kaun sa model (hybrid = behtareen)"
+        default: "hybrid"
+        type: choice
+        options: [hybrid, q8]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Model + metadata laao
+        run: |
+          set -euo pipefail
+          SRC=farooqmusicai/qarina-voice
+          TAG='${{ inputs.tag }}'
+          VAR='${{ inputs.variant }}'
+          mkdir -p qarina-tts/neural
+
+          curl -fsSL -o qarina-tts/neural/model.onnx \
+            "https://github.com/$SRC/releases/download/$TAG/model.$VAR.onnx"
+
+          for f in vocab.json config.json test_vectors.json; do
+            curl -fsSL -o "qarina-tts/neural/$f" \
+              "https://raw.githubusercontent.com/$SRC/main/models-web/$f"
+          done
+
+          BYTES=$(stat -c%s qarina-tts/neural/model.onnx)
+          # GitHub 100 MB se bari file qubool nahi karta - push se PEHLE rok do,
+          # warna push reject hoga aur mehnat zaya jaayegi (wahi purani ghalti).
+          if [ "$BYTES" -gt 99000000 ]; then
+            echo "::error::model.$VAR.onnx $((BYTES/1048576)) MB hai - GitHub ki 100 MB had se bara. 'hybrid' ya 'q8' chunein."
+            exit 1
+          fi
+
+          printf '{"variant":"%s","tag":"%s","bytes":%s,"sha256":"%s"}\n' \
+            "$VAR" "$TAG" "$BYTES" \
+            "$(sha256sum qarina-tts/neural/model.onnx | cut -d' ' -f1)" \
+            > qarina-tts/neural/info.json
+
+          ls -lh qarina-tts/neural
+
+      - name: Repo mein commit
+        run: |
+          git config user.name  "qarina-bot"
+          git config user.email "qarina-bot@users.noreply.github.com"
+          git add qarina-tts/neural
+          git diff --cached --quiet && { echo "kuch naya nahi"; exit 0; }
+          git commit -m "neural awaz: model.${{ inputs.variant }} (${{ inputs.tag }})"
+          git pull --rebase --autostash
+          git push
