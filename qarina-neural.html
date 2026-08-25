@@ -135,22 +135,35 @@ function closeBracket(t,i){                 // nested [] ka sahih jora dhoondo
   for(let k=i;k<t.length;k++){ if(t[k]==='[')d++; else if(t[k]===']'){d--; if(!d)return k;} }
   return -1;
 }
-function splitLines(t){                     // misra / jumla ba jumla
+function splitLines(t){                     // misra / jumla ba jumla; nl = nayi satar
   const out=[];
-  for(const line of t.split(/\n+/))
+  for(const line of t.split(/\n+/)){
+    let first=true;
     for(let s of line.split(/(?<=[۔؟!])\s*/)){
       s=s.trim(); if(!s) continue;
       while(s.length>110){
         let c=s.lastIndexOf('،',110); if(c<40)c=s.lastIndexOf(' ',110); if(c<40)c=110;
-        out.push(s.slice(0,c).trim()); s=s.slice(c).trim();
+        out.push({t:s.slice(0,c).trim(),nl:first}); first=false; s=s.slice(c).trim();
       }
-      if(s) out.push(s);
+      if(s){ out.push({t:s,nl:first}); first=false; }
     }
+  }
   return out;
+}
+
+// Model har tukde ke aage-peeche ~0.3 sec khamoshi chhorta hai. Do tukde jorne par
+// woh 0.6-0.8 sec ka jhol ban jaata hai - isi liye awaz "tooti hui" lagti thi.
+// Yahan use kaat kar apni napi hui, chhoti si saans di jaati hai.
+function trim(p,thr=0.012){
+  let a=0,b=p.length-1;
+  while(a<b&&Math.abs(p[a])<thr)a++;
+  while(b>a&&Math.abs(p[b])<thr)b--;
+  a=Math.max(0,a-320); b=Math.min(p.length-1,b+800);   // 20ms pehle, 50ms baad
+  return p.subarray(a,b+1);
 }
 function walk(text,st,out){
   let i=0,buf='';
-  const flush=()=>{ for(const c of splitLines(buf)) out.push({text:c,ls:st.ls,gain:st.gain,label:st.label}); buf=''; };
+  const flush=()=>{ for(const c of splitLines(buf)) out.push({text:c.t,nl:c.nl,ls:st.ls,gain:st.gain,label:st.label}); buf=''; };
   while(i<text.length){
     if(text[i]==='['){
       const e=closeBracket(text,i);
@@ -223,14 +236,14 @@ async function say(text,ls){
   return {pcm:r.pcm,drop};
 }
 
-function play(pcm,gain){
+// Pehle poori awaz ban jaati hai, phir EK hi buffer mein bajti hai.
+// Tukda-ba-tukda bajane par, agar banne ki raftaar bajne se sust ho (rtf > 1),
+// to har satar ke baad jhol par jaata tha. Ab aisa mumkin hi nahi.
+function playAll(pcm){
   const b=ctx.createBuffer(1,pcm.length,sr);
   b.getChannelData(0).set(pcm);
-  const s=ctx.createBufferSource();s.buffer=b;
-  const g=ctx.createGain();g.gain.value=gain??1;
-  s.connect(g);g.connect(ctx.destination);
-  const t=Math.max(ctx.currentTime+0.06,playHead);
-  s.start(t);playHead=t+b.duration;sources.push(s);
+  const s=ctx.createBufferSource();s.buffer=b;s.connect(ctx.destination);
+  s.start(ctx.currentTime+0.05);sources.push(s);
 }
 
 function stopAll(){
@@ -293,32 +306,42 @@ $('#go').addEventListener('click',async()=>{
       ol.appendChild(li);return li;});
 
     $('#stop').disabled=false;$('#pause').disabled=false;
-    const drops=new Set(); const t0=performance.now(); let secs=0;
+    const drops=new Set(); const t0=performance.now(); let secs=0, justPaused=false;
 
     for(let i=0;i<segs.length&&!abort;i++){
       const sg=segs[i];
       if(sg.pause){                                  // khamoshi: awaz mein bhi, file mein bhi
         allPcm.push(new Float32Array(Math.round(sg.pause*sr))); secs+=sg.pause;
-        playHead=Math.max(playHead,ctx.currentTime)+sg.pause;
-        lis[i].classList.add('done'); continue;
+        justPaused=true; lis[i].classList.add('done'); continue;
       }
       lis[i].classList.add('now');
-      msg(`ٹکڑا ${i+1} / ${segs.length} بن رہا ہے…`);
+      bar((i+1)/segs.length);
+      msg(`آواز بن رہی ہے… ${i+1} / ${segs.length}`);
       const {pcm,drop}=await say(sg.text,sg.ls);
       if(abort)break;
       drop.forEach(d=>drops.add(d));
       if(pcm.length){
+        const cut=trim(pcm);
+        // apni napi hui saans: nayi satar par thori lambi, jumle ke andar chhoti.
+        // Magar agar user ne khud [وقف] lagaya hai to uske baad kuch mat joro -
+        // 2 second ka matlab theek 2 second hona chahiye.
+        if(allPcm.length && !justPaused){ const gp=Math.round((sg.nl?0.18:0.06)*sr);
+                           allPcm.push(new Float32Array(gp)); secs+=gp/sr; }
+        justPaused=false;
         const g=sg.gain??DEF_GAIN;
-        const out=new Float32Array(pcm.length);
-        for(let k=0;k<pcm.length;k++) out[k]=pcm[k]*g;
-        allPcm.push(out); secs+=pcm.length/sr; play(pcm,g);
+        const out=new Float32Array(cut.length);
+        for(let k=0;k<cut.length;k++) out[k]=cut[k]*g;
+        allPcm.push(out); secs+=cut.length/sr;
       }
       lis[i].classList.remove('now');lis[i].classList.add('done');
     }
+    bar(null);
+    allPcm.push(new Float32Array(Math.round(0.2*sr)));   // aakhri lafz ko saans lene ki jagah
     if(abort){msg('روک دیا گیا۔','warn');return;}
     const wall=(performance.now()-t0)/1000;
+    playAll(merge());                                   // poori awaz, ek saath, bina jhol ke
     $('#wav').disabled=false;$('#mp3').disabled=false;
-    msg(`تیار — ${secs.toFixed(1)} سیکنڈ آواز، ${wall.toFixed(1)} سیکنڈ میں بنی (rtf ${(wall/secs).toFixed(2)})`
+    msg(`چل رہی ہے — ${secs.toFixed(1)} سیکنڈ آواز، ${wall.toFixed(1)} سیکنڈ میں بنی (rtf ${(wall/secs).toFixed(2)})`
         +(drops.size?` · لغت سے باہر: ${[...drops].join(' ')}`:''),'ok');
   }catch(e){msg('خرابی: '+e.message,'err');console.error(e);bar(null);}
   finally{busy=false;$('#go').disabled=false;$('#stop').disabled=true;}
