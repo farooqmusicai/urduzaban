@@ -114,6 +114,26 @@ function trim(p,sr){
                     Math.min(p.length,(last+1)*win+Math.round(0.10*sr)));
 }
 
+/* ---------------- pehle se tayyar rakho ----------------
+   Agar model pehle se browser mein mehfooz hai to safha khulte hi (chupke se,
+   alag worker mein) awaz ka انجن tayyar kar lo — taake 🔊 dabate hi bole.
+   Agar mehfooz NAHI hai to yahan kuch nahi hota: 80 MB kabhi khud se nahi utarte. */
+(function warm(){
+  const go=async()=>{
+    try{
+      const v=pick();
+      const url=new URL(v.model, BASE).href;
+      const c=await caches.open(CACHE);
+      const keys=await c.keys();
+      if(!keys.some(k=>k.url.startsWith(url))) return;      // mehfooz nahi — chhoro
+      try{ localStorage.setItem(ASK,'yes'); }catch{}        // pehle utar chuka hai
+      neuralReady().catch(()=>{});
+    }catch{}
+  };
+  if(typeof requestIdleCallback==='function') requestIdleCallback(go,{timeout:4000});
+  else setTimeout(go,1500);
+})();
+
 /* ---------------- baahir ka darwaza (wohi purana) ---------------- */
 export async function synth(text, opts={}){ return espeakWav(text, opts); }
 export function isSpeaking(){ return speaking; }
