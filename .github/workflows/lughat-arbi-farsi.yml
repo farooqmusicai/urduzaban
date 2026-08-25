@@ -1,6 +1,6 @@
 name: lughat-arbi-farsi
 
-# Dour 2 — ginti theek, roman ki jaanch, aur TAJWEEZ files (lughat me kuch nahi jata).
+# Dour 3 — Platts darban + arabi ka sahih andraaj. Lughat me abhi bhi kuch nahi jata.
 on:
   workflow_dispatch:
 
@@ -14,74 +14,102 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Ginti · jaanch · tajweez
+      - name: Darban · jaanch · tajweez
         run: |
           python3 - <<'PY'
-          import json, re, os, urllib.request, collections
+          import json, re, os, urllib.request, unicodedata
+          from urllib.parse import quote
 
           UA={'User-Agent':'urduzaban/1.0 (+https://www.urduzaban.com)'}
-          MARKS = re.compile(r'[ً-ْٰٓ-ٟۖ-ۭـ]')
-          HARK  = re.compile(r'[ً-ْٰ]')
-          TRANS = {'ي':'ی','ى':'ی','ے':'ی','ۓ':'ی',
-                   'ك':'ک','ه':'ہ','ة':'ہ','ۃ':'ہ',
-                   'أ':'ا','إ':'ا','آ':'ا','ٱ':'ا',
-                   'ؤ':'و','ۇ':'و','ئ':'ی','ء':''}
+          def fetch(u, t=300):
+              return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=t)
+
+          MARKS=re.compile(r'[ً-ْٰٓ-ٟـۖ-ۭ]')
+          HARK =re.compile(r'[ً-ْٰ]')
+          TR={'ي':'ی','ى':'ی','ے':'ی','ۓ':'ی',
+              'ك':'ک','ه':'ہ','ة':'ہ','ۃ':'ہ',
+              'أ':'ا','إ':'ا','آ':'ا','ٱ':'ا',
+              'ؤ':'و','ۇ':'و','ئ':'ی','ء':''}
           def key(w):
-              w = MARKS.sub('', w or '')
-              w = ''.join(TRANS.get(c,c) for c in w)
+              w=MARKS.sub('', w or '')
+              w=''.join(TR.get(c,c) for c in w)
               return re.sub(r'[^؀-ۿ]','',w)
 
-          # ---------- arabi harakat -> vowel pattern (A=lambi, a=chhoti) ----------
-          FAT,KAS,DAM,SUK,SHD,DAG,DIK,DUM,ALM = 'َ','ِ','ُ','ْ','ّ','ً','ٍ','ٌ','ٰ'
-          def pat_ar(w):
-              out=[]; i=0
-              while i < len(w):
-                  c=w[i]
-                  if c in (FAT,KAS,DAM):
-                      nxt = w[i+1] if i+1 < len(w) else ''
-                      if c==FAT and nxt in ('ا',ALM): out.append('A'); i+=2; continue
-                      if c==KAS and nxt=='ي': out.append('I'); i+=2; continue
-                      if c==DAM and nxt=='و': out.append('U'); i+=2; continue
-                      out.append({FAT:'a',KAS:'i',DAM:'u'}[c]); i+=1; continue
-                  if c==ALM: out.append('A'); i+=1; continue
-                  i+=1
-              s=''.join(out)
-              return s[:-1] if s and s[-1] in 'aiu' else s      # aakhri chhoti harkat girao
+          # ---------- coarse phonetic skeleton (dono taraf ek jaisa) ----------
+          AR2 = {'ب':'b','پ':'p','ت':'t','ٹ':'t','ث':'s','ج':'j',
+                 'چ':'c','ح':'h','خ':'k','د':'d','ڈ':'d','ذ':'z',
+                 'ر':'r','ڑ':'r','ز':'z','ژ':'z','س':'s','ش':'s',
+                 'ص':'s','ض':'z','ط':'t','ظ':'z','ع':'','غ':'g',
+                 'ف':'f','ق':'k','ک':'k','گ':'g','ل':'l','م':'m',
+                 'ن':'n','ں':'n','و':'','ہ':'h','ی':'','ا':'',
+                 'ھ':''}
+          def sk_ar(w):
+              w=key(w)
+              return ''.join(AR2.get(c,'') for c in w)
 
-          VOW = re.compile(r"(aa|ā|ee|ii|ī|oo|uu|ū|ai|au|a|e|i|o|u)")
-          LONG = {'aa':'A','ā':'A','ee':'I','ii':'I','ī':'I','oo':'U','uu':'U','ū':'U','ai':'A','au':'A'}
-          def pat_rm(r):
-              r=(r or '').lower()
-              return ''.join(LONG.get(m,{'a':'a','e':'i','i':'i','o':'u','u':'u'}.get(m,'')) for m in VOW.findall(r))
+          DIA=str.maketrans({'ā':'a','ī':'i','ū':'u','ṭ':'t','ḍ':'d',
+                             'ṇ':'n','ṛ':'r','ś':'s','ṣ':'s','ġ':'g',
+                             'ẖ':'h','ʼ':'','‘':'','’':'','̱':'','̣':''})
+          def sk_rm(r):
+              r=unicodedata.normalize('NFC',(r or '').lower()).translate(DIA)
+              r=re.sub(r'[^a-z]','',r)
+              for a,b in (('kh','k'),('gh','g'),('sh','s'),('ch','c'),('th','t'),('dh','d'),
+                          ('ph','p'),('bh','b'),('zh','z'),('jh','j'),('rh','r')):
+                  r=r.replace(a,b)
+              r=r.replace('q','k').replace('x','k').replace('w','').replace('v','').replace('y','')
+              return re.sub(r'[aeiou]','',r)
 
+          # ---------- 1) PLATTS = darban ----------
+          PL=set()
+          iid='platts-a-dictionary-of-urdu-classical-hindi-and-english-1884'
+          try:
+              meta=json.loads(fetch('https://archive.org/metadata/'+iid,60).read().decode('utf-8','replace'))
+              txts=[f['name'] for f in meta.get('files',[]) if f.get('name','').endswith('_djvu.txt')]
+              plat_lines=0
+              for tn in txts:
+                  body=fetch('https://archive.org/download/%s/%s'%(quote(iid),quote(tn))).read().decode('utf-8','replace')
+                  for L in body.split('\n'):
+                      plat_lines+=1
+                      m=re.match(r"^[^A-Za-z]{0,6}([A-Za-zāīūṭḍṇṛśṣġ'ʼ-]{2,25})\s*[,(]", L)
+                      if m:
+                          s=sk_rm(m.group(1))
+                          if len(s)>=2: PL.add(s)
+              plat_ok=True
+          except Exception as e:
+              plat_ok=False; plat_lines=0; print('platts fail', e)
+
+          # ---------- 2) aap ki lughat ----------
           d=json.load(open('uz-lughat.json',encoding='utf-8')); E=d['entries']
           MINE={}
           for it in E:
               k=key(it.get('w') or '')
               if k: MINE.setdefault(k,it)
 
-          STOP=set('a an the of to in and or for with is are be by on at as from that it its one'.split())
-          def wen(s): return {t for t in re.findall(r"[a-z']+", (s or '').lower()) if len(t)>2 and t not in STOP}
+          # darban ki kasoti: aap ke apne alfaz me se kitne Platts me hain?
+          hit=tot=0
+          for k,it in MINE.items():
+              s=sk_ar(k)
+              if len(s)>=2:
+                  tot+=1
+                  if s in PL: hit+=1
+          kasoti = 100.0*hit/tot if tot else 0.0
 
+          STOP=set('a an the of to in and or for with is are be by on at as from that it its one'.split())
+          def wen(s): return {t for t in re.findall(r"[a-z']+",(s or '').lower()) if len(t)>2 and t not in STOP}
           BADPOS={'name','character','punct','prefix','suffix','infix','interfix','circumfix','abbrev','phrase','proverb'}
 
-          rep=['# عربی + فارسی — دور ۲ (جانچ)\n','> لغت میں اب بھی **ایک لفظ بھی نہیں ڈالا گیا**۔ یہ تجویزی فائلیں ہیں۔\n',
-               '**آپ کی لغت:** %d اندراج · %d کنجیاں\n'%(len(E),len(MINE))]
-          tbl=[]; samp=[]; tajweez_ar=[]; tajweez_fa=[]; nay_fa=[]
-
-          for urn, lang, url in [('عربی','Arabic','https://kaikki.org/dictionary/Arabic/kaikki.org-dictionary-Arabic.jsonl'),
-                                 ('فارسی','Persian','https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl')]:
-              matched={}; new={}
-              try:
-                  r=urllib.request.urlopen(urllib.request.Request(url,headers=UA),timeout=300)
+          # ---------- 3) arabi: sahih andraaj (maani se chuno) ----------
+          def scan(url, want_new):
+              cands={}; new={}
+              try: r=fetch(url)
               except Exception as e:
-                  rep.append('\n> %s نہیں پہنچا: %s\n'%(urn,str(e)[:80])); continue
+                  print('fail',url,e); return cands,new
               for raw in r:
                   try: j=json.loads(raw)
                   except Exception: continue
                   w=j.get('word') or ''; k=key(w)
                   if not k or len(k)<2: continue
-                  pos=(j.get('pos') or '')
+                  pos=j.get('pos') or ''
                   gl=''; isform=False
                   for s in (j.get('senses') or []):
                       if s.get('form_of') or s.get('alt_of'): isform=True; continue
@@ -93,64 +121,84 @@ jobs:
                           fw=f.get('form') or ''
                           if HARK.search(fw) and key(fw)==k: voc=fw; break
                   if k in MINE:
-                      c=matched.get(k)
-                      if c is None or (not c['voc'] and voc) or (not c['gl'] and gl):
-                          matched[k]={'voc':voc,'gl':gl,'w':w,'pos':pos}
-                  else:
-                      if gl and not isform and pos not in BADPOS and k not in new:
-                          new[k]={'w':MARKS.sub('',w),'voc':voc,'gl':gl,'pos':pos}
+                      cands.setdefault(k,[]).append({'voc':voc,'gl':gl,'pos':pos,'w':w})
+                  elif want_new and gl and not isform and pos not in BADPOS and k not in new:
+                      new[k]={'w':MARKS.sub('',w),'voc':voc,'gl':gl,'pos':pos}
+              return cands,new
 
-              sabz=zard=surkh=0; aeraab_naya=0; roman_judged=roman_ok=0
-              for k,m in matched.items():
-                  it=MINE[k]
-                  en_ok=None
-                  a,b=wen(it.get('en')),wen(m['gl'])
-                  if a and b: en_ok = bool(a&b)
-                  rm_ok=None
-                  if m['voc'] and (it.get('r') or ''):
-                      pa,pr=pat_ar(m['voc']),pat_rm(it.get('r'))
-                      if pa and pr:
-                          roman_judged+=1; rm_ok=(pa==pr)
-                          if rm_ok: roman_ok+=1
-                  votes=[v for v in (en_ok,rm_ok) if v is not None]
-                  if votes and all(votes): tier='🟢'; sabz+=1
-                  elif votes and any(votes): tier='🟡'; zard+=1
-                  else: tier='🔴'; surkh+=1
-                  if tier=='🟢' and m['voc']:
-                      aeraab_naya+=1
-                      tajweez_ar.append((it.get('w',''), m['voc'], urn, (m['gl'] or '')[:80]))
-                  if len(samp)<60 and (en_ok is not None or rm_ok is not None):
-                      samp.append((urn,tier,it.get('w',''),m['voc'] or '—',(it.get('r') or '—'),
-                                   (it.get('en') or '')[:45],(m['gl'] or '')[:45]))
-              tbl.append((urn,len(matched),sabz,zard,surkh,aeraab_naya,roman_judged,roman_ok,len(new)))
-              if lang=='Persian':
-                  for k,v in new.items():
-                      nay_fa.append((v['w'], v['voc'] or '', v['pos'], v['gl'][:120]))
+          rep=['# دور ۳ — Platts دربان + عربی کا صحیح اندراج\n',
+               '> لغت میں **اب بھی کچھ نہیں ڈالا گیا**۔\n']
 
-          rep.append('\n## گنتی — دور ۲\n')
-          rep.append('| زبان | ملے | 🟢 محفوظ | 🟡 مشکوک | 🔴 رد | **اعراب تیار** | رومن جانچے | رومن ملے | نئے (چھنے ہوئے) |')
-          rep.append('|---|---|---|---|---|---|---|---|---|')
-          for t in tbl: rep.append('| %s | %d | **%d** | %d | %d | **%d** | %d | %d | %d |'%t)
+          rep.append('\n## دربان کی کسوٹی\n')
+          rep.append('| چیز | تعداد |')
+          rep.append('|---|---|')
+          rep.append('| Platts سے نکالے گئے رومن سرلفظ | %d |'%len(PL))
+          rep.append('| Platts کی پڑھی گئی سطریں | %d |'%plat_lines)
+          rep.append('| **آپ کے اپنے الفاظ جو Platts میں ملے** | **%d / %d = %.1f%%** |'%(hit,tot,kasoti))
+          rep.append('\n> یہ نمبر بتاتا ہے کہ دربان پر کتنا بھروسہ کیا جا سکتا ہے۔ اونچا = بھروسے کے قابل۔\n')
 
-          rep.append('\n## نمونہ\n')
-          rep.append('| زبان | درجہ | لفظ | اعراب | آپ کا رومن | آپ کا معنی | اُن کا معنی |')
+          aeraab=[]; manzoor=[]; ghaur=[]; samp=[]
+          for urn, url, want_new in [('عربی','https://kaikki.org/dictionary/Arabic/kaikki.org-dictionary-Arabic.jsonl',False),
+                                     ('فارسی','https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl',True)]:
+              cands,new=scan(url,want_new)
+              sabz=surkh=0
+              for k,lst in cands.items():
+                  it=MINE[k]; mine=wen(it.get('en'))
+                  best=None; bestn=-1
+                  for c in lst:
+                      n=len(mine & wen(c['gl'])) if mine else 0
+                      if c['voc']: n+=0.5
+                      if n>bestn: bestn=n; best=c
+                  ok = bool(mine and (mine & wen(best['gl'])))
+                  if ok:
+                      sabz+=1
+                      if best['voc']:
+                          aeraab.append((it.get('w',''),best['voc'],urn,(best['gl'] or '')[:80]))
+                  else: surkh+=1
+                  if len(samp)<45:
+                      samp.append((urn,'🟢' if ok else '🔴',it.get('w',''),best['voc'] or '—',
+                                   (it.get('en') or '')[:42],(best['gl'] or '')[:42],str(len(lst))))
+              rep.append('\n**%s:** ملے %d · 🟢 تصدیق شدہ **%d** · 🔴 رد %d\n'%(urn,len(cands),sabz,surkh))
+
+              for k,v in new.items():
+                  s=sk_ar(k)
+                  row=(v['w'], v['voc'] or '', v['pos'], v['gl'][:110])
+                  if len(s)>=2 and s in PL: manzoor.append(row)
+                  else: ghaur.append(row)
+
+          rep.append('\n## دربان کا فیصلہ — نئے فارسی الفاظ\n')
+          rep.append('| | تعداد |')
+          rep.append('|---|---|')
+          rep.append('| ✅ **Platts میں موجود — اردو کا لفظ ثابت** | **%d** |'%len(manzoor))
+          rep.append('| ⏸ Platts میں نہیں — زیرِ غور | %d |'%len(ghaur))
+          rep.append('\n**تصدیق شدہ اعراب (عربی + فارسی):** **%d** الفاظ\n'%len(aeraab))
+
+          rep.append('\n## نمونہ — ملے ہوئے الفاظ\n')
+          rep.append('| زبان | درجہ | لفظ | اعراب | آپ کا معنی | چنا ہوا معنی | کتنے امیدوار |')
           rep.append('|---|---|---|---|---|---|---|')
-          for s in samp[:60]: rep.append('| %s | %s | %s | %s | %s | %s | %s |'%s)
+          for s in samp: rep.append('| %s | %s | %s | %s | %s | %s | %s |'%s)
+
+          rep.append('\n## نمونہ — دربان سے گزرے نئے فارسی الفاظ\n')
+          rep.append('| لفظ | قسم | معنی |')
+          rep.append('|---|---|---|')
+          for r_ in manzoor[:35]: rep.append('| %s | %s | %s |'%(r_[0],r_[2],r_[3]))
+
+          rep.append('\n## نمونہ — جو رکے (زیرِ غور)\n')
+          rep.append('| لفظ | قسم | معنی |')
+          rep.append('|---|---|---|')
+          for r_ in ghaur[:25]: rep.append('| %s | %s | %s |'%(r_[0],r_[2],r_[3]))
 
           os.makedirs('uz-data',exist_ok=True)
-          with open('uz-data/tajweez-aeraab.tsv','w',encoding='utf-8') as f:
-              f.write('lafz\taeraab\tzaban\tun_ka_maani\n')
-              for t in tajweez_ar: f.write('\t'.join(str(x).replace('\t',' ') for x in t)+'\n')
-          with open('uz-data/tajweez-farsi-naye.tsv','w',encoding='utf-8') as f:
-              f.write('lafz\taeraab\tqism\tmaani_en\n')
-              for t in nay_fa: f.write('\t'.join(str(x).replace('\t',' ') for x in t)+'\n')
+          def wr(p,head,rows):
+              with open(p,'w',encoding='utf-8') as f:
+                  f.write(head+'\n')
+                  for t in rows: f.write('\t'.join(str(x).replace('\t',' ') for x in t)+'\n')
+          wr('uz-data/tajweez-aeraab.tsv','lafz\taeraab\tzaban\tmaani_en',aeraab)
+          wr('uz-data/tajweez-farsi-manzoor.tsv','lafz\taeraab\tqism\tmaani_en',manzoor)
+          wr('uz-data/tajweez-farsi-zer-e-ghaur.tsv','lafz\taeraab\tqism\tmaani_en',ghaur)
 
-          rep.append('\n## تیار فائلیں (لغت میں نہیں — صرف تجویز)\n')
-          rep.append('- `uz-data/tajweez-aeraab.tsv` — **%d** الفاظ جن کا اعراب محفوظ ہے\n'%len(tajweez_ar))
-          rep.append('- `uz-data/tajweez-farsi-naye.tsv` — **%d** نئے فارسی الفاظ، معنی سمیت (نام، جگہیں اور گردانیں نکال دی گئیں)\n'%len(nay_fa))
-          rep.append('\n---\n*خودکار رپورٹ — فاروق نے کچھ download نہیں کیا۔ لغت میں کچھ نہیں ملایا گیا۔*\n')
-
-          open('ARBI-FARSI-SURVEY.md','w',encoding='utf-8').write('\n'.join(rep))
+          rep.append('\n---\n*خودکار رپورٹ — لغت میں کچھ نہیں ملایا گیا۔*\n')
+          open('PLATTS-DARBAN.md','w',encoding='utf-8').write('\n'.join(rep))
           print('\n'.join(rep)[:2500])
           PY
 
@@ -160,5 +208,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git status --short
-          git commit -m "arbi-farsi: dour 2 - jaanch aur tajweez files" || echo "no change"
+          git commit -m "dour 3: platts darban + arabi sahih andraaj" || echo "no change"
           git push || echo "push skipped"
