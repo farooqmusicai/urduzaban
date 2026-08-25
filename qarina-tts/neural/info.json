@@ -1,1 +1,5 @@
-{"variant":"hybrid","tag":"models-v1","bytes":72887126,"sha256":"e69d40366fd9e43dc81465d89083951a3cb94a87be3a26fc13ea60b5920bc5b6"}
+{
+ "model.onnx": {"bytes": 72887126, "sha256": "e69d40366fd9e43dc81465d89083951a3cb94a87be3a26fc13ea60b5920bc5b6"},
+ "piper/female.onnx": {"bytes": 63515589, "sha256": "3ec306035cfd0bbc22342fee5890450708a16dd231809522731678aa583c961f"},
+ "piper/male.onnx": {"bytes": 63532015, "sha256": "46d590b90fbb41e4d4f2c54ded44874917f8b11b6e0500de2a89e5d3731b5917"}
+}
