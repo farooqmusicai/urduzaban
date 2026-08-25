@@ -12,7 +12,41 @@
 | `dli.ernet.528657` | HTTP 200 | `528657-A Dictionary Urdu Hindi And English Volii(1959)_djvu.txt` | 4.7 MB |
 | `ahandyurduengli00shakgoog` | HTTP 200 | `ahandyurduengli00shakgoog_djvu.txt` | 3.0 MB |
 
-> متن فائل نہیں اتری (HTTP 0)۔
+**سب سے بڑی متن فائل:** `Platts, A Dictionary of Urdū, Classical Hindī, and English (1884) - Part 1_djvu.txt` — 5.2 MB · 164592 سطریں · اُن میں اردو رسم الخط والی **35815** سطریں
+
+**Platts کی شکل سے ملتی سطریں (ممکنہ اندراج):** 200
+
+### نمونہ (OCR جیسا آیا، ویسا ہی)
+
+```
+وس lous, or pleasant place; population ; cu‏
+۱ ibn (used in comp. only, usually in its nom. form
+۱ aba (used, like in, in comb. with a following subst. in
+یا updynd,‏ اپاڑنا Lok! WAUSAT updind, v.t.=‏ ک5
+٦ atripti, ھ٠٠‎ Tnability to be satisfied, in.
+٤ Thoughtlessneas,
+۱ ahmadt, adj. & s.m. Belonging to Ahmad ;—a
+۱ akhyifi, adj. By the same mother but by a diffe.
+۱ RY, adi, 8.1. The act of bringing to completion,
+۶ھ izkar (int.‏ اذکارء
+٢ dsarin (Azar, q.v. + Zend aena .3ء“‎ in), s.m. Camo-
+۱ arjal, ۰ A horse having the lower part of one
+۱ ars, 8.1. The earth ; land, region, country ; a on
+۷۳۲۲٢ drav (also ६75०), a.m. Sound, noise.‏ رو ہ
+۱ azraq, adj. Cerulean, blue, azure seo arzag) ; blue-
+٤ ds (Pehl. 4j, Zend dzi, rt. az, ‘to long’), 8.1. Ardent
+١ dzdr (see next), s.m. Sickness, disorder, disease, in-
+۲ asimarth, adj. Powerless, weak,
+٠ھ istddagt (abst. subst. from istdda, q.v.),‏ سخا
+خفر istigfdr (inf. n. x of‏ ۱ متغفارء
+۱ iklil, 8.01. A crown (used, in ٥۶۹۵, in compn.) :—
+ہہ onan (8. अप्रि+कारिका),‏ ۲۷۹٭٭٭ اگیاری ء
+۱ al, def. art. The —al-améin, intj. Mercy! quarter! God
+۱ alkan, adj. Spenking barbarously; stammering,
+٤ alantt, 8.۶. Eaves of a house (=oltt, ort,
+```
+
+> 200 سطروں کا مکمل نمونہ `uz-data/platts-sample.txt` میں رکھا ہے — اپنی آنکھ سے معیار دیکھ لیں۔
 
 
 ## ۲) DSAL (شکاگو یونیورسٹی) — تیار شدہ ڈیجیٹل متن
@@ -34,7 +68,7 @@
 | ia-meta:dli.ernet.527546 | HTTP 200 |
 | ia-meta:dli.ernet.528657 | HTTP 200 |
 | ia-meta:ahandyurduengli00shakgoog | HTTP 200 |
-| ia-text | نہیں پہنچا |
+| ia-text | HTTP 200 |
 | dsal-platts | HTTP 200 |
 
 ---
