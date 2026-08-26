@@ -216,7 +216,7 @@ var say=function(t,bad){ $('status').textContent=t||''; $('status').className='s
 
 /* ---- لغت (uz-lughat.json) ---- */
 var LUG=null, BYW={}, POSL={}, POSE={};
-fetch('uz-lughat.json',{cache:'force-cache'}).then(function(r){return r.json();}).then(function(j){
+fetch('uz-lughat.json',{cache:'no-cache'}).catch(function(){return fetch('uz-lughat.json',{cache:'force-cache'});}).then(function(r){return r.json();}).then(function(j){
   LUG=j; POSL=j.pos_labels||{}; POSE=j.pos_labels_en||{};
   j.entries.forEach(function(e){ (BYW[e.w]=BYW[e.w]||[]).push(e); });
   var n=Object.keys(BYW).length; $('nDict').textContent=n; $('nDictEn').textContent=n;

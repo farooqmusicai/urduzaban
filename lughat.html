@@ -238,13 +238,12 @@ var say=function(el,t,bad){ $(el).textContent=t||''; $(el).className='status'+(b
 var LUG=null, E=[], POSL={}, POSE={}, LAST=null, mode='auto';
 var URRANGE=/[؀-ۿ]/;
 function glossWords(g){ return g.toLowerCase().replace(/\([^)]*\)/g,' ').split(/[^a-z']+/).filter(function(x){return x.length>1;}); }
-fetch('uz-lughat.json',{cache:'force-cache'}).then(function(r){return r.json();}).then(function(j){
+fetch('uz-lughat.json',{cache:'no-cache'}).catch(function(){return fetch('uz-lughat.json',{cache:'force-cache'});}).then(function(r){return r.json();}).then(function(j){
   LUG=j; POSL=j.pos_labels||{}; POSE=j.pos_labels_en||{};
   var deacc=function(a){ try{ return a.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }catch(err){ return a.toLowerCase(); } };
-  E=j.entries.map(function(e,i){ var rr=(e.r||'').toLowerCase(); var aa=e.a||e.w||'';
-    var k=rr?T.romanKey(rr):['','']; var en=(e.en||''); var alts=(e.alt||[]).map(deacc);
-    return { e:e, i:i, w:e.w, a:T.normalise(aa), r:rr, alts:alts, altKeys:alts.map(function(a){return T.romanKey(a);}),
-      k:k[0], sk:k[1], en:en.toLowerCase(), en1:en.toLowerCase().split(/[;,(]/)[0].trim(), enw:glossWords(en), ur:(e.ur||'')+' '+(e.note||'') }; });
+  E=j.entries.map(function(e,i){ var k=T.romanKey(e.r); var alts=(e.alt||[]).map(deacc);
+    return { e:e, i:i, w:e.w, a:T.normalise(e.a), r:e.r.toLowerCase(), alts:alts, altKeys:alts.map(function(a){return T.romanKey(a);}),
+      k:k[0], sk:k[1], en:e.en.toLowerCase(), en1:e.en.toLowerCase().split(/[;,(]/)[0].trim(), enw:glossWords(e.en), ur:(e.ur||'')+' '+(e.note||'') }; });
   var words={}; E.forEach(function(x){ words[x.w]=1; });
   var n=Object.keys(words).length; $('nWords').textContent=n; $('nWordsEn').textContent=n;
   $('nEntries').textContent=E.length; $('nEntriesEn').textContent=E.length; $('updated').textContent=j.updated; $('updatedEn').textContent=j.updated;
@@ -320,7 +319,7 @@ function render(R){
   }
   $('list').innerHTML=hits.map(function(h){ var e=h.x.e, two=(LUG&&E.filter(function(y){return y.w===e.w;}).length>1);
     return '<div class="card'+(two?' two':'')+'" data-i="'+h.x.i+'">'+
-      '<div class="l1"><span class="wd">'+esc(e.a||e.w)+'</span><span class="rm">'+esc(e.r||'')+'</span></div>'+
+      '<div class="l1"><span class="wd">'+esc(e.a)+'</span><span class="rm">'+esc(e.r)+'</span></div>'+
       '<div class="l2"><span class="en">'+esc(e.en)+'</span><span class="pos"'+(h.how?' title="'+esc(h.how)+'"':'')+'>'+esc(chipLabel(e,en))+'</span></div>'+
       (e.ur?'<div class="ur">'+esc(e.ur)+'</div>':'')+'</div>'; }).join('');
 }
@@ -366,7 +365,7 @@ function speak(text){
 /* ---- شجرہ ---- */
 var CUR=null, EXT=null, EXTP=null;
 function loadExt(){ if(EXT) return Promise.resolve(EXT); if(EXTP) return EXTP;
-  EXTP=fetch('uz-lughat-ext.json',{cache:'force-cache'}).then(function(r){return r.ok?r.json():{ext:{}};}).then(function(j){ EXT=j.ext||{}; return EXT; }).catch(function(){ EXT={}; return EXT; }); return EXTP; }
+  EXTP=fetch('uz-lughat-ext.json',{cache:'no-cache'}).catch(function(){return fetch('uz-lughat-ext.json',{cache:'force-cache'});}).then(function(r){return r.ok?r.json():{ext:{}};}).then(function(j){ EXT=j.ext||{}; return EXT; }).catch(function(){ EXT={}; return EXT; }); return EXTP; }
 function renderExt(e, x, en){
   var h='';
   if(!x) return '';
@@ -382,7 +381,7 @@ function renderExt(e, x, en){
 function field(k,v,cls){ if(!v) return ''; return '<div class="f"><span class="k">'+k+'</span><span class="v '+(cls||'')+'">'+esc(v)+'</span></div>'; }
 function openShajra(e){
   CUR=e; var en=isEn(); var senses=E.filter(function(y){return y.w===e.w;}).map(function(y){return y.e;});
-  $('sjWord').textContent=e.a||e.w; $('sjRoman').textContent=e.r||''; $('sjPos').textContent=chipLabel(e,en);
+  $('sjWord').textContent=e.a; $('sjRoman').textContent=e.r; $('sjPos').textContent=chipLabel(e,en);
   $('sjTj').href='tarjuman.html?text='+encodeURIComponent(e.w)+'&from=ur';
   var h='';
   h+=field(en?'Word (bare)':'لفظ (بے اعراب)', e.w, 'ar');
