@@ -329,3 +329,97 @@
 | گنی | gini | **گِنی** | guinea (gold coin worth twenty-one shill |
 | گنیش | ganesh | **گَنیش** | Ganesha; a male given name, Ganesh, from |
 | ہدایتکار | hidayatkar | **ہِدایَتْکار** | alternative form of ہدایت کار (hdāet kār |
+
+## بیچ 6 — 89 الفاظ
+
+| لفظ | رومن | اعراب | معنی |
+|---|---|---|---|
+| کانٹا | kaanta | **کانْٹا** | thorn |
+| مانگوں | maangun | **مانْگوں** | I (may) ask for |
+| آسرا | aasra | **آسْرا** | support; hope; refuge |
+| جاگتی | jaagti | **جاگْتی** | awake; wakes (f.) |
+| آستین | asteen | **آسْتِین** | sleeve |
+| ابتر | abtar | **اَبْتَر** | hazy, indigested, maladjusted, ruined, s |
+| ابھرتا | ubharta | **اُبھَرْتا** | upward |
+| اتفاقی | ittefaqi | **اِتِّفاقی** | accidental, adventitious, casual, circum |
+| اجمالی | ijmali | **اِجْمالی** | brief; succinct; abridged |
+| ادارتی | idarati | **اِدارَتی** | institutional |
+| ارجمند | arjmand | **اَرْجْمَنْد** | exalted |
+| ازسرنو | az sar-e-nau | **اَزْسَرِنَو** | all over again; afresh; da capo |
+| اسفندیار | isfandiyar | **اِسْفَنْدِیار** | name of the son of Gishtāsb, of the firs |
+| اشتراکی | ishtiraki | **اِشْتِراکی** | Communist |
+| اصطلاحی | istelahi | **اِصْطِلاحی** | technical; idiomatic |
+| الرجی | alarji | **اَلَرْجی** | allergy |
+| انگوٹھا | angootha | **اَنْگُوٹھا** | thumb; toe; the big toe, hallux |
+| اپنانا | apnana | **اَپْنانا** | to take; to adopt; to absorb |
+| بخارا | bukhara | **بُخارا** | Bukhara (a city in Uzbekistan) |
+| بددعا | baddua | **بَدْدُعا** | curse, malediction; anathema |
+| بدنصیب | badnaseeb | **بَدْنَصِیب** | unlucky |
+| بدنیتی | badneeti | **بَدْنِیَّتی** | dishonesty |
+| برش | burish | **بُرِش** | cutting; sharpness; brush |
+| برقعہ | burqa | **بُرْقَعَہ** | burqa |
+| بلانا | bulana | **بُلانا** | to shout; to call out; to call |
+| بہاؤالدین | bahauddeen | **بَہاؤُالدِّین** | a male given name |
+| بہرام | bahram | **بَہْرام** | a male given name, Bahram, from Persian; |
+| تقویم | taqveem | **تَقْوِیم** | calendar |
+| تلا | tala | **تُلا** | bottom; base; stand |
+| تلسی | tulsi | **تُلْسی** | holy basil (plant) |
+| تند | tund | **تُنْد** | fast, quick, swift, rapid; sharp |
+| تنور | tanoor | **تَنُّور** | alternative form of تندور (tandūr) |
+| جابجا | jabaja | **جابَجا** | here and there |
+| جامنی | jamni | **جامْنی** | purple |
+| جانکاری | jankari | **جانْکاری** | information |
+| جمنا | jamna | **جَمْنا** | to solidify, freeze; to become firm, stu |
+| ختنہ | khatna | **خَتْنَہ** | circumcision |
+| خسرہ | khasra | **خَسْرَہ** | a khasra: record of all land ownership i |
+| خوشبودار | khusboodar | **خُوشْبُودار** | fragrant, aromatic; perfumed |
+| خچر | khachchar | **خَچَّر** | mule |
+| دراڑ | darar | **دَراڑ** | rift, split, rupture; schism, division o |
+| دوربین | door-been | **دُورْبِین** | binoculars, telescope; farsighted, far-s |
+| دوگنا | doguna | **دُوگُنا** | alternative form of دُگنا (dugnā) |
+| دگنا | dugna | **دُگْنا** | twice, double |
+| رکشا | raksa | **رَکْشا** | protection; safety; defence |
+| سرمہ | surma | **سُرْمَہ** | kohl, collyrium; soorma |
+| شانتی | shanti | **شانْتی** | quietness; peace, tranquility |
+| شغل | shughl | **شُغْل** | job; work; occupation |
+| عجمی | ajami | **عَجَمی** | Ajami |
+| عشقیہ | ishqiya | **عِشْقِیَہ** | erotic; amatory |
+| غفیر | ghafeer | **غَفِیر** | numerous; milling (crowd) |
+| فہرستوں | fehriston | **فِہْرِسْتوں** | oblique plural of فہرست |
+| فہرستیں | fehristen | **فِہْرِسْتیں** | direct plural of فہرست |
+| لاوارث | lavaris | **لاوارِث** | heirless, orphan; abandoned, unclaimed p |
+| لدھیانہ | ludhiyana | **لُدھِیانَہ** | Ludhiana (a city in Ludhiana district, P |
+| لسی | lassi | **لَسّی** | lassi |
+| لومڑی | lomri | **لومْڑی** | fox |
+| لہسن | lahsun | **لَہْسُن** | garlic |
+| مانس | manus | **مانُس** | human; man; husband |
+| محشر | mahshar | **مَحْشَر** | commotion, tumult; day of judgement; mah |
+| مراٹھی | marathi | **مَراٹھی** | Marathi (language) |
+| ملانا | milana | **مِلانا** | to mix, blend; to unite, to bring togeth |
+| نحوست | nahoosat | **نَحُوسَت** | misfortune, ill omen; evil, abomination, |
+| نزدیکی | nazdeeki | **نَزْدِیکی** | nearness; closeness |
+| نفاق | nafaq | **نِفاق** | schism; great schism (east–west schism) |
+| نمکین | namkeen | **نَمْکِین** | salty; a salty or savory snack |
+| وتر | vatar | **وَتَر** | hypotenuse; odd, alone; Witr, a salah do |
+| وشنو | vishnu | **وِشْنُو** | Vishnu; a male given name, Vishnu, from  |
+| پرستار | parastar | **پَرَسْتار** | adorer; worshipper; servant, slave |
+| پریت | pareet | **پَرِیت** | phantom, specter, apparition; sprite |
+| پلید | paleed | **پَلِید** | impure, polluted, defiled, unclean; nast |
+| پنجہ | panja | **پَنْجَہ** | claw |
+| پکڑنا | pakarna | **پَکَڑْنا** | to hold; to seize; to catch |
+| پیپل | peepal | **پِیپَل** | bodhi tree, sacred fig, peepal, Ficus re |
+| چندا | chanda | **چَنْدا** | moon |
+| چنگیز | changeez | **چَنْگِیز** | Genghis Khan |
+| چھاؤنی | chhaoni | **چھاؤنی** | cantonment |
+| ڈھکن | dhakkan | **ڈھَکَّن** | bottle cap or a cork to close a bottle;  |
+| کانٹوں | kanton | **کانْٹوں** | oblique plural of کانٹا |
+| کدو | kaddu | **کَدُّو** | pumpkin, calabash |
+| کلا | killa | **کِلّا** | nail (fastener); wedge; peg |
+| کلیہ | kalya | **کَلْیَہ** | well, sound, healthy, free from sickness |
+| کنجی | kunji | **کُنْجی** | key |
+| کند | kund | **کُنْد** | blunt, dull, not sharp; slow |
+| کومل | komal | **کومَل** | soft; delicate; tender |
+| گرنا | girna | **گِرْنا** | to fall, to tumble; to descend |
+| گنت | ganit | **گَنِت** | mathematics |
+| گڑیا | guriya | **گُڑِیا** | a doll; a female puppet |
+| گیندوں | gendon | **گینْدوں** | oblique plural of گیند |
