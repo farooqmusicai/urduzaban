@@ -1,6 +1,6 @@
 name: lughat-arbi-farsi
 
-# Dour 4 — Adab ki chhalni (fahsh + jadeed) + darban mazboot + kasoti dobara.
+# Dour 5 — Adab ki chhalni (sakht) + rishta ka sakht usool + darban mazboot.
 # Lughat me abhi bhi KUCH NAHI jata. Sirf tajweez files aur report banti hain.
 on:
   workflow_dispatch:
@@ -73,7 +73,9 @@ jobs:
                                r'(sexual|carnal)\s+intercourse|'
                                r'fornicat|sodom|incest|rape\b|erotic|horny|lewd|obscene|porn|'
                                r'urinat|urine|piss\b|faeces|feces|shit\b|excrement|defecat|turd|'
-                               r'bastard|cuckold|nipple|buttock|condom)', re.I)
+                               r'bastard|cuckold|nipple|buttock|condom|'
+                               r'clitoris|genital|foreskin|pubic|castrat|lust\b|lustful|seduc|'
+                               r'aphrodisiac|virgin\b|menstru|nymph|libido|fondl|caress)', re.I)
           # 3) fahsh chhalni — nam ba nam (Farooq ki fehrist, §5.1)
           BAD_WORDS={key(x) for x in ('کیر','خایہ','کسکش','کس کش','شہوتی','شاش','کاپوت','گاند','چوت',
                      'لوڑا','پھدی','رنڈی','قحبہ','لواطت','مقعد','واژن')}
@@ -100,7 +102,10 @@ jobs:
                   if BAD_GLOSS.search(g or '') and not SAAF.search(g or ''): return 'maani'
               return ''
 
+          # ZWNJ (nim-fasla) sirf jadeed Irani imla me aata hai — Ghalib ki farsi me kabhi nahi
+          ZWNJ='‌'
           def jadeed(j, w):
+              if ZWNJ in (w or ''): return 'zwnj'
               if key(w) in MODERN_WORDS: return 'naam'
               et=(j.get('etymology_text') or '')
               if MODERN.search(et) and re.search(r'\b(borrow|loan|from)\b', et, re.I): return 'shajra'
@@ -140,7 +145,8 @@ jobs:
 
           # ---------- 3) scan (arabi pehle: uska ARK darban banta hai) ----------
           ARK=set()      # arabi Wiktionary ke sab lafzon ka dhancha — doosra darban
-          CUT={'fahsh_tag':0,'fahsh_naam':0,'fahsh_maani':0,'jadeed_naam':0,'jadeed_shajra':0}
+          CUT={'fahsh_tag':0,'fahsh_naam':0,'fahsh_maani':0,
+               'jadeed_naam':0,'jadeed_shajra':0,'jadeed_zwnj':0}
           CUT_SAMP=[]
 
           def scan(url, want_new, collect_ark):
@@ -186,7 +192,7 @@ jobs:
                       new[k]={'w':MARKS.sub('',w),'voc':voc,'gl':gl,'pos':pos}
               return cands,new
 
-          rep=['# دور ۴ — ادب کی چھلنی + مضبوط دربان\n',
+          rep=['# دور ۵ — ادب کی سخت چھلنی + سخت رشتہ + مضبوط دربان\n',
                '> لغت میں **اب بھی کچھ نہیں ڈالا گیا**۔ یہ صرف چھنی ہوئی فہرست اور رپورٹ ہے۔\n']
 
           aeraab=[]; manzoor=[]; ghaur=[]; samp=[]
@@ -212,16 +218,32 @@ jobs:
                                    (it.get('en') or '')[:42],(best['gl'] or '')[:42],str(len(lst))))
               rep.append('\n**%s:** ملے %d · 🟢 تصدیق شدہ **%d** · 🔴 رد %d\n'%(urn,len(cands),sabz,surkh))
 
-              # ---- DOUR 4: darban ab teen raaste ----
+              # ---- DOUR 5: darban — teen raaste, magar rishta ab SAKHT ----
+              # rishta sirf tab jab lafz do (ya ziyada) alag hisson ka jora ho
+              # aur HAR hissa apne aap me maana rakhta ho: "bagh wahsh" ✅ · "zeest-shanasi" ❌
+              def rishta(w):
+                  parts=[p for p in re.split(r'[\s‌‍-]+', MARKS.sub('',w or '')) if p]
+                  if len(parts)<2: return ''
+                  hit=''
+                  for p in parts:
+                      pk=key(p)
+                      if len(pk)<2: return ''
+                      ps=sk_ar(pk)
+                      if pk in MINE:
+                          hit=hit or pk
+                      elif len(ps)>=2 and (ps in PL or ps in ARK):
+                          pass
+                      else:
+                          return ''
+                  return ('rishta:'+hit) if hit else ''
+
               for k,v in new.items():
                   s=sk_ar(k)
                   row=(v['w'], v['voc'] or '', v['pos'], v['gl'][:110])
                   why=''
                   if len(s)>=2 and s in PL: why='platts'
                   elif len(s)>=2 and s in ARK: why='arbi'
-                  else:
-                      for mk in MINE_KEYS:
-                          if len(k)>len(mk) and mk in k: why='rishta:'+mk; break
+                  else: why=rishta(v['w'])
                   if why: manzoor.append(row+(why,))
                   else: ghaur.append(row)
 
@@ -255,6 +277,7 @@ jobs:
           rep.append('| فحش — انگریزی معنی سے پکڑا | %d |'%CUT['fahsh_maani'])
           rep.append('| فحش — نام بہ نام فہرست | %d |'%CUT['fahsh_naam'])
           rep.append('| جدید — یورپی شجرہ | %d |'%CUT['jadeed_shajra'])
+          rep.append('| جدید — نیم‌فاصلہ (ZWNJ) والی ایرانی املا | %d |'%CUT['jadeed_zwnj'])
           rep.append('| جدید — نام بہ نام فہرست | %d |'%CUT['jadeed_naam'])
           rep.append('| **کل نکالے گئے** | **%d** |'%sum(CUT.values()))
           rep.append('\n> نکالے گئے الفاظ **کہیں محفوظ نہیں کیے گئے** — صرف گنتی رکھی ہے۔\n')
@@ -306,5 +329,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git status --short
-          git commit -m "dour 4: adab ki chhalni (fahsh + jadeed) + darban mazboot" || echo "no change"
+          git commit -m "dour 5: sakht chhalni (ZWNJ + fahsh) + rishta ka sakht usool" || echo "no change"
           git push || echo "push skipped"
