@@ -389,6 +389,8 @@ function openShajra(e){
   h+=field(en?'Meaning (English)':'معنی (English)', e.en, 'en');
   h+=field(en?'Meaning / hint (Urdu)':'معنی / اشارہ (اردو)', e.ur||(en?'— not yet (filled a little every day)':'— ابھی نہیں (روز تھوڑا بھرتا ہے)'));
   if(e.g==='name'){ h+=field(en?'Gender':'صنف', lab('gender_labels',e.gen,en)); h+=field(en?'Origin (language)':'اصل زبان', lab('origin_labels',e.org,en)); }
+  if(e.asl) h+=field(en?'Origin (etymology)':'اصل (اشتقاق)', e.asl, 'ar');
+  if(e.re) h+=field(en?'Roman':'رومن', en?'made by the Tarjuman engine — not yet checked by a human':'ترجمان انجن کا بنایا ہوا — جانچ باقی', 'en');
   if(e.alt&&e.alt.length) h+=field(en?'Other Roman spellings':'رومن کے دوسرے املا', e.alt.join(' · '), 'en');
   h+=field(en?'Speak-form (voice engine)':'بولنے کا روپ (آواز کے لیے)', e.s||(en?'same as written':'لکھے جیسا'), 'ar');
   if(e.ex) h+=field(en?'Example':'مثال', e.ex, 'ar');
