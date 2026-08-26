@@ -20,3 +20,15 @@
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
 </IfModule>
+
+<IfModule mod_headers.c>
+<IfModule mod_setenvif.c>
+  # farooqmusic.com ko sirf do engine files parhne ki ijazat (CORS).
+  # Baaki poori site par koi asar nahi - sirf ye do files, sirf ye ek domain.
+  <FilesMatch "^(uz-translit\.js|uz-lughat\.json)$">
+    SetEnvIf Origin "^https?://(www\.)?farooqmusic\.com$" UZ_CORS=$0
+    Header set Access-Control-Allow-Origin "%{UZ_CORS}e" env=UZ_CORS
+    Header append Vary "Origin"
+  </FilesMatch>
+</IfModule>
+</IfModule>
