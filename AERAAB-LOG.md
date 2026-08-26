@@ -71,3 +71,83 @@
 | گردش | gardish | **گَرْدِش** | rotation; revolution; circulation |
 | گڑھ | garh | **گَڑھ** | stronghold, defenses; citadel, fortress; |
 | گہرا | gahra | **گَہْرا** | deep |
+
+## بیچ 3 — 75 الفاظ
+
+| لفظ | رومن (سند) | اعراب | معنی |
+|---|---|---|---|
+| سوچتا | sochta | **سوچْتا** | thinks (m.) |
+| سوچتے | sochte | **سوچْتے** | think (pl.) |
+| مانگا | maanga | **مانْگا** | asked for; demanded (m.) |
+| مانگے | maange | **مانْگے** | asked for (pl.); may ask |
+| اثاثہ | asasa | **اَثاثَہ** | asset; property |
+| آرزو | aarzoo | **آرْزُو** | wish; desire; longing |
+| آدمیوں | admiyon | **آدْمِیوں** | oblique plural of آدمی (ādmī) |
+| آسمانی | asmani | **آسْمانی** | sky blue; of or relating to the sky; cel |
+| آمریت | amiriyat | **آمِرِیَت** | dictatorship |
+| اجاگر | ujagar | **اُجاگَر** | bright, conspicuous, famous, illustrious |
+| اجداد | ajdad | **اَجْداد** | forefathers |
+| اخذ | akhz | **اَخْذ** | seizing, taking; something derived |
+| اخراج | ikhraj | **اِخْراج** | expulsion, efflux, relegation; ousting |
+| ادراک | idrak | **اِدْراک** | insight; cognition, intuition, comprehen |
+| اسباب | asbab | **اَسْباب** | causes, means, motives, appliance, mater |
+| استدلال | istedlal | **اِسْتِدْلال** | demonstration, reasoning, justification, |
+| استقامت | isteqamat | **اِسْتِقامَت** | adherence, rectitude, uprightness |
+| استوار | ustuvar | **اُسْتُوار** | strong, powerful, mighty; durable, firm, |
+| اشتعال | ishteal | **اِشْتِعال** | combustion, infuriation, agitation, igni |
+| اصرار | israr | **اِصْرار** | insistence, obduracy, obstinacy, persist |
+| اصغر | asghar | **اَصْغَر** | junior |
+| اصلاحی | islahi | **اِصْلاحی** | meliorative, reform |
+| امامت | imamat | **اِمامَت** | leadership; an office or jurisdiction of |
+| انگلی | ungli | **اُنْگْلی** | finger |
+| اٹک | atak | **اَٹَک** | obstacle; stoppage; doubt |
+| ایجنٹ | ejant | **ایجَنْٹ** | agent |
+| بائبل | baibil | **بائِبِل** | the Bible |
+| بحیرہ | buhaira | **بُحَیرَہ** | sea |
+| بدنام | badnam | **بَدْنام** | infamous |
+| بربادی | barbadi | **بَرْبادی** | waste, havoc, overthrow, destruction, de |
+| برما | barma | **بَرْما** | drill, borer; Burma, Myanmar (country in |
+| بظاہر | ba-zahir | **بَظاہِر** | seemingly; apparently |
+| بیجنگ | bejing | **بیجِنْگ** | Beijing (a direct-administered municipal |
+| بیشک | beshak | **بیشَک** | undoubtedly, without a doubt, totally; c |
+| تنازع | tanazo | **تَنازُع** | conflict, struggle |
+| تہائی | tihai | **تِہائی** | third |
+| جغرافیائی | jugrafiyai | **جُغْرافِیائی** | geographical, geographic |
+| جھنگ | jhang | **جھَنْگ** | Jhang (a city in Punjab, Pakistan) |
+| حروف | huroof | **حُرُوف** | plural of حرف |
+| خودکشی | khudkushi | **خودْکُشی** | suicide |
+| درمیانی | darmiyani | **دَرْمِیانی** | middle; intermediate |
+| دیوبندی | devbandi | **دیوْبَنْدی** | Deobandi |
+| راکٹ | rakit | **راکِٹ** | rocket |
+| رسمی | rasmi | **رَسْمی** | usual; customary; ordinary |
+| سادگی | sadgi | **سادْگی** | simplicity, naivety; plainness |
+| سست | sust | **سُسْت** | slow, sluggish; lazy, leisurely, idle; r |
+| سوچنا | sochna | **سوچْنا** | to think; to ponder |
+| شناختی | shanakhti | **شِناخْتی** | identification |
+| شہدا | shuhada | **شُہَدا** | formal plural of شہید (śahīd) |
+| صفات | sifat | **صِفات** | plural of صفت |
+| فاصلہ | fasila | **فاصِلَہ** | distance; interval; space |
+| لمبا | lamba | **لَمْبا** | tall (of people); long (of objects, dura |
+| لمبائی | lambai | **لَمْبائی** | length; height |
+| لڑکوں | larkon | **لَڑْکوں** | oblique plural of لڑکا |
+| لڑکیاں | larkiyan | **لَڑْکِیاں** | direct plural of لڑکی |
+| مادر | madar | **مادَر** | mother, mama |
+| مشاورت | mushavarat | **مُشاوَرَت** | counseling |
+| معتبر | motabar | **مُعْتَبَر** | credible, reliable |
+| مغل | mughal | **مُغَل** | Mughal, Moghul |
+| ناراضگی | narazgi | **ناراضْگی** | disappointment, sadness, dissatisfaction |
+| ٹینک | taink | **ٹَینْک** | tank (vehicle) |
+| پابند | paband | **پابَنْد** | restrained, encumbered; bound |
+| پتی | patti | **پَتّی** | leaf; husband |
+| پہلوان | pahlvan | **پَہْلْوان** | wrestler; champion |
+| چلنا | chalna | **چَلْنا** | to go; to walk; to move |
+| چمک | chamak | **چَمَک** | brightness; radiance; luminosity |
+| چندر | chandr | **چَنْدْر** | moon; understanding, comprehension |
+| کروانا | karvana | **کَرْوانا** | to cause to do, to make do or cause, to  |
+| کشیدگی | kasheedgi | **کَشِیدْگی** | tension, stress; displeasure |
+| کلیدی | kaleedi | **کَلِیدی** | key, essential, basic, central, pivotal |
+| کینسر | kainsar | **کَینْسَر** | cancer |
+| گلا | gala | **گَلا** | neck; throat; voice |
+| ہجری | hijri | **ہِجْری** | Hijri (Islamic calendar); AH (Anno Hegir |
+| ہندوؤں | Hinu-oon | **ہِنْدوؤں** | plural of ہندو |
+| ہونٹوں | honton | **ہونْٹوں** | oblique plural of ہونٹ (“lip”) |
