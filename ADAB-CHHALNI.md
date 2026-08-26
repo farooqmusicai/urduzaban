@@ -1,4 +1,4 @@
-# دور ۴ — ادب کی چھلنی + مضبوط دربان
+# دور ۵ — ادب کی سخت چھلنی + سخت رشتہ + مضبوط دربان
 
 > لغت میں **اب بھی کچھ نہیں ڈالا گیا**۔ یہ صرف چھنی ہوئی فہرست اور رپورٹ ہے۔
 
@@ -27,11 +27,12 @@
 | چھلنی | نکالے گئے |
 |---|---|
 | فحش — Wiktionary کا tag | 121 |
-| فحش — انگریزی معنی سے پکڑا | 85 |
+| فحش — انگریزی معنی سے پکڑا | 103 |
 | فحش — نام بہ نام فہرست | 3 |
-| جدید — یورپی شجرہ | 1197 |
+| جدید — یورپی شجرہ | 1167 |
+| جدید — نیم‌فاصلہ (ZWNJ) والی ایرانی املا | 680 |
 | جدید — نام بہ نام فہرست | 14 |
-| **کل نکالے گئے** | **1420** |
+| **کل نکالے گئے** | **2088** |
 
 > نکالے گئے الفاظ **کہیں محفوظ نہیں کیے گئے** — صرف گنتی رکھی ہے۔
 
@@ -40,11 +41,11 @@
 
 | | تعداد |
 |---|---|
-| ✅ **دربان سے گزرے** | **7907** |
-| ⏸ زیرِ غور | 873 |
-| &nbsp;&nbsp;↳ rishta سے | 3453 |
-| &nbsp;&nbsp;↳ platts سے | 3378 |
-| &nbsp;&nbsp;↳ arbi سے | 1076 |
+| ✅ **دربان سے گزرے** | **5320** |
+| ⏸ زیرِ غور | 2827 |
+| &nbsp;&nbsp;↳ platts سے | 3323 |
+| &nbsp;&nbsp;↳ arbi سے | 1049 |
+| &nbsp;&nbsp;↳ rishta سے | 948 |
 
 **تصدیق شدہ اعراب (عربی + فارسی):** **1282** الفاظ
 
@@ -60,39 +61,39 @@
 | زوج | noun | couple, pair | arbi |
 | باغ وحش | noun | zoo | rishta:باغ |
 | ایتالیایی | adj | Italian | platts |
-| زیست‌شناسی | noun | biology | rishta:اسی |
 | مرحبا | intj | bravo, good job | arbi |
 | اجاق | noun | stove | platts |
-| زمین‌شناسی | noun | geology | rishta:زمین |
 | شاذ | adj | glad | platts |
-| کتاب لغت | noun | dictionary, glossary | rishta:لغت |
+| کتاب لغت | noun | dictionary, glossary | rishta:کتاب |
 | باب | adj | appropriate | platts |
 | بان | noun | prince, lord, governor, chief | platts |
-| چامه‌سرایی | noun | poetry | rishta:ایی |
 | رأس | classifier | classifier for counting animals: head | platts |
 | نار | noun | pomegranate | platts |
 | زیتونی | adj | olivaceous | platts |
-| اسلحه گرم | noun | firearm | rishta:گرم |
+| اسلحه گرم | noun | firearm | rishta:اسلحہ |
 | زیاد | adj | much; a lot | platts |
-| چندین | adj | much; a lot | rishta:دین |
 | چتر | noun | umbrella, parasol | platts |
-| چوچوله | noun | clitoris | rishta:چول |
 | چطور | adv | how | platts |
-| گنجینه | noun | treasure | rishta:جین |
-| گردنبند | noun | necklace | rishta:گرد |
 | ظهر | noun | noon, midday | arbi |
 | منخر | noun | nostril | platts |
-| ریشه‌شناسی | noun | etymology | rishta:اسی |
-| ویکی‌پدیا | noun | Wikipedia | rishta:دیا |
 | منت | noun | favor, grace; action that causes the receiver to be thankful | platts |
 | نهار | noun | daytime | platts |
 | مجاهد | noun | fighter, warrior; especially a mujahid | arbi |
 | طالب | noun | seeker | platts |
-| ویکی‌واژه | noun | Wiktionary | arbi |
 | محرم | noun | mahram; close family member who cannot be married | platts |
 | شعبان | noun | Sha'ban (the eighth month of the Islamic calendar) | arbi |
 | شوال | noun | Shawwal (the tenth month of the Islamic calendar) | platts |
 | شباط | noun | February | platts |
+| آذار | noun | March | platts |
+| تموز | noun | July | platts |
+| بلند کردن | verb | to raise | rishta:بلند |
+| قطران | noun | tar | platts |
+| سیخ زدن | verb | to skewer | rishta:سیخ |
+| تمساح | noun | alligator | arbi |
+| جرس | noun | clapper | platts |
+| صوت | noun | sound | platts |
+| ناس | noun | people | platts |
+| رف | noun | shelf, ledge, rack | platts |
 
 ## نمونہ — ملے ہوئے الفاظ (اعراب)
 
@@ -149,30 +150,30 @@
 | لفظ | قسم | معنی |
 |---|---|---|
 | ال | noun | plough; the beam of a plough |
+| چندین | adj | much; a lot |
 | این | det | this; the |
+| گنجینه | noun | treasure |
+| گردنبند | noun | necklace |
 | روبه جلو | adj | ad hoc |
 | رجب | noun | Rajab (the seventh month of the Islamic calendar) |
+| فضاپیما | noun | spacecraft |
+| ترگمان | noun | translator |
+| وب نوشت | noun | website |
+| حسابدار | noun | accountant |
+| عصر بخیر | intj | good afternoon |
 | قاصدک | noun | dandelion |
-| سه‌شنبه | noun | Tuesday |
 | شنبه | noun | Saturday |
+| تابستان | noun | summer |
 | گوش دادن | verb | to listen |
+| سنگسار | noun | stoning, lapidation |
 | فروختن | verb | to sell |
+| مادربزرگ | noun | grandmother |
 | آش | noun | aush (thick Persian-style soup) |
+| پدربزرگ | noun | grandfather |
 | مو | noun | hair |
 | عمو | noun | paternal uncle |
+| گهگاه | adv | sometimes |
 | گلدان | noun | flowerpot |
-| زشت | adj | ugly |
-| خربزه | noun | melon |
-| ول | adj | free |
-| قارچ | noun | mushroom |
-| پرتقال | noun | orange |
-| بنفش | adj | violet, violet-coloured |
-| سوسک | noun | cockroach; ellipsis of سوسک حمام (susk-e hammâm) |
-| زشتی | noun | ugliness |
-| را | particle | Used to mark certain noun phrases as the direct object. Since it is obligatory for all definite direct objects |
-| نارگیل | noun | coconut |
-| ازگیل | noun | medlar |
-| چکاوک | noun | skylark, lark |
 
 ---
 *خودکار رپورٹ — لغت میں کچھ نہیں ملایا گیا۔*
