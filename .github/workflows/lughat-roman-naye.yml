@@ -1,0 +1,94 @@
+name: Lughat - naye lafzon ka roman
+
+# Sirf un andraaj ka roman (r) bharta hai jin ka khana KHALI hai.
+# Roman aap ke apne Tarjuman engine (uz-translit.js) se banta hai -> re:1 (jaanch baqi).
+# Jin ke pas pehle se r hai, unhe haath nahi lagta. Koi naya lafz nahi jurta.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  roman:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tarjuman engine se roman banao
+        run: |
+          node - <<'JS'
+          const fs = require('fs');
+
+          // 1) Tarjuman engine (browser script) ko node me chalao
+          const src = fs.readFileSync('uz-translit.js', 'utf8');
+          const root = {};
+          new Function('window', 'globalThis', 'self', src).call(root, root, root, root);
+          const T = root.UZTranslit;
+          if (!T || !T.urToRoman) { console.error('UZTranslit nahi mila'); process.exit(1); }
+
+          // 2) Lughat parho
+          const j = JSON.parse(fs.readFileSync('uz-lughat.json', 'utf8'));
+          const pehle = JSON.stringify(j.entries.map(e => [e.w, e.r || '', e.a || '']));
+
+          let r_bhare = 0, a_bhare = 0, khali = [], chhue_nahi = 0;
+          const namoona = [];
+          for (const e of j.entries) {
+            if (typeof e.r === 'string' && e.r.trim()) { chhue_nahi++; continue; }
+            if (!e.a || typeof e.a !== 'string') { e.a = e.w; a_bhare++; }
+            let r = '';
+            try { r = (T.urToRoman(e.w) || '').trim().toLowerCase(); } catch (err) { r = ''; }
+            r = r.replace(/\s+/g, ' ');
+            if (r && /[a-z]/.test(r)) {
+              e.r = r; e.re = 1; r_bhare++;
+              if (namoona.length < 25) namoona.push([e.w, r, (e.en || '').slice(0, 40)]);
+            } else {
+              khali.push(e.w);
+            }
+          }
+
+          // 3) Hifazat: jin ke pas pehle se r tha, wo bilkul na badle
+          const baad = JSON.parse(JSON.stringify(j.entries));
+          let bigra = 0;
+          const p = JSON.parse(pehle);
+          for (let i = 0; i < p.length; i++) {
+            if (p[i][1] && p[i][1] !== baad[i].r) bigra++;
+          }
+          if (bigra) { console.error('KHATRA: ' + bigra + ' purane roman badal gaye — kuch nahi likha'); process.exit(1); }
+
+          j.updated = new Date().toISOString().slice(0, 10);
+          j.count = j.entries.length;
+          fs.writeFileSync('uz-lughat.json', JSON.stringify(j), 'utf8');
+
+          const rep = [];
+          rep.push('# نئے الفاظ کا رومن — ترجمان انجن سے\n');
+          rep.push('> صرف خالی خانے بھرے گئے۔ جن الفاظ کا رومن پہلے سے موجود تھا، اُنہیں ہاتھ نہیں لگا۔\n');
+          rep.push('| ناپ | تعداد |');
+          rep.push('|---|---|');
+          rep.push('| کل اندراج | ' + j.entries.length + ' |');
+          rep.push('| پہلے سے رومن موجود (نہیں چھوا) | ' + chhue_nahi + ' |');
+          rep.push('| **نیا رومن بھرا گیا** (`re:1` — جانچ باقی) | **' + r_bhare + '** |');
+          rep.push('| `a` کا خانہ بھرا (لفظ جیسا) | ' + a_bhare + ' |');
+          rep.push('| انجن رومن نہ بنا سکا | ' + khali.length + ' |');
+          rep.push('\n> ⚠️ `re:1` کا مطلب: یہ رومن ترجمان انجن نے بنایا ہے، انسان نے نہیں دیکھا۔ کچھ جگہ کچا ہو سکتا ہے۔\n');
+          rep.push('\n## نمونہ\n');
+          rep.push('| لفظ | رومن | معنی |');
+          rep.push('|---|---|---|');
+          for (const n of namoona) rep.push('| ' + n[0] + ' | ' + n[1] + ' | ' + n[2] + ' |');
+          if (khali.length) {
+            rep.push('\n## جن کا رومن نہ بن سکا\n');
+            rep.push(khali.slice(0, 40).join(' · '));
+          }
+          fs.writeFileSync('ROMAN-NAYE.md', rep.join('\n'), 'utf8');
+          console.log(rep.join('\n').slice(0, 2000));
+          JS
+
+      - name: Commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "lughat: naye lafzon ka roman (Tarjuman engine, re:1)" || echo "no change"
+          git push || echo "push skipped"
