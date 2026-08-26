@@ -423,3 +423,95 @@
 | گنت | ganit | **گَنِت** | mathematics |
 | گڑیا | guriya | **گُڑِیا** | a doll; a female puppet |
 | گیندوں | gendon | **گینْدوں** | oblique plural of گیند |
+
+## بیچ 7 — 87 الفاظ
+
+| لفظ | رومن | اعراب | معنی |
+|---|---|---|---|
+| مستانہ | mastana | **مَسْتانَہ** | intoxicated; carefree (m.) |
+| آمدہ | amda | **آمَدَہ** | arrived |
+| اجوائن | ajvain | **اَجْوائِن** | anise |
+| ادبا | udaba | **اُدَبا** | plural of ادیب (adīb) |
+| ازبک | uzbak | **اُزْبَک** | Uzbek, a western Karluk Turkic people na |
+| استر | astar | **اَسْتَر** | wigan |
+| اشراق | ishraq | **اِشْراق** | orient; dawn, daybreak, lustre |
+| امرود | amrood | **اَمْرُود** | guava (fruit) |
+| براق | baraq | **بُراق** | shiny, bright |
+| بناوٹی | banavati | **بَناوَٹی** | artificial; counterfeit |
+| بنیان | baniyan | **بَنِیان** | vest; undershirt |
+| بیکر | bekar | **بیکَر** | baker |
+| بیگانہ | begana | **بیگانَہ** | foreign, alien, stranger |
+| تارہ | tara | **تارَہ** | alternative spelling of تارا (tārā) |
+| جامن | jaman | **جامَن** | jambul, jamun (Syzygium cumini); Malabar |
+| جاگنا | jagna | **جاگْنا** | to wake up; to be awake; to be on the as |
+| جمیکا | jamaika | **جَمَیکا** | Jamaica (an island and country in the Ca |
+| خمیازہ | khamyaza | **خَمْیازَہ** | retribution; yawn |
+| دبانا | dabana | **دَبانا** | to press, apply pressure; to squeeze |
+| درگ | durg | **دُرْگ** | fortress; castle, fort; citadel, strongh |
+| دریائی | daryai | **دَرْیائی** | marine; maritime |
+| دیگچی | degchi | **دیگْچی** | cauldron |
+| رفقا | rufaqa | **رُفَقا** | plural of رفیق (rafīq) |
+| روانڈا | ravanda | **رَوانْڈا** | Rwanda (a country in East Africa) |
+| ساجن | sajan | **ساجَن** | lover, paramour, sweetheart, gallant; hu |
+| سردیاں | sardiyan | **سَرْدِیاں** | winter; cold; direct plural of سردی (sar |
+| سرف | sarf | **سَرْف** | extravagance, excess, non-essential expe |
+| سرمئی | surmai | **سُرْمَئی** | grey, ash (color); dark-colored |
+| سناتن | sanatan | **سَناتَن** | existing from the old, immemorial, conti |
+| سپنے | sapnon | **سَپْنے** | inflection of سَپْنا (sapnā, “sleep”): o |
+| شردھا | sharaddha | **شَرَدّھا** | faith, belief; shraddha |
+| شعاری | shiari | **شِعاری** | customary; habitual |
+| عجائبات | ajaibat | **عَجائِبات** | plural of عجائب (ajāib) |
+| عجوبہ | ajooba | **عَجُوبَہ** | wonder; portent; miracle |
+| فجی | fiji | **فِجی** | Fiji (a country and archipelago of over  |
+| فسادی | fasadi | **فَسادی** | rioter, seditious, rebellious, quarrelso |
+| لائبیریا | laiberiya | **لائبِیرِیا** | Liberia (a country in West Africa) |
+| لاڈلی | ladli | **لاڈْلی** | feminine of لاڈلہ; a darling, dear |
+| لغو | lagv | **لَغْو** | nonsensical; absurd; improper |
+| مارخور | markhor | **مارْخور** | markhor |
+| متولی | mutavalli | **مُتَوَلّی** | superintendent or treasurer (of a mosque |
+| مقدسات | muqaddasat | **مُقَدَّسات** | plural of مقدسہ |
+| ملائم | mulayam | **مُلائِم** | tender, soft |
+| ملنسار | milansar | **مِلَنْسار** | affable, amiable, genial |
+| منقبت | manqabat | **مَنْقَبَت** | glory; ability, accomplishment; praise |
+| مٹانا | mitana | **مِٹانا** | erase; rub; erasure, deletion |
+| مکرر | mukarrar | **مُکَرَّر** | repeating, recurring; repeatedly |
+| نارنجی | naranji | **نارَنْجی** | orange (colour) |
+| ناشپاتی | nashpati | **ناشْپاتی** | pear |
+| ناگن | nagin | **ناگِن** | female serpent |
+| ندیاں | nadiyan | **نَدِیاں** | direct plural of ندی |
+| ندیوں | nadiyon | **نَدِیوں** | oblique plural of ندی |
+| نپولین | napoliyan | **نَپولِیَن** | Napoleon |
+| وارانسی | varansi | **وارانْسی** | Varanasi, Benares (a city in India) |
+| ولولہ | walwala | **وَلْوَلَہ** | howling; lamenting; wailing |
+| ٹوٹنا | tootna | **ٹُوٹْنا** | to break; to shatter |
+| پاخانہ | pakhana | **پاخانَہ** | privy, latrine, outhouse, lavatory, toil |
+| پدم | padma | **پَدْم** | lotus |
+| پرتگالی | purtgali | **پُرْتْگالی** | Portuguese (language); a Portuguese, inh |
+| پرزہ | purza | **پُرْزَہ** | part |
+| پروہت | purohit | **پُروہِت** | priest |
+| پرکھ | purukh | **پُرُکھ** | male; a person, human being; ancestor |
+| پستہ | pista | **پِسْتَہ** | pistachio (nut); pistachio (color); havi |
+| پلٹنا | palatna | **پَلَٹْنا** | to turn around; to recoil, rebound, reve |
+| پنکھ | pankh | **پَنْکھ** | feather; wing |
+| پیادہ | pyada | **پِیادَہ** | on foot; one on foot; footman, footsoldi |
+| چاردیواری | chardivari | **چارْدِیواری** | enclosure, fence |
+| چاشنی | chashni | **چاشْنی** | syrup |
+| چاکر | chakar | **چاکَر** | servant |
+| چراگاہ | charagah | **چَراگاہ** | pasture; grasslands |
+| چمڑا | chamra | **چَمْڑا** | skin |
+| چڑھنا | charhna | **چَڑھْنا** | to climb; to rise, to ascend; to mount |
+| چڑیاں | chiriyan | **چِڑِیاں** | direct plural of چڑیا (cṛyā) |
+| چڑیوں | chiriyon | **چِڑِیوں** | oblique plural of چڑیا (cṛyā) |
+| چیچنیا | chechanya | **چیچَنْیا** | Chechnya (a republic and federal subject |
+| کسک | kasak | **کَسَک** | lassitude; ache; pain |
+| کمانا | kamana | **کَمانا** | to earn |
+| کمبخت | kambakht | **کَمْبَخْت** | unfortunate, unlucky, miserable; cursed, |
+| کنڑ | kunar | **کَنَڑ** | Kannada; Kunar, a province of Afghanista |
+| کنگال | kangal | **کَنْگال** | poor, destitute; poor person, pauper |
+| گدا | guda | **گُدا** | anal; anus |
+| گمبھیر | gambheer | **گَمْبھِیر** | deep; serious, grave |
+| گیندیں | genden | **گینْدیں** | direct plural of گیند |
+| ہندومت | hindoomat | **ہِنْدُومَت** | Hinduism |
+| یاتری | yatri | **یاتْری** | traveller, pilgrim |
+| یرمیاہ | Yirmiyah | **یِرْمِیاہ** | Book of Jeremiah; Jeremiah, a prophet; a |
+| یسعیاہ | yasayah | **یَسَعْیاہ** | the Book of Isaiah (one of the books of  |
