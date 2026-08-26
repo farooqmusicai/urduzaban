@@ -1,6 +1,7 @@
 name: lughat-arbi-farsi
 
-# Dour 3 — Platts darban + arabi ka sahih andraaj. Lughat me abhi bhi kuch nahi jata.
+# Dour 4 — Adab ki chhalni (fahsh + jadeed) + darban mazboot + kasoti dobara.
+# Lughat me abhi bhi KUCH NAHI jata. Sirf tajweez files aur report banti hain.
 on:
   workflow_dispatch:
 
@@ -14,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Darban · jaanch · tajweez
+      - name: Darban · chhalni · jaanch · tajweez
         run: |
           python3 - <<'PY'
           import json, re, os, urllib.request, unicodedata
@@ -59,7 +60,54 @@ jobs:
               r=r.replace('q','k').replace('x','k').replace('w','').replace('v','').replace('y','')
               return re.sub(r'[aeiou]','',r)
 
-          # ---------- 1) PLATTS = darban ----------
+          # ================= DOUR 4 · ADAB KI CHHALNI =================
+          # 1) fahsh chhalni — Wiktionary ke tags
+          BAD_TAGS={'vulgar','obscene','slang','offensive','derogatory','ethnic-slur',
+                    'ethnic slur','slur','profane','swear-word','swearword','taboo',
+                    'pejorative','sexual','crude'}
+          # 2) fahsh chhalni — angrezi maani (agar tag na laga ho)
+          # (gadha = ass/donkey aur seena = breast jaise saaf lafz na pakde jayen)
+          BAD_GLOSS=re.compile(r'\b(penis|vagina|vulva|testicl|scrotum|anus|arse|butthole|'
+                               r'fuck|cunt|dick|cock\b|prick\b|whore|slut|prostitut|pimp\b|brothel|'
+                               r'semen|sperm|ejacul|masturbat|orgasm|coitus|copulat|'
+                               r'(sexual|carnal)\s+intercourse|'
+                               r'fornicat|sodom|incest|rape\b|erotic|horny|lewd|obscene|porn|'
+                               r'urinat|urine|piss\b|faeces|feces|shit\b|excrement|defecat|turd|'
+                               r'bastard|cuckold|nipple|buttock|condom)', re.I)
+          # 3) fahsh chhalni — nam ba nam (Farooq ki fehrist, §5.1)
+          BAD_WORDS={key(x) for x in ('کیر','خایہ','کسکش','کس کش','شہوتی','شاش','کاپوت','گاند','چوت',
+                     'لوڑا','پھدی','رنڈی','قحبہ','لواطت','مقعد','واژن')}
+          # 4) jadeed chhalni — Europi zabanon se udhaar
+          MODERN=re.compile(r'\b(French|English|Russian|German|Italian|Portuguese|Dutch|Spanish|'
+                            r'Latin|Greek)\b', re.I)
+          MODERN_WORDS={key(x) for x in ('مرسی','توییت','توئیت','رپ','لارو','تومان','صرب','ویکی',
+                        'تلویزیون','رادیو','کامپیوتر','اینترنت','موبایل','تاکسی','بانک','هتل')}
+
+          def sense_tags(j):
+              t=set()
+              for s in (j.get('senses') or []):
+                  for x in (s.get('tags') or []): t.add(str(x).lower())
+                  for x in (s.get('topics') or []): t.add(str(x).lower())
+              for x in (j.get('tags') or []): t.add(str(x).lower())
+              return t
+
+          # saaf lafz jo galti se pakde ja sakte hain (rapeseed/canola = kalza)
+          SAAF=re.compile(r'\b(rapeseed|canola|oilseed)\b', re.I)
+          def fahsh(j, w, glosses):
+              if sense_tags(j) & BAD_TAGS: return 'tag'
+              if key(w) in BAD_WORDS: return 'naam'
+              for g in glosses:
+                  if BAD_GLOSS.search(g or '') and not SAAF.search(g or ''): return 'maani'
+              return ''
+
+          def jadeed(j, w):
+              if key(w) in MODERN_WORDS: return 'naam'
+              et=(j.get('etymology_text') or '')
+              if MODERN.search(et) and re.search(r'\b(borrow|loan|from)\b', et, re.I): return 'shajra'
+              return ''
+          # ===========================================================
+
+          # ---------- 1) PLATTS = pehla darban ----------
           PL=set()
           iid='platts-a-dictionary-of-urdu-classical-hindi-and-english-1884'
           try:
@@ -84,22 +132,18 @@ jobs:
           for it in E:
               k=key(it.get('w') or '')
               if k: MINE.setdefault(k,it)
-
-          # darban ki kasoti: aap ke apne alfaz me se kitne Platts me hain?
-          hit=tot=0
-          for k,it in MINE.items():
-              s=sk_ar(k)
-              if len(s)>=2:
-                  tot+=1
-                  if s in PL: hit+=1
-          kasoti = 100.0*hit/tot if tot else 0.0
+          MINE_KEYS=[k for k in MINE if len(k)>=3]
 
           STOP=set('a an the of to in and or for with is are be by on at as from that it its one'.split())
           def wen(s): return {t for t in re.findall(r"[a-z']+",(s or '').lower()) if len(t)>2 and t not in STOP}
           BADPOS={'name','character','punct','prefix','suffix','infix','interfix','circumfix','abbrev','phrase','proverb'}
 
-          # ---------- 3) arabi: sahih andraaj (maani se chuno) ----------
-          def scan(url, want_new):
+          # ---------- 3) scan (arabi pehle: uska ARK darban banta hai) ----------
+          ARK=set()      # arabi Wiktionary ke sab lafzon ka dhancha — doosra darban
+          CUT={'fahsh_tag':0,'fahsh_naam':0,'fahsh_maani':0,'jadeed_naam':0,'jadeed_shajra':0}
+          CUT_SAMP=[]
+
+          def scan(url, want_new, collect_ark):
               cands={}; new={}
               try: r=fetch(url)
               except Exception as e:
@@ -110,11 +154,16 @@ jobs:
                   w=j.get('word') or ''; k=key(w)
                   if not k or len(k)<2: continue
                   pos=j.get('pos') or ''
-                  gl=''; isform=False
+                  gl=''; isform=False; allg=[]
                   for s in (j.get('senses') or []):
                       if s.get('form_of') or s.get('alt_of'): isform=True; continue
                       g=s.get('glosses') or []
-                      if g and not gl: gl=g[0]
+                      if g:
+                          allg.append(g[0])
+                          if not gl: gl=g[0]
+                  if collect_ark and gl and not isform and pos not in BADPOS:
+                      s2=sk_ar(k)
+                      if len(s2)>=2: ARK.add(s2)
                   voc = w if HARK.search(w) else ''
                   if not voc:
                       for f in (j.get('forms') or []):
@@ -123,24 +172,27 @@ jobs:
                   if k in MINE:
                       cands.setdefault(k,[]).append({'voc':voc,'gl':gl,'pos':pos,'w':w})
                   elif want_new and gl and not isform and pos not in BADPOS and k not in new:
+                      # ---- DOUR 4: chhalni yahan lagti hai ----
+                      f_=fahsh(j,w,allg)
+                      if f_:
+                          CUT['fahsh_'+f_]+=1
+                          if len(CUT_SAMP)<20: CUT_SAMP.append(('فحش/'+f_,pos,(gl or '')[:60]))
+                          continue
+                      m_=jadeed(j,w)
+                      if m_:
+                          CUT['jadeed_'+m_]+=1
+                          if len(CUT_SAMP)<20: CUT_SAMP.append(('جدید/'+m_,pos,(gl or '')[:60]))
+                          continue
                       new[k]={'w':MARKS.sub('',w),'voc':voc,'gl':gl,'pos':pos}
               return cands,new
 
-          rep=['# دور ۳ — Platts دربان + عربی کا صحیح اندراج\n',
-               '> لغت میں **اب بھی کچھ نہیں ڈالا گیا**۔\n']
-
-          rep.append('\n## دربان کی کسوٹی\n')
-          rep.append('| چیز | تعداد |')
-          rep.append('|---|---|')
-          rep.append('| Platts سے نکالے گئے رومن سرلفظ | %d |'%len(PL))
-          rep.append('| Platts کی پڑھی گئی سطریں | %d |'%plat_lines)
-          rep.append('| **آپ کے اپنے الفاظ جو Platts میں ملے** | **%d / %d = %.1f%%** |'%(hit,tot,kasoti))
-          rep.append('\n> یہ نمبر بتاتا ہے کہ دربان پر کتنا بھروسہ کیا جا سکتا ہے۔ اونچا = بھروسے کے قابل۔\n')
+          rep=['# دور ۴ — ادب کی چھلنی + مضبوط دربان\n',
+               '> لغت میں **اب بھی کچھ نہیں ڈالا گیا**۔ یہ صرف چھنی ہوئی فہرست اور رپورٹ ہے۔\n']
 
           aeraab=[]; manzoor=[]; ghaur=[]; samp=[]
-          for urn, url, want_new in [('عربی','https://kaikki.org/dictionary/Arabic/kaikki.org-dictionary-Arabic.jsonl',False),
-                                     ('فارسی','https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl',True)]:
-              cands,new=scan(url,want_new)
+          for urn, url, want_new, ark in [('عربی','https://kaikki.org/dictionary/Arabic/kaikki.org-dictionary-Arabic.jsonl',False,True),
+                                          ('فارسی','https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl',True,False)]:
+              cands,new=scan(url,want_new,ark)
               sabz=surkh=0
               for k,lst in cands.items():
                   it=MINE[k]; mine=wen(it.get('en'))
@@ -160,28 +212,74 @@ jobs:
                                    (it.get('en') or '')[:42],(best['gl'] or '')[:42],str(len(lst))))
               rep.append('\n**%s:** ملے %d · 🟢 تصدیق شدہ **%d** · 🔴 رد %d\n'%(urn,len(cands),sabz,surkh))
 
+              # ---- DOUR 4: darban ab teen raaste ----
               for k,v in new.items():
                   s=sk_ar(k)
                   row=(v['w'], v['voc'] or '', v['pos'], v['gl'][:110])
-                  if len(s)>=2 and s in PL: manzoor.append(row)
+                  why=''
+                  if len(s)>=2 and s in PL: why='platts'
+                  elif len(s)>=2 and s in ARK: why='arbi'
+                  else:
+                      for mk in MINE_KEYS:
+                          if len(k)>len(mk) and mk in k: why='rishta:'+mk; break
+                  if why: manzoor.append(row+(why,))
                   else: ghaur.append(row)
 
-          rep.append('\n## دربان کا فیصلہ — نئے فارسی الفاظ\n')
+          # ---------- kasoti: purani (sirf Platts) aur nayi (poora darban) ----------
+          hit_pl=hit_full=tot=0
+          for k,it in MINE.items():
+              s=sk_ar(k)
+              if len(s)>=2:
+                  tot+=1
+                  in_pl = s in PL
+                  if in_pl: hit_pl+=1
+                  if in_pl or s in ARK: hit_full+=1
+          kas_pl   = 100.0*hit_pl/tot if tot else 0.0
+          kas_full = 100.0*hit_full/tot if tot else 0.0
+
+          rep.append('\n## دربان کی کسوٹی — آپ کے اپنے الفاظ میں سے کتنے گزرتے ہیں\n')
+          rep.append('| دربان | گزرے | کسوٹی |')
+          rep.append('|---|---|---|')
+          rep.append('| صرف Platts (دور ۳) | %d / %d | **%.1f%%** |'%(hit_pl,tot,kas_pl))
+          rep.append('| Platts + عربی Wiktionary (دور ۴) | %d / %d | **%.1f%%** |'%(hit_full,tot,kas_full))
+          rep.append('\n| چیز | تعداد |')
+          rep.append('|---|---|')
+          rep.append('| Platts سے نکالے گئے رومن سرلفظ | %d |'%len(PL))
+          rep.append('| Platts کی پڑھی گئی سطریں | %d |'%plat_lines)
+          rep.append('| عربی Wiktionary کے ڈھانچے (ARK) | %d |'%len(ARK))
+
+          rep.append('\n## 🚨 چھلنی نے کیا نکالا\n')
+          rep.append('| چھلنی | نکالے گئے |')
+          rep.append('|---|---|')
+          rep.append('| فحش — Wiktionary کا tag | %d |'%CUT['fahsh_tag'])
+          rep.append('| فحش — انگریزی معنی سے پکڑا | %d |'%CUT['fahsh_maani'])
+          rep.append('| فحش — نام بہ نام فہرست | %d |'%CUT['fahsh_naam'])
+          rep.append('| جدید — یورپی شجرہ | %d |'%CUT['jadeed_shajra'])
+          rep.append('| جدید — نام بہ نام فہرست | %d |'%CUT['jadeed_naam'])
+          rep.append('| **کل نکالے گئے** | **%d** |'%sum(CUT.values()))
+          rep.append('\n> نکالے گئے الفاظ **کہیں محفوظ نہیں کیے گئے** — صرف گنتی رکھی ہے۔\n')
+
+          rep.append('\n## دربان کا فیصلہ — نئے فارسی الفاظ (چھلنی کے بعد)\n')
           rep.append('| | تعداد |')
           rep.append('|---|---|')
-          rep.append('| ✅ **Platts میں موجود — اردو کا لفظ ثابت** | **%d** |'%len(manzoor))
-          rep.append('| ⏸ Platts میں نہیں — زیرِ غور | %d |'%len(ghaur))
+          rep.append('| ✅ **دربان سے گزرے** | **%d** |'%len(manzoor))
+          rep.append('| ⏸ زیرِ غور | %d |'%len(ghaur))
+          bywhy={}
+          for r_ in manzoor:
+              t=r_[4].split(':')[0]; bywhy[t]=bywhy.get(t,0)+1
+          for t,n in sorted(bywhy.items(), key=lambda x:-x[1]):
+              rep.append('| &nbsp;&nbsp;↳ %s سے | %d |'%(t,n))
           rep.append('\n**تصدیق شدہ اعراب (عربی + فارسی):** **%d** الفاظ\n'%len(aeraab))
 
-          rep.append('\n## نمونہ — ملے ہوئے الفاظ\n')
+          rep.append('\n## نمونہ — دربان سے گزرے نئے فارسی الفاظ (پہلے 40)\n')
+          rep.append('| لفظ | قسم | معنی | کیوں گزرا |')
+          rep.append('|---|---|---|---|')
+          for r_ in manzoor[:40]: rep.append('| %s | %s | %s | %s |'%(r_[0],r_[2],r_[3],r_[4]))
+
+          rep.append('\n## نمونہ — ملے ہوئے الفاظ (اعراب)\n')
           rep.append('| زبان | درجہ | لفظ | اعراب | آپ کا معنی | چنا ہوا معنی | کتنے امیدوار |')
           rep.append('|---|---|---|---|---|---|---|')
           for s in samp: rep.append('| %s | %s | %s | %s | %s | %s | %s |'%s)
-
-          rep.append('\n## نمونہ — دربان سے گزرے نئے فارسی الفاظ\n')
-          rep.append('| لفظ | قسم | معنی |')
-          rep.append('|---|---|---|')
-          for r_ in manzoor[:35]: rep.append('| %s | %s | %s |'%(r_[0],r_[2],r_[3]))
 
           rep.append('\n## نمونہ — جو رکے (زیرِ غور)\n')
           rep.append('| لفظ | قسم | معنی |')
@@ -194,11 +292,11 @@ jobs:
                   f.write(head+'\n')
                   for t in rows: f.write('\t'.join(str(x).replace('\t',' ') for x in t)+'\n')
           wr('uz-data/tajweez-aeraab.tsv','lafz\taeraab\tzaban\tmaani_en',aeraab)
-          wr('uz-data/tajweez-farsi-manzoor.tsv','lafz\taeraab\tqism\tmaani_en',manzoor)
+          wr('uz-data/tajweez-farsi-manzoor.tsv','lafz\taeraab\tqism\tmaani_en\tkyun',manzoor)
           wr('uz-data/tajweez-farsi-zer-e-ghaur.tsv','lafz\taeraab\tqism\tmaani_en',ghaur)
 
           rep.append('\n---\n*خودکار رپورٹ — لغت میں کچھ نہیں ملایا گیا۔*\n')
-          open('PLATTS-DARBAN.md','w',encoding='utf-8').write('\n'.join(rep))
+          open('ADAB-CHHALNI.md','w',encoding='utf-8').write('\n'.join(rep))
           print('\n'.join(rep)[:2500])
           PY
 
@@ -208,5 +306,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git status --short
-          git commit -m "dour 3: platts darban + arabi sahih andraaj" || echo "no change"
+          git commit -m "dour 4: adab ki chhalni (fahsh + jadeed) + darban mazboot" || echo "no change"
           git push || echo "push skipped"
