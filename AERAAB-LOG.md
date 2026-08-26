@@ -240,3 +240,92 @@
 | گرو | guru | **گُرُو** | guru; sage; teacher |
 | گلاس | glas | **گِلاس** | glass |
 | ہواؤں | havaon | **ہَواؤں** | oblique plural of ہوا (hvā, “air; wind”) |
+
+## بیچ 5 — 84 الفاظ
+
+| لفظ | رومن | اعراب | معنی |
+|---|---|---|---|
+| انجان | anjaan | **اَنْجان** | unknown; unfamiliar; stranger (m.) |
+| جاگتے | jaagte | **جاگْتے** | awake; wake (pl.) |
+| اتم | atam | **اُتَم** | immortal |
+| اجیرن | ajeeran | **اَجِیرَن** | boring, distasteful, hurtful, indigestib |
+| اختلافی | ikhtilafi | **اِخْتِلافی** | varied |
+| ادارت | idarat | **اِدارَت** | alternative form of ادارہ (idārā) |
+| ارتھ | arth | **اَرْتھ** | meaning; sense; motive |
+| ارشادات | irsadat | **اِرْشادات** | utterance |
+| استغاثہ | isteghasa | **اِسْتِغاثَہ** | indictment, prosecution |
+| استنباط | istenbat | **اِسْتِنْباط** | elicitation |
+| اسقاط | isqat | **اِسْقاط** | causing to fall; dropping or casting her |
+| اصلا | aslan | **اَصْلاً** | actually, genuinely, radically |
+| اصلیت | asliyat | **اَصْلِیَت** | genuineness, originality, quiddity |
+| افلاس | iflas | **اِفْلاس** | poverty |
+| انکاری | inkari | **اِنْکاری** | denial |
+| انگ | ang | **اَنْگ** | body, limb (anatomy) |
+| انگور | angoor | **اَنْگُور** | grape |
+| بابت | babat | **بابَت** | affair, matter, account, business; regar |
+| بارہا | barha | **بارْہا** | again and again, over and over, time and |
+| باشندہ | bashinda | **باشِنْدَہ** | resident, inhabitant |
+| براعظم | barr-i azam | **بَرِّاعْظَم** | continent |
+| بزرگی | buzargi | **بُزُرْگی** | sainthood; old age |
+| بسکٹ | biskit | **بِسْکِٹ** | biscuit, cookie |
+| بقایا | baqaya | **بَقایا** | remaining, outstanding; remainder, balan |
+| بوسیدہ | boseedah | **بوسِیدَہ** | rotten, decayed |
+| بپتسمہ | baptisma | **بَپْتِسْمَہ** | baptism (a Christian sacrament, by which |
+| بڑھنا | barna | **بَڑھْنا** | to increase (in amount or intensity); to |
+| بکرا | bakra | **بَکْرا** | billy goat, male goat; fool |
+| بھاگنا | bhagna | **بھاگْنا** | to run; to flee, run away |
+| بھنگ | bhang | **بھَنْگ** | alternative form of بھانگ (bhāṅg) |
+| ترازو | tarazu | **تَرازُو** | balance; scales |
+| توڑنا | torna | **توڑْنا** | to break, snap; to break (a vow, promise |
+| جگت | jagat | **جَگَت** | world; universe; creation (all which exi |
+| خرگوش | khargosh | **خَرْگوش** | rabbit, hare |
+| دانہ | dana | **دانَہ** | grain; seed; corn |
+| دھرمی | dharmi | **دھَرْمی** | Dharmist |
+| ذیابیطس | ziyabeetas | **ذِیابِیطَس** | diabetes |
+| ربڑ | rabar | **رَبَڑ** | rubber, eraser |
+| رتن | ratan | **رَتَن** | gem, jewel, precious stone; pupil of the |
+| رسل | rusul | **رُسُل** | plural of رسول (rasūl) |
+| ریشمی | reshmi | **ریشْمی** | silky; made of silk; silken |
+| سدھار | sudhar | **سُدھار** | improvement; correction; upgrade |
+| سرائے | sarae | **سَرائے** | inn, hotel; dwelling |
+| سرکشی | sarkasi | **سَرْکَشی** | stubbornness; disobedience |
+| سمجھدار | samajhdar | **سَمَجھْدار** | prudent, witty, sensible; intelligent |
+| سوداگر | saudagar | **سَوداگَر** | merchant, trader |
+| سہن | sahan | **سَہَن** | patience; toleration, endurance; forbear |
+| شعار | shiar | **شِعار** | mark; signal; sign |
+| شمشیر | shamsheer | **شَمْشِیر** | sword; scimitar, shamshir |
+| لچک | lachak | **لَچَک** | kerchief; headscarf; elasticity |
+| لکشمی | lakshmi | **لَکْشْمی** | wealth; Lakshmi; a female given name, La |
+| لگنا | lagna | **لَگْنا** | to seem, to appear |
+| مجال | majal | **مَجال** | power, ability; right |
+| محنتی | mihnati | **مِحْنَتی** | hard-working; laborious; difficult |
+| مردار | murdar | **مُرْدار** | dead; impure; unclean |
+| مرچ | mirch | **مِرْچ** | pepper (in both senses) |
+| مشتری | mustari | **مُشْتَری** | customer; buyer; Jupiter (planet) |
+| ملیریا | maleriya | **مَلیرِیا** | malaria |
+| منانا | manana | **مَنانا** | to convince; to celebrate; to triumph |
+| مورتی | moorti | **مُورْتی** | murti; an idol, religious statue; an ico |
+| مکا | makka | **مُکّا** | corn, maize |
+| مہتاب | mahtab | **مَہْتاب** | moonlight |
+| مہران | mehran | **مِہْران** | the Indus (river); the Indus Valley; the |
+| ننگا | nannga | **نَنْگا** | nude, naked; bare; shameless |
+| پتلا | patla | **پَتْلا** | thin, lean, slender; emaciate; weak; del |
+| پجاری | pujari | **پُجاری** | priest; worshipper |
+| پلی | pali | **پَلی** | a very small cup |
+| پگڑی | pagri | **پَگْڑی** | turban |
+| پھونک | phoonk | **پھُونْک** | blow; breath; puff |
+| چغتائی | chughtai | **چُغْتائی** | Chagatai; a now-extinct Turkic language  |
+| چلن | chalan | **چَلَن** | behavior; demeanor; manner |
+| کاٹنا | katna | **کاٹْنا** | to cut, to slice; to bite |
+| کسر | kasr | **کَسْر** | fraction |
+| کلیسیا | kaleesiya | **کَلِیسِیا** | the Church; the combined Christian commu |
+| کچا | kachcha | **کَچّا** | raw; unripe; uncooked |
+| کڑا | kara | **کَڑا** | hard; stiff; tough |
+| کہنی | kuhni | **کُہْنی** | elbow |
+| کیتھولک | kaitholik | **کَیتھولِک** | Catholic, Roman Catholic; a Roman Cathol |
+| گرڈ | garud | **گَرْڈ** | eagle |
+| گلو | gulo | **گُلو** | neck, throat; gullet, windpipe; voice |
+| گند | gannd | **گَنْد** | stink; stench; filth |
+| گنی | gini | **گِنی** | guinea (gold coin worth twenty-one shill |
+| گنیش | ganesh | **گَنیش** | Ganesha; a male given name, Ganesh, from |
+| ہدایتکار | hidayatkar | **ہِدایَتْکار** | alternative form of ہدایت کار (hdāet kār |
