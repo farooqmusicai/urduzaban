@@ -151,3 +151,92 @@
 | ہجری | hijri | **ہِجْری** | Hijri (Islamic calendar); AH (Anno Hegir |
 | ہندوؤں | Hinu-oon | **ہِنْدوؤں** | plural of ہندو |
 | ہونٹوں | honton | **ہونْٹوں** | oblique plural of ہونٹ (“lip”) |
+
+## بیچ 4 — 84 الفاظ
+
+| لفظ | رومن (سند) | اعراب | معنی |
+|---|---|---|---|
+| سانسیں | saansein | **سانْسیں** | breaths |
+| آندھی | aandhi | **آنْدھی** | dust storm; gale |
+| کانٹے | kaante | **کانْٹے** | thorns |
+| چاندنی | chandni | **چانْدْنی** | moonlight |
+| نالہ | nala | **نالَہ** | lament; wail |
+| آنچ | aanch | **آنْچ** | heat; flame; glow |
+| دیوانہ | deewana | **دِیوانَہ** | mad (with love); crazy (m.) |
+| پروا | parwa | **پَرْوا** | care; concern |
+| اثبات | isbat | **اِثْبات** | attestation, ascertainment, proof, verif |
+| اجتناب | ijtinab | **اِجْتِناب** | abstention, evasion, go by |
+| اجرا | ijra | **اِجْرا** | issue |
+| اجماع | ijma | **اِجْماع** | unanimous |
+| اخباری | akhbari | **اَخْباری** | journalistic |
+| اختتامی | ikhtitami | **اِخْتِتامی** | last |
+| ارتکاب | irtikab | **اِرْتِکاب** | perpetration |
+| ازخود | azkhud | **اَزْخُود** | involuntarily |
+| ازدواجی | izdivaji | **اِزْدِواجی** | marital, nuptial, connubial |
+| اسٹور | istor | **اِسْٹور** | store |
+| اشد | asad | **اَشَد** | extreme |
+| الم | alam | **اَلَم** | enough, sufficient, adequate, equal to |
+| بتوں | bton | **بُتوں** | oblique plural of بت; oblique plural of  |
+| بدبو | badbu | **بَدْبُو** | alternative spelling of بد بو (bad-bū) |
+| بدلنا | badalna | **بَدَلْنا** | to change, to transform; to transfer (to |
+| بدنامی | badnami | **بَدْنامی** | defamation; scandal |
+| برہنہ | barahna | **بَرَہْنَہ** | nude, naked, unclothed; bare, uncovered |
+| بندوبست | bandobast | **بَنْدوبَسْت** | arrangement |
+| بنگالی | bangali | **بَنْگالی** | Bengali; of or relating to Bengal (the r |
+| بچانا | bachana | **بَچانا** | to save, rescue; to defend, protect |
+| بچت | bacat | **بَچَت** | savings |
+| بچنا | bachna | **بَچْنا** | to be saved; to escape |
+| جامہ | jama | **جامَہ** | jam; garment; robe |
+| جاننا | janna | **جانْنا** | to know, comprehend, understand |
+| جدت | jiddat | **جِدَّت** | newness, originality; modernisation |
+| جراثیم | jaraseem | **جَراثِیم** | plural of جرثومہ (jursūma) |
+| جزوی | juzvi | **جُزْوی** | partial. |
+| حلیم | haleem | **حَلِیم** | haleem, (a stew-like dish traditionally  |
+| خریدنا | khareedna | **خَرِیدْنا** | to buy, to purchase |
+| خودمختاری | khudmukhtari | **خودْمُخْتاری** | autonomy, self-government; autarchy, aut |
+| خودکار | khudkar | **خودْکار** | alternative form of خود کار (xud kār); a |
+| دستہ | dasta | **دَسْتَہ** | an army formation, typically a troop or  |
+| رنگت | rangat | **رَنْگَت** | complexion; skin color |
+| ریشم | resham | **ریشَم** | silk |
+| زرد | zard | **زَرْد** | yellow |
+| زمیندار | zameendar | **زَمِینْدار** | landlord; zamindar |
+| سرخی | surkhi | **سُرْخی** | redness, red ink; lipstick, rouge, blush |
+| سنسکرت | sanskrit | **سَنْسْکِرِت** | Sanskrit |
+| عجائب | ajaib | **عَجائِب** | wonder; curiosity; rarity |
+| فلکیات | falkeeyat | **فَلَکِیات** | astronomy |
+| فوجداری | faujdari | **فَوجْداری** | criminal |
+| لڑاکا | laraka | **لَڑاکا** | fighter, one that fights |
+| لکیر | lakeer | **لَکِیر** | line, boundary; line |
+| مارنا | marna | **مارْنا** | to beat, hit, strike; to hammer; to kill |
+| مسیحیوں | masihiyoon | **مَسِیحِیوں** | plural of مسیحی |
+| معظم | muazzam | **مُعَظَّم** | magnified; great; honoured, respected, r |
+| مفاہمت | mufahimat | **مُفاہَمَت** | understanding; compromise; reconciliatio |
+| منگل | mangal | **مَنْگَل** | auspicious, lucky; pleasure, happiness;  |
+| مہندی | mehandi | **مَہَنْدی** | henna (Lawsonia inermis and its dye) |
+| ناخن | nakhun | **ناخُن** | nail, fingernail (of the finger or toe), |
+| ناشتہ | nashta | **ناشْتَہ** | breakfast; light food |
+| نمی | nami | **نَمی** | humidity |
+| نوبت | naubat | **نَوبَت** | condition, circumstances, period (favour |
+| وزرا | vuzara | **وُزَرا** | plural of وزیر (vazīr) |
+| پائپ | paip | **پائِپ** | pipe |
+| پانچواں | panchvan | **پانْچْواں** | fifth |
+| پتر | pitr | **پِتْر** | Pitrs; (paternal ancestor); a son, child |
+| پرکاش | prakash | **پَرْکاش** | visible; clear; evident, open; public |
+| پریم | parem | **پَریم** | love |
+| پلاسٹک | plastik | **پلاسْٹِک** | plastic |
+| چرس | charas | **چَرَس** | charas (cannabis-resin intoxicant) |
+| چڑھائی | charhai | **چَڑھائی** | ascent, climb, slope, ramp (upwards) |
+| چڑیا | chiriya | **چِڑِیا** | sparrow; bird; club, clubs |
+| چہارم | chaharum | **چَہارُم** | fourth; fourth, quarter |
+| ڈھانچہ | dhancha | **ڈھانْچَہ** | frame, structure; skeleton |
+| کانسی | kansi | **کانْسی** | bronze |
+| کرسمس | kirismas | **کِرِسْمَس** | Christmas |
+| کٹھن | kathin | **کَٹھِن** | difficult; hard; arduous |
+| کپاس | kapas | **کَپاس** | cotton (material and plant) |
+| کھیلنا | khelna | **کھیلْنا** | to play (a game, a sport) |
+| کہاوت | kahawat | **کَہاوَت** | proverb; saying; adage |
+| کیچڑ | keechar | **کِیچَڑ** | slime, muck, sludge; rheum; a mess |
+| گرج | garaj | **گَرَج** | thunder; roar |
+| گرو | guru | **گُرُو** | guru; sage; teacher |
+| گلاس | glas | **گِلاس** | glass |
+| ہواؤں | havaon | **ہَواؤں** | oblique plural of ہوا (hvā, “air; wind”) |
