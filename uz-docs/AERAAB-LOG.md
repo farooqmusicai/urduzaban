@@ -574,3 +574,30 @@
 | گگن | gagan | **گَگَن** | sky |
 | گھبرانا | ghabrana | **گھَبْرانا** | to panic; worry; to be nervous; to tremb |
 | ہنٹر | hantar | **ہَنْٹَر** | an instrument used for flogging |
+
+## بیچ 9 — 22 الفاظ (27 اگست 2026) — سند سے تصدیق شدہ الفاظ
+
+| لفظ | رومن | اعراب | معنی |
+|---|---|---|---|
+| مستانے | mastane | **مَسْتانے** | intoxicated; carefree (pl.) |
+| ابلنا | ubalna | **اُبَلْنا** | to boil, seethe |
+| ارزانی | arzani | **اَرْزانی** | cheapness |
+| استواری | ustuvari | **اُسْتُواری** | compactness; consistency, firmness, stra |
+| استہزا | istehza | **اِسْتِہْزا** | irony; sarcasm; jape |
+| بنفشہ | banafsha | **بَنَفْشَہ** | viola |
+| بہمن | bahman | **بَہْمَن** | Bahman, the eleventh month of the solar  |
+| تابہ | taba | **تابَہ** | frying pan; pan; skillet |
+| ترائی | tarai | **تَرائی** | foothills; plateau at the foot of a moun |
+| جمانا | jamana | **جَمانا** | to fix; to lay in place; to freeze |
+| خشم | khashm | **خَشْم** | anger; rage, fury, wrath; indignation; i |
+| رفتگی | raftagi | **رَفْتَگی** | departure; going; loss |
+| سرشت | sarisht | **سِرِشْت** | nature; disposition |
+| لاشہ | lasha | **لاشَہ** | corpse |
+| لرزاں | larzan | **لَرْزاں** | trembling, shaking |
+| مردن | mardan | **مَرْدَن** | crushing; grinding; breaking |
+| مٹنا | mitna | **مِٹْنا** | to fade away; to disappear, to vanish (g |
+| چشمک | chashmak | **چَشْمَک** | wink; spectacles |
+| چھپنا | chhapna | **چھَپْنا** | to be printed, to be stamped; to be publ |
+| کنشت | kunisht | **کُنِشْت** | synagogue; fire temple; church; temple/m |
+| گلیم | gileem | **گِلِیم** | a garment made out of wool; carpet; rug |
+| گنگنا | gunguna | **گُنْگُنا** | lukewarm |
