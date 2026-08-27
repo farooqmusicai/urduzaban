@@ -614,3 +614,119 @@
 | گناہ | gunah | sin; crime, fault, guilt | **خطا، جرم؛ دین کی خلاف ورزی** |
 | گنتی | ginti | counting; calculation, reckoning; Number | **شمار، گننا** |
 | یمن | yaman | Yemen (a country in West Asia in the Mid | **جزیرہ نمائے عرب کا ملک** |
+
+## بیچ 7 — 111 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| ویسے | waise | by the way; like that; anyway | **اُس طرح؛ نیز «ویسے تو»** |
+| اتنے | itne | this many; so many | **اِس قدر (جمع)** |
+| درد | dard | pain; ache | **تکلیف، پیڑ** |
+| انتظار | intezar | waiting; expectation | **راہ دیکھنا، منتظر رہنا** |
+| قسمت | qismat | fate; luck; destiny | **نصیب، مقدر** |
+| بارش | barish | rain | **مینہ، آسمان سے گرنے والا پانی** |
+| سمندر | samandar | sea; ocean | **پانی کا وسیع ذخیرہ** |
+| راستے | raaste | roads; ways | **راستہ کی جمع — رستے** |
+| مجبور | majboor | helpless; compelled | **بےبس، جسے کرنا پڑے** |
+| قید | qaid | imprisonment; confinement | **بندش، حراست** |
+| بجے | baje | o'clock; rang (pl.) | **گھڑی کے وقت کا نشان — «تین بجے»** |
+| سنا | suna | heard; listened (m.) | **کان میں پڑا (مذکر ماضی)** |
+| دیکھے | dekhe | saw (pl.); may see | **دیکھا (جمع)؛ دیکھ لے** |
+| دیکھیں | dekhein | see (polite imperative) | **دیکھنے کی درخواست (تعظیم)** |
+| گر | gir | fall (stem/imperative) | **گرنے کا حکم** |
+| پائے | paye | found; got (pl.); may find | **ملے، حاصل ہوئے (جمع)؛ نیز پاؤں** |
+| بنائے | banaye | made; built (pl.) | **تیار کیے (جمع)** |
+| لکھ | likh | write (stem/imperative) | **لکھنے کا حکم** |
+| لکھے | likhe | wrote; written (pl.) | **تحریر کیے (جمع)** |
+| بولا | bola | spoke; said (m.) | **کہا، زبان سے نکالا (مذکر ماضی)** |
+| سچ | sach | truth; (adj.) true | **جو حقیقت ہو، صادق** |
+| جھوٹ | jhoot | lie; falsehood | **خلافِ حقیقت بات** |
+| بری | buri | bad (f.) | **خراب، ناپسندیدہ (مؤنث)** |
+| صدی | sadi | century | **سو برس کا عرصہ** |
+| در | dar | door; gate (poetic) | **دروازہ (شاعری میں)** |
+| گاؤں | gaon | village | **چھوٹی بستی، دیہات** |
+| جنت | jannat | paradise; heaven | **بہشت، نیکوں کا ٹھکانا** |
+| نور | noor | light (divine); radiance | **روشنی، اجالا (خصوصاً الٰہی)** |
+| آئین | aeen | constitution | **دستور، ملک کا بنیادی قانون** |
+| آرمی | armi | army | **فوج** |
+| آسٹریلیا | astreliya | Australia (a country consisting of a mai | **جنوبی نصف کرے کا براعظم اور ملک** |
+| اتفاق | ittifaq | agreement; concord; coincidence; gatheri | **ہم رائے ہونا؛ نیز غیر متوقع واقعہ** |
+| اختلاف | ikhtilaf | discord, clash, difference, disagreement | **رائے کا فرق، جھگڑا** |
+| ادارہ | idara | academy, body, institute; institution, d | **منظم تنظیم یا ادارہ** |
+| افسوس | afsos | sorrow; regret, remorse; pity | **رنج، دکھ** |
+| انتظام | intizam | preparation, arrangement; method, system | **بندوبست، ترتیب** |
+| انتہا | intiha | limit, extent; extreme (ie. the extreme  | **آخری حد** |
+| انسانیت | insaniyat | humanity | **انسان ہونے کا جوہر، ہمدردی** |
+| انقلاب | inqilab | revolution; coup d'état | **بڑا پلٹا، نظام کی تبدیلی** |
+| اولاد | aulad | offspring; descendant; progeny | **بچے، نسل** |
+| اکتوبر | aktoobar | October | **سال کا دسواں مہینہ** |
+| اکثریت | aksariyyat | majority | **بڑی تعداد، جو زیادہ ہوں** |
+| بابا | baba | father | **باپ؛ بزرگ** |
+| بازی | bazi | bet; wager | **شرط؛ کھیل کا دور** |
+| بد | bad | bad; evil; wicked | **برا، خراب (سابقہ)** |
+| بدھ | budh | Wednesday; Buddha | **ہفتے کا چوتھا دن؛ نیز گوتم بدھ** |
+| برابر | barabar | abreast; level; equal | **یکساں، ہم پلہ؛ ساتھ ساتھ** |
+| برداشت | bardasht | endurance; tolerance; patience | **سہنا، تحمل** |
+| بم | bam | bomb | **پھٹنے والا آلہ** |
+| بنانا | banana | to make, create, produce; to cause to be | **تیار کرنا، تعمیر کرنا** |
+| بچہ | bachcha | baby; kid, child (of any gender); baby b | **ننھا انسان، طفل** |
+| بہ | bah | with, by, for, in | **کے ساتھ، سے (سابقہ) — «بہ خوشی»** |
+| بیت | bait | couplet, distich; abode, house, edifice; | **شعر، دو مصرعوں کا جوڑا؛ نیز گھر** |
+| ترک | turk | a Turkic person; a speaker of a Turkic l | **ترکی کا باشندہ؛ نیز چھوڑ دینا** |
+| تشدد | tashaddud | violence, oppression, aggression; severi | **سختی، مار پیٹ** |
+| تعریف | tareef | definition, description; praise, commend | **مدح، سراہنا؛ نیز حد بندی** |
+| توانائی | tawanay | energy; power, ability, strength | **قوت، طاقت** |
+| تکلیف | takleef | trouble, difficulty; affliction, pain; s | **دکھ، زحمت** |
+| جج | jaj | judge | **منصف، عدالت میں فیصلہ کرنے والا** |
+| جرم | jurm | crime; sin | **گناہ، قانون توڑنا** |
+| جمہوری | jamhoori | democratic | **جمہوریت کا** |
+| جون | joon | June | **سال کا چھٹا مہینہ** |
+| حرام | haram | forbidden; unlawful; haram | **ناجائز، منع کیا ہوا** |
+| حضور | huzoor | huzoor; beloved; master | **جناب؛ سرکار (ادب کا لفظ)** |
+| خاتمہ | khatima | conclusion, end, termination | **انجام، اختتام** |
+| خارجہ | kharija | foreign, external, outer; foreign affair | **باہر کا، بیرونی** |
+| خاطر | khatir | consideration, respect; attention to; ho | **لحاظ، واسطے** |
+| خالی | khali | empty, vacant; emptyhanded; desolate, de | **جس میں کچھ نہ ہو** |
+| خراب | kharab | spoiled, ruined, damaged; bad, evil; rot | **بگڑا ہوا، بیکار** |
+| خطرہ | khatra | risk, danger | **اندیشہ، جوکھم** |
+| داخلہ | dakhila | entry; entrance; admission, admittance | **اندر آنا؛ بھرتی** |
+| دارالحکومت | dar-ul-hukoomat | capital city, seat of government; royal  | **ملک کا صدر مقام** |
+| دعوت | davat | invitation; invite, request (to join a m | **بلاوا، ضیافت** |
+| دعوی | dava | claim, assertion, pretension; lawsuit, s | **دعوے کی بات، مطالبہ** |
+| دفتر | daftar | office, workplace | **کام کی جگہ، آفس** |
+| دماغ | dimagh | brain, cerebrum; brain (intellect), mind | **سر کا وہ عضو جو سوچتا ہے** |
+| دینی | deeni | religious | **دین کا، مذہبی** |
+| ذاتی | zati | inherent; natural; innate | **اپنا، نجی** |
+| راولپنڈی | ravalpindi | Rawalpindi (a city in Rawalpindi distric | **پنجاب کا شہر، اسلام آباد کے پاس** |
+| رشتہ | rishta | relationship, kinship (by blood); propos | **تعلق، ناتا؛ نیز نکاح کا پیغام** |
+| روانہ | ravana | departed, set off; dispatched, sent off; | **چل پڑا، سفر پر نکلا** |
+| روزہ | roza | fast (abstention from food); sawm (absta | **صبح سے شام تک کھانے پینے سے رکنا** |
+| سائنس | sains | science | **علم، فطرت کا مطالعہ** |
+| سامنا | samna | front; facade; encounter; confrontation; | **مقابلہ، آمنے سامنے آنا** |
+| سبب | sabab | cause, reason | **وجہ، علت** |
+| ستمبر | sitambar | September | **سال کا نواں مہینہ** |
+| سنت | sunnat | tradition; habit; custom | **نبی ﷺ کا طریقہ** |
+| شہادت | shahadat | martyrdom; testimony; shahada | **گواہی؛ جان دینا** |
+| شیر | sher | lion; tiger; milk | **جنگل کا درندہ، ببر** |
+| صحافی | sahafi | journalist | **خبر لکھنے والا** |
+| صوبہ | sooba | province; presidency | **ملک کا بڑا انتظامی حصہ** |
+| طرز | tarz | style; manner; style (ie. fashion); mode | **انداز، ڈھنگ** |
+| طے | tai | decided, predetermined | **مقرر، فیصلہ شدہ** |
+| عبادت | ibadat | worship; devotion, idol | **بندگی، پرستش** |
+| عراق | iraq | Iraq (a country in West Asia in the Midd | **مغربی ایشیا کا ملک** |
+| عقل | aql | common sense; understanding, wisdom | **سمجھ، دانائی** |
+| علمی | ilmi | academic; scientific; scholarly | **علم کا، تحقیقی** |
+| عید | eed | Eid; festival, celebration | **خوشی کا مقررہ تہوار** |
+| غالب | ghalib | dominant, predominant; higher, superior; | **چھایا ہوا، جیتنے والا** |
+| غلطی | ghalti | mistake; error | **خطا، بھول** |
+| غور | ghaur | deep thought, deliberation; close attent | **گہری سوچ، دھیان** |
+| فن | fan | art, craft, skill; trick, deception, art | **ہنر، کاریگری** |
+| فوری | fauri | immediate, urgent, prompt, rapid, instan | **جھٹ پٹ، بلا تاخیر** |
+| فہرست | fihrist | list; index; catalogue | **سوچی، ناموں کی لڑی** |
+| قاضی | qazi | qazi; judge | **شرعی منصف** |
+| قبضہ | qabza | occupation; annexation, takeover; seizur | **دخل، اپنے اختیار میں لینا** |
+| قربانی | qurbani | sacrifice; qurbani, sacrificial animal ( | **اللہ کی راہ میں جانور ذبح کرنا؛ اپنی چیز وار دینا** |
+| قوت | qoot | food; strength, power, force | **طاقت؛ نیز خوراک** |
+| قیامت | qayamat | doomsday; judgement day, last judgment;  | **روزِ حساب؛ نیز بڑی آفت** |
+| مئی | mai | May | **سال کا پانچواں مہینہ** |
+| کنٹرول | kantrol | check, inspection (physically, by an off | **قابو، نگرانی** |
