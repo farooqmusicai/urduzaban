@@ -387,3 +387,114 @@
 | ہدایت | hidayat | guidance; instruction; the truth | **رہنمائی، صحیح راستہ دکھانا** |
 | ہلاک | halak | killed; perished; withered; desired; wis | **مارا گیا، فنا ہوا** |
 | ہندوستان | hindoostan | India (a country in South Asia); Hindust | **بھارت، جنوبی ایشیا کا ملک** |
+
+## بیچ 5 — 106 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| احساس | ehsaas | feeling; realization | **محسوس کرنا، شعور** |
+| دشمن | dushman | enemy | **مخالف، بیری** |
+| طاقت | taqat | strength; power | **زور، قوت** |
+| عزت | izzat | honour; respect | **آبرو، مان** |
+| لگی | lagi | seemed; began; attached (f.) | **شروع ہوئی؛ محسوس ہوئی (مؤنث ماضی)** |
+| لگتا | lagta | seems; feels (m.) | **محسوس ہوتا ہے، جچتا ہے (مذکر)** |
+| چلے | chale | went; walked (pl.); let's go | **روانہ ہوئے (جمع ماضی)** |
+| ملی | mili | met; got; was found (f.) | **حاصل ہوئی؛ ملاقات ہوئی (مؤنث ماضی)** |
+| دیتی | deti | gives (f.) | **دینے کا فعلِ حال (مؤنث)** |
+| لیتے | lete | take (pl.) | **لینے کا فعلِ حال (جمع)** |
+| کہتا | kehta | says (m.) | **کہنے کا فعلِ حال (مذکر)** |
+| اٹھا | utha | rose; lifted (m.) | **کھڑا ہوا؛ اوپر کیا (مذکر ماضی)** |
+| چاہے | chahe | may want; (conj.) whether; even if | **چاہے تو؛ نیز «خواہ»** |
+| بنے | bane | became; were made (pl.) | **بن گئے، تیار ہوئے (جمع ماضی)** |
+| رکھے | rakhe | kept; put (pl.) | **دھرے، محفوظ کیے (جمع)** |
+| مطلب | matlab | meaning; purpose; self-interest | **معنی؛ غرض** |
+| معنی | maani | meaning | **مفہوم، جو سمجھ آئے** |
+| کہانی | kahani | story | **قصہ، بیان** |
+| نیا | naya | new (m.) | **تازہ، جو پرانا نہ ہو** |
+| بلند | buland | high; lofty; loud | **اونچا؛ زور دار** |
+| سخت | sakht | hard; strict; harsh | **کڑا، جو نرم نہ ہو؛ شدید** |
+| منظر | manzar | scene; view | **نظارہ، دکھائی دینے والی صورت** |
+| کھڑے | khare | standing (pl.) | **سیدھے قائم (جمع)** |
+| ممکن | mumkin | possible | **جو ہو سکے** |
+| زمانہ | zamana | era; age; the world/people | **دور، عہد؛ دنیا** |
+| پہلا | pehla | first (m.) | **سب سے اول (مذکر)** |
+| سارے | sare | whole; all (pl.) | **سب، تمام (جمع)** |
+| آبادی | abadi | population; settlement | **بستی؛ لوگوں کی تعداد** |
+| آگ | ag | fire; flame; anger | **جلانے والی لپٹ؛ غصہ** |
+| ابتدائی | ibtidai | beginning, inchoate, incipient, initial, | **شروع کا، پہلا** |
+| اتحاد | ittihad | unity, alliance; unification; accord, ag | **میل، جوڑ، ایکا** |
+| اجازت | ijazat | permission, authorisation, clearance; co | **منظوری، اذن** |
+| احتجاج | ehtijaj | protest | **مخالفت میں آواز اٹھانا** |
+| ادب | adab | discipline; training; politeness | **تہذیب، لحاظ؛ نیز شعر و نثر** |
+| اسرائیل | israeel | Israel (a country in Asia) | **مغربی ایشیا کا ملک** |
+| اضافہ | izafa | increase; addition; surplus | **بڑھوتری، زیادتی** |
+| امریکا | amreeka | America, the Americas (a supercontinent  | **شمالی براعظم کا ملک** |
+| امیدوار | ummeedvar | candidate, contestant (in an election or | **جو کسی عہدے کے لیے کھڑا ہو** |
+| انتہائی | intihai | extreme, utmost, excessive | **حد درجہ، بہت زیادہ** |
+| انڈیا | indiya | synonym of ہندوستان (hindūstān) | **ہندوستان** |
+| اگست | agast | August | **سال کا آٹھواں مہینہ** |
+| اہمیت | ahmiyat | importance | **قدر، بھاری ہونا** |
+| باعث | bais | cause, reason; root, origin, basis | **سبب، وجہ** |
+| بالکل | bilkul | absolutely (quite, wholly, at all, clear | **پوری طرح، ذرا بھی نہیں** |
+| باپ | bap | father | **والد، جنم دینے والا** |
+| بجلی | bijli | electricity; lightning | **برق؛ روشنی اور طاقت کی رو** |
+| برطانیہ | bartaniya | Britain (the United Kingdom, a kingdom a | **یورپ کا جزیرہ ملک** |
+| بلوچستان | balochistan | Balochistan (a province of Pakistan); Si | **رقبے میں پاکستان کا سب سے بڑا صوبہ** |
+| بینک | baink | bank | **روپیہ رکھنے اور لین دین کا ادارہ** |
+| بیوی | beevi | wife | **زوجہ، شریکِ حیات** |
+| تازہ | taza | fresh, just made; new, breaking; novel,  | **نیا، جو باسی نہ ہو** |
+| تبدیل | tabdeel | change, replace; transfer | **بدلنا، جگہ لینا** |
+| تحقیق | tahqeeq | research, investigation; truth, exactnes | **کھوج، چھان بین** |
+| ترجمان | tarjuman | spokesman; translator, interpreter | **بولنے والا نمائندہ؛ ترجمہ کرنے والا** |
+| ترکی | turki | of or belonging to a Turk; Turkish, Turk | **ترکیہ کا؛ ترکی زبان** |
+| تسلیم | tasleem | acceptance | **مان لینا، قبول کرنا** |
+| تنظیم | tanzeem | organization | **ترتیب؛ منظم گروہ** |
+| جسم | jism | body | **بدن، ڈھانچہ** |
+| جمہوریت | jamhooriyat | democracy; republic | **عوام کی حکومت** |
+| جناب | janab | sir, mister; Excellency, Honour; form of | **ادب سے پکارنے کا لفظ** |
+| جیل | jel | jail, the slammer | **قید خانہ** |
+| حل | hal | solution, resolution | **کسی مسئلے کا جواب؛ گھلنا** |
+| حلقہ | halqa | constituency, electoral district; circle | **دائرہ؛ ووٹ کا علاقہ** |
+| حمایت | himayat | support, backing, aid, advocacy (of a si | **پشت پناہی، ساتھ دینا** |
+| خدمت | khidmat | service (ie. help; contribution, typical | **کام آنا، سیوا** |
+| خوف | khauf | fear | **ڈر، ہراس** |
+| درجہ | darja | level, extent, rate; status, social stat | **مرتبہ، سطح؛ جماعت** |
+| درست | durust | in good condition; unbroken, in working  | **ٹھیک، صحیح** |
+| رب | rab | Lord; An epithet for God.; owner; posses | **پالنے والا، پروردگار** |
+| روایت | rivayat | legend, narrative; tradition | **پرانی چلی آتی بات یا رسم** |
+| روس | roos | Russia (a transcontinental country in Ea | **رقبے میں دنیا کا سب سے بڑا ملک** |
+| سابق | sabiq | former, prior, precedent, preceding, for | **پہلے کا، گزرا ہوا** |
+| سنگھ | singh | lion; The constellation Leo; A Leo | **شیر؛ نیز نام کا لاحقہ** |
+| شدید | shadeed | abundant, plentiful; strong, powerful, m | **سخت، بہت زیادہ** |
+| شرکت | shirkat | contribution, role | **شامل ہونا، حصہ لینا** |
+| شکل | shakl | face; appearance, look | **صورت، چہرہ؛ ہیئت** |
+| شہری | shahri | urban; pertaining to the city.; citizen | **شہر کا؛ ملک کا باشندہ** |
+| علاج | ilaj | medical treatment; cure; remedy | **مرض کا تدارک، دوا دارو** |
+| عوامی | avami | public; popular | **عوام کا، سب لوگوں کا** |
+| فائدہ | faida | benefit; profit; gain | **نفع، بھلائی** |
+| فکر | fikr | concern | **سوچ؛ تشویش** |
+| قدر | qadr | value, worth; fate, destiny | **قیمت، وقعت؛ تقدیر** |
+| متعدد | mutaaddid | numerous, multiple; various (ie. differe | **کئی، بہت سے** |
+| مثال | misal | example, instance, specimen, model, prec | **نمونہ، جیسا کوئی اور** |
+| محنت | mihnat | hard work, effort; toil, labour; hardshi | **مشقت، جدوجہد** |
+| محکمہ | mahkama | tribunal, assize; department, bureau, se | **سرکاری شعبہ** |
+| مرتبہ | martaba | degree, rank, standing; occasion, time | **درجہ، رتبہ؛ نیز دفعہ** |
+| مسئلہ | masala | problem, issue; matter, affair; proposit | **دقت، جھگڑے کی بات؛ سوال** |
+| مسیح | maseeh | Christ, Messiah | **حضرت عیسیٰ علیہ السلام کا لقب** |
+| مشہور | mashhoor | famous, reputed | **جانا پہچانا، نامور** |
+| معروف | maroof | famous, renowned; evident; known; active | **مشہور؛ معلوم** |
+| مغربی | maghribi | western | **مغرب کا** |
+| من | man | maund (unit of mass) | **وزن کی اکائی (چالیس سیر)** |
+| منتخب | muntakhab | chosen, selected; elected | **چنا ہوا، پسند کیا گیا** |
+| میدان | maidan | ground, field, arena; battleground; maid | **کھلی زمین؛ لڑائی کی جگہ** |
+| نقصان | nuqsan | loss, harm, harmful; disadvantage, drawb | **ہرج، خسارہ** |
+| والد | valid | father | **باپ** |
+| وزارت | vizarat | ministry; premiership; vizierate | **وزیر کا محکمہ** |
+| پتہ | pata | address; knowledge, clue | **ٹھکانے کا نشان؛ خبر** |
+| پور | poor | town, city; village; fortress | **بستی، شہر (نام کا لاحقہ)** |
+| پیر | pair | foot; footprint; old man | **پاؤں؛ نیز بزرگ، مرشد** |
+| پیغام | paigham | message; advice | **سندیسہ، بھیجی ہوئی بات** |
+| چکی | chakki | millstone, mill, handmill, quern; act of | **اناج پیسنے کا پتھر** |
+| چینی | cheeni | Chinese; Chinese (person); Chinese (lang | **چین کا؛ چینی زبان** |
+| کارروائی | karravai | procedure, conduct, action, process, pro | **کام کا عمل، اقدام** |
+| کلام | kalam | speech; word; discourse | **بات، بول؛ شعر** |
