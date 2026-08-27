@@ -960,3 +960,116 @@
 | گزشتہ | guzashta | past, elapsed; previous | **گزرا ہوا، پچھلا** |
 | ہند | hind | India (a country in South Asia); the Ind | **ہندوستان** |
 | ہندوستانی | hindoostani | Indian (of, from or relating to India);  | **ہندوستان کا** |
+
+## بیچ 10 — 108 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| محل | mahal | palace | **شاہی مکان** |
+| کھلے | khule | open (pl.) | **کھلا کی جمع — جو بند نہ ہوں** |
+| کھلے | khile | bloomed (pl.) | **کھل گئے، شگفتہ ہوئے** |
+| پیار | pyar | love; affection | **محبت، چاہت** |
+| اچانک | achanak | suddenly | **یکایک، بغیر خبر کے** |
+| یار | yaar | friend; mate; beloved | **دوست؛ نیز محبوب** |
+| اشارہ | ishara | sign; gesture; hint | **نشان، ہاتھ یا آنکھ سے بات** |
+| آئندہ | ainda | coming, future; the future; in the futur | **آنے والا، اگلی بار** |
+| آخرت | akhirat | akhirah, afterlife; hereafter | **مرنے کے بعد کی زندگی** |
+| آرام | aram | rest; comfort; leisure | **سکون، سستانا** |
+| آلہ | alah | tool, implement, instrument, device; wea | **اوزار، کام کی چیز** |
+| آنکھ | ankh | eye; glance, look | **دیکھنے کا عضو** |
+| آہستہ | ahista | slow; tardy, lazy; soft, gentle | **دھیرے، سست رفتاری سے** |
+| اتر | uttar | northern; north (direction); reply | **شمال (سمت)** |
+| احترام | ihtiram | respect, honour; consideration, regardfu | **ادب، عزت** |
+| ارشاد | irsad | command, direction, order | **فرمان، بزرگ کی کہی ہوئی بات** |
+| اسٹیڈیم | istediyam | stadium | **کھیل کا میدان** |
+| اصلاح | islah | improvement, atonement, correction, emen | **درستی، سدھار** |
+| اطلاع | ittila | notice; notification, information, knowl | **خبر، جتانا** |
+| افسر | afsar | officer | **عہدہ دار، حاکم** |
+| اقتصادی | iqtisadi | economic | **معیشت کا** |
+| البتہ | albatta | although, but; of course, surely, certai | **مگر، ہاں یہ کہ** |
+| امداد | imdad | aid, help, assistance; support | **مدد، سہارا** |
+| امکان | imkan | possibility, probability; means, courage | **ہو سکنے کی گنجائش** |
+| انعام | inam | reward; prize | **صلہ، بخشش** |
+| انٹرنیٹ | intarnet | the Internet | **دنیا بھر کا جڑا ہوا معلوماتی جال** |
+| انکشاف | inkishaf | discovery; revelation (ie. something con | **راز کھلنا، ظاہر ہونا** |
+| بالی | bali | a kind of earring with pendants; an ear  | **کان کا زیور** |
+| بحال | bahal | reinstated, restored | **پھر سے قائم، لوٹایا گیا** |
+| بحث | bahas | discussion; argument, debate | **گفتگو، تکرار** |
+| بزرگ | buzurg | old in age; elderly; senior; elderly per | **بڑی عمر کا، قابلِ احترام** |
+| بچی | bachchi | feminine of بَچَّہ (bacca); girl, female | **ننھی لڑکی** |
+| بیماری | beemari | illness, disease | **مرض، علالت** |
+| بیچ | beech | middle, center; in the midst | **درمیان، وسط** |
+| تجارتی | tijarati | mercantile, commercial, business; anythi | **تجارت کا** |
+| تجربہ | tajriba | experience; experiment, test, trial | **آزمائش؛ سیکھا ہوا سبق** |
+| تجزیہ | tajziya | analysis, dissolution | **پرکھ، حصے کر کے دیکھنا** |
+| تفسیر | tafseer | exposition, commentary; explanation | **قرآن کی تشریح** |
+| تفصیل | tafseel | detail; particular; explanation; comment | **پوری بات، جزئیات** |
+| تنگ | tang | tight, narrow; troubled, distressed, vex | **سکڑا ہوا؛ نیز پریشان** |
+| توبہ | tauba | repentance; recantation; my God! | **گناہ سے پھرنا، معافی مانگنا** |
+| توہین | tavhiyn | blasphemy, insult; massacre | **بےعزتی، اہانت** |
+| تھوڑا | thora | some, a little; small (amount of) | **کم، ذرا سا** |
+| تیل | tel | oil; vegetable oil; fuel, fuel oil | **چکنائی، روغن** |
+| جائز | jaiz | permissible, permitted, allowed; lawful, | **درست، جس کی اجازت ہو** |
+| جائزہ | jaiza | survey; inspection, examination; present | **پرکھ، سرسری دیکھنا** |
+| جامعہ | jamia | university | **یونیورسٹی** |
+| جانور | janvar | animal, beast; savage, uncivilized being | **حیوان، چوپایہ** |
+| جاپان | japan | Japan (a country in East Asia) | **مشرقِ بعید کا جزیرہ ملک** |
+| جرمن | jarman | the German language, of Germany | **جرمنی کا؛ جرمن زبان** |
+| جعلی | jali | fake, counterfeit; forged, fabricated; i | **نقلی، بناوٹی** |
+| جلدی | jaldi | quickness | **تیزی، عجلت** |
+| جلسہ | jalsa | event, convention; public gathering; ral | **اجتماع، مجلس** |
+| جنم | janam | birth; emergence | **پیدائش** |
+| جنگی | jangi | warlike; military; martial | **جنگ کا** |
+| جوان | javan | young; youthful; a young man | **نوجوان؛ سپاہی** |
+| جوہری | jauhari | pertaining to gems or jewels; atomic, nu | **جواہرات کا؛ نیز ایٹمی** |
+| حکمت | hikmat | wisdom; knowledge; mystery | **دانائی؛ نیز طبابت** |
+| حیران | hairan | surprised, amazed, awed, speechless, sho | **دنگ، متعجب** |
+| خرچ | kharch | expenditure, spending | **صرف کرنا، لاگت** |
+| خفیہ | khufya | concealed; secret | **چھپا ہوا، پوشیدہ** |
+| خلافت | khilafat | caliphate | **خلیفہ کی حکومت** |
+| خلیفہ | khaleefa | caliph; successor; the most gifted wrest | **جانشین، امیرِ مسلمین** |
+| دبئی | dubai | Dubai (an emirate of the United Arab Emi | **متحدہ عرب امارات کا شہر** |
+| دباؤ | dabao | weight; power; influence, control | **زور، دباؤ ڈالنا** |
+| درخت | darakht | tree | **پیڑ، شجر** |
+| دودھ | doodh | milk; milk; sap of certain plants; cocon | **سفید غذائی سیال** |
+| دوستی | dosti | friendship | **یارانہ، میل جول** |
+| دکھ | dukh | sadness, grief; suffering, distress; pai | **رنج، تکلیف** |
+| راج | raj | royalty, kingship; reign, rule; kingdom, | **حکومت، بادشاہت** |
+| رام | ram | Rama; God; a male given name, Ram or Rām | **ہندو دیوتا؛ نیز مطیع** |
+| رفتار | raftar | motion; speed; pace | **چال، تیزی** |
+| روسی | roosi | Russian; Russian (person); Russian (lang | **روس کا؛ روسی زبان** |
+| رہائش | rihaish | residence, stay | **رہنے کی جگہ، سکونت** |
+| زیادتی | ziyadati | oppression, injustice (connoted with for | **ظلم، حد سے بڑھنا** |
+| ساتھی | sathi | companion; friend, pal, mate; partner, a | **ہمراہی، رفیق** |
+| سادہ | sada | plain, simple; white | **بےتکلف، جس میں بناوٹ نہ ہو** |
+| سازش | sazish | conspiracy, scheme, plot | **خفیہ منصوبہ، مکر** |
+| سالانہ | salanah | yearly, annual | **ہر سال کا** |
+| سرگودھا | sargodha | Sargodha (a city in Sargodha district, P | **پنجاب کا شہر** |
+| سفیر | safeer | ambassador, envoy; arbitrator, messenger | **ایلچی، ملک کا نمائندہ** |
+| سڑک | sarak | road | **راستہ، پکی گزرگاہ** |
+| سیاہ | siyah | black | **کالا** |
+| سینٹر | sentar | centre, center | **مرکز** |
+| شراب | sharab | alcohol; alcoholic drink; wine | **مے، نشہ آور مشروب** |
+| شریعت | shariat | shari'a; divine law; justice; law; ordin | **دین کا قانون** |
+| شعور | shuoor | intellect, wisdom; good sense; conscious | **سمجھ، ہوش** |
+| شوق | shauq | desire, yearning; ardor, interest; pleas | **لگن، چاہ** |
+| شکایت | shikayat | a complaint, objection, criticism; illne | **گلہ، اعتراض** |
+| شہرت | shuhrat | fame, reputation; renown; notoriety | **نام، مشہوری** |
+| شیطان | shaitan | mischievous; wicked, evil; devil, satan | **بہکانے والا، ابلیس** |
+| صفائی | safai | cleanliness, hygiene; response, clarific | **ستھرائی؛ نیز وضاحت** |
+| صلاحیت | salahiyyat | capability; capacity (to do or carry out | **قابلیت، استعداد** |
+| صنعت | sanat | industry; art, skill, handicraft, workma | **کارخانہ داری؛ نیز ہنر** |
+| ضائع | zai | wasted; squandered; lost, destroyed; per | **برباد، رائیگاں** |
+| ضمانت | zamanat | bail; guarantee, security | **کفالت؛ عدالت میں رہائی کی ضمانت** |
+| عرض | arz | request; petition; width | **گزارش، کہنا** |
+| عزم | azm | determination, resolve, resolution | **پکا ارادہ** |
+| عظمت | azmat | grandeur, greatness; might; glory, magni | **بڑائی، شان** |
+| عمارت | imarat | building | **بنی ہوئی چیز، مکان** |
+| عنوان | unvan | title, headline; topic; preface | **سرخی، نام** |
+| فرقہ | firqa | religious sect; cult; faith, religion | **مذہبی گروہ** |
+| فروری | farvari | February | **سال کا دوسرا مہینہ** |
+| فلسطین | filisteen | Palestine (the region in Western Asia in | **مشرقِ وسطیٰ کا خطہ** |
+| فورا | fauran | immediately, instantly, urgently, prompt | **اُسی وقت، بلا تاخیر** |
+| قبر | qabr | grave, tomb | **مردے کی جگہ** |
+| قرض | qarz | debt; loan; credit; revenge, vengeance | **ادھار، جو لوٹانا ہو** |
+| نیز | neez | also, even; again; likewise | **اور، اِس کے علاوہ** |
