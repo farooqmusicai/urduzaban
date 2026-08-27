@@ -515,3 +515,62 @@
 | یاتری | yatri | **یاتْری** | traveller, pilgrim |
 | یرمیاہ | Yirmiyah | **یِرْمِیاہ** | Book of Jeremiah; Jeremiah, a prophet; a |
 | یسعیاہ | yasayah | **یَسَعْیاہ** | the Book of Isaiah (one of the books of  |
+
+## بیچ 8 — 54 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | اعراب | معنی |
+|---|---|---|---|
+| آزمانا | azmana | **آزْمانا** | to test; to try; to experiment |
+| ابھرنا | ubharna | **اُبھَرْنا** | emerge, jut |
+| اجرک | ajrak | **اَجْرَک** | Ajrak, a form of textile block-printing  |
+| اجلا | ujla | **اُجْلا** | bright, shining; whitish, white, fair; n |
+| احتراز | ehtiraz | **اِحْتِراز** | wafture; vibration |
+| ارزاں | arzan | **اَرْزاں** | cheesy, inexpensive, cheap |
+| ازروئے | az ruey | **اَزرُوئے** | by virtue of |
+| استغراق | isteghraq | **اِسْتِغْراق** | rumination |
+| اسراف | israf | **اِسْراف** | waste; splurge, squander; expensiveness, |
+| اسفار | asfar | **اَسْفار** | travels |
+| اشراف | asraf | **اَشْراف** | noblesse |
+| اضطراری | iztirari | **اِضْطِراری** | impulsive |
+| بادبان | badban | **بادْبان** | sail |
+| بانٹنا | bantna | **بانٹْنا** | to distribute, divide amongst |
+| بحار | bihar | **بِحار** | plural of بحر (bahr, “sea”) |
+| بسیار | bisyar | **بِسْیار** | abundant, in plenty; much, many; very |
+| بنفشی | banafshi | **بَنَفْشی** | violet (color) |
+| بہاراں | baharan | **بَہاراں** | alternative form of بہاران (bahārān) |
+| بہرا | behra | **بَہْرا** | deaf; deaf person |
+| تڑکا | tarka | **تَڑْکا** | crack of dawn; daybreak; morning |
+| تیندوا | tendua | **تیندُوا** | leopard |
+| جٹا | jata | **جَٹا** | dreadlocks; the hair of Shiva, which is  |
+| خامہ | khama | **خامَہ** | reed, especially when cut and dried for  |
+| خاکستری | khakistari | **خاکِسْتَری** | gray |
+| خربوزہ | kharbooza | **خَرْبُوزَہ** | melon: usually musk melon, Cucumis melo; |
+| دنگا | danga | **دَنْگا** | disturbance; disorder; trouble |
+| دواخانہ | dawakhana | **دَواخانَہ** | pharmacy, clinic |
+| دیپکا | deepika | **دِیپِکا** | light; lamp |
+| روزن | rauzan | **رَوزَن** | crevice, hole |
+| زیرہ | zeera | **زِیرَہ** | cumin (short for زیرۂ سفید); caraway (sh |
+| سرفروش | sarfarosh | **سَرْفَروش** | ready to sacrifice one's life; extremely |
+| سمان | saman | **سَمان** | similar; equal; identical |
+| سمرتی | smriti | **سِمْرِتی** | memory; recollection; remembrance |
+| شرفا | shurafa | **شُرَفا** | plural of شریف (śarīf) |
+| شمشان | shamshan | **شَمْشان** | crematorium; burning-ground; cemetery |
+| صوفہ | sofa | **صوفَہ** | a sofa, couch |
+| لعنتی | lanati | **لَعْنَتی** | cursed, accursed |
+| معلمہ | muallima | **مُعَلِّمَہ** | teacher |
+| ململ | malmal | **مَلْمَل** | muslin |
+| مینہ | menh | **مِینْہ** | rain; rainfall |
+| ناخدا | nakhuda | **ناخُدا** | sailor, seaman; captain |
+| ناسمجھ | nasamajh | **ناسَمَجھ** | goofy; mindless, shiftless; stupid |
+| نوکرانی | naukrani | **نَوکْرانی** | servant; domestic; attendant |
+| نکما | nikamma | **نِکَمّا** | useless, worthless; unemployed, good-for |
+| پردادا | pardada | **پَرْدادا** | great grandfather |
+| پرمیشور | parameshvar | **پَرَمیشْوَر** | God |
+| چابک | chabuk | **چابُک** | horsewhip; quick, fast |
+| چاشت | chasht | **چاشْت** | breakfast; collation; the middle hour be |
+| کریا | kriya | **کِرِیا** | verb; doing, performance; action, act, d |
+| کیکر | keekar | **کِیکَر** | babul tree |
+| گلہری | gilahri | **گِلَہْری** | squirrel |
+| گگن | gagan | **گَگَن** | sky |
+| گھبرانا | ghabrana | **گھَبْرانا** | to panic; worry; to be nervous; to tremb |
+| ہنٹر | hantar | **ہَنْٹَر** | an instrument used for flogging |
