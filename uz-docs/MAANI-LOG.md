@@ -498,3 +498,119 @@
 | چینی | cheeni | Chinese; Chinese (person); Chinese (lang | **چین کا؛ چینی زبان** |
 | کارروائی | karravai | procedure, conduct, action, process, pro | **کام کا عمل، اقدام** |
 | کلام | kalam | speech; word; discourse | **بات، بول؛ شعر** |
+
+## بیچ 6 — 111 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| جیسی | jaisi | like; such as (f.) | **کی طرح، مانند (مؤنث)** |
+| انکار | inkar | refusal; denial | **نہ کہنا، رد کرنا** |
+| تصور | tasawwur | imagination; concept | **خیال باندھنا، تخیل** |
+| روح | rooh | soul; spirit | **جان، وہ جو بدن میں زندگی ڈالے** |
+| شاعر | shayar | poet | **شعر کہنے والا** |
+| شاعری | shayari | poetry | **شعر کہنے کا فن** |
+| موسم | mausam | season; weather | **رت؛ ہوا کا حال** |
+| روشنی | roshni | light; illumination | **اجالا، نور** |
+| راستہ | raasta | road; way; path | **رستہ، سڑک، گزرگاہ** |
+| ظلم | zulm | oppression; tyranny; cruelty | **زیادتی، ناانصافی** |
+| جیت | jeet | victory; win | **فتح، کامیابی** |
+| خواہش | khwahish | wish; desire | **چاہت، آرزو** |
+| کروں | karun | I (may) do | **میں کروں (صیغۂ متکلم)** |
+| سمجھا | samjha | understood (m.) | **سمجھ گیا (مذکر ماضی)** |
+| بیٹھے | baithe | sat; seated (pl.) | **بیٹھ گئے (جمع)** |
+| بیٹھ | baith | sit (stem/imperative) | **بیٹھنے کا حکم** |
+| پایا | paya | found; got (m.) | **ملا، حاصل ہوا (مذکر ماضی)** |
+| پڑھ | parh | read (stem/imperative) | **پڑھنے کا حکم** |
+| پوچھا | poochha | asked (m.) | **دریافت کیا (مذکر ماضی)** |
+| اچھے | ache | good (pl.) | **اچھا کی جمع — بھلے، عمدہ** |
+| خوبصورت | khoobsurat | beautiful | **حسین، دیکھنے میں بھلا** |
+| کھڑا | khara | standing (m.) | **سیدھا قائم (مذکر)** |
+| شک | shak | doubt; suspicion | **شبہ، بےیقینی** |
+| منظور | manzoor | accepted; approved | **قبول، مان لیا گیا** |
+| آسان | aasan | easy | **سہل، جو مشکل نہ ہو** |
+| مستقبل | mustaqbil | future | **آنے والا زمانہ** |
+| ماہ | maah | month; moon (Persian) | **مہینہ؛ چاند** |
+| احتساب | ehtesab | accountability | **حساب لینا، جواب طلبی** |
+| اسکول | iskool | school | **مدرسہ، پڑھنے کی جگہ** |
+| اعتماد | itimad | belief; confidence, trust; reliance | **بھروسا، یقین** |
+| افغان | afghan | Afghan (a person from Afghanistan); Pash | **افغانستان کا باشندہ** |
+| اقتدار | iqtidar | power; control; authority | **حکومت، قابو** |
+| انتخاب | intikhab | election; selection | **چناؤ؛ ووٹ سے چننا** |
+| انگریزی | angrezi | English; of or relating to the English l | **انگریز کی زبان** |
+| اول | avval | first; foremost, primary; first-class, e | **پہلا، سب سے آگے** |
+| بادشاہ | badshah | king, monarch; Badshah, Padishah; king | **حکمران، سلطان** |
+| بال | bal | hair; child; young boy | **سر کے ریشے؛ نیز بچہ** |
+| برس | baras | year | **سال** |
+| برطانوی | bartanvi | British | **برطانیہ کا** |
+| بلا | bala | affliction, scourge; great trouble, trib | **آفت، مصیبت** |
+| بندی | bandi | prisoner; captive; slave | **قیدی، اسیر** |
+| بیٹا | beta | son, boy; child (any gender) | **پسر، لڑکا** |
+| بیٹی | beti | daughter | **دختر، لڑکی** |
+| تاریخی | tareekhi | historical | **تاریخ کا، پرانے زمانے کا** |
+| تباہ | tabah | destroyed, ruined | **برباد، اجڑا ہوا** |
+| تحریر | tahreer | writing; letter, correspondence; stateme | **لکھت، لکھی ہوئی بات** |
+| تربیت | tarbiyyat | upbringing (ie. of a parent to a child); | **پرورش، سکھانا** |
+| ترجمہ | tarjama | translation; interpretation; rendering,  | **ایک زبان سے دوسری میں ڈھالنا** |
+| تشکیل | tashkeel | formation; foundation, establishment | **بنانا، صورت دینا** |
+| تصویر | tasveer | image, picture, photograph; depiction, p | **عکس، بنی ہوئی شکل** |
+| تنقید | tanqeed | criticism | **پرکھ، خوبی خامی بتانا** |
+| توجہ | tavajju | attention, care; spiritual concentration | **دھیان، خیال** |
+| ثبوت | saboot | evidence; proof | **دلیل، جو سچ ثابت کرے** |
+| جولائی | julai | July | **سال کا ساتواں مہینہ** |
+| جہاز | jahaz | plane, ship; craft; clipping of ہَوائی ج | **بحری یا ہوائی سواری** |
+| حج | hajj | hajj, pilgrimage to Mecca | **مکہ کی مقررہ زیارت** |
+| حفاظت | hifazat | protection; safekeeping; guardianship | **بچاؤ، نگہبانی** |
+| حیات | hayat | alive; life, lifetime | **زندگی؛ زندہ** |
+| خانہ | khana | place, site, dwelling, house; box, small | **گھر، جگہ؛ نیز جدول کا ایک ڈبہ** |
+| خصوصی | khusoosi | special, peculiar, particular; personal, | **خاص، مخصوص** |
+| خط | khat | letter, correspondence | **چٹھی؛ نیز لکیر** |
+| خوب | khoob | good, well, in a good manner; bad; pleas | **اچھا، بھرپور** |
+| دفاع | difa | defence (of character against allegation | **بچاؤ، مدافعت** |
+| دفعہ | dafa | occasion, time; group; a clause or secti | **بار، مرتبہ؛ قانون کی شق** |
+| دولت | daulat | wealth; riches; fortune; power; prosperi | **مال، سرمایہ** |
+| ذات | zat | essence; nature (characteristic); substa | **اصل، نفس؛ نیز نسل** |
+| رابطہ | rabta | contact, in touch; connection, relation; | **جوڑ، تعلق، رسائی** |
+| رہنما | rahnuma | guide; conductor, pilot; leader | **راہ دکھانے والا، قائد** |
+| سماعت | samaat | hearing, proceeding; sense of hearing; a | **سننا؛ عدالت کی نشست** |
+| شکار | shikar | hunt; prey, catch; victim | **شکار کرنا؛ جو پکڑا جائے** |
+| طریقہ | tareeqa | method; manner, way; tariqa | **ڈھنگ، طور** |
+| طلب | talab | urge, desire, yearning | **مانگ، خواہش** |
+| عربی | arbi | Arabic | **عرب کی زبان؛ عرب کا** |
+| عطا | ata | giving | **دینا، بخشش** |
+| علاقہ | ilaqa | area (ie. locality; jurisdiction); part; | **خطہ، حصۂ زمین** |
+| عہد | ahd | vow, pledge; covenant; era, epoch | **وعدہ، اقرار؛ نیز زمانہ** |
+| غریب | ghareeb | poor (of wealth); poor; helpless | **مفلس، نادار** |
+| قانونی | qanooni | legal; legislative; lawful | **قانون کے مطابق** |
+| قیمت | qeemat | price; value; worth | **مول، دام** |
+| لڑکی | larki | girl; daughter | **بچی، دختر** |
+| لہذا | lihaza | therefore, thus, hence | **اِس لیے، پس** |
+| لینا | lena | to take, get; to pick up (a person or an | **حاصل کرنا، پکڑنا** |
+| مال | mal | property, possessions, goods; wealth; fo | **سامان، جائیداد** |
+| مبارک | mubarik | blessed; happy (on congratulations of an | **برکت والا، خوش آئند** |
+| مثلا | masalan | for example, for instance, e.g.; namely | **مثال کے طور پر** |
+| محسوس | mahsoos | felt, sensed, perceived | **جو دل یا حواس میں آئے** |
+| مخصوص | makhsoos | private, characteristic | **خاص، مقرر کیا ہوا** |
+| مرکز | markaz | centre, center; centerpoint; hub | **بیچ کا نقطہ؛ صدر مقام** |
+| مسلسل | musalsal | continuously; repeatedly | **لگاتار، بغیر رکے** |
+| مشترکہ | mushtaraka | shared; combined; joint | **سانجھا، مل جل کر** |
+| مضمون | mazmoon | contents (of a text); topic; sense | **لکھا ہوا مقالہ؛ متن کا مواد** |
+| منصوبہ | mansoobah | plan, design, scheme, project | **تدبیر، پہلے سے بنایا خاکہ** |
+| ناکام | nakam | failed; unsuccessful | **جو مقصد نہ پا سکے** |
+| نتیجہ | nateeja | result, consequence, end, outcome | **انجام، جو نکلے** |
+| نسل | nasl | race, ethnic group; family, lineage; sto | **قوم، خاندان کی لڑی** |
+| نقل | naqal | copy, imitation; print, printing | **اتاری ہوئی صورت؛ اُتارنا** |
+| نوجوان | naujavan | young; young man; teenager; young; youth | **جوان، کم عمر مرد** |
+| نہایت | nihayat | very much, excessive; remarkable; extrem | **بہت، حد درجہ** |
+| واضح | vazih | evident, manifest, elaborate, clear, app | **صاف، کھلا ہوا** |
+| واقعہ | vaqia | event, incident; episode; occurrence | **پیش آنے والی بات، حادثہ** |
+| وجود | vajood | existence | **ہونا، ہستی** |
+| ٹھیک | theek | right, correct, accurate, appropriate, p | **درست، صحیح** |
+| پشاور | pishavar | Peshawar (a city, the provincial capital | **خیبر پختونخوا کا صدر مقام** |
+| کالج | kalij | college | **اعلیٰ تعلیم کا ادارہ** |
+| کمی | kami | lack, deficiency, deficit, scarcity; der | **گھٹاؤ، جو پورا نہ ہو** |
+| گاڑی | gari | car; carriage, wagon, cart; any four-whe | **سواری کی چیز، موٹر** |
+| گروپ | groop | group | **ٹولی، گروہ** |
+| گفتگو | guftagu | conversation; dialogue; discourse | **بات چیت** |
+| گناہ | gunah | sin; crime, fault, guilt | **خطا، جرم؛ دین کی خلاف ورزی** |
+| گنتی | ginti | counting; calculation, reckoning; Number | **شمار، گننا** |
+| یمن | yaman | Yemen (a country in West Asia in the Mid | **جزیرہ نمائے عرب کا ملک** |
