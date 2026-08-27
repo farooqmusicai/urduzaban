@@ -170,3 +170,109 @@
 | پیدا | paida | born; arisen, created | **جنم لیا ہوا؛ وجود میں آیا** |
 | ڈاکٹر | daktar | doctor; physician | **طبیب، علاج کرنے والا** |
 | کراچی | karachi | Karachi (the largest city in Pakistan si | **پاکستان کا سب سے بڑا شہر** |
+
+## بیچ 3 — 101 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| بس | bas | enough; only; just | **کافی؛ صرف اتنا** |
+| محبت | muhabbat | love | **پیار، چاہت** |
+| خیال | khayal | thought; idea; opinion | **سوچ، دھیان؛ رائے** |
+| مسجد | masjid | mosque | **نماز کی جگہ** |
+| زمین | zameen | earth; land; ground | **دھرتی، مٹی کی سطح** |
+| موت | maut | death | **زندگی کا خاتمہ** |
+| سفر | safar | journey; travel | **ایک جگہ سے دوسری جگہ جانا** |
+| مقام | maqam | place; position; status | **ٹھکانا؛ درجہ** |
+| ادا | ada | grace; charm; gesture; (also) paid | **انداز، ناز؛ نیز چکانا** |
+| لگے | lage | seemed; began (pl.) | **شروع ہوئے؛ محسوس ہوئے** |
+| ملا | mila | met; got; was found (m.) | **حاصل ہوا؛ ملاقات ہوئی (مذکر ماضی)** |
+| کرو | karo | do (imperative) | **کرنے کا حکم** |
+| کرکے | karke | having done; by doing | **کر لینے کے بعد، کے ذریعے** |
+| آتا | aata | comes (m.) | **آنے کا فعلِ حال (مذکر)** |
+| آتے | aate | come (pl.) | **آنے کا فعلِ حال (جمع)** |
+| دیتا | deta | gives (m.) | **دینے کا فعلِ حال (مذکر)** |
+| کہنا | kehna | to say; to tell | **بولنا، بیان کرنا** |
+| کہیں | kahin | say (polite); (adv.) somewhere | **کہنے کی درخواست (تعظیم)؛ نیز کسی جگہ** |
+| سمجھ | samajh | understanding; (v.) understand (stem) | **عقل، بات کی گرفت** |
+| چاہتے | chahte | want; love (pl.) | **چاہنے کا فعلِ حال (جمع)** |
+| بنایا | banaya | made; built (m.) | **تیار کیا، تعمیر کیا (مذکر ماضی)** |
+| رکھ | rakh | keep; put (stem/imperative) | **رکھنے کا حکم — «رکھ دو»** |
+| رکھا | rakha | kept; put (m.) | **دھرا، محفوظ کیا (مذکر ماضی)** |
+| لکھا | likha | wrote; written (m.) | **تحریر کیا (مذکر ماضی)** |
+| حال | haal | condition; state; present | **کیفیت؛ گزرتا ہوا وقت** |
+| حالات | halaat | circumstances; conditions | **حال کی جمع — گرد و پیش کی صورت** |
+| سوال | sawal | question | **پوچھی ہوئی بات** |
+| اچھی | achi | good (f.) | **اچھا کی مؤنث — بھلی، عمدہ** |
+| نئی | nayi | new (f.) | **نیا کی مؤنث — تازہ** |
+| نئے | naye | new (pl.) | **نیا کی جمع — تازہ، جو پرانا نہ ہو** |
+| خبر | khabar | news; information | **اطلاع، نئی بات** |
+| صورت | soorat | face; form; situation | **چہرہ؛ شکل، حالت** |
+| رہیں | rahein | stay; remain (polite/plural) | **رہنے کی درخواست یا حکم (تعظیم)** |
+| یقین | yaqeen | certainty; belief; trust | **پکا بھروسا، بےشک جاننا** |
+| مشکل | mushkil | difficult; (n.) difficulty | **دشوار؛ نیز دقت** |
+| آغاز | aaghaz | beginning; start | **ابتدا، شروعات** |
+| آخری | aakhri | last; final | **سب سے پچھلا، انجام کا** |
+| پہلی | pehli | first (f.) | **پہلا کی مؤنث — سب سے اول** |
+| یوں | yun | thus; like this | **اِس طرح** |
+| رات | raat | night | **سورج ڈوبنے سے نکلنے تک کا وقت** |
+| شام | shaam | evening | **دن ڈھلنے کا وقت؛ نیز ملکِ شام** |
+| روز | roz | day; (adv.) daily | **دن؛ ہر روز** |
+| آواز | awaaz | voice; sound | **بولنے کی صدا؛ کوئی بھی صدا** |
+| آزاد | azad | free, independent; liberated; safe (from | **جو بندھن میں نہ ہو، خودمختار** |
+| آزادی | azadi | freedom, independence; liberty, liberati | **بندھن سے نجات، خودمختاری** |
+| ابن | ibn | son, child; offspring; slave | **بیٹا (عربی) — «ابنِ آدم»** |
+| اجلاس | ijlas | session, official meeting, assembly sess | **بیٹھک، باقاعدہ نشست** |
+| اختیار | ikhtiyar | power, authority, jurisdiction; choice,  | **قابو، حکم چلانے کا حق** |
+| اصل | asl | fundamental, basic; radical; original, g | **بنیادی، حقیقی؛ نیز جڑ** |
+| اعلی | ala | greatest; highest; supreme, chief, head; | **سب سے بلند، بہترین** |
+| افغانستان | afghanistan | Afghanistan (a landlocked country betwee | **پاکستان کے مغرب کا ملک** |
+| امن | aman | peace, tranquility | **سکون، لڑائی کا نہ ہونا** |
+| انسانی | insani | human; humane | **انسان کا، انسان سے متعلق** |
+| ایران | eeran | Iran (a country in West Asia) | **مغربی ایشیا کا ملک، سرزمینِ فارس** |
+| باقی | baqi | remaining, left over; extra; remainder,  | **بچا ہوا، جو رہ جائے** |
+| بعض | baaz | some, certain, few, several | **کچھ، چند** |
+| بنیاد | buniyad | foundation, basis; principle | **جڑ، نیو، جس پر عمارت کھڑی ہو** |
+| بنیادی | buniyadi | fundamental, primary, basic, principal | **جڑ کا، سب سے ضروری** |
+| بھائی | bhai | brother (a male sibling of any age); a m | **ایک ماں باپ کا بیٹا** |
+| بھارتی | bharti | Indian; an Indian (person) | **بھارت کا** |
+| بین | bain | word, speech, utterance, saying; lamenta | **بول، کہی ہوئی بات** |
+| ترقی | taraqqi | progress; development | **آگے بڑھنا، بہتری** |
+| تیار | taiyar | ready | **مستعد، جو کام کے لیے موجود ہو** |
+| جانا | jana | to go, to leave | **روانہ ہونا، چلے جانا** |
+| جانب | janib | direction, side | **طرف، سمت** |
+| جنرل | janral | general | **فوج کا بڑا افسر** |
+| حدیث | hadees | a narration (ie. statement); hadith | **نبی ﷺ کا فرمان یا اُن کا بیان کردہ واقعہ** |
+| حملہ | hamla | attack; invasion; assault | **چڑھائی، وار** |
+| حکم | hukm | order, command, decree; verdict, judgeme | **فرمان، جو ماننا ہو** |
+| خاندان | khandan | family; dynasty, lineage; household | **کنبہ، نسل** |
+| دار | dar | wife; having, possessing, holding; wood | **رکھنے والا (لاحقہ) — «زمیندار»** |
+| درخواست | darkhvast | appeal, petition; application, proposal; | **عرضی، مانگ** |
+| دینا | dena | to give, to grant; to deliver; to let | **عطا کرنا، سونپنا** |
+| ریاست | riyasat | rule, control; a state; a sovereign stat | **حکومت کا علاقہ، سلطنت** |
+| سطح | satah | level, surface | **اوپری تہ؛ درجہ** |
+| سعودی | saoodi | Saudi, Saudi Arabian | **سعودی عرب کا** |
+| سلسلہ | silsila | chain, shackle; line, sequence, chain (n | **لڑی، ایک کے بعد ایک آنے کا جوڑ** |
+| سندھ | sindh | Sindh (a province of Pakistan); Indus (a | **پاکستان کا صوبہ، دریائے سندھ کی سرزمین** |
+| شادی | shadi | wedding, marriage | **بیاہ، نکاح** |
+| صحیح | saheeh | right, correct, accurate | **درست، ٹھیک** |
+| فلم | falam | film, movie | **چلتی تصویر** |
+| قانون | qanoon | law; rule, statute | **ضابطہ، حکومت کا بنایا اصول** |
+| قریب | qareeb | near; approximate; nearly | **نزدیک، پاس** |
+| مدد | madad | help, assistance; aid, relief; supply, a | **سہارا، اعانت** |
+| مسلمان | musalman | Muslim | **اسلام ماننے والا** |
+| واپس | vapas | back; return, returned, restored | **لوٹ کر، پھر سے** |
+| وغیرہ | vaghairah | et cetera, and so forth | **اور اِسی طرح کی باقی چیزیں** |
+| پانی | pani | water; rain, monsoon; tear, sweat | **وہ سیال جو پیاس بجھائے؛ بارش** |
+| پاک | pak | clean, pure; clipping of پاکستان (“Pakis | **صاف، ستھرا؛ مقدس** |
+| پیش | pesh | presented; in front; the damma diacritic | **سامنے، آگے؛ پیش کیا ہوا** |
+| چیز | cheez | thing (ie. object; item) | **شے، سامان** |
+| چین | chain | comfort, tranquility, at rest, quiet, pe | **آرام، سکون** |
+| کار | kar | work, occupation, action; function, duty | **کام، پیشہ؛ نیز موٹر گاڑی** |
+| کتاب | kitab | book, manuscript, volume | **لکھی ہوئی جلد، مطالعے کی چیز** |
+| کردار | kirdar | character; behaviour; character; role; c | **چال چلن؛ کہانی کا آدمی** |
+| کشمیر | kashmeer | Azad Kashmir (an autonomous territory ad | **شمالی خطہ، جنت نظیر وادی** |
+| کوشش | koshish | effort; attempt | **جتن، محنت** |
+| ہاتھ | hath | hand; claw (of an animal); source of hel | **بازو کا آخری حصہ، جس سے پکڑتے ہیں** |
+| ہمیشہ | hamesha | eternal; always; continually | **ہر وقت، ابد تک** |
+| ہونا | hona | to be, to exist; to become; to happen, t | **وجود میں آنا، واقع ہونا** |
+| یاد | yad | memory; recollection; reminiscence | **جو بھولا نہ ہو، ذہن میں رہ جانے والی بات** |
