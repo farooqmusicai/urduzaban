@@ -32,3 +32,17 @@
   </FilesMatch>
 </IfModule>
 </IfModule>
+
+
+<IfModule mod_authz_core.c>
+  # Kaghazat (uz-docs ki .md reports) website par nahi khulni chahiyen.
+  <FilesMatch "\.md$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "\.md$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
