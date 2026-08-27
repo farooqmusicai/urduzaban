@@ -843,3 +843,120 @@
 | ہندو | hindu | Hindu, a follower of Hinduism; Indian; A | **ہندو مت کا ماننے والا** |
 | یورپ | yoorap | Europe (a continent located west of Asia | **دنیا کا ایک براعظم** |
 | یوم | yaum | day; aeon; epoch; period; age; era; (usu | **دن** |
+
+## بیچ 9 — 112 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| جتنا | jitna | as much as | **جس قدر** |
+| کتنا | kitna | how much? (m.) | **کس قدر؟ (مذکر)** |
+| نگاہ | nigah | gaze; glance | **نظر، دیکھنا** |
+| چہرہ | chehra | face | **منہ، صورت** |
+| عشق | ishq | passionate love | **شدید محبت، والہانہ چاہت** |
+| کرم | karam | kindness; grace | **مہربانی، عنایت** |
+| رحم | raham | mercy; pity | **ترس، مہربانی** |
+| سکون | sukoon | peace; calm; tranquillity | **چین، ٹھہراؤ** |
+| جذبات | jazbaat | emotions; feelings | **دل کے احساسات** |
+| نصیب | naseeb | fortune; destiny | **قسمت، مقدر** |
+| غزل | ghazal | ghazal (lyric poem) | **عشق کے مضمون کی شعری صنف** |
+| کافر | kafir | unbeliever; (poetic) cruel beloved | **منکر؛ شاعری میں سنگدل محبوب** |
+| مومن | momin | believer | **ایمان لانے والا** |
+| محبوب | mehboob | beloved | **پیارا، جس سے محبت ہو** |
+| پھول | phool | flower | **پودے کا رنگین حصہ، گل** |
+| بہار | bahar | spring (season); bloom | **موسمِ گل؛ رونق** |
+| منزل | manzil | destination; stage; floor (storey) | **پہنچنے کی جگہ؛ سفر کا مرحلہ** |
+| صبر | sabr | patience | **تحمل، جلدی نہ کرنا** |
+| ہمت | himmat | courage; strength of will | **حوصلہ، دم خم** |
+| عروج | urooj | rise; zenith; height of glory | **بلندی، چڑھاؤ** |
+| کہتی | kehti | says (f.) | **کہنے کا فعلِ حال (مؤنث)** |
+| کہے | kahe | may say; says (subjunctive) | **کہہ دے (صیغۂ امکان)** |
+| دیکھو | dekho | look; see (imperative) | **دیکھنے کا حکم** |
+| سوچا | socha | thought (m.) | **غور کیا (مذکر ماضی)** |
+| چلتا | chalta | walks; goes; works (m.) | **چلنے کا فعلِ حال (مذکر)** |
+| چلتے | chalte | walk; go (pl.) | **چلنے کا فعلِ حال (جمع)** |
+| بیٹھا | baitha | sat; seated (m.) | **بیٹھ گیا (مذکر)** |
+| اٹھ | uth | rise; get up (stem/imperative) | **اٹھنے کا حکم** |
+| بھول | bhool | mistake; (v.) forget (stem) | **چوک، غلطی؛ نیز بھولنے کا حکم** |
+| پڑھا | parha | read (past, m.) | **مطالعہ کیا (مذکر ماضی)** |
+| بول | bol | speak (stem/imperative); (n.) words, lyr | **بولنے کا حکم؛ نیز گیت کے الفاظ** |
+| ساز | saaz | musical instrument | **باجا، موسیقی کا آلہ** |
+| خاموشی | khamoshi | silence | **چپ، سناٹا** |
+| شور | shor | noise; clamour | **غل، اونچی آواز** |
+| پرانی | purani | old (f.) | **پرانا کی مؤنث — قدیم** |
+| گرم | garm | hot; warm | **تپش والا، جو ٹھنڈا نہ ہو** |
+| کھڑی | khari | standing (f.) | **سیدھی قائم (مؤنث)** |
+| بچپن | bachpan | childhood | **لڑکپن، بچے ہونے کا زمانہ** |
+| دروازہ | darwaza | door | **گھر میں آنے جانے کا راستہ** |
+| نگر | nagar | town; city (poetic) | **شہر، بستی (شاعری میں)** |
+| تیاری | taiyari | readiness; preparation; construction | **تیار ہونا، سامان کرنا** |
+| تیز | tez | fast, quick; sharp; cunning, smart, clev | **جلد رفتار؛ نیز دھار دار** |
+| جرمنی | jarmani | Germany (a country in Central Europe) | **یورپ کا ملک** |
+| جمعہ | juma | Friday; Jumu'ah (Friday prayer); a gym,  | **ہفتے کا چھٹا دن، برکت کا دن** |
+| جموں | jammoon | Jammu (a city, the winter capital of Jam | **کشمیر کا شہر** |
+| جنوری | janvari | January | **سال کا پہلا مہینہ** |
+| حاضر | hazir | ready; present | **موجود، سامنے** |
+| حوالہ | havala | reference, citing; charge, custody; mone | **سند، جس کی طرف اشارہ ہو** |
+| حیرت | hairat | astonishment; amazement; surprise; wonde | **تعجب، دنگ رہ جانا** |
+| دراصل | darasal | in reality, in fact, actually, truly, in | **حقیقت میں، اصل بات یہ کہ** |
+| دسمبر | disambar | December | **سال کا بارھواں مہینہ** |
+| دیکھنا | dekhna | to look, see, watch; to consider, ponder | **نظر ڈالنا، مشاہدہ کرنا** |
+| روحانی | roohani | spiritual (as opposed to physical); holy | **روح کا، باطنی** |
+| روم | room | Asia Minor; Byzantine Empire; Ottoman Ca | **قدیم سلطنتِ روم؛ ایشیائے کوچک** |
+| رہنا | rahna | to live; to reside; to stay, to remain | **بسنا، ٹھہرنا** |
+| سامان | saman | luggage, baggage; goods, chattels; equip | **اسباب، سازوسامان** |
+| سرکار | sarkar | government; sir, mister; sarkar | **حکومت؛ نیز ادب سے پکارنا** |
+| سسٹم | sistam | system, method | **نظام، طریقہ** |
+| سفید | safed | white; clean; blank | **اجلا، دودھ کے رنگ کا** |
+| سہولت | suhoolat | facility (ie. something provided); ease, | **آسانی، آرام کی چیز** |
+| شدت | shiddat | severity, sternness, rigour; intensity,  | **سختی، زور** |
+| شناخت | shinakht | identification | **پہچان** |
+| شوہر | shauhar | husband | **خاوند، بیوی کا جوڑا** |
+| طبی | tibbi | medical | **طب کا، علاج سے متعلق** |
+| عجیب | ajeeb | strange; foreign; peculiar | **انوکھا، حیران کن** |
+| عذاب | azab | torture; torment; punishment | **سزا، سخت تکلیف** |
+| فرانس | frans | France (a country located primarily in W | **یورپ کا ملک** |
+| فرض | farz | obligatory; compulsory; duty (ie. respon | **لازم، جو کرنا ہی ہو** |
+| فٹ | fut | foot (unit of measure) | **لمبائی کی اکائی (بارہ انچ)** |
+| لال | lal | red; a surname, Lal | **سرخ؛ نیز پیارا بیٹا** |
+| لوٹ | loot | spoils; loot; swag | **لوٹ مار، چھینا ہوا مال** |
+| لڑائی | larai | fight; argument; war, battle | **جھگڑا، جنگ** |
+| ماہر | mahir | expert, professional; scholar of a speci | **جاننے والا، فن کا استاد** |
+| مختصر | mukhtasar | brief, short (in duration or area); conc | **تھوڑا، سمٹا ہوا** |
+| مدت | muddat | period, duration | **عرصہ، وقت کا دورانیہ** |
+| مرضی | marzi | choice; will; need | **چاہت، اپنی پسند** |
+| مستقل | mustaqil | permanent; firm; fixed; constant, immova | **پکا، جو بدلے نہ** |
+| مشرق | mashriq | east | **سورج نکلنے کی سمت** |
+| مشورہ | mashvara | advice; consultation; opinion | **صلاح، رائے** |
+| مطالعہ | mutalaah | study, reading, perusal; considering, in | **پڑھنا، غور سے دیکھنا** |
+| معمولی | mamooli | ordinary; common; regular, usual | **عام، جو خاص نہ ہو** |
+| مفتی | mufti | mufti | **شرعی فتویٰ دینے والا** |
+| مقبوضہ | maqbooza | occupied, annexed, possessed; seized, ca | **جس پر قبضہ ہو** |
+| مقبول | maqbool | accepted, assenting; known | **پسندیدہ، منظور** |
+| مقدار | miqdar | amount, quantity | **کتنا، مقدار** |
+| مقدمہ | muqadma | case, lawsuit | **عدالت کا معاملہ؛ نیز دیباچہ** |
+| ملتان | multan | Multan (a city in Multan district, Punja | **پنجاب کا قدیم شہر** |
+| ملزم | mulzim | accused, charged, indictee, convicted, c | **جس پر الزام ہو** |
+| ممبئی | mumbai | Mumbai (a megacity, the capital of Mahar | **بھارت کا بڑا شہر** |
+| مملکت | mamlukat | kingdom; empire (dominion); grandeur, ma | **سلطنت، ملک** |
+| نشانہ | nishana | aim, target | **ہدف، جس پر وار ہو** |
+| نظم | nazm | order, arrangement, sequence; nazm (a ge | **ترتیب؛ شعر کی ایک صنف** |
+| نفرت | nafrat | hate, hatred; loathing; detestation | **بیر، ناپسندیدگی** |
+| وار | var | assault, attack; a day of the week; occa | **حملہ، ضرب** |
+| واقعی | vaqii | real, actual, true, right, proper; reall | **سچ مچ، حقیقتاً** |
+| والدین | validain | parents | **ماں باپ** |
+| وفات | vafat | death, decease, demise | **موت، انتقال** |
+| ٹکٹ | tikat | ticket | **سفر یا داخلے کا پرچہ** |
+| پاؤں | paoon | foot; footprint; leg | **پیر، چلنے کا عضو** |
+| پتھر | patthar | stone, rock | **سخت چٹانی ٹکڑا** |
+| پرچم | parcham | flag, banner | **جھنڈا** |
+| پریشان | pareshan | bothered, distressed, troubled, worried | **گھبرایا ہوا، فکر مند** |
+| پیشہ | pesa | profession, occupation, trade, business; | **کام، روزگار** |
+| پیٹ | pet | stomach, belly; womb | **بدن کا وہ حصہ جہاں کھانا جاتا ہے** |
+| کارکردگی | karkardagi | performance; output; work | **کام کا نتیجہ، کارگزاری** |
+| کمال | kamal | complete; entire; perfect | **پورا ہنر، عروج** |
+| کوئٹہ | koita | Quetta (a city in Quetta district, Baloc | **بلوچستان کا صدر مقام** |
+| کھانا | khana | to eat; to take (medicine etc.); food, m | **کھانے کا عمل؛ نیز غذا** |
+| گاہ | gah | place, area, centre; time; sometimes | **جگہ (لاحقہ) — «عیدگاہ»** |
+| گزشتہ | guzashta | past, elapsed; previous | **گزرا ہوا، پچھلا** |
+| ہند | hind | India (a country in South Asia); the Ind | **ہندوستان** |
+| ہندوستانی | hindoostani | Indian (of, from or relating to India);  | **ہندوستان کا** |
