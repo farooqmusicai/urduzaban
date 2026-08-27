@@ -730,3 +730,116 @@
 | قیامت | qayamat | doomsday; judgement day, last judgment;  | **روزِ حساب؛ نیز بڑی آفت** |
 | مئی | mai | May | **سال کا پانچواں مہینہ** |
 | کنٹرول | kantrol | check, inspection (physically, by an off | **قابو، نگرانی** |
+
+## بیچ 8 — 108 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| کب | kab | when? (question) | **کس وقت؟** |
+| کتنی | kitni | how much? (f.) | **کس قدر؟ (مؤنث)** |
+| کتنے | kitne | how many? | **کس قدر؟ (جمع)** |
+| رخ | rukh | face; direction | **چہرہ؛ سمت** |
+| غم | gham | sorrow; grief | **دکھ، رنج** |
+| عدم | adam | non-existence; nothingness | **نہ ہونا، نیستی** |
+| شعر | sher | couplet; verse | **دو مصرعوں کا کلام** |
+| باغ | bagh | garden; orchard | **پھول اور درختوں کی جگہ** |
+| شب | shab | night | **رات** |
+| سورج | sooraj | sun | **دن کا روشن ستارہ** |
+| دریا | darya | river | **بہتا ہوا بڑا پانی** |
+| وادی | wadi | valley | **دو پہاڑوں کے بیچ کی زمین** |
+| حوصلہ | hausla | courage; morale | **ہمت، دم** |
+| کمزور | kamzor | weak | **ناتواں، جس میں زور نہ ہو** |
+| فخر | fakhr | pride (positive) | **ناز، بڑائی کا احساس** |
+| ذرا | zara | a little; just; slightly | **تھوڑا سا؛ نیز «ذرا سنیے»** |
+| چلی | chali | went; walked; moved (f.) | **روانہ ہوئی (مؤنث ماضی)** |
+| لیتا | leta | takes (m.) | **لینے کا فعلِ حال (مذکر)** |
+| خاموش | khamosh | silent; quiet | **چپ، بےآواز** |
+| برا | bura | bad (m.) | **خراب، ناپسندیدہ (مذکر)** |
+| پرانے | purane | old (pl.) | **پرانا کی جمع — قدیم** |
+| اعتبار | aitbar | trust; credibility | **بھروسا، ساکھ** |
+| رد | radd | rejection; (adj.) rejected | **نامنظور، لوٹا دینا** |
+| ماضی | maazi | past | **گزرا ہوا زمانہ** |
+| دیوار | deewar | wall | **اینٹ پتھر کی کھڑی روک** |
+| بازار | bazaar | market | **خرید و فروخت کی جگہ** |
+| سرحد | sarhad | border; frontier | **حد، دو ملکوں کی لکیر** |
+| سارا | sara | whole; entire; all (m.) | **سب، پورا (مذکر)** |
+| جاں | jaan | life; soul; darling (poetic spelling) | **جان، روح (شاعری میں)** |
+| چاند | chaand | moon | **رات کا روشن جرم** |
+| آسمان | asman | sky; heaven, skies; celestial sphere, fi | **اوپر پھیلا نیلا فلک** |
+| آمد | amad | arrival | **آنا، تشریف لانا** |
+| آنا | ana | to come, to arrive; to know | **پہنچنا، وارد ہونا** |
+| اختتام | ikhtitam | completion; ending | **خاتمہ، انجام** |
+| اخلاق | akhlaq | morals, ethics; behaviour; nature | **عادات، اچھا برتاؤ** |
+| اخلاقی | akhlaqi | ethical, moral | **اخلاق کا** |
+| ادبی | adbi | literary; moral | **ادب کا، شعر و نثر سے متعلق** |
+| استاد | ustad | professor; teacher, tutor; expert, maste | **سکھانے والا، معلم** |
+| اسپتال | aspatal | hospital | **بیماروں کے علاج کی جگہ** |
+| افریقہ | afreeqa | Africa (the continent south of Europe an | **دنیا کا ایک براعظم** |
+| امت | ummat | ummah | **نبی کے ماننے والوں کا گروہ** |
+| انتظامیہ | intizamiya | administration, establishment | **بندوبست کرنے والا محکمہ** |
+| انتقال | intiqal | death, passing; transfer, moving | **وفات؛ نیز منتقل ہونا** |
+| انٹرنیشنل | intarneshinal | international | **بین الاقوامی** |
+| اپریل | aprail | April | **سال کا چوتھا مہینہ** |
+| ایرانی | eerani | Iranian | **ایران کا** |
+| ایشیا | eshiya | Asia (the largest continent, located bet | **دنیا کا سب سے بڑا براعظم** |
+| ایوان | aivan | hall; palace; chamber | **بڑا ہال؛ مجلس کا گھر** |
+| باقاعدہ | baqayda | regular, standard, proper | **قاعدے سے، منظم** |
+| برآمد | bar-amad | export; recovered, regained, recouped | **باہر بھیجنا؛ نیز برآمد ہونا** |
+| بنگلہ | bangla | Bengali, of or relating to Bengal; Benga | **بنگال کا؛ بنگالی زبان** |
+| بوجھ | bojh | burden, load (ie. weight); obligation (i | **وزن، بار** |
+| بھاری | bhari | heavy | **وزنی، جو ہلکا نہ ہو** |
+| بھرپور | bharpoor | bountiful, abundant; ample, sufficient | **پورا پورا، لبریز** |
+| بہن | bahan | sister (a female sibling of any age); a  | **ایک ماں باپ کی بیٹی** |
+| تجارت | tijarat | trade, business, commerce | **خرید و فروخت، کاروبار** |
+| تحفظ | tahaffuz | security, protection, safeguarding, pres | **حفاظت، بچاؤ** |
+| تخلیق | takhleeq | origin, birth; genesis, creation; compil | **نیا بنانا، پیدا کرنا** |
+| ترتیب | tarteeb | order, arrangement, sequence; classifica | **سلسلہ، قرینے سے رکھنا** |
+| تشریف | tashreef | honour; rank; dignity; seat; bottom | **عزت، بزرگی — «تشریف لائیے»** |
+| تصدیق | tasdeeq | verification; confirmation; attestation; | **سچ ثابت کرنا، توثیق** |
+| تقریر | taqreer | speech | **خطاب، بولنا** |
+| تکمیل | takmeel | finishing, completion, conclusion | **پورا کرنا** |
+| تہذیب | tahzeeb | civilization, culture; politeness, manne | **تمدن، شائستگی** |
+| روشن | raushan | bright, shining, luminous; illuminated;  | **چمکتا ہوا، اجالا کیا ہوا** |
+| زور | zor | powerfully; forcibly; violently | **طاقت، قوت سے** |
+| مخالف | mukhalif | contrary, opposite; opponent, adversary; | **برعکس، جو ساتھ نہ ہو** |
+| مخالفت | mukhalifat | opposition (ie. hostility); opposition ( | **مخالف ہونا، ضد** |
+| مدینہ | madeena | Medina (a major city, the capital of Med | **نبی ﷺ کا شہر، سعودی عرب میں** |
+| مذمت | mazammat | condemnation; dispraise, abuse | **برائی بیان کرنا، ملامت** |
+| مسترد | mustarad | revoked, refuted; rejected, refused | **رد کیا گیا، نامنظور** |
+| مصر | misr | Egypt (a country in North Africa and Wes | **شمالی افریقہ کا ملک** |
+| مصروف | masroof | busy, occupied, engaged | **کام میں لگا ہوا** |
+| مضبوط | mazboot | firm; strong; stable | **پکا، جو ٹوٹے نہ** |
+| مظاہرہ | muzahira | demonstration; rally | **کھلا اظہار؛ جلوس** |
+| معاملہ | muamala | matter, affair, issue. | **بات، مسئلہ؛ لین دین** |
+| معیشت | maeeshat | economy | **روزگار اور مال کا نظام** |
+| مغرب | maghrib | the west, the West; synonym of مَراکِش ( | **سورج ڈوبنے کی سمت؛ نیز مغربی دنیا** |
+| ملوث | mulavvas | involved, implicated; tainted, polluted, | **جو کسی کام میں شریک ہو** |
+| منٹ | minat | minute | **گھنٹے کا ساٹھواں حصہ** |
+| موبائل | mobayl | phone, telephone, mobile | **ہاتھ میں رکھنے والا فون** |
+| موضوع | mauzu | subject, topic, issue, matter, discussio | **جس پر بات ہو، عنوان** |
+| مکہ | makkah | Mecca (a large city, the provincial capi | **خانۂ کعبہ کا شہر** |
+| میل | meel | mile (unit of measurement); dirt, filth, | **فاصلے کی اکائی** |
+| نائب | naib | naib, viceroy, deputy | **قائم مقام، مددگار** |
+| نامہ | namah | letter, book, treaty; history | **خط، لکھی ہوئی کتاب** |
+| نامی | nami | having a good reputation; famous, celebr | **نامور، جس کا نام ہو** |
+| نجی | naji | private, personal, unofficial, confident | **ذاتی، غیر سرکاری** |
+| نزدیک | nazdeek | close, closeby; near, nearby | **پاس، قریب** |
+| نشان | nishan | sign, symbol; mark, impression, scar; tr | **علامت، پہچان کی چیز** |
+| نومبر | navambar | November | **سال کا گیارھواں مہینہ** |
+| نگار | nigar | sweetheart; writer; painting, portrait,  | **محبوب؛ لکھنے والا** |
+| نیک | nek | good, virtuous, righteous, upright, piou | **بھلا، پرہیزگار** |
+| واحد | vahid | single | **اکیلا، ایک ہی** |
+| واپسی | vapsi | return, coming-back; reimbursement, rest | **لوٹنا، واپس آنا** |
+| ورنہ | varna | otherwise; else; if not | **وگرنہ، ایسا نہ ہو تو** |
+| وسیع | vasi | wide, extensive, broad; spacious, roomy, | **کشادہ، پھیلا ہوا** |
+| وعدہ | vada | promise; vow; pledge | **قول، اقرار** |
+| ولی | vali | favorite with God; prophet, saint; maste | **اللہ کا دوست، بزرگ** |
+| پناہ | panah | refuge (ie. protection); shelter (ie. a  | **بچاؤ کی جگہ، سہارا** |
+| پنجابی | panjabi | Punjabi; Punjabi (language) | **پنجاب کا؛ پنجابی زبان** |
+| کپ | kap | cup, glass | **پیالی** |
+| کپتان | kaptan | captain; skipper | **سردار، ٹیم کا سربراہ** |
+| گروہ | giroh | group, gang, clique, crew | **ٹولی، جتھا** |
+| گزر | gazar | carrot | **گاجر** |
+| ہندو | hindu | Hindu, a follower of Hinduism; Indian; A | **ہندو مت کا ماننے والا** |
+| یورپ | yoorap | Europe (a continent located west of Asia | **دنیا کا ایک براعظم** |
+| یوم | yaum | day; aeon; epoch; period; age; era; (usu | **دن** |
