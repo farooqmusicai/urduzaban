@@ -1,5 +1,5 @@
 # اردو زبان — کل کے لیے (End of Day)
-### تازہ: 27 اگست 2026، شام · **یہ اکیلی فائل اگلی نشست کے لیے کافی ہے**
+### تازہ: 27 اگست 2026، رات · **یہ اکیلی فائل اگلی نشست کے لیے کافی ہے**
 
 > اگلی نشست کا پہلا جملہ: «uz-docs/UZ-KAL.md پڑھو اور کام جاری رکھو۔»
 
@@ -45,6 +45,8 @@
 - ✅ **اردو معنی: 10 بیچ، 1,020 الفاظ** — 708 → 1,728
 - ✅ **repo کی صفائی** — کاغذات uz-docs/ میں، تین مردہ فائلیں حذف، .md ویب سے بند
 - 🔴 **«س» کا کام روکا گیا** — §3 دیکھیں
+- ✅ **تلفظ کی تصحیح: 54 الفاظ** — فاروق نے سنا کہ شاہد کو «shahida» بولا جا رہا ہے؛ جانچ پر 55 اندراج کے آخری حرف پر عربی حرکت نکلی (شَاہَدَ، اَحْمَدَ، صَبَرَ)۔ 54 درست، «استھ» جان بوجھ کر باقی۔ کھاتہ: uz-docs/TALAFFUZ-LOG.md
+- ✅ **نقشۂ راہ v2** — uz-docs/UZ-ROADMAP-28DIN.md: ہفتے 2-4 نئے سرے سے، معنی کی مہم مرکزی دھاگا
 
 **ہر بیچ میں دو پہرے:** 0 رد · 0 دوسرے اندراج بدلے · اندراج ہمیشہ 9,899۔
 **کھاتے:** `uz-docs/AERAAB-LOG.md` · `uz-docs/MAANI-LOG.md`
@@ -75,15 +77,16 @@
 
 ---
 
-## ۴ · اگلا کام (ترتیب سے)
+## ۴ · اگلا کام — کل (دن 8، جمعہ 28 اگست)
 
-1. **اردو معنی جاری رکھیں — 8,171 باقی۔** طریقہ نیچے §5 میں۔ ~110 فی بیچ چل رہا ہے۔
-   ہدف: frequency کے حساب سے سب سے عام content words پہلے (حروف، ضمائر، اسمِ علم چھوڑ دیں)۔
-2. **رومن کا جائزہ** — کتنے اندراج میں رومن لفظ سے میل نہیں کھاتا؟ (دستانے/hafte جیسے)
-3. **س کے ~1,659 متضاد اندراج** — فیصلہ کہ اصول کیا ہو
-4. **اعراب — 571 باقی**، مگر 568 نایاب Wiktionary سنسکرت/ہندی الفاظ ہیں۔ کم ترجیح۔
-5. **سند بڑھانا** — پہلے صاف public-domain دیوان کا ماخذ ڈھونڈنا۔ **بغیر ماخذ کے ایک شعر بھی نہیں۔**
-6. **فاروق کے 2 منٹ:** `UZROADMAP28DIN.md` کو GitHub → Add file → Upload files سے `uz-docs/` میں چھوڑ دیں۔ اصل نقشہ ابھی repo میں نہیں ہے (صرف حالت کی فائل ہے)۔
+**نقشہ: uz-docs/UZ-ROADMAP-28DIN.md (v2) — روز کی قطار وہیں ہے۔ کل کے تین ٹکڑے:**
+
+1. **corpus سانچہ v1** — سند کے 5,190 اشعار کو corpus کا پہلا ذخیرہ بنانا: metadata (شاعر، دور، ماخذ، اجازت نامہ) + فہرست۔ ہفتہ 1 کے دن 6 کا ادھورا حصہ بند ہوگا۔
+2. **بہن سائٹوں کے جوڑ** — farooqmusic / farooqstars / mymandoob کے لیے تیار HTML ٹکڑے (فاروق چڑھائیں گے، 5 منٹ)۔ دن 7 کا ادھورا حصہ بند ہوگا۔
+3. **اردو معنی 5 بیچ (~550)** — 1,728 → ~2,300۔ طریقہ §5 میں۔
+
+پھر ترتیب سے: تلفظ لغت کا دور (100) · س کا اصول · رومن کا جائزہ · اعراب کے بقیہ کارآمد · سند کے لیے صاف PD دیوان کی تلاش۔
+
 
 ---
 
@@ -125,7 +128,7 @@ await fetch("/api/agenda.php", {method:"POST", credentials:"include",
 ## ۸ · repo کا نقشہ
 
 **جڑ (صرف زندہ سائٹ):** index.html · lughat.html · sanad.html · tarjuman.html · qarina-neural.html · qarina-aeraab.html · uz-admin.html · uz-lughat.json · uz-lughat-ext.json · uz-lughat-alt.tsv · uz-lughat-speak.tsv · qarina-dict.json · uz-keyboard.js · uz-translit.js · .htaccess · robots.txt · sitemap.xml · README.md
-**uz-docs/ (کاغذات — ویب سے بند، .htaccess سے):** UZ-KAL.md (یہی فائل) · UZ-ROADMAP-STATUS.md · AERAAB-LOG.md · MAANI-LOG.md · KALKAPLAN27AUG2026.md · ADAB-CHHALNI.md · ROMAN-JAANCH.md · ROMAN-NAYE.md · LUGHAT-SURVEY.md
+**uz-docs/ (کاغذات — ویب سے بند، .htaccess سے):** UZ-KAL.md (یہی فائل) · UZ-ROADMAP-28DIN.md (نقشۂ راہ v2) · UrduZaban_Master_Project_Plan_2026.pdf (آئین) · AERAAB-LOG.md · MAANI-LOG.md · TALAFFUZ-LOG.md · KALKAPLAN27AUG2026.md · ADAB-CHHALNI.md · ROMAN-JAANCH.md · ROMAN-NAYE.md · LUGHAT-SURVEY.md
 **uz-data/** · **qarina-tts/** · **.github/workflows/**
 
 ---
