@@ -276,3 +276,114 @@
 | ہمیشہ | hamesha | eternal; always; continually | **ہر وقت، ابد تک** |
 | ہونا | hona | to be, to exist; to become; to happen, t | **وجود میں آنا، واقع ہونا** |
 | یاد | yad | memory; recollection; reminiscence | **جو بھولا نہ ہو، ذہن میں رہ جانے والی بات** |
+
+## بیچ 4 — 106 الفاظ (27 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| تب | tab | then; at that time | **اُس وقت، اُس گھڑی** |
+| کہاں | kahan | where? | **کس جگہ؟** |
+| کیسے | kaise | how? | **کس طرح؟** |
+| جیسا | jaisa | like; such as (m.) | **کی طرح، مانند (مذکر)** |
+| اتنا | itna | this much; so much (m.) | **اِس قدر، اِس مقدار میں (مذکر)** |
+| اتنی | itni | this much; so much (f.) | **اِس قدر، اِس مقدار میں (مؤنث)** |
+| قدم | qadam | step; footstep | **پاؤں کا ایک ڈگ** |
+| خوشی | khushi | happiness; joy | **شادمانی، دل کا کھلنا** |
+| قرار | qarar | rest; stability; composure | **ٹھہراؤ، سکون؛ طے پانا** |
+| اظہار | izhar | expression; declaration | **ظاہر کرنا، کہہ دینا** |
+| امید | umeed | hope | **آس، توقع** |
+| خواب | khwab | dream | **نیند میں دکھائی دینے والی صورت** |
+| دعا | dua | prayer; supplication | **التجا، مانگنا** |
+| قسم | qasam | oath; swearing | **حلف، سوگند؛ نیز نوع** |
+| صبح | subah | morning | **سویرا، دن کا آغاز** |
+| راہ | raah | way; path; road | **رستہ، سڑک** |
+| فتح | fateh | victory; conquest | **جیت، غلبہ** |
+| شکست | shikast | defeat | **ہار، پسپائی** |
+| انداز | andaz | style; manner; estimate | **ڈھنگ، طرز؛ نیز اندازہ** |
+| چلا | chala | went; walked; moved (m.) | **روانہ ہوا، چل پڑا (مذکر ماضی)** |
+| آتی | aati | comes (f.) | **آنے کا فعلِ حال (مؤنث)** |
+| چل | chal | walk; go (stem/imperative) | **چلنے کا حکم — «چل پڑو»** |
+| چاہتا | chahta | wants; loves (m.) | **چاہنے کا فعلِ حال (مذکر)** |
+| بنی | bani | became; was made (f.) | **بن گئی، تیار ہوئی (مؤنث ماضی)** |
+| لفظ | lafz | word | **بولی کا ایک ٹکڑا، کلمہ** |
+| حقیقت | haqeeqat | reality; truth | **اصل بات، سچائی** |
+| اچھا | acha | good; well; okay (m.) | **بھلا، عمدہ؛ نیز «ٹھیک ہے»** |
+| اثر | asar | effect; influence | **کسی چیز کا چھوڑا ہوا نشان یا زور** |
+| قبول | qabool | accepted; (n.) acceptance | **منظور، مان لیا** |
+| حد | had | limit; boundary | **سرحد، آخری کنارہ** |
+| انجام | anjam | end; outcome; result | **نتیجہ، آخر** |
+| آخر | aakhir | end; (adv.) at last; after all | **انتہا؛ نیز «بالآخر»** |
+| دوسرا | doosra | second; other (m.) | **دیگر، غیر؛ گنتی میں دو** |
+| وطن | watan | homeland; country | **اپنا ملک، جنم بھومی** |
+| ساری | sari | whole; entire; all (f.) | **سب، پوری (مؤنث)** |
+| باتیں | baatein | talks; things said | **بات کی جمع — گفتگو** |
+| دوست | dost | friend | **یار، ہمدرد** |
+| آدمی | admi | man; a human being; individual, person | **انسان، مرد** |
+| ابو | abbu | diminutive of اَبّا (abbā, “dad”) | **والد، باپ (پیار کا لفظ)** |
+| الزام | ilzam | blame, accusation; allegation | **تہمت، جرم کی نسبت** |
+| الگ | alag | separate; distinct, different; separatel | **جدا، علیحدہ** |
+| اکثر | aksar | often, frequently; usually, for the most | **بارہا، بیشتر** |
+| بجائے | bajae | instead, alternatively | **کے عوض، کی جگہ** |
+| تا | ta | to; until; as far as | **تک، حتیٰ کہ** |
+| تقریبا | taqreeban | around, about, approximately, close to,  | **لگ بھگ، قریب قریب** |
+| تقسیم | taqseem | division, partition; distribution; divis | **بانٹنا، حصے کرنا** |
+| جدید | jadeed | modern, recent | **نیا، آج کے زمانے کا** |
+| جلد | jald | soon; quick, swift, expeditious, brisk,  | **تیزی سے، جلدی؛ نیز کتاب کا پٹھا** |
+| جنوبی | junoobi | southern | **جنوب کا** |
+| حالت | halat | state, condition | **کیفیت، صورتِ حال** |
+| حساب | hisab | account; calculation; arithmetic; bill ( | **گنتی، شمار؛ لین دین کا کھاتہ** |
+| خواجہ | khaja | master, lord; dignitary, governor; an ho | **سردار، آقا** |
+| خون | khoon | blood; murder, killing; relationship | **رگوں میں دوڑنے والا سرخ سیال؛ قتل** |
+| داخل | dakhil | admitted, enrolled; inside; intruding, p | **اندر آیا ہوا؛ بھرتی** |
+| دوبارہ | dobarah | again, anew, twice, second time, newly | **پھر سے، دوسری بار** |
+| ذمہ | zimma | obligation; responsibility; duty | **جواب دہی، فرض** |
+| رنگ | rang | colour | **آنکھ کو دکھائی دینے والی صورت — لال، نیلا** |
+| زندہ | zinda | alive, living | **جیتا جاگتا، جو مرا نہ ہو** |
+| سزا | saza | punishment; penalty; chastisement | **جرم کا بدلہ** |
+| سن | sin | age | **عمر؛ نیز برس** |
+| شاید | shayad | maybe, perhaps | **ہو سکتا ہے، غالباً** |
+| صاف | saf | clean; blank; pure | **ستھرا، بےمیل؛ نیز واضح** |
+| صحت | sihat | health; soundness | **تندرستی؛ درستی** |
+| ضرور | zuroor | surely, definitely; of course | **یقیناً، لازماً** |
+| ضروری | zaroori | necessary, required; important | **لازمی، جس کے بغیر نہ چلے** |
+| ضلع | zil | district | **ملک کا انتظامی حصہ** |
+| ظاہر | zahir | clear, apparent, obviously | **کھلا ہوا، صاف نظر آنے والا** |
+| عورت | aurat | woman; wife; pudendum | **مادہ انسان، خاتون؛ بیوی** |
+| غلط | ghalat | wrong; incorrect; mistaken | **نادرست، خطا** |
+| فراہم | faraham | gathered, collected, obtained | **جمع کیا ہوا، مہیا** |
+| فوجی | fauji | martial; soldier | **فوج کا، سپاہی** |
+| فون | foon | phone, telephone; phone call, telephone  | **دور سے بات کرنے کا آلہ** |
+| فیصد | feesad | percent (%) | **سو میں سے، صدی** |
+| قابل | qabil | capable; worthy, deserving | **لائق، جو کر سکے** |
+| قیادت | qiyadat | leadership (ie. office of a leader); con | **رہنمائی، سربراہی** |
+| لندن | landan | London (the capital city of the United K | **برطانیہ کا دارالحکومت** |
+| مارچ | march | March | **سال کا تیسرا مہینہ** |
+| ماں | man | mother | **جنم دینے والی، والدہ** |
+| متحدہ | muttahida | united, unified; allied | **ملا ہوا، متفق** |
+| مذہب | mazhab | religion; creed, sectarian belief; madhh | **دین، عقیدہ** |
+| مذہبی | mazhabi | religious; faithful; sectarian | **مذہب سے متعلق** |
+| مرد | mard | man | **نر انسان، آدمی** |
+| مرکزی | markazi | central | **مرکز کا، بیچ کا** |
+| معلوم | maloom | known; evident, clear; obvious | **جانا ہوا، جس کا پتہ ہو** |
+| مقامی | muqami | local; native; resident | **اُسی جگہ کا** |
+| مقصد | maqsad | purpose (ie. intention; goal; aim) | **غرض، جس کے لیے کام ہو** |
+| ملاقات | mulaqat | meeting, interview (ie. an appointment); | **ملنا، بھینٹ** |
+| ملکی | mulki | belonging to one's own country; indigeno | **اپنے ملک کا** |
+| منہ | munh | mouth; face; reputation | **چہرہ؛ کھانے بولنے کا سوراخ** |
+| موجودہ | maujoodah | existing, present, current; at present | **آج کا، جو اِس وقت ہے** |
+| موقع | mauqa | chance, opportunity | **مناسب وقت، گھڑی** |
+| میاں | miyan | mister, sir; husband; person | **صاحب، جناب؛ شوہر** |
+| نماز | namaz | salat, prayer (worship); devotion, idoli | **مسلمانوں کی مقررہ عبادت** |
+| واقع | vaqe | located; situated | **جو کہیں ہو، پایا جانے والا** |
+| پسند | pasand | liked, favoured, preferred; like; choice | **جو بھا جائے، مرغوب** |
+| پورا | poora | whole, entire; complete; fulfilled | **سارا، مکمل** |
+| چند | cand | a few, some, several | **کچھ، تھوڑے سے** |
+| کافی | kafi | coffee | **قہوہ، ایک مشروب** |
+| کامیاب | kamyab | prosperous, successful | **جو مقصد پا لے، فتح مند** |
+| کامیابی | kamyabi | success, achievement | **مقصد کا حاصل ہونا** |
+| کرکٹ | kirkit | cricket | **بلے اور گیند کا کھیل** |
+| کمیٹی | kameti | committee; a committee session; meeting; | **چند لوگوں کا مقرر گروہ** |
+| کھیل | khel | game, sport; fun; match, sporting event; | **تفریح کا مقابلہ، کھیلنے کی چیز** |
+| ہدایت | hidayat | guidance; instruction; the truth | **رہنمائی، صحیح راستہ دکھانا** |
+| ہلاک | halak | killed; perished; withered; desired; wis | **مارا گیا، فنا ہوا** |
+| ہندوستان | hindoostan | India (a country in South Asia); Hindust | **بھارت، جنوبی ایشیا کا ملک** |
