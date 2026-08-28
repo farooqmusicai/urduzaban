@@ -1283,3 +1283,108 @@
 | تمہارے | tumhare | your; yours (pl./oblique) | **تم سے تعلق، جمع و مغیرہ — «تمہارے گھر»** |
 | ہمارا | hamara | our; ours (m.) | **ہم سے تعلق، مذکر — «ہمارا وطن»** |
 | بے قرار | be-qarar | restless; uneasy | **بےچین، مضطرب** |
+
+## بیچ 13 — 100 الفاظ (28 اگست 2026، رات دیر)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| تاکہ | take | so that; in order to | **اِس غرض سے کہ — «جلدی چلو تاکہ پہنچ جائیں»** |
+| آباد مقام | abad maqam | human settlement | **بستی، جہاں لوگ رہتے ہوں** |
+| ابن اللہ | ibn allah | God the Son | **عیسائی عقیدے میں «خدا کا بیٹا»** |
+| ابھی ابھی | abhi abhi | newly, recently, just now | **اِسی لمحے، تازہ تازہ** |
+| اتنا ہی | utna hi | equally | **برابر، اُسی قدر** |
+| ادا کرنا | ada karna | enact; do, pay, quit, utter | **بجا لانا؛ چکانا — «قرض ادا کیا»** |
+| از | az | from, by | **سے، کی طرف سے (فارسی) — «از قلم»** |
+| اقوام | aqvam | plural of قَوم (qaum) | **«قوم» کی جمع — «اقوامِ متحدہ»** |
+| الفاظ | alfaz | plural of لَفْظ (lafz, “word”) | **«لفظ» کی جمع: بول، کلمات** |
+| اچھی طرح سے | achchhi tarah se | thoroughly | **پوری طرح، خوب** |
+| بنیادی طور پر | buniyadi taur par | basically | **اصل میں، جڑ سے** |
+| تعلقات | taalluqat | formal plural of تَعَلُّق (ta'alluq) | **«تعلق» کی جمع: رشتے، جوڑ** |
+| تفصیلات | tafseelat | formal plural of تَفْصِیل (tafsīl) | **«تفصیل» کی جمع: پوری باتیں** |
+| جائے ضرور | ja-e-zaroor | necessary room, toilet, lavatory | **بیت الخلا (پرانا ادب)** |
+| جگہ جگہ | jagah-jagah | everywhere | **ہر جگہ، جا بجا** |
+| حقوق | huqooq | plural of حَق (haq): rights | **«حق» کی جمع — «انسانی حقوق»** |
+| حملے | hamle | inflection of حَمْلَہ (hamla, “attack; i | **«حملہ» کی جمع و بدلی شکل** |
+| خوش حال | khush-hal | happy, fortunate; prosperous, thriving | **آسودہ، جس کا گزارا اچھا ہو** |
+| رات گئی بات گئی | rat gai | the ship has sailed; let bygones be bygo | **گزری بات پر مٹی ڈالنے کی کہاوت** |
+| طرف دار | taraf dar | taking a side; partial; a party-man, par | **کسی کا ساتھ دینے والا، حامی** |
+| علیہ السلام | alayhi-s-salam | peace be upon him | **«اُن پر سلامتی ہو» — نبیوں کے نام کے ساتھ** |
+| غلط کرنا | ghalat karna | to do wrong; to mistake; to err | **بگاڑنا، خطا کرنا** |
+| قتل عام | qatl-i am | massacre | **بہت سے لوگوں کا قتل، خونریزی** |
+| لا | la | not | **نہیں، بے (عربی نفی) — «لاعلم»** |
+| مجھ کو | mujh ko | dative/accusative of مَیں (ma͠i) | **مجھے** |
+| واقعات | vaqiat | plural of واقِعَہ (vāqiʻa) | **«واقعہ» کی جمع: پیش آئی باتیں** |
+| وزیر اعلی | vazeer-i ala | chief minister | **صوبے کی حکومت کا سربراہ** |
+| کے باوجود | ke bavajood | despite, in spite of, nonetheless | **پھر بھی، اِس کے ہوتے ہوئے — «بارش کے باوجود آیا»** |
+| یوں ہی | yon hi | simply; by chance | **بس ایسے ہی، بلا سبب** |
+| ہاتھوں | haathon | hands (oblique) | **«ہاتھ» کی بدلی جمع — «ہاتھوں ہاتھ»** |
+| اوپر | oopar | above; up; on top | **بلندی کی طرف — «چھت کے اوپر»** |
+| نیچے | neeche | below; down; under | **پستی کی طرف، تلے — «میز کے نیچے»** |
+| بے حد | be-had | boundless; extremely | **بہت زیادہ، بے انتہا** |
+| پہ | pe | on; at (short for par) | **«پر» کی چھوٹی شکل — «دل پہ»** |
+| سا | sa | -like; -ish; somewhat (m.) | **جیسا، مانند، مذکر — «چاند سا چہرہ»** |
+| آ جانا | a jana | to come; to arrive; to enter | **پہنچ جانا، وارد ہونا** |
+| آزاد کشمیر | azad kashmeer | alternative form of آزاد جموں و کشمیر (ā | **پاکستان کے زیرِ انتظام کشمیر کا علاقہ** |
+| آیت اللہ | ayatu llah | ayatollah | **شیعہ عالموں کا بڑا درجہ** |
+| اب تب | ab tab | occasionally | **کبھی کبھی، گاہے گاہے** |
+| ابتدائی طور پر | ibtedai taur par | initially | **شروع میں، پہلے پہل** |
+| اتحاد سے | ittihad se | jointly | **مل کر، مل جل کر** |
+| اثر کرنا | asar karna | reaction; to imbue | **اثر ڈالنا، لگنا — «دوا نے اثر کیا»** |
+| احتجاج کرنا | ehtejaj karna | convulse, protest | **اعتراض جتانا، آواز اٹھانا** |
+| اختیار ہونا | ikhtiyar hona | to wield | **بس میں ہونا، قدرت رکھنا** |
+| ادا کار | ada kar | actor, protagonist, thespian; mummer | **فلم یا ڈرامے میں کام کرنے والا، فنکار** |
+| ادب سے | adab se | deferentially, reverently | **احترام کے ساتھ، جھک کر** |
+| ارب | arab | billion | **سو کروڑ** |
+| اضافہ کرنا | izafa karna | redouble; add, adjoin, augment, increase | **بڑھانا، جوڑنا** |
+| اظہار کرنا | izhar karna | to express, convey; to admit, disclose | **ظاہر کرنا، کہہ دینا — «خیال کا اظہار»** |
+| انھوں نے | inhon ne | alternative spelling of اِنْہوں نے (inhõ | **«انہوں نے» کا دوسرا املا** |
+| اپنا وطن | apna vatan | old country | **اپنا دیس، جنم بھومی** |
+| ایف ایم | ef-em | FM; FM radio | **ریڈیو کی ایک قسم (FM)** |
+| بیٹے | bete | inflection of بیٹا (beṭā, “boy; son; chi | **«بیٹا» کی جمع و بدلی شکل** |
+| بے ایمان | be-eeman | faithless, irreligious; dishonest, decep | **جس کا ایمان نہ ہو؛ کھوٹا، دغا باز** |
+| جواب دینا | javab dena | to reply; answer; respond; to refuse; de | **اتر دینا، بولنا؛ نیز انکار کرنا — «خط کا جواب دیا»** |
+| دس | das | ten | **۱۰** |
+| دہشت گردی | dahshat gardi | terrorism | **ڈرا کر ظلم پھیلانا، خوف کی کارروائی** |
+| دیکھنے | dekhne | inflection of دیکھنا: oblique infinitive | **«دیکھنا» کی بدلی شکل — «دیکھنے والا»** |
+| سات | sat | seven (۷ (7)) | **۷** |
+| صاف کرنا | saf karna | to clean | **میل ہٹانا، جھاڑنا پونچھنا** |
+| صلی اللہ علیہ وسلم | sallallahu alaihi va-sallam | God shower blessing and well-being upon  | **نبی کے نام کے ساتھ درود کا کلمہ** |
+| صورت حال | soorat-e-hal | situation, circumstances, current situat | **حالات، معاملے کی حالت** |
+| طالبان | taliban | plural of طالب (tālib, “seeker; student” | **«طالب» کی جمع؛ افغانستان کی ایک تحریک** |
+| غیر ملکی | ghair mulki | overseas; foreign | **دوسرے ملک کا، بدیسی** |
+| فون کرنا | fon karna | to phone, to telephone, to call, to cont | **فون ملانا، بات کرنا** |
+| قبول کرنا | qubool karna | to accept | **مان لینا، لے لینا** |
+| قریب قریب | qareeb-qareeb | nearly; almost | **تقریباً، لگ بھگ** |
+| مت | mat | don't (imperative negation); religion, c | **نہ (روکنے کا حرف) — «مت جاؤ»؛ نیز: دھرم، عقیدہ** |
+| مغربی پاکستان | maghribi pakistan | West Pakistan (a former province of Paki | **پرانا صوبہ؛ آج کا پاکستان** |
+| میرا ایک سوال ہے | mera ek saval hai | I have a question | **سوال شروع کرنے کا جملہ** |
+| نو | nau | nine; new | **۹؛ نیز: نیا (فارسی) — «نوجوان»** |
+| ٹی وی | ti-vi | TV, television | **ٹیلی ویژن** |
+| پانچ سو | panch sau | five hundred | **۵۰۰** |
+| چھ | chha | alternative form of چھہ | **۶ — «چھہ» کا دوسرا املا** |
+| کروڑ | karor | crore (ten million); millions | **سو لاکھ** |
+| کوئی مسئلہ نہیں | koi masala naheen | no worries; no problem; you're welcome | **«سب ٹھیک ہے» کہنے کا جملہ** |
+| کون سی | kaun si | feminine of کَون سا (kaun sā) | **«کون سا» کی مؤنث — «کون سی کتاب؟»** |
+| ہاں جی | han ji | yes sir, yes madam; yes | **ادب سے ہاں** |
+| دنوں | dinon | days (oblique) | **«دن» کی بدلی جمع — «اُن دنوں»** |
+| زمانے | zamane | eras; the world (oblique) | **«زمانہ» کی جمع و بدلی شکل — «پرانے زمانے»** |
+| آنکھوں | aankhon | eyes (oblique) | **«آنکھ» کی بدلی جمع — «آنکھوں دیکھی»** |
+| اگرچہ | agarche | although | **گو کہ، ہرچند — «اگرچہ دیر ہوئی»** |
+| احساس کرنا | ehsas karna | realise | **محسوس کرنا، جان لینا** |
+| اخبار | akhbar | newspaper; gazette, journal; plural of خ | **خبروں کا پرچہ؛ «خبر» کی جمع** |
+| اختیار دینا | ikhtiyar deyna | license; authorise, empower | **اجازت اور طاقت دینا** |
+| ادب کرنا | adab karna | to respect | **احترام کرنا، لحاظ رکھنا** |
+| اصل جیسا | asl jaisa | verisimilitude | **ہو بہو اصل لگنے والا** |
+| اضافہ ہونا | izafa hona | increase | **بڑھ جانا** |
+| اللہ حافظ | allah hafiz | goodbye, farewell | **رخصت کا سلام، خدا حافظ** |
+| ان پڑھ | anparh | illiterate; uneducated | **جو پڑھا لکھا نہ ہو** |
+| انھیں | inhen | alternative spelling of اِنہیں (inhẽ); a | **«انہیں» کا دوسرا املا** |
+| اوپر والا | uvpar vala | the one upstairs; God, the Supreme Being | **اللہ، خدا (بول چال)** |
+| اپنا حصہ ادا کرنا | apna hissa ada karna | contribute, kick in | **اپنے ذمے کا کام کر دینا** |
+| اپنی ماں کا قتل | apni man ka qatl | matricide | **ماں کا قتل (مادر کشی)** |
+| اگلے | agle | inflection of اَگْلا (aglā, “next”): dir | **«اگلا» کی جمع و بدلی شکل — «اگلے دن»** |
+| اہل ایمان | ahal eeman | People of faith, O ye who believe (an in | **ایمان والے (قرآنی خطاب)** |
+| بلند شہر | buland shahar | Bulandshahr (a city in Uttar Pradesh, In | **بھارتی اتر پردیش کا ایک شہر** |
+| بے شک | be shak | undoubtedly, without a doubt, totally; c | **بلاشبہ، ضرور** |
+| بے مثال | be misal | unexampled, incomparable | **جس کی مثال نہ ملے، لاجواب** |
+| حاصل پور | hasil poor | Hasilpur (a city in Bahawalpur district, | **بہاولپور (پنجاب، پاکستان) کا ایک شہر** |
