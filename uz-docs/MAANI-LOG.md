@@ -1073,3 +1073,213 @@
 | قبر | qabr | grave, tomb | **مردے کی جگہ** |
 | قرض | qarz | debt; loan; credit; revenge, vengeance | **ادھار، جو لوٹانا ہو** |
 | نیز | neez | also, even; again; likewise | **اور، اِس کے علاوہ** |
+
+## بیچ 11 — 100 الفاظ (28 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| کے | ke | of; 's (pl./oblique) | **تعلق کا حرف، جمع و مغیرہ — «گھر کے لوگ»** |
+| کی | ki | of; 's (f.) | **تعلق کا حرف، مؤنث — «ماں کی دعا»** |
+| اور | aur | and; more | **بھی، مزید؛ جوڑنے کا حرف — «تم اور میں»** |
+| ہے | hai | is | **«ہونا» کا حال، واحد — «وہ یہاں ہے»** |
+| سے | se | from; with; by; than | **آغاز، ذریعہ یا موازنہ کا حرف — «گھر سے آیا»** |
+| کا | ka | of; 's (m.) | **تعلق کا حرف، مذکر — «علی کا گھر»** |
+| کو | ko | to; (object marker) | **مفعول کا حرف؛ کی طرف — «اُس کو دو»** |
+| ہیں | hain | are | **«ہونا» کا حال، جمع — «سب یہاں ہیں»** |
+| نے | ne | (ergative marker: by) | **فاعل کا حرف، ماضی کے فعل سے پہلے — «میں نے کہا»** |
+| اس کی | us ki | her | **اُس سے تعلق، مؤنث — «اس کی کتاب»** |
+| ایک | aik | one; a; an | **۱؛ کوئی — «ایک دن»** |
+| یہ | yeh | this; he; she; it | **قریب کی چیز یا شخص — «یہ کتاب»** |
+| بھی | bhi | also; too; even | **اِس کے ساتھ، مزید — «میں بھی»** |
+| اس سے | is se | hereto, hereunto, herewith | **اِس چیز سے؛ اِس کے ذریعے** |
+| اس کا | is ka | genitive of یہ (ye); (proximal) his, its | **اِس یا اُس سے تعلق، مذکر — «اس کا نام»** |
+| میں نے | maine | ergative of میں (ma͠i) | **«میں» فاعل بن کر — «میں نے دیکھا»** |
+| اس نے | is-ne | ergative singular of یہ (ye); ergative s | **اُس شخص نے (فاعل)** |
+| اس پر | is par | hereupon | **اِس چیز پر، اِس کے اوپر** |
+| اس کو | is-ko | dative/accusative singular of یہ (ye); d | **اِس یا اُس شخص یا چیز کو** |
+| کہ | ki | that; or | **جوڑنے کا حرف: جو بات آگے آئے — «کہا کہ آؤں گا»** |
+| تھا | tha | was (m.) | **«ہونا» کا ماضی، مذکر — «وہ وہاں تھا»** |
+| ہو | ho | are (you); be; become | **«ہونا»: تم کے ساتھ؛ ہو جانا — «تم کون ہو»** |
+| وہ | woh | he; she; it; that; they | **دور کی چیز یا شخص — «وہ گھر»** |
+| جو | jo | who; which; that (relative) | **جس نے، جس چیز نے — «جو آئے، بیٹھے»** |
+| ہی | hi | only; just (emphasis) | **صرف، زور کے لیے — «ابھی ہی»** |
+| ان کا | in-ka | plural of اِس کا (is-kā); (proximal) the | **اُن لوگوں کا — «ان کا گھر»** |
+| ان کو | in-ko | plural of اِس کو (is-ko); dative/accusat | **اُن لوگوں کو** |
+| تو نے | to ne | ergative of تو (tū) | **«تو» فاعل بن کر — «تو نے کیا کیا؟»** |
+| جس | jis | which; whom (relative, oblique) | **«جو» کی بدلی شکل — «جس نے کہا»** |
+| آپ | ap | second-person subjective or objective pe | **احترام سے «تم»؛ نیز: خود — «آپ آئیے»** |
+| و | va | and | **اور (فارسی جوڑ) — «شب و روز»** |
+| بعد | baad | after; later | **پیچھے، آگے چل کر — «کھانے کے بعد»** |
+| ہم | hum | we; us | **میں اور دوسرے — «ہم سب»** |
+| اپنے | apne | one's own (pl./oblique) | **خود کے، جمع و مغیرہ — «اپنے گھر جاؤ»** |
+| کوئی | koi | someone; any; some | **کوئی ایک، نامعلوم — «کوئی آیا ہے»** |
+| تھے | the | were (pl.) | **«ہونا» کا ماضی، جمع — «وہ وہاں تھے»** |
+| گا | ga | will (m. sg.) | **آنے والے وقت کا حرف، مذکر — «جاؤں گا»** |
+| لیے | liye | for; for the sake of | **کی خاطر، واسطے — «تمہارے لیے»** |
+| آپ نے | ap-ne | ergative of آپ (āp) | **«آپ» فاعل بن کر — «آپ نے فرمایا»** |
+| آپ کا | ap-ka | genitive of آپ (āp) | **«آپ» سے تعلق — «آپ کا نام»** |
+| آپ کو | ap-ko | dative/accusative of آپ (āp) | **«آپ» کی طرف — «آپ کو مبارک»** |
+| جب | jab | when (relative) | **جس وقت — «جب آؤ گے»** |
+| ساتھ | saath | with; together | **سنگ، ہمراہ — «میرے ساتھ چلو»** |
+| کسی | kisi | someone; any (oblique) | **«کوئی» کی بدلی شکل — «کسی نے کہا»** |
+| تھی | thi | was (f.) | **«ہونا» کا ماضی، مؤنث — «وہ خوش تھی»** |
+| گے | ge | will (pl.) | **آنے والے وقت کا حرف، جمع — «ہم جائیں گے»** |
+| رہے | rahe | (were) -ing; stayed (pl.) | **جاری کام، جمع — «کھیل رہے ہیں»** |
+| تک | tak | until; up to; even | **اُس حد لگ — «شام تک»** |
+| والے | wale | the ones with/of (pl.) | **رکھنے یا کرنے والے، جمع — «دودھ والے»** |
+| کے ساتھ | ke sath | with | **سنگ، ہمراہ — «دوستوں کے ساتھ»** |
+| ہم نے | hum ne | ergative of ہم (ham) | **«ہم» فاعل بن کر — «ہم نے سنا»** |
+| ہم کو | ham-ko | dative/accusative of ہم (ham); plural of | **ہمیں، ہماری طرف** |
+| یا | ya | or; oh! | **دو میں سے کوئی ایک — «چائے یا پانی»؛ نیز پکار کا حرف** |
+| اگر | agar | if | **شرط کا حرف — «اگر آئے تو»** |
+| سب | sab | all; everyone | **سارے، تمام — «سب لوگ»** |
+| کچھ | kuchh | some; something | **تھوڑا؛ کوئی چیز — «کچھ کھا لو»** |
+| اپنی | apni | one's own (f.) | **خود کی، مؤنث — «اپنی بات»** |
+| ہوں | hoon | am | **«ہونا»: میں کے ساتھ — «میں حاضر ہوں»** |
+| رہا | raha | (was) -ing; stayed (m.) | **جاری کام، مذکر — «لکھ رہا ہوں»** |
+| اب سے | ab se | forth, henceforth | **اِس وقت سے آگے** |
+| سب سے | sab se | most (superlative form of adjectives) | **سارے میں بڑھ کر — «سب سے اچھا»** |
+| لیکن | lekin | but | **مگر، پر — «آیا لیکن دیر سے»** |
+| گی | gi | will (f.) | **آنے والے وقت کا حرف، مؤنث — «وہ آئے گی»** |
+| دو | do | two | **۲ — «دو ہاتھ»** |
+| لئے | liye | for (alternative spelling) | **«لیے» کا دوسرا املا؛ کی خاطر** |
+| اب بھی | ab bhi | still, yet | **ابھی تک، اِس وقت بھی** |
+| اس لئے | is lie | wherefore, therefore | **اِسی سبب سے، چنانچہ** |
+| اپنے آپ | apne ap | ipso facto, oneself, automatically; your | **خود بخود؛ خود کو — «اپنے آپ چلے»** |
+| کے لئے | keliye | marks a recipient or beneficiary: for; m | **کی خاطر، واسطے — «ملک کے لئے»** |
+| ہوتا | hota | inflection of ہونا (honā): masculine sin | **«ہونا» کی عادت والی شکل، مذکر — «ایسا ہوتا ہے»** |
+| مگر | magar | but; however | **لیکن، پر — «چھوٹا مگر تیز»** |
+| خود | khud | self; oneself | **آپ، اپنے آپ — «خود آیا»** |
+| جن | jin | which; whom (relative, plural) | **«جو» کی جمع بدلی شکل — «جن سے ملے»** |
+| رہی | rahi | (was) -ing; stayed (f.) | **جاری کام، مؤنث — «پڑھ رہی ہے»** |
+| اب کے بعد | ab ke bad | hereinafter | **آگے چل کر، آئندہ** |
+| اس طرح | is tarah | how | **اِس ڈھنگ سے، یوں** |
+| انہوں نے | inhon ne | plural of اِس نے (is ne); ergative singu | **اُن لوگوں نے (فاعل)** |
+| لوگوں | logon | oblique plural of لوگ (log, “people”) | **«لوگ» کی بدلی شکل — «لوگوں سے ملو»** |
+| لے | le | inflection of لینا (lenā): stem; inflect | **«لینا» کا حکم؛ اٹھا — «یہ لے»** |
+| کی طرح | ki tarah | like; as | **جیسا، مانند — «چاند کی طرح»** |
+| کیلئے | keliye | alternative form of کے لئے (“for”) | **«کے لئے» کا ملا ہوا املا** |
+| مجھے | mujhe | to me; me | **مجھ کو — «مجھے بتاؤ»** |
+| تم | tum | you (familiar) | **سامنے والا، بے تکلف — «تم آؤ»** |
+| ہمارے | hamare | our; ours (pl./oblique) | **ہم سے تعلق، جمع و مغیرہ — «ہمارے گھر»** |
+| سی | si | -like; -ish; somewhat (f.) | **جیسی، مانند، مؤنث — «پھول سی بات»** |
+| والی | wali | the one with/of; -er (f.) | **رکھنے یا کرنے والی — «سبزی والی»** |
+| میرے | mere | my; mine (pl./oblique) | **مجھ سے تعلق، جمع و مغیرہ — «میرے دوست»** |
+| اے | ae | O! (vocative) | **پکارنے کا حرف — «اے دوست!»** |
+| اب تک | ab tak | yet; heretofore, hitherto; so far | **اِس وقت لگ، ہنوز — «اب تک نہیں آیا»** |
+| اس طرف | us taraf | yonder, over there; here | **اِس جانب، اِدھر** |
+| اس وجہ سے | is vaja se | thence | **اِسی سبب سے** |
+| افراد | afrad | plural of فَرْد (fard, “person, individu | **«فرد» کی جمع: لوگ، اشخاص** |
+| تم نے | tum ne | ergative of تم (tum) | **«تم» فاعل بن کر — «تم نے دیکھا»** |
+| تم کو | tum-ko | dative/accusative of تم (tum) | **تمہیں، تمہاری طرف** |
+| کی طرف | ki taraf | in the direction of, toward | **جانب، رخ — «گھر کی طرف»** |
+| کے مطابق | ke mutabiq | according to | **موافق، جیسا کہا گیا — «خبر کے مطابق»** |
+| ہمیں | hamen | to us; us | **ہم کو — «ہمیں بتاؤ»** |
+| اپنا | apna | one's own (m.) | **خود کا، مذکر — «اپنا کام»** |
+| تین | teen | three | **۳** |
+| ہوگا | hoga | will be (m.) | **آگے چل کر ہونا، مذکر — «کل ہوگا»** |
+
+## بیچ 12 — 100 الفاظ (28 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| پاس | paas | near; with (possession) | **نزدیک؛ کسی کے ہاتھ میں — «میرے پاس ہے»** |
+| آپ کا نام کیا ہے | ap ka nam kya hai | what is your name (polite) | **نام پوچھنے کا ادب والا جملہ** |
+| اب سے پہلے | ab se pahle | heretofore | **اِس وقت سے پیچھے، پہلے کبھی** |
+| اس دوران میں | is dauran men | meanwhile | **اِسی وقت میں، اِسی بیچ** |
+| بات کرنا | bat karna | to talk | **بولنا، گفتگو کرنا** |
+| دینے | dene | inflection of دینا (dēnā): oblique infin | **«دینا» کی بدلی شکل — «دینے والا»** |
+| میرے کو | mere ko | synonym of مجھے | **مجھے (عام بول چال)** |
+| کے بنا | ke bina | without | **بغیر، بن — «پانی کے بنا»** |
+| ہماری | hamari | our; ours (f.) | **ہم سے تعلق، مؤنث — «ہماری زمین»** |
+| والا | wala | the one with/of; -er (m.) | **رکھنے یا کرنے والا — «گھر والا»** |
+| میری | meri | my; mine (f.) | **مجھ سے تعلق، مؤنث — «میری ماں»** |
+| سامنے | saamne | in front of; opposite | **آنکھوں کے آگے، روبرو — «گھر کے سامنے»** |
+| کیونکہ | kyunke | because | **اِس سبب سے کہ — «رکا کیونکہ رات تھی»** |
+| اس کے علاوہ | is ke ilava | thereby | **اِس کے سوا، مزید برآں** |
+| اسی طرح سے | isi tarah se | likewise | **ویسے ہی، اُسی ڈھنگ سے** |
+| اسی لئے | isi lie | therefore | **اِسی سبب سے** |
+| اسی وقت | isi-vaqt | now | **فوراً؛ اُسی گھڑی** |
+| بڑے | bare | inflection of بَڑا (baṛā): direct mascul | **«بڑا» کی جمع و بدلی شکل — «بڑے لوگ»** |
+| بے جا | be ja | alternative spelling of بیجا (bejā) | **بے موقع، نامناسب** |
+| جی | ji | used to show agreement - yes, correct; t | **ہاں (ادب سے)؛ احترام کا لاحقہ — «جی ہاں»، «امی جی»** |
+| میں پاکستانی ہوں | mai pakistani hoon | I am Pakistani | **اپنی پہچان بتانے کا جملہ** |
+| یعنی | yani | [he/she/it] means; in other words, meani | **مطلب یہ کہ، دوسرے لفظوں میں** |
+| کس | kis | which? whom? (oblique) | **«کون» کی بدلی شکل — «کس نے کہا؟»** |
+| باہر | bahar | outside; out | **اندر کا الٹ — «گھر سے باہر»** |
+| ہزار | hazaar | thousand | **۱۰۰۰** |
+| چار | chaar | four | **۴** |
+| چاہیے | chahiye | should; is needed | **ضروری ہے، مناسب ہے — «جانا چاہیے»** |
+| اب جبکہ | ab jabke | now that | **اب جس حال میں** |
+| استعمال نہ کرنا | isteamal nah karna | disuse | **کام میں نہ لانا، چھوڑ دینا** |
+| استعمال کرنا | istimal karna | to use, consume, employ, utilise, expend | **کام میں لانا، برتنا** |
+| اسلام آباد | islam-abad | Islamabad (the capital city of Pakistan, | **پاکستان کا دارالحکومت** |
+| اپنا ملک | apna mulk | motherland | **وطن، دھرتی** |
+| بارے میں | bare men | about, concerning, regarding | **کے متعلق، بابت — «اس کے بارے میں»** |
+| خواتین | khavateen | plural of خاتُون (xātūn, “lady”) | **«خاتون» کی جمع: عورتیں** |
+| دوسری اور | doosri or | on the other hand; conversely | **دوسری جانب؛ اِس کے برعکس** |
+| شروع کرنا | shuru karna | to begin; to start | **آغاز کرنا، چھیڑنا** |
+| صلی | salla | only used in صلیٰ اللہ علیہ وسلم (sallā- | **درود کے کلمے «صلی اللہ علیہ وسلم» کا جزو** |
+| عام طور سے | amm taur se | usually; generally; normally | **اکثر، بالعموم** |
+| عام طور پر | am taur par | usually, normally; generally | **اکثر، بالعموم — «عام طور پر گرم»** |
+| علی آباد | ali abad | Aliabad (a city in Hunza district, Gilgi | **ہنزہ (گلگت بلتستان) کا ایک شہر** |
+| ممالک | mamalik | plural of مَمْلُکَت /مَمْلَکَت (mamlukat | **«ملک» کی جمع: کئی ملک** |
+| بغیر | baghair | without | **بن، سوا — «بغیر پوچھے»** |
+| جسے | jise | whom; to which (relative) | **جس کو — «جسے چاہو دو»** |
+| اندر | andar | inside; within | **بھیتر، کسی چیز کے بیچ — «کمرے کے اندر»** |
+| میرا | mera | my; mine (m.) | **مجھ سے تعلق، مذکر — «میرا نام»** |
+| ہوگی | hogi | will be (f.) | **آگے چل کر ہونا، مؤنث — «بات ہوگی»** |
+| آگے | aage | ahead; in front; further | **سامنے کی جانب؛ آئندہ — «آگے بڑھو»** |
+| ابھی بھی | abhi bhi | yet | **اِس وقت بھی، ہنوز** |
+| ابھی تک | abhi tak | yet, still | **اِس گھڑی لگ، ہنوز** |
+| اس جگہ پر | is jagah par | hither | **اِسی مقام پر، یہاں** |
+| انتخابات | intikhabat | broken plural of اِنْتِخاب (intixāb) | **«انتخاب» کی جمع: ووٹ کا چناؤ، الیکشن** |
+| بار بار | bar-bar | again and again, over and over, time and | **پھر پھر، گھڑی گھڑی** |
+| بچوں | bachchon | oblique plural of بَچَّہ (bacca, “kid; b | **«بچہ» کی بدلی جمع — «بچوں کو بلاؤ»** |
+| بچے | bachche | inflection of بَچَّہ (bacca, “kid; boy”) | **«بچہ» کی جمع — «بچے کھیلتے ہیں»** |
+| بڑا دن | bara din | Christmas | **کرسمس، عیسائیوں کا تہوار** |
+| بہتر | bahattar | seventy-two; comparative degree of اَچّھ | **بَہَتَّر: ۷۲ · بِہْتَر: زیادہ اچھا، برتر** |
+| بے زبان | bezaban | speechless | **جو بول نہ سکے، گونگا؛ بے بس** |
+| روپے | roope | oblique/vocative singular; direct plural | **«روپیہ» کی جمع و بدلی شکل — «دس روپے»** |
+| علاقے | ilaqe | inflection of عِلاقَہ ('ilāqa, “area”):  | **«علاقہ» کی جمع و بدلی شکل** |
+| متعلق | mutaalliq | concerning, belonging to, relating to, a | **بارے میں؛ جڑا ہوا — «اس کے متعلق»** |
+| نظر نواز | nazar-navaz | attractive | **آنکھوں کو بھلا لگنے والا، دلکش** |
+| وزیر آباد | vazeerabad | Wazirabad (a city in Wazirabad district, | **پنجاب (پاکستان) کا ایک شہر** |
+| پولیس والا | pulis vala | policeman | **سپاہی، پولیس کا آدمی** |
+| پی ٹی آئی | pi ti ai | initialism of پْریس ٹْرَسْٹ آف اِنْڈِیا  | **مخفف: پاکستان تحریکِ انصاف؛ بھارتی خبر ادارہ بھی** |
+| کیا حال ہے | kya hal hai | how are you?, how's it going? | **خیریت پوچھنے کا جملہ** |
+| کے اندر | ke andar | inside, within, in; under, within | **بھیتر، بیچ میں — «گھر کے اندر»** |
+| پیچھے | peechhe | behind; after | **پیٹھ کی جانب؛ بعد میں — «گھر کے پیچھے»** |
+| بے خبر | be-khabar | unaware; oblivious | **انجان، جسے پتا نہ ہو** |
+| لاکھ | lakh | hundred thousand (lakh) | **۱۰۰۰۰۰، سو ہزار** |
+| پانچ | paanch | five | **۵** |
+| نا | na | isn't it?; not (colloquial) | **نہیں (بول چال) — «ہے نا؟»** |
+| او | o | O!; hey (address) | **پکار کا حرف — «او بھائی!»** |
+| آج کل | aj kal | nowadays | **اِن دنوں، اِس زمانے میں** |
+| ا | a | A negating prefix. non-, un-, a-, an-, e | **نفی کا سابقہ: نہ، بغیر (اَ)** |
+| ا- | a | A negating prefix. non-, un-, a-, an-, e | **نفی کا سابقہ: نہ، بغیر (جوڑ کر)** |
+| اب سے آگے | ab se age | henceforward | **آئندہ، آگے چل کر** |
+| احمد آباد | ahmad abad | Ahmedabad, Amdavad (the largest city in  | **بھارتی گجرات کا سب سے بڑا شہر** |
+| اختیار کرنا | ikhtiyar karna | to undertake; to adopt; to espouse | **اپنانا، قبول کرنا — «راہ اختیار کی»** |
+| اس قابل | is qabil | up to | **اِس لائق — «اس قابل نہیں»** |
+| استعمال کرنے والا | istemal karne vala | user, consumer | **برتنے والا، صارف** |
+| اصل میں | asl men | in fact; really; actually | **حقیقت میں، دراصل** |
+| باہر والا | bahar vala | An employee of a teahouse or restaurant  | **چائے کھانا دفتروں تک پہنچانے والا ملازم** |
+| بند کرنا | band karna | to close; to turn off, to switch off; to | **موندنا، روک دینا؛ بجھانا — «دروازہ بند کرو»** |
+| بے اختیار | be ikhtiyar | without control or authority, helplessne | **بس سے باہر، مجبور؛ بے ساختہ** |
+| بے کار | be-kar | useless; good-for-nothing; unemployed | **جس کا کوئی کام نہ ہو، نکما؛ فضول** |
+| حاصل ہونا | hasil hona | to obtain; acquire; gain | **ملنا، ہاتھ آنا** |
+| خاص طور پر | khas taur par | especially, for the most part, specially | **خصوصاً، بالخصوص** |
+| ذرائع | zarai | formal plural of ذَرِیعَہ (zariya) | **«ذریعہ» کی جمع: وسیلے، راستے** |
+| علاقوں | ilaqon | oblique plural of عِلاقَہ ('ilāqa, “area | **«علاقہ» کی بدلی جمع — «دور کے علاقوں میں»** |
+| قومی زبان | qaumi zuban | a national language | **پوری قوم کی مشترک زبان** |
+| مسلمانوں | musalmanon | plural of مسلمان | **«مسلمان» کی بدلی جمع** |
+| وزیر اعظم | vazeer-i azam | grand vizier; prime minister | **حکومت کا سربراہ** |
+| وہی | vahi | he, she, it, they, that, those; that ver | **وہ ہی، اُسی طرح کا — «وہی بات»** |
+| کون | kaun | subjective interrogative pronoun used to | **سوال: کون سا شخص؟ — «کون آیا؟»** |
+| ہاں | han | yes | **جی، بےشک — اقرار کا لفظ** |
+| مجھ | mujh | me (oblique) | **«میں» کی بدلی شکل — «مجھ سے»** |
+| تمہیں | tumhen | to you; you (familiar) | **تم کو — «تمہیں کیا ہوا؟»** |
+| تمہارے | tumhare | your; yours (pl./oblique) | **تم سے تعلق، جمع و مغیرہ — «تمہارے گھر»** |
+| ہمارا | hamara | our; ours (m.) | **ہم سے تعلق، مذکر — «ہمارا وطن»** |
+| بے قرار | be-qarar | restless; uneasy | **بےچین، مضطرب** |
