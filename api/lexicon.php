@@ -9,7 +9,12 @@
    Data: public_html/uz-data/lexicon.live.json + suggest.json  (دونوں repo سے باہر — git deploy اِنہیں نہیں چھوتا)
    ============================================================ */
 header('Content-Type: application/json; charset=utf-8');
-$KEY  = '0ff4938111d1613b3b80b42624335ef3769141e7fd434da9';   /* بدلنا ہو تو یہیں */
+/* چابی repo میں نہیں — سرور پر الگ فائل میں: uz-data/uz-config.php
+   (وہ فائل GitHub پر نہیں جاتی، اِس لیے deploy اُسے چھوتا بھی نہیں)
+   نمونہ:  <?php return ['admin_key' => 'یہاں نئی لمبی چابی'];               */
+$KEY  = '';
+$CFG  = dirname(__DIR__) . '/uz-data/uz-config.php';
+if (is_file($CFG)) { $c = @include $CFG; if (is_array($c) && !empty($c['admin_key'])) $KEY = (string)$c['admin_key']; }
 $DIR  = dirname(__DIR__) . '/uz-data';
 $LEX  = $DIR . '/lexicon.live.json';   /* deploy کی زد سے باہر — repo میں نہیں */
 $SUG  = $DIR . '/suggest.json';
@@ -51,8 +56,13 @@ if ($act === 'suggest') {
     exit;
 }
 
-/* یہاں سے آگے چابی لازم */
-if (($_POST['key'] ?? '') !== $KEY) { http_response_code(403); echo '{"ok":false,"err":"key"}'; exit; }
+/* یہاں سے آگے چابی لازم — چابی سرور پر نہ ہو تو دروازہ بند (کھلا نہیں) */
+if (!is_string($KEY) || strlen($KEY) < 16) {
+    http_response_code(503);
+    echo '{"ok":false,"err":"noconfig"}';
+    exit;
+}
+if (!hash_equals($KEY, (string)($_POST['key'] ?? ''))) { http_response_code(403); echo '{"ok":false,"err":"key"}'; exit; }
 
 if ($act === 'suggestions') {
     $s = readj($SUG, ['items'=>[]]);
