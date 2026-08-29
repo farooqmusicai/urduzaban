@@ -26,6 +26,43 @@ const pick = () => { try{ return VOICES[localStorage.getItem(VKEY)] || VOICES.au
 
 let speaking=false, stopped=false;
 
+/* ---------------- talaffuz ki lughat ----------------
+   Do jagah se aati hai, dono milti hain:
+     1) qarina-tts/talaffuz.json      — bunyadi (repo mein)
+     2) api/lexicon.php?action=get    — Farooq ki apni durustiyan (admin se), yehi upar rehti hain
+   Har safhe par lagti hai — lughat, tarjuman, qarina, admin. 5 minute cache.        */
+const LUG_TTL = 5*60*1000;
+let lugVal=null, lugAt=0, lugP=null;
+function applyLug(t, m){
+  if(!m) return t;
+  return String(t).replace(/[\p{L}\p{M}]+/gu, w=>{
+    const k=w.replace(/[^\p{L}]/gu,'');
+    return (k && Object.prototype.hasOwnProperty.call(m,k)) ? m[k] : w;
+  });
+}
+async function lughat(){
+  if(lugVal && (Date.now()-lugAt) < LUG_TTL) return lugVal;
+  if(lugP) return lugP;
+  lugP = (async()=>{
+    const out={};
+    try{
+      const d=await (await fetch(new URL('talaffuz.json', BASE), {cache:'no-cache'})).json();
+      for(const k in d) if(k!=='_' && typeof d[k]==='string' && k) out[k]=d[k];
+    }catch{}
+    try{
+      const j=await (await fetch(new URL('../api/lexicon.php?action=get&t='+Date.now(), BASE), {cache:'no-store'})).json();
+      const sp=(j&&j.speak)||{};
+      for(const k in sp) if(typeof sp[k]==='string' && k) out[k]=sp[k];   /* admin ki durusti hamesha upar */
+    }catch{}
+    lugVal=out; lugAt=Date.now(); lugP=null; return out;
+  })();
+  return lugP;
+}
+/* admin mein kuch mehfooz ho to foran naya talaffuz — intezar nahi */
+export function refreshLughat(){ lugVal=null; lugAt=0; lugP=null; return lughat(); }
+export async function lughatCount(){ return Object.keys(await lughat()).length; }
+
+
 /* ---------------- purani awaz: eSpeak (hameshah maujood) ---------------- */
 let factoryP=null;
 function factory(){
@@ -151,7 +188,7 @@ export async function speak(text, opts={}, cb={}){
     /* pehle nayi awaz — agar mumkin ho */
     try{
       await neuralReady();
-      const r=await call({t:'phon', segs:[String(text)]});
+      const r=await call({t:'phon', segs:[String(text)], lughat: await lughat()});
       const ids=r.ids[0]||[];
       if(ids.length>=3){
         const ls = wcfg.ls * (opts.wpm ? Math.max(0.6, Math.min(1.8, 145/opts.wpm)) : 1);
@@ -162,7 +199,7 @@ export async function speak(text, opts={}, cb={}){
     }catch(e){ /* neural na chali to neeche purani chalegi */ }
 
     /* purani awaz — eSpeak */
-    const wav=await espeakWav(String(text), opts);
+    const wav=await espeakWav(applyLug(String(text), lugVal), opts);   /* purani awaz par bhi lughat */
     if(stopped){ speaking=false; return; }
     const url=URL.createObjectURL(new Blob([wav],{type:'audio/wav'}));
     const a=new Audio(url); window.__qtts_audio=a;
