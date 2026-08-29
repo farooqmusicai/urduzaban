@@ -113,23 +113,21 @@ body.kb-open #w{padding-bottom:430px;}
   <div class="card">
     <label>انتظامی چابی (ایک بار — یاد رہے گی) <span class="en">Admin key</span></label>
     <input type="password" id="key" class="ltr" placeholder="admin key">
+    <div class="row"><span class="hint" id="kgState">حالت دیکھی جا رہی ہے…</span></div>
     <div class="row">
       <button id="kgMake">🔑 نئی چابی بنائیے</button>
-      <span class="hint">چابی آپ ہی کے براؤزر میں بنتی ہے — کہیں بھیجی نہیں جاتی۔</span>
+      <span class="hint">چابی آپ ہی کے براؤزر میں بنتی ہے اور سیدھی سرور پر لگ جاتی ہے — Claude تک نہیں آتی۔</span>
     </div>
     <div id="kgBox" style="display:none;">
-      <b>نئی چابی تیار — تین قدم، دو منٹ</b>
+      <b>نئی چابی تیار اور سرور پر لگ گئی</b>
       <code id="kgKey"></code>
       <div class="row">
         <button id="kgCopyKey">چابی نقل کریں</button>
         <button id="kgCopyFile">فائل کا پورا متن نقل کریں</button>
       </div>
-      <ol>
-        <li>Hostinger → <b>File Manager</b> → <span dir="ltr">public_html/uz-data/</span> کھولیے</li>
-        <li>نئی فائل بنائیے: <b dir="ltr">uz-config.php</b> — اور اُس میں یہ متن چسپاں کر کے محفوظ کیجیے:
-          <pre id="kgFile"></pre></li>
-        <li>بس۔ اوپر والے خانے میں یہی نئی چابی خودبخود لگ چکی ہے۔ صفحہ تازہ کر کے جانچ لیجیے۔</li>
-      </ol>
+      <p class="hint" style="margin:8px 0 0;">چابی سرور پر خود لگ چکی ہے — <b>File Manager کھولنے کی ضرورت نہیں</b>۔ اِسے کہیں محفوظ رکھنا ہو تو نقل کر لیجیے۔
+      اگر کبھی خودکار نہ لگ سکے تو یہ متن <b dir="ltr">uz-private/uz-config.php</b> میں ہاتھ سے رکھ دیجیے:</p>
+      <pre id="kgFile"></pre>
       <p class="hint" style="margin:10px 0 0;"><b style="color:var(--bad)">پرانی چابی مر چکی ہے</b> — نئی فائل بنتے ہی صرف یہ چابی چلے گی۔
       یہ فائل GitHub پر کبھی نہیں جاتی، اِس لیے آئندہ کوئی deploy اُسے مٹا نہیں سکتا۔</p>
     </div>
@@ -533,17 +531,44 @@ $("key").addEventListener("input",()=>{ try{ localStorage.setItem("uz-admin-key"
   clearTimeout(keyDeb); keyDeb=setTimeout(loadReq,600); });
 loadReq();
 
-/* ---------- 🔑 نئی چابی (سب کچھ اِسی براؤزر میں) ---------- */
+/* ---------- 🔑 چابی: بنائیے اور سرور پر لگائیے ---------- */
 (function(){
   const mk=()=>[...crypto.getRandomValues(new Uint8Array(24))].map(b=>b.toString(16).padStart(2,"0")).join("");
-  const fileTxt=k=>"<?php\n/* urduzaban — انتظامی چابی۔ یہ فائل GitHub پر کبھی نہ ڈالیں۔ */\nreturn ['admin_key' => '"+k+"'];\n";
+  const fileTxt=k=>"<?php\nreturn ['admin_key' => '"+k+"'];\n";
   async function cp(t,btn){ try{ await navigator.clipboard.writeText(t); const o=btn.textContent; btn.textContent="✔ نقل ہو گیا"; setTimeout(()=>btn.textContent=o,1600);}catch(e){ say("نقل نہ ہو سکا — ہاتھ سے منتخب کر لیجیے"); } }
-  $("kgMake").onclick=()=>{
+  async function health(){ try{ return await (await fetch("api/lexicon.php?action=health&t="+Date.now(),{cache:"no-store"})).json(); }catch(e){ return null; } }
+  async function paint(){
+    const h=await health(); const el=$("kgState"); if(!el) return h;
+    if(!h){ el.innerHTML='<b style="color:var(--bad)">server تک بات نہیں پہنچی</b>'; return h; }
+    const safe = h.store!=="public_html";
+    el.innerHTML = (h.config
+        ? '<b style="color:var(--ok)">✔ چابی سرور پر لگی ہوئی ہے</b>'
+        : '<b style="color:var(--bad)">✖ سرور پر کوئی چابی نہیں — نیچے بٹن دبائیے</b>')
+      + ' · ذخیرہ: ' + (safe
+        ? '<b style="color:var(--ok)">public_html سے باہر (deploy محفوظ)</b>'
+        : '<b style="color:var(--bad)">public_html کے اندر — deploy پر مٹ سکتا ہے</b>');
+    $("kgMake").style.display = h.config ? "none" : "";
+    return h;
+  }
+  paint();
+  $("kgMake").onclick=async()=>{
+    const h=await health();
+    if(h && h.config){ say("چابی پہلے سے لگی ہوئی ہے — بدلنی ہو تو فائل ہاتھ سے بدلیے"); paint(); return; }
     const k=mk();
-    $("kgKey").textContent=k; $("kgFile").textContent=fileTxt(k);
-    $("kgBox").style.display="";
-    $("key").value=k; try{ localStorage.setItem("uz-admin-key",k); }catch(e){}
-    say("نئی چابی بن گئی — اب سرور پر uz-config.php بنائیے");
+    $("kgMake").disabled=true; $("kgMake").textContent="لگا رہا ہوں…";
+    let j=null;
+    try{ const b=new URLSearchParams(); b.set("action","setkey"); b.set("newkey",k);
+         j=await (await fetch("api/lexicon.php",{method:"POST",body:b})).json(); }catch(e){}
+    $("kgMake").disabled=false; $("kgMake").textContent="🔑 نئی چابی بنائیے";
+    if(j && j.ok){
+      $("key").value=k; try{ localStorage.setItem("uz-admin-key",k); }catch(e){}
+      $("kgKey").textContent=k; $("kgFile").textContent=fileTxt(k);
+      $("kgBox").style.display="";
+      say("✔ چابی بن کر سرور پر لگ گئی — اب سب چل جائے گا");
+      await paint(); loadReq(); load();
+    } else if(j && j.err==="exists"){ say("چابی پہلے سے موجود ہے"); paint(); }
+    else { $("kgKey").textContent=k; $("kgFile").textContent=fileTxt(k); $("kgBox").style.display="";
+           say("خودکار نہ لگ سکی — نیچے والا متن ہاتھ سے فائل میں رکھ دیجیے"); }
   };
   $("kgCopyKey").onclick=e=>cp($("kgKey").textContent,e.target);
   $("kgCopyFile").onclick=e=>cp($("kgFile").textContent,e.target);
@@ -571,14 +596,16 @@ loadReq();
     const t=cur(); if(!t) return;
     $("tjNew").textContent=t.new; $("tjOld").textContent=t.old;
     $("tjRoman").textContent=t.r||"—"; $("tjWhy").textContent=t.why||"";
-    const done=Object.keys(marks).length, bad=Object.values(marks).filter(v=>v==="bad").length;
-    $("tjCount").innerHTML='<span class="tjdone">'+(i+1)+" / "+TJ.length+" · نشان زدہ <b class=\"ok\">"+done+"</b>"+(bad?" · غلط <b class=\"bad\">"+bad+"</b>":"")+"</span>";
+    const vals=Object.values(marks);
+    const done=vals.length, bad=vals.filter(v=>v==="bad").length, fixed=vals.filter(v=>v==="fixed").length;
+    $("tjCount").innerHTML='<span class="tjdone">'+(i+1)+" / "+TJ.length+" · نشان زدہ <b class=\"ok\">"+done+"</b>"
+      +(bad?" · غلط باقی <b class=\"bad\">"+bad+"</b>":"")+(fixed?" · درست شدہ <b class=\"ok\">"+fixed+"</b>":"")+"</span>";
     $("tjFill").style.width=(100*(i+1)/TJ.length)+"%";
     const m=marks[t.id];
     if(m!=="bad") $("tjFix").style.display="none";
-    $("tjOk").classList.toggle("on", m==="ok");
+    $("tjOk").classList.toggle("on", m==="ok"||m==="fixed");
     $("tjBad").classList.toggle("on", m==="bad");
-    $("tjStat").textContent = m==="ok" ? "✔ ٹھیک" : m==="bad" ? "✖ غلط — درخواست بھیجی جا چکی" : "";
+    $("tjStat").textContent = m==="fixed" ? "✔ درست ہو کر محفوظ" : m==="ok" ? "✔ ٹھیک" : m==="bad" ? "✖ غلط — درستی باقی" : "";
   }
   async function speakWord(text){
     if(busy) return;
@@ -637,10 +664,12 @@ loadReq();
     const t=cur(); if(!t) return;
     const v=$("tjFixIn").value.trim();
     if(await saveOne(t.w, v)){
+      marks[t.id]="fixed"; save();          /* اب یہ دوبارہ «غلط» میں نہیں آئے گا */
       await speakWord(v);
-      $("tjStat").textContent="✔ محفوظ — پوری سائٹ پر لاگو";
       $("tjFix").style.display="none";
-      if(i<TJ.length-1){ i++; show(); }
+      show();
+      $("tjStat").textContent="✔ درست ہو کر محفوظ — پوری سائٹ پر لاگو";
+      setTimeout(()=>{ if(i<TJ.length-1){ i++; show(); } }, 900);
     }
   };
   $("tjFixIn").addEventListener("focus",()=>{ taT=$("tjFixIn"); });
@@ -649,9 +678,14 @@ loadReq();
   $("tjBad").onclick=()=> mark("bad");
   $("tjReset").onclick=()=>{ marks={}; save(); i=0; show(); $("tjOut").innerHTML=""; };
   $("tjList").onclick=()=>{
-    const bad=TJ.filter(x=>marks[x.id]==="bad");
-    if(!bad.length){ $("tjOut").innerHTML='<span class="hint">ابھی کوئی لفظ «غلط» نشان زدہ نہیں۔</span>'; return; }
-    $("tjOut").innerHTML=bad.map(x=>'<div class="req"><span class="w">'+esc(x.new)+'</span><span class="meta">'+esc(x.r||"")+"</span></div>").join("");
+    const bad=TJ.filter(x=>marks[x.id]==="bad"), fx=TJ.filter(x=>marks[x.id]==="fixed");
+    let h="";
+    if(bad.length) h+='<p class="hint" style="margin:6px 0 2px;"><b style="color:var(--bad)">درستی باقی ('+bad.length+')</b></p>'+
+      bad.map((x,n)=>'<div class="req"><span class="w">'+esc(x.new)+'</span><span class="meta">'+esc(x.r||"")+'</span><button data-go="'+TJ.indexOf(x)+'">یہاں جائیے ↑</button></div>').join("");
+    if(fx.length) h+='<p class="hint" style="margin:10px 0 2px;"><b style="color:var(--ok)">درست ہو چکے ('+fx.length+')</b></p>'+
+      fx.map(x=>'<div class="req"><span class="w">'+esc(x.new)+'</span><span class="meta">'+esc(x.r||"")+' ✔</span></div>').join("");
+    $("tjOut").innerHTML = h || '<span class="hint">ابھی کوئی نشان نہیں۔</span>';
+    [...$("tjOut").querySelectorAll("button[data-go]")].forEach(b=>b.onclick=()=>{ stopAuto(); i=+b.dataset.go; show(); $("tjBad").click(); });
   };
 })();
 </script>
