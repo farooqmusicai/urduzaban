@@ -152,6 +152,7 @@ body.kb-open #w{padding-bottom:430px;}
       </div>
       <div class="tjbar"><i id="tjFill"></i></div>
       <div class="row">
+        <select id="tjVoice" title="آواز — بدل کر دوبارہ سنیے"></select>
         <button class="primary" id="tjPlay">▶ خودکار سنیے</button>
         <button id="tjAgain">🔊 دوبارہ</button>
         <button id="tjOldPlay" title="پرانی، غلط شکل — فرق سننے کے لیے">پہلے والا سنیے</button>
@@ -173,7 +174,7 @@ body.kb-open #w{padding-bottom:430px;}
         <span><button id="tjList">فہرست دیکھیں</button> <button id="tjReset" title="سب نشان مٹا کر پہلے سے">دوبارہ شروع</button></span>
       </div>
       <div id="tjOut" style="margin-top:8px;"></div>
-      <p class="hint" style="margin:10px 0 0;">خودکار حالت میں ہر لفظ خود بجتا ہے اور اگلا آ جاتا ہے۔ ✔/✖ دباتے ہی اگلا لفظ۔ نشان اِسی براؤزر میں محفوظ رہتے ہیں — بیچ میں چھوڑ کر بعد میں وہیں سے جاری رکھ سکتے ہیں۔<span class="en">Auto mode plays each word and advances. Marks are kept in this browser, so you can stop and resume.</span></p>
+      <p class="hint" style="margin:10px 0 0;">آواز کی فہرست سے <b>«اردو — خودکار»</b> اور <b>«قرینہ»</b> کے درمیان بدل کر سن سکتے ہیں — چھوٹے الفاظ اکثر «خودکار» میں صاف نکلتے ہیں۔ خودکار حالت میں ہر لفظ خود بجتا ہے اور اگلا آ جاتا ہے۔ ✔/✖ دباتے ہی اگلا لفظ۔ نشان اِسی براؤزر میں محفوظ رہتے ہیں — بیچ میں چھوڑ کر بعد میں وہیں سے جاری رکھ سکتے ہیں۔<span class="en">Auto mode plays each word and advances. Marks are kept in this browser, so you can stop and resume.</span></p>
     </div>
   </div>
 
@@ -257,7 +258,15 @@ function mkVoices(){
   const cur=$("vsel").value; $("vsel").innerHTML=o;
   if(cur && [...$("vsel").options].some(x=>x.value===cur)) $("vsel").value=cur;
   else $("vsel").value = QTTS ? "__q__" : "__a__";
+  const tv=$("tjVoice");
+  if(tv){ const c2=tv.value; tv.innerHTML=o;
+    tv.value = (c2 && [...tv.options].some(x=>x.value===c2)) ? c2 : $("vsel").value; }
 }
+/* دونوں فہرستیں ایک ساتھ چلیں */
+document.addEventListener("change", e=>{
+  if(e.target && e.target.id==="tjVoice" && $("vsel")) $("vsel").value=e.target.value;
+  if(e.target && e.target.id==="vsel" && $("tjVoice")) $("tjVoice").value=e.target.value;
+});
 mkVoices();
 let alive=null;
 function speakA(text){
@@ -640,9 +649,22 @@ loadReq();
       /* چھوٹے لفظ نیورل آواز میں دب جاتے ہیں — اُنہیں آہستہ بلوائیے */
       const letters=(String(text).match(/\p{L}/gu)||[]).length;
       const wpm = letters<=3 ? 80 : letters<=5 ? 100 : 130;
-      if(QTTS){ if(QTTS.isSpeaking()) QTTS.stop(); await QTTS.speak(text,{wpm},{}); }
-      else if("speechSynthesis" in window){
-        await new Promise(res=>{ const u=new SpeechSynthesisUtterance(text); u.lang="ur-PK"; u.rate=.9; u.onend=u.onerror=res; speechSynthesis.speak(u); });
+      const pickV = ($("tjVoice") && $("tjVoice").value) || ($("vsel") && $("vsel").value) || (QTTS?"__q__":"__a__");
+      if(pickV==="__q__" && QTTS){
+        if(QTTS.isSpeaking()) QTTS.stop();
+        await QTTS.speak(text,{wpm},{});
+      } else if("speechSynthesis" in window){
+        if(speechSynthesis.speaking||speechSynthesis.pending) speechSynthesis.cancel();
+        const v = pickV==="__a__"
+          ? (VOICES.find(x=>/^ur/i.test(x.lang))||VOICES.find(x=>/^ar/i.test(x.lang))||VOICES.find(x=>/^hi/i.test(x.lang))||VOICES[0])
+          : VOICES.find(x=>x.name===pickV);
+        await new Promise(res=>{
+          const u=new SpeechSynthesisUtterance(text);
+          if(v){ u.voice=v; u.lang=v.lang; } else u.lang="ur-PK";
+          u.rate = letters<=3 ? .7 : letters<=5 ? .8 : .95;
+          u.onend=u.onerror=res; speechSynthesis.speak(u);
+          setTimeout(res, 6000);            /* کبھی onend نہ آئے تو اٹکے نہیں */
+        });
       }
     }catch(e){}
     busy=false;
