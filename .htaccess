@@ -46,3 +46,16 @@
     Deny from all
   </FilesMatch>
 </IfModule>
+
+<IfModule mod_authz_core.c>
+  # چابی والی فائل اور درخواستوں کا ذخیرہ — ویب سے کبھی نہ کھلیں۔
+  <FilesMatch "^(uz-config\.php|suggest\.json|lexicon\.live\.prev\.json)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^(uz-config\.php|suggest\.json|lexicon\.live\.prev\.json)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>

@@ -89,6 +89,13 @@ body.kb-open #w{padding-bottom:430px;}
 #tjCard button.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
 #tjCard .tjdone{font-size:15px;}
 #tjCard .tjdone b.ok{color:var(--ok);} #tjCard .tjdone b.bad{color:var(--bad);}
+#kgBox{margin-top:12px; padding:14px 16px; border:1px solid var(--accent); border-radius:11px; background:var(--warn-wash);}
+#kgBox ol{margin:10px 0 0; padding-inline-start:20px; font-size:15px;}
+#kgBox li{margin-bottom:7px;}
+#kgBox pre{margin:8px 0 0; padding:11px 13px; background:var(--card); border:1px solid var(--line); border-radius:9px;
+  overflow-x:auto; direction:ltr; text-align:left; font-family:ui-monospace,Menlo,monospace; font-size:13px; line-height:1.8; white-space:pre; user-select:all;}
+#kgKey{font-family:ui-monospace,monospace; font-size:14px; word-break:break-all; direction:ltr; user-select:all;
+  background:var(--card); border:1px dashed var(--accent); border-radius:8px; padding:9px 11px; display:block; margin-top:8px;}
 #tjCard .fixbox, .req .fixbox{flex-basis:100%; display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:9px; padding-top:9px; border-top:1px dashed var(--line);}
 .req{flex-wrap:wrap;}
 .fixin{flex:1; min-width:190px; border:1px solid var(--accent); border-radius:9px; background:var(--paper); color:var(--ink);
@@ -106,6 +113,26 @@ body.kb-open #w{padding-bottom:430px;}
   <div class="card">
     <label>انتظامی چابی (ایک بار — یاد رہے گی) <span class="en">Admin key</span></label>
     <input type="password" id="key" class="ltr" placeholder="admin key">
+    <div class="row">
+      <button id="kgMake">🔑 نئی چابی بنائیے</button>
+      <span class="hint">چابی آپ ہی کے براؤزر میں بنتی ہے — کہیں بھیجی نہیں جاتی۔</span>
+    </div>
+    <div id="kgBox" style="display:none;">
+      <b>نئی چابی تیار — تین قدم، دو منٹ</b>
+      <code id="kgKey"></code>
+      <div class="row">
+        <button id="kgCopyKey">چابی نقل کریں</button>
+        <button id="kgCopyFile">فائل کا پورا متن نقل کریں</button>
+      </div>
+      <ol>
+        <li>Hostinger → <b>File Manager</b> → <span dir="ltr">public_html/uz-data/</span> کھولیے</li>
+        <li>نئی فائل بنائیے: <b dir="ltr">uz-config.php</b> — اور اُس میں یہ متن چسپاں کر کے محفوظ کیجیے:
+          <pre id="kgFile"></pre></li>
+        <li>بس۔ اوپر والے خانے میں یہی نئی چابی خودبخود لگ چکی ہے۔ صفحہ تازہ کر کے جانچ لیجیے۔</li>
+      </ol>
+      <p class="hint" style="margin:10px 0 0;"><b style="color:var(--bad)">پرانی چابی مر چکی ہے</b> — نئی فائل بنتے ہی صرف یہ چابی چلے گی۔
+      یہ فائل GitHub پر کبھی نہیں جاتی، اِس لیے آئندہ کوئی deploy اُسے مٹا نہیں سکتا۔</p>
+    </div>
   </div>
 
   <div class="card" id="reqCard">
@@ -135,7 +162,7 @@ body.kb-open #w{padding-bottom:430px;}
       </div>
       <div class="row">
         <button id="tjOk" class="tjok">✔ ٹھیک ہے</button>
-        <button id="tjBad" class="tjbad">✖ غلط ہے — اوپر درخواست میں بھیجیں</button>
+        <button id="tjBad" class="tjbad">✖ غلط ہے — درست کریں</button>
         <span id="tjStat" class="hint"></span>
       </div>
       <div class="fixbox" id="tjFix" style="display:none;">
@@ -364,7 +391,7 @@ async function saveOne(word, form){
       setStat("✔ «"+k+"» محفوظ ہو گیا — لغت میں کل "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):""), true);
       await load(); loadReq(); return true;
     }
-    setStat(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا", false); return false;
+    setStat(j.err==="noconfig"?"سرور پر uz-config.php نہیں ہے — اوپر «🔑 نئی چابی بنائیے» دیکھیے":(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا"), false); return false;
   }catch(e){ setStat("server تک بات نہ پہنچی", false); return false; }
 }
 $("save").onclick=async()=>{
@@ -377,7 +404,7 @@ $("save").onclick=async()=>{
     body.set("action","save"); body.set("key",KEYV()); body.set("data",JSON.stringify({speak}));
     const r=await fetch("api/lexicon.php",{method:"POST",body}); const j=await r.json();
     if(j.ok){ setStat("✔ محفوظ — "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):"")+(badL?(" ("+badL+" سطریں سمجھ نہ آئیں)"):""), true); loadReq(); }
-    else setStat(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا", false);
+    else setStat(j.err==="noconfig"?"سرور پر uz-config.php نہیں ہے — اوپر «🔑 نئی چابی بنائیے» دیکھیے":(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا"), false);
   }catch(e){ setStat("server تک بات نہ پہنچی", false); }
 };
 
@@ -426,7 +453,7 @@ async function loadReq(){
       el.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault();
         $("reqList").querySelector('button[data-a="put"][data-i="'+el.dataset.i+'"]').click(); } });
     });
-  }catch(e){ $("reqList").innerHTML='<span class="hint">درخواستیں نہ مل سکیں</span>'; }
+  }catch(e){ $("reqList").innerHTML='<span class="hint">درخواستیں نہ مل سکیں — چابی یا uz-config.php دیکھیے</span>'; }
 }
 $("reqReload").onclick=loadReq;
 
@@ -503,6 +530,22 @@ let keyDeb=null;
 $("key").addEventListener("input",()=>{ try{ localStorage.setItem("uz-admin-key",$("key").value); }catch(e){}
   clearTimeout(keyDeb); keyDeb=setTimeout(loadReq,600); });
 loadReq();
+
+/* ---------- 🔑 نئی چابی (سب کچھ اِسی براؤزر میں) ---------- */
+(function(){
+  const mk=()=>[...crypto.getRandomValues(new Uint8Array(24))].map(b=>b.toString(16).padStart(2,"0")).join("");
+  const fileTxt=k=>"<?php\n/* urduzaban — انتظامی چابی۔ یہ فائل GitHub پر کبھی نہ ڈالیں۔ */\nreturn ['admin_key' => '"+k+"'];\n";
+  async function cp(t,btn){ try{ await navigator.clipboard.writeText(t); const o=btn.textContent; btn.textContent="✔ نقل ہو گیا"; setTimeout(()=>btn.textContent=o,1600);}catch(e){ say("نقل نہ ہو سکا — ہاتھ سے منتخب کر لیجیے"); } }
+  $("kgMake").onclick=()=>{
+    const k=mk();
+    $("kgKey").textContent=k; $("kgFile").textContent=fileTxt(k);
+    $("kgBox").style.display="";
+    $("key").value=k; try{ localStorage.setItem("uz-admin-key",k); }catch(e){}
+    say("نئی چابی بن گئی — اب سرور پر uz-config.php بنائیے");
+  };
+  $("kgCopyKey").onclick=e=>cp($("kgKey").textContent,e.target);
+  $("kgCopyFile").onclick=e=>cp($("kgFile").textContent,e.target);
+})();
 
 /* ---------- 🎧 تلفظ سنیے ---------- */
 (function(){
