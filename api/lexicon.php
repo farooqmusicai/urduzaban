@@ -6,12 +6,12 @@
    POST action=suggestions&key=…       → درخواستوں کی فہرست (admin)
    POST action=resolve&key=…&word=…    → ایک درخواست ہٹائیے (admin)
    POST action=save&key=…&data=…       → لغت محفوظ (admin) + مماثل درخواستیں خود صاف
-   Data: public_html/uz-data/lexicon.json + suggest.json
+   Data: public_html/uz-data/lexicon.live.json + suggest.json  (دونوں repo سے باہر — git deploy اِنہیں نہیں چھوتا)
    ============================================================ */
 header('Content-Type: application/json; charset=utf-8');
 $KEY  = '0ff4938111d1613b3b80b42624335ef3769141e7fd434da9';   /* بدلنا ہو تو یہیں */
 $DIR  = dirname(__DIR__) . '/uz-data';
-$LEX  = $DIR . '/lexicon.json';
+$LEX  = $DIR . '/lexicon.live.json';   /* deploy کی زد سے باہر — repo میں نہیں */
 $SUG  = $DIR . '/suggest.json';
 
 function bare_ur($s){ return trim(preg_replace('/[\x{064B}-\x{0655}\x{0670}\x{0640}]/u', '', $s)); }
@@ -22,6 +22,10 @@ function writej($f,$j){ global $DIR; if(!is_dir($DIR)) @mkdir($DIR,0775,true);
 $act = $_REQUEST['action'] ?? 'get';
 
 if ($act === 'get') {
+    /* پہلی بار: پرانی lexicon.json میں کچھ ہو تو اُسے live میں اٹھا لیجیے */
+    $old = $DIR . '/lexicon.json';
+    if (!is_file($LEX) && is_file($old)) { $o = json_decode(file_get_contents($old), true);
+        if (is_array($o) && !empty($o['speak'])) @copy($old, $LEX); }
     if (is_file($LEX)) readfile($LEX); else echo '{"speak":{},"updated":null}';
     exit;
 }
@@ -76,7 +80,7 @@ if ($act === 'save') {
             $out['speak'][trim($k)] = trim($v); $n++;
         }
     }
-    if (is_file($LEX)) @copy($LEX, $DIR.'/lexicon.prev.json');
+    if (is_file($LEX)) @copy($LEX, $DIR.'/lexicon.live.prev.json');
     $ok = writej($LEX, $out);
     /* جس لفظ کی درستی لغت میں آ گئی، اس کی درخواست خود صاف */
     $s = readj($SUG, ['items'=>[]]);
