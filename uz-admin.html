@@ -577,21 +577,46 @@ loadReq();
 /* ---------- 🎧 تلفظ سنیے ---------- */
 (function(){
   const LS="uz-talaffuz-marks-v1";
-  let TJ=[], i=0, marks={}, auto=false, busy=false;
+  let TJ=[], i=0, marks={}, auto=false, busy=false, BATCH="";
   try{ marks=JSON.parse(localStorage.getItem(LS)||"{}"); }catch(e){ marks={}; }
   const save=()=>{ try{ localStorage.setItem(LS,JSON.stringify(marks)); }catch(e){} };
 
   fetch("uz-data/talaffuz-jaanch.json?t="+Date.now()).then(r=>r.json()).then(j=>{
     TJ=(j&&j.items)||[];
     if(!TJ.length){ $("tjHead").textContent="ابھی کوئی نئی تبدیلی نہیں — سب سنی جا چکی ✔"; return; }
-    $("tjHead").innerHTML=esc((j.batch&&j.batch.title)||"")+" — <b>"+TJ.length+"</b> الفاظ کا تلفظ بدلا ہے۔ سن کر بتائیے کون سا غلط ہے۔";
+    BATCH=(j.batch&&j.batch.title)||"";
     $("tjBox").style.display="";
-    const firstUnmarked=TJ.findIndex(x=>!marks[x.id]);
-    i = firstUnmarked<0 ? 0 : firstUnmarked;
-    show();
+    i = pickStart();
+    show(); paintHead();
+    /* سب سن لیے مگر ایک آدھ کی درستی باقی — سیدھا اُسی پر، خانہ کھلا */
+    if(allMarked() && marks[cur().id]==="bad"){
+      $("tjFix").style.display="flex"; $("tjFixIn").value=cur().new;
+    }
   }).catch(()=>{ $("tjHead").textContent="فہرست نہ مل سکی — «تازہ کریں» دبا کر دوبارہ کوشش کیجیے"; });
 
   function cur(){ return TJ[i]; }
+  const allMarked = () => TJ.length>0 && TJ.every(x=>marks[x.id]);
+  const badIdx = () => TJ.findIndex(x=>marks[x.id]==="bad");
+  function pickStart(){
+    const u=TJ.findIndex(x=>!marks[x.id]); if(u>=0) return u;   /* جو سنا ہی نہیں */
+    const b=badIdx(); if(b>=0) return b;                        /* پھر جس کی درستی باقی */
+    return TJ.length-1;                                         /* سب مکمل */
+  }
+  function paintHead(){
+    const v=Object.values(marks), done=v.length,
+          bad=v.filter(x=>x==="bad").length, fixed=v.filter(x=>x==="fixed").length;
+    if(done < TJ.length){
+      $("tjHead").innerHTML=esc(BATCH)+" — <b>"+TJ.length+"</b> الفاظ کا تلفظ بدلا ہے۔ سن کر بتائیے کون سا غلط ہے۔"
+        +(done?' <span class="hint">('+done+" سن چکے)</span>":"");
+    } else if(bad){
+      $("tjHead").innerHTML='<b style="color:var(--ok)">✔ سارے '+TJ.length+' سن لیے۔</b> صرف <b style="color:var(--bad)">'
+        +bad+'</b> لفظ کی درستی باقی ہے — وہی نیچے کھلا ہے۔';
+    } else {
+      $("tjHead").innerHTML='<b style="color:var(--ok)">✔ سارے '+TJ.length+' سن لیے — کچھ باقی نہیں۔</b>'
+        +(fixed?' <span class="hint">('+fixed+" درست کیے)</span>":"")
+        +' <span class="hint">اگلے تلفظ کے دور کی فہرست آتے ہی یہ خانہ خود بھر جائے گا۔</span>';
+    }
+  }
   function show(){
     const t=cur(); if(!t) return;
     $("tjNew").textContent=t.new; $("tjOld").textContent=t.old;
@@ -604,6 +629,7 @@ loadReq();
     const m=marks[t.id];
     if(m!=="bad") $("tjFix").style.display="none";
     $("tjOk").classList.toggle("on", m==="ok"||m==="fixed");
+    paintHead();
     $("tjBad").classList.toggle("on", m==="bad");
     $("tjStat").textContent = m==="fixed" ? "✔ درست ہو کر محفوظ" : m==="ok" ? "✔ ٹھیک" : m==="bad" ? "✖ غلط — درستی باقی" : "";
   }
@@ -625,10 +651,11 @@ loadReq();
       if(!auto) break;
       await new Promise(r=>setTimeout(r,1400));
       if(!auto) break;
-      if(i>=TJ.length-1){ stopAuto(); break; }
+      if(i>=TJ.length-1){ stopAuto(); endSummary(); break; }
       i++; show();
     }
   }
+  function endSummary(){ paintHead(); const b=badIdx(); if(b>=0){ i=b; show(); $("tjFix").style.display="flex"; $("tjFixIn").value=cur().new; } }
   function startAuto(){ auto=true; $("tjPlay").textContent="⏸ ٹھہریے"; $("tjPlay").classList.add("on"); loop(); }
   function stopAuto(){ auto=false; $("tjPlay").textContent="▶ خودکار سنیے"; $("tjPlay").classList.remove("on"); try{ QTTS&&QTTS.stop(); }catch(e){} }
 
@@ -676,7 +703,7 @@ loadReq();
   $("tjFixIn").addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); $("tjPut").click(); } });
   $("tjOk").onclick=()=>{ $("tjFix").style.display="none"; mark("ok"); };
   $("tjBad").onclick=()=> mark("bad");
-  $("tjReset").onclick=()=>{ marks={}; save(); i=0; show(); $("tjOut").innerHTML=""; };
+  $("tjReset").onclick=()=>{ marks={}; save(); i=0; show(); paintHead(); $("tjOut").innerHTML=""; $("tjFix").style.display="none"; };
   $("tjList").onclick=()=>{
     const bad=TJ.filter(x=>marks[x.id]==="bad"), fx=TJ.filter(x=>marks[x.id]==="fixed");
     let h="";
