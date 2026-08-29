@@ -2,6 +2,8 @@
 /* ============================================================
    urduzaban.com — تلفظ کی لغت + درخواستوں کا server
    GET  ?action=get                    → لغت (json) — عوامی
+   GET  ?action=health                 → حالت (کوئی راز نہیں)
+   POST action=setkey&newkey=…         → پہلی بار چابی رکھیے (صرف جب کوئی چابی نہ ہو)
    POST action=suggest&word=…&form=…   → مہمان کی درخواست (بغیر چابی)
    POST action=suggestions&key=…       → درخواستوں کی فہرست (admin)
    POST action=resolve&key=…&word=…    → ایک درخواست ہٹائیے (admin)
@@ -12,12 +14,23 @@ header('Content-Type: application/json; charset=utf-8');
 /* چابی repo میں نہیں — سرور پر الگ فائل میں: uz-data/uz-config.php
    (وہ فائل GitHub پر نہیں جاتی، اِس لیے deploy اُسے چھوتا بھی نہیں)
    نمونہ:  <?php return ['admin_key' => 'یہاں نئی لمبی چابی'];               */
-$KEY  = '';
-$CFG  = dirname(__DIR__) . '/uz-data/uz-config.php';
-if (is_file($CFG)) { $c = @include $CFG; if (is_array($c) && !empty($c['admin_key'])) $KEY = (string)$c['admin_key']; }
-$DIR  = dirname(__DIR__) . '/uz-data';
-$LEX  = $DIR . '/lexicon.live.json';   /* deploy کی زد سے باہر — repo میں نہیں */
+/* ذخیرہ public_html سے *باہر* — Hostinger کا git deploy public_html کے اندر کی
+   ہر غیر repo فائل مٹا دیتا ہے (29 اگست کو چابی اور لغت دونوں یوں ہی مٹیں)۔      */
+$ROOT = dirname(__DIR__);                    /* public_html            */
+$PRIV = dirname($ROOT) . '/uz-private';      /* public_html کے باہر    */
+if (!is_dir($PRIV)) @mkdir($PRIV, 0700, true);
+$DIR   = (is_dir($PRIV) && is_writable($PRIV)) ? $PRIV : $ROOT . '/uz-data';
+$INSIDE = ($DIR !== $PRIV);
+$LEX  = $DIR . '/lexicon.live.json';
 $SUG  = $DIR . '/suggest.json';
+$CFG  = $DIR . '/uz-config.php';
+/* پرانی جگہ سے ایک بار اٹھا لیجیے (اگر بچی ہو) */
+foreach ([['uz-config.php',$CFG], ['lexicon.live.json',$LEX], ['suggest.json',$SUG]] as $m) {
+    $o = $ROOT . '/uz-data/' . $m[0];
+    if (!is_file($m[1]) && is_file($o)) @copy($o, $m[1]);
+}
+$KEY = '';
+if (is_file($CFG)) { $c = @include $CFG; if (is_array($c) && !empty($c['admin_key'])) $KEY = (string)$c['admin_key']; }
 
 function bare_ur($s){ return trim(preg_replace('/[\x{064B}-\x{0655}\x{0670}\x{0640}]/u', '', $s)); }
 function readj($f,$d){ if(is_file($f)){ $j=json_decode(file_get_contents($f),true); if(is_array($j)) return $j; } return $d; }
@@ -32,6 +45,31 @@ if ($act === 'get') {
     if (!is_file($LEX) && is_file($old)) { $o = json_decode(file_get_contents($old), true);
         if (is_array($o) && !empty($o['speak'])) @copy($old, $LEX); }
     if (is_file($LEX)) readfile($LEX); else echo '{"speak":{},"updated":null}';
+    exit;
+}
+
+if ($act === 'health') {
+    /* کوئی راز نہیں — صرف حالت */
+    echo json_encode([
+        'ok'       => true,
+        'store'    => $INSIDE ? 'public_html' : 'outside',   /* outside = deploy سے محفوظ */
+        'writable' => is_writable($DIR),
+        'config'   => is_file($CFG),
+        'lexicon'  => is_file($LEX),
+    ]);
+    exit;
+}
+
+if ($act === 'setkey') {
+    /* پہلی بار چابی رکھنے کے لیے — اور صرف جب کوئی چابی موجود نہ ہو۔
+       ایک بار لگ جانے کے بعد یہ دروازہ ہمیشہ کے لیے بند۔                */
+    if (is_file($CFG) || $KEY !== '') { http_response_code(409); echo '{"ok":false,"err":"exists"}'; exit; }
+    $k = trim((string)($_POST['newkey'] ?? ''));
+    if (!preg_match('/^[A-Za-z0-9_\-]{32,128}$/', $k)) { echo '{"ok":false,"err":"weak"}'; exit; }
+    $php = "<?php\n/* urduzaban — انتظامی چابی۔ public_html سے باہر، اِس لیے deploy اِسے نہیں چھوتا۔ */\nreturn ['admin_key' => '" . $k . "'];\n";
+    $ok = @file_put_contents($CFG, $php);
+    if ($ok) @chmod($CFG, 0600);
+    echo json_encode(['ok' => (bool)$ok, 'store' => $INSIDE ? 'public_html' : 'outside']);
     exit;
 }
 
