@@ -75,6 +75,21 @@ body.kb-open #w{padding-bottom:430px;}
   transform:scale(1.3); font-weight:700;}
 #toast{position:fixed; bottom:20px; right:50%; transform:translateX(50%); background:var(--ink); color:var(--paper);
   padding:9px 20px; border-radius:999px; font-size:15px; opacity:0; pointer-events:none; transition:opacity .25s; z-index:400;}
+/* 🎧 تلفظ سنیے */
+#tjCard .tjword{text-align:center; padding:18px 10px 10px;}
+#tjCard .tjnew{font-family:"Noto Nastaliq Urdu",serif; font-size:52px; line-height:2.1; font-weight:700; color:var(--ink); word-break:break-word;}
+#tjCard .tjmeta{font-size:14px; color:var(--muted);}
+#tjCard .tjmeta .rom{direction:ltr; unicode-bidi:isolate; font-family:system-ui,sans-serif;}
+#tjCard .tjba{margin-top:8px; font-size:19px; color:var(--muted);}
+#tjCard .tjba s{color:var(--bad); text-decoration-thickness:1px;}
+#tjCard .tjbar{height:6px; background:var(--line); border-radius:99px; margin:14px 0 8px; overflow:hidden;}
+#tjCard .tjbar i{display:block; height:100%; width:0; background:var(--accent); transition:width .25s ease;}
+#tjCard button.tjok{border-color:var(--ok); color:var(--ok);}
+#tjCard button.tjbad{border-color:var(--bad); color:var(--bad);}
+#tjCard button.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
+#tjCard .tjdone{font-size:15px;}
+#tjCard .tjdone b.ok{color:var(--ok);} #tjCard .tjdone b.bad{color:var(--bad);}
+#tjOut .req{display:flex; gap:10px; align-items:center; flex-wrap:wrap; padding:6px 0; border-bottom:1px solid var(--line);}
 </style>
 </head>
 <body>
@@ -95,6 +110,37 @@ body.kb-open #w{padding-bottom:430px;}
       <button id="reqReload">تازہ کریں</button>
     </div>
     <div id="reqList"><span class="hint">چابی ڈالیے تو درخواستیں یہاں آئیں گی…</span></div>
+  </div>
+
+  <div class="card" id="tjCard">
+    <b style="font-size:17px;">🎧 تلفظ سنیے — نئی تبدیلیاں<span class="en">Listen to the newest pronunciation changes — mark anything wrong</span></b>
+    <p class="hint" id="tjHead" style="margin:8px 0 0;">فہرست لائی جا رہی ہے…</p>
+    <div id="tjBox" style="display:none;">
+      <div class="tjword">
+        <div class="tjnew" id="tjNew"></div>
+        <div class="tjmeta"><span class="rom" id="tjRoman"></span> · <span id="tjWhy"></span></div>
+        <div class="tjba">پہلے: <s id="tjOld"></s></div>
+      </div>
+      <div class="tjbar"><i id="tjFill"></i></div>
+      <div class="row">
+        <button class="primary" id="tjPlay">▶ خودکار سنیے</button>
+        <button id="tjAgain">🔊 دوبارہ</button>
+        <button id="tjOldPlay" title="پرانی، غلط شکل — فرق سننے کے لیے">پہلے والا سنیے</button>
+        <button id="tjPrev" title="پچھلا">⏮</button>
+        <button id="tjNext" title="اگلا">⏭</button>
+      </div>
+      <div class="row">
+        <button id="tjOk" class="tjok">✔ ٹھیک ہے</button>
+        <button id="tjBad" class="tjbad">✖ غلط ہے — اوپر درخواست میں بھیجیں</button>
+        <span id="tjStat" class="hint"></span>
+      </div>
+      <div class="row" style="justify-content:space-between;">
+        <span class="hint" id="tjCount"></span>
+        <span><button id="tjList">فہرست دیکھیں</button> <button id="tjReset" title="سب نشان مٹا کر پہلے سے">دوبارہ شروع</button></span>
+      </div>
+      <div id="tjOut" style="margin-top:8px;"></div>
+      <p class="hint" style="margin:10px 0 0;">خودکار حالت میں ہر لفظ خود بجتا ہے اور اگلا آ جاتا ہے۔ ✔/✖ دباتے ہی اگلا لفظ۔ نشان اِسی براؤزر میں محفوظ رہتے ہیں — بیچ میں چھوڑ کر بعد میں وہیں سے جاری رکھ سکتے ہیں۔<span class="en">Auto mode plays each word and advances. Marks are kept in this browser, so you can stop and resume.</span></p>
+    </div>
   </div>
 
   <div class="card">
@@ -411,6 +457,91 @@ let keyDeb=null;
 $("key").addEventListener("input",()=>{ try{ localStorage.setItem("uz-admin-key",$("key").value); }catch(e){}
   clearTimeout(keyDeb); keyDeb=setTimeout(loadReq,600); });
 loadReq();
+
+/* ---------- 🎧 تلفظ سنیے ---------- */
+(function(){
+  const LS="uz-talaffuz-marks-v1";
+  let TJ=[], i=0, marks={}, auto=false, busy=false;
+  try{ marks=JSON.parse(localStorage.getItem(LS)||"{}"); }catch(e){ marks={}; }
+  const save=()=>{ try{ localStorage.setItem(LS,JSON.stringify(marks)); }catch(e){} };
+
+  fetch("uz-data/talaffuz-jaanch.json?t="+Date.now()).then(r=>r.json()).then(j=>{
+    TJ=(j&&j.items)||[];
+    if(!TJ.length){ $("tjHead").textContent="ابھی کوئی نئی تبدیلی نہیں — سب سنی جا چکی ✔"; return; }
+    $("tjHead").innerHTML=esc((j.batch&&j.batch.title)||"")+" — <b>"+TJ.length+"</b> الفاظ کا تلفظ بدلا ہے۔ سن کر بتائیے کون سا غلط ہے۔";
+    $("tjBox").style.display="";
+    const firstUnmarked=TJ.findIndex(x=>!marks[x.id]);
+    i = firstUnmarked<0 ? 0 : firstUnmarked;
+    show();
+  }).catch(()=>{ $("tjHead").textContent="فہرست نہ مل سکی — «تازہ کریں» دبا کر دوبارہ کوشش کیجیے"; });
+
+  function cur(){ return TJ[i]; }
+  function show(){
+    const t=cur(); if(!t) return;
+    $("tjNew").textContent=t.new; $("tjOld").textContent=t.old;
+    $("tjRoman").textContent=t.r||"—"; $("tjWhy").textContent=t.why||"";
+    const done=Object.keys(marks).length, bad=Object.values(marks).filter(v=>v==="bad").length;
+    $("tjCount").innerHTML='<span class="tjdone">'+(i+1)+" / "+TJ.length+" · نشان زدہ <b class=\"ok\">"+done+"</b>"+(bad?" · غلط <b class=\"bad\">"+bad+"</b>":"")+"</span>";
+    $("tjFill").style.width=(100*(i+1)/TJ.length)+"%";
+    const m=marks[t.id];
+    $("tjOk").classList.toggle("on", m==="ok");
+    $("tjBad").classList.toggle("on", m==="bad");
+    $("tjStat").textContent = m==="ok" ? "✔ ٹھیک" : m==="bad" ? "✖ غلط — درخواست بھیجی جا چکی" : "";
+  }
+  async function say(text){
+    if(busy) return;
+    busy=true;
+    try{
+      if(QTTS){ if(QTTS.isSpeaking()) QTTS.stop(); await QTTS.speak(text,{wpm:130},{}); }
+      else if("speechSynthesis" in window){
+        await new Promise(res=>{ const u=new SpeechSynthesisUtterance(text); u.lang="ur-PK"; u.rate=.9; u.onend=u.onerror=res; speechSynthesis.speak(u); });
+      }
+    }catch(e){}
+    busy=false;
+  }
+  async function playCur(){ const t=cur(); if(t) await say(t.new); }
+  async function loop(){
+    while(auto && i<TJ.length){
+      await playCur();
+      if(!auto) break;
+      await new Promise(r=>setTimeout(r,1400));
+      if(!auto) break;
+      if(i>=TJ.length-1){ stopAuto(); break; }
+      i++; show();
+    }
+  }
+  function startAuto(){ auto=true; $("tjPlay").textContent="⏸ ٹھہریے"; $("tjPlay").classList.add("on"); loop(); }
+  function stopAuto(){ auto=false; $("tjPlay").textContent="▶ خودکار سنیے"; $("tjPlay").classList.remove("on"); try{ QTTS&&QTTS.stop(); }catch(e){} }
+
+  function step(d){ const n=i+d; if(n<0||n>=TJ.length) return; i=n; show(); if(!auto) playCur(); }
+  async function mark(v){
+    const t=cur(); if(!t) return;
+    marks[t.id]=v; save(); show();
+    if(v==="bad"){
+      try{
+        const body=new URLSearchParams(); body.set("action","suggest"); body.set("word",t.w); body.set("form",t.new);
+        const r=await fetch("api/lexicon.php",{method:"POST",body}); const j=await r.json();
+        $("tjStat").textContent = (j&&j.ok) ? "✖ غلط — اوپر درخواستوں میں پہنچ گیا ✔" : "✖ نشان لگ گیا (درخواست نہ بھیجی جا سکی)";
+        if(j&&j.ok && typeof loadReq==="function") loadReq();
+      }catch(e){ $("tjStat").textContent="✖ نشان لگ گیا (server تک بات نہ پہنچی)"; }
+    }
+    if(i<TJ.length-1){ setTimeout(()=>{ i++; show(); if(!auto) playCur(); }, 450); }
+  }
+
+  $("tjPlay").onclick=()=> auto?stopAuto():startAuto();
+  $("tjAgain").onclick=()=>{ stopAuto(); playCur(); };
+  $("tjOldPlay").onclick=()=>{ stopAuto(); const t=cur(); if(t) say(t.old); };
+  $("tjPrev").onclick=()=>{ stopAuto(); step(-1); };
+  $("tjNext").onclick=()=>{ stopAuto(); step(1); };
+  $("tjOk").onclick=()=> mark("ok");
+  $("tjBad").onclick=()=> mark("bad");
+  $("tjReset").onclick=()=>{ marks={}; save(); i=0; show(); $("tjOut").innerHTML=""; };
+  $("tjList").onclick=()=>{
+    const bad=TJ.filter(x=>marks[x.id]==="bad");
+    if(!bad.length){ $("tjOut").innerHTML='<span class="hint">ابھی کوئی لفظ «غلط» نشان زدہ نہیں۔</span>'; return; }
+    $("tjOut").innerHTML=bad.map(x=>'<div class="req"><span class="w">'+esc(x.new)+'</span><span class="meta">'+esc(x.r||"")+"</span></div>").join("");
+  };
+})();
 </script>
 </body>
 </html>
