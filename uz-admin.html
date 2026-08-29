@@ -89,6 +89,10 @@ body.kb-open #w{padding-bottom:430px;}
 #tjCard button.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
 #tjCard .tjdone{font-size:15px;}
 #tjCard .tjdone b.ok{color:var(--ok);} #tjCard .tjdone b.bad{color:var(--bad);}
+#tjCard .fixbox, .req .fixbox{flex-basis:100%; display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:9px; padding-top:9px; border-top:1px dashed var(--line);}
+.req{flex-wrap:wrap;}
+.fixin{flex:1; min-width:190px; border:1px solid var(--accent); border-radius:9px; background:var(--paper); color:var(--ink);
+  padding:9px 12px; font-family:"Noto Naskh Arabic",serif; font-size:21px; direction:rtl;}
 #tjOut .req{display:flex; gap:10px; align-items:center; flex-wrap:wrap; padding:6px 0; border-bottom:1px solid var(--line);}
 </style>
 </head>
@@ -134,6 +138,11 @@ body.kb-open #w{padding-bottom:430px;}
         <button id="tjBad" class="tjbad">✖ غلط ہے — اوپر درخواست میں بھیجیں</button>
         <span id="tjStat" class="hint"></span>
       </div>
+      <div class="fixbox" id="tjFix" style="display:none;">
+        <input class="fixin" id="tjFixIn" placeholder="درست بولنے کا روپ لکھیے">
+        <button id="tjTry">🔊 جانچیے</button>
+        <button class="primary" id="tjPut">💾 محفوظ + سنیں</button>
+      </div>
       <div class="row" style="justify-content:space-between;">
         <span class="hint" id="tjCount"></span>
         <span><button id="tjList">فہرست دیکھیں</button> <button id="tjReset" title="سب نشان مٹا کر پہلے سے">دوبارہ شروع</button></span>
@@ -155,7 +164,9 @@ body.kb-open #w{padding-bottom:430px;}
     <p class="hint" style="margin:0 0 8px;">
       ہر سطر: <b>لفظ = بولنے کا روپ</b> — مثلاً «خود = خُد»، «بالکل = بِلکُل»۔ محفوظ کرتے ہی پوری سائٹ پر لاگو؛
       جس لفظ کی درستی لغت میں آ جائے، اس کی درخواست خودبخود صاف ہو جاتی ہے۔ پرانا نسخہ server پر محفوظ رہتا ہے۔
-      <span class="en">One rule per line. Saving applies site-wide; matching requests auto-clear; previous version auto-backed-up.</span>
+      <span class="en">One rule per line. Saving applies site-wide; matching requests auto-clear; previous version auto-backed-up.</span><br>
+      <b style="color:var(--warn)">⚠ خبردار:</b> یہ خانہ <b>پوری لغت</b> ہے۔ «محفوظ کریں» دبانے پر جو کچھ یہاں لکھا ہے <b>بس وہی</b> رہ جائے گا — باقی سب مٹ جائے گا۔
+      ایک لفظ ٹھیک کرنا ہو تو اوپر درخواست پر <b>«✏ درست کریں»</b> استعمال کیجیے — وہ باقی لغت کو ہاتھ نہیں لگاتا۔
     </p>
     <textarea id="ta" placeholder="خود = خُد&#10;بالکل = بِلکُل"></textarea>
     <div class="row">
@@ -338,6 +349,24 @@ async function load(){
   }catch(e){ setStat("database پڑھا نہ جا سکا — کیا api upload ہے؟", false); }
 }
 $("reload").onclick=load; load();
+
+/* ایک لفظ محفوظ — باقی لغت جوں کی توں (merge, replace نہیں) */
+async function saveOne(word, form){
+  const k=bare(word), v=String(form||"").trim();
+  if(!k||!v){ setStat("بولنے کا روپ خالی ہے", false); return false; }
+  try{
+    const g=await (await fetch("api/lexicon.php?action=get&t="+Date.now(),{cache:"no-store"})).json();
+    const sp=(g&&g.speak)||{}; sp[k]=v;
+    const body=new URLSearchParams();
+    body.set("action","save"); body.set("key",KEYV()); body.set("data",JSON.stringify({speak:sp}));
+    const j=await (await fetch("api/lexicon.php",{method:"POST",body})).json();
+    if(j.ok){
+      setStat("✔ «"+k+"» محفوظ ہو گیا — لغت میں کل "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):""), true);
+      await load(); loadReq(); return true;
+    }
+    setStat(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا", false); return false;
+  }catch(e){ setStat("server تک بات نہ پہنچی", false); return false; }
+}
 $("save").onclick=async()=>{
   const speak={}; let badL=0;
   ta.value.split("\n").forEach(line=>{ const L=line.trim(); if(!L||L.startsWith("#"))return;
@@ -362,23 +391,40 @@ async function loadReq(){
     $("reqCount").textContent=items.length?("("+items.length+")"):"";
     if(!items.length){ $("reqList").innerHTML='<span class="hint">کوئی درخواست نہیں — سب صاف ✔</span>'; return; }
     $("reqList").innerHTML=items.map((it,i)=>
-      '<div class="req"><span class="w">'+esc(it.w)+'</span>'+
+      '<div class="req" data-row="'+i+'"><span class="w">'+esc(it.w)+'</span>'+
       '<span class="meta">×'+(it.n||1)+(it.t?(' · '+String(it.t).slice(0,10)):'')+'</span>'+
       '<button data-a="hear" data-i="'+i+'">🔊 سنیں</button>'+
-      '<button data-a="fix" data-i="'+i+'">لغت میں لکھیں ↓</button>'+
-      '<button data-a="del" data-i="'+i+'" title="بغیر درستی کے ہٹائیے">❌</button></div>').join("");
+      '<button data-a="fix" data-i="'+i+'">✏ درست کریں</button>'+
+      '<button data-a="del" data-i="'+i+'" title="ٹھیک ہے — بغیر تبدیلی کے ہٹائیے">❌</button>'+
+      '<div class="fixbox" data-i="'+i+'" style="display:none;">'+
+        '<input class="fixin" data-i="'+i+'" value="'+esc(it.f||it.w)+'" placeholder="بولنے کا روپ — مثلاً لَیْلیٰ">'+
+        '<button data-a="try" data-i="'+i+'">🔊 جانچیے</button>'+
+        '<button class="primary" data-a="put" data-i="'+i+'">💾 محفوظ + سنیں</button>'+
+      '</div></div>').join("");
+    const inp=i=>$("reqList").querySelector('.fixin[data-i="'+i+'"]');
     [...$("reqList").querySelectorAll("button")].forEach(b=>b.onclick=async()=>{
-      const it=items[+b.dataset.i];
-      if(b.dataset.a==="hear") speakA(it.w);
-      else if(b.dataset.a==="fix"){
-        if(!ta.value.split("\n").some(l=>l.trim().startsWith(it.w+" ")||l.trim().startsWith(it.w+"="))){
-          ta.value=it.w+" = \n"+ta.value; }
-        ta.focus(); ta.setSelectionRange((it.w+" = ").length,(it.w+" = ").length);
-        say("اب بولنے کا روپ لکھیے، پھر محفوظ کریں");
-      } else if(b.dataset.a==="del"){
+      const i=+b.dataset.i, it=items[i], a=b.dataset.a;
+      if(a==="hear") speakA(it.w);
+      else if(a==="fix"){
+        const box=$("reqList").querySelector('.fixbox[data-i="'+i+'"]');
+        const open = box.style.display==="none";
+        box.style.display = open ? "flex" : "none";
+        if(open){ const el=inp(i); el.focus(); el.setSelectionRange(el.value.length,el.value.length); taT=el; }
+      }
+      else if(a==="try") speakA(inp(i).value.trim());
+      else if(a==="put"){
+        const v=inp(i).value.trim();
+        if(await saveOne(it.w, v)) speakA(v);
+      }
+      else if(a==="del"){
         const body=new URLSearchParams(); body.set("action","resolve"); body.set("key",KEYV()); body.set("word",it.w);
         await fetch("api/lexicon.php",{method:"POST",body}); loadReq();
       }
+    });
+    [...$("reqList").querySelectorAll(".fixin")].forEach(el=>{
+      el.addEventListener("focus",()=>{ taT=el; });
+      el.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault();
+        $("reqList").querySelector('button[data-a="put"][data-i="'+el.dataset.i+'"]').click(); } });
     });
   }catch(e){ $("reqList").innerHTML='<span class="hint">درخواستیں نہ مل سکیں</span>'; }
 }
@@ -484,11 +530,12 @@ loadReq();
     $("tjCount").innerHTML='<span class="tjdone">'+(i+1)+" / "+TJ.length+" · نشان زدہ <b class=\"ok\">"+done+"</b>"+(bad?" · غلط <b class=\"bad\">"+bad+"</b>":"")+"</span>";
     $("tjFill").style.width=(100*(i+1)/TJ.length)+"%";
     const m=marks[t.id];
+    if(m!=="bad") $("tjFix").style.display="none";
     $("tjOk").classList.toggle("on", m==="ok");
     $("tjBad").classList.toggle("on", m==="bad");
     $("tjStat").textContent = m==="ok" ? "✔ ٹھیک" : m==="bad" ? "✖ غلط — درخواست بھیجی جا چکی" : "";
   }
-  async function say(text){
+  async function speakWord(text){
     if(busy) return;
     busy=true;
     try{
@@ -499,7 +546,7 @@ loadReq();
     }catch(e){}
     busy=false;
   }
-  async function playCur(){ const t=cur(); if(t) await say(t.new); }
+  async function playCur(){ const t=cur(); if(t) await speakWord(t.new); }
   async function loop(){
     while(auto && i<TJ.length){
       await playCur();
@@ -525,15 +572,35 @@ loadReq();
         if(j&&j.ok && typeof loadReq==="function") loadReq();
       }catch(e){ $("tjStat").textContent="✖ نشان لگ گیا (server تک بات نہ پہنچی)"; }
     }
+    if(v==="bad"){
+      stopAuto();
+      $("tjFix").style.display="flex";
+      $("tjFixIn").value=t.new; $("tjFixIn").focus(); taT=$("tjFixIn");
+      return;   /* غلط پر آگے نہ بڑھیں — پہلے درست کیجیے */
+    }
+    $("tjFix").style.display="none";
     if(i<TJ.length-1){ setTimeout(()=>{ i++; show(); if(!auto) playCur(); }, 450); }
   }
 
   $("tjPlay").onclick=()=> auto?stopAuto():startAuto();
   $("tjAgain").onclick=()=>{ stopAuto(); playCur(); };
-  $("tjOldPlay").onclick=()=>{ stopAuto(); const t=cur(); if(t) say(t.old); };
+  $("tjOldPlay").onclick=()=>{ stopAuto(); const t=cur(); if(t) speakWord(t.old); };
   $("tjPrev").onclick=()=>{ stopAuto(); step(-1); };
   $("tjNext").onclick=()=>{ stopAuto(); step(1); };
-  $("tjOk").onclick=()=> mark("ok");
+  $("tjTry").onclick=()=> speakWord($("tjFixIn").value.trim());
+  $("tjPut").onclick=async()=>{
+    const t=cur(); if(!t) return;
+    const v=$("tjFixIn").value.trim();
+    if(await saveOne(t.w, v)){
+      await speakWord(v);
+      $("tjStat").textContent="✔ محفوظ — پوری سائٹ پر لاگو";
+      $("tjFix").style.display="none";
+      if(i<TJ.length-1){ i++; show(); }
+    }
+  };
+  $("tjFixIn").addEventListener("focus",()=>{ taT=$("tjFixIn"); });
+  $("tjFixIn").addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); $("tjPut").click(); } });
+  $("tjOk").onclick=()=>{ $("tjFix").style.display="none"; mark("ok"); };
   $("tjBad").onclick=()=> mark("bad");
   $("tjReset").onclick=()=>{ marks={}; save(); i=0; show(); $("tjOut").innerHTML=""; };
   $("tjList").onclick=()=>{
