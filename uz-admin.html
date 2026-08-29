@@ -637,7 +637,10 @@ loadReq();
     if(busy) return;
     busy=true;
     try{
-      if(QTTS){ if(QTTS.isSpeaking()) QTTS.stop(); await QTTS.speak(text,{wpm:130},{}); }
+      /* چھوٹے لفظ نیورل آواز میں دب جاتے ہیں — اُنہیں آہستہ بلوائیے */
+      const letters=(String(text).match(/\p{L}/gu)||[]).length;
+      const wpm = letters<=3 ? 80 : letters<=5 ? 100 : 130;
+      if(QTTS){ if(QTTS.isSpeaking()) QTTS.stop(); await QTTS.speak(text,{wpm},{}); }
       else if("speechSynthesis" in window){
         await new Promise(res=>{ const u=new SpeechSynthesisUtterance(text); u.lang="ur-PK"; u.rate=.9; u.onend=u.onerror=res; speechSynthesis.speak(u); });
       }
