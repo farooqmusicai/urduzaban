@@ -388,7 +388,8 @@ async function saveOne(word, form){
     body.set("action","save"); body.set("key",KEYV()); body.set("data",JSON.stringify({speak:sp}));
     const j=await (await fetch("api/lexicon.php",{method:"POST",body})).json();
     if(j.ok){
-      setStat("✔ «"+k+"» محفوظ ہو گیا — لغت میں کل "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):""), true);
+      setStat("✔ «"+k+"» محفوظ ہو گیا — لغت میں کل "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):"")+" · پوری سائٹ کی آواز پر لاگو", true);
+      try{ if(QTTS && QTTS.refreshLughat) await QTTS.refreshLughat(); }catch(e){}   /* نیا تلفظ فوراً */
       await load(); loadReq(); return true;
     }
     setStat(j.err==="noconfig"?"سرور پر uz-config.php نہیں ہے — اوپر «🔑 نئی چابی بنائیے» دیکھیے":(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا"), false); return false;
@@ -403,7 +404,8 @@ $("save").onclick=async()=>{
     const body=new URLSearchParams();
     body.set("action","save"); body.set("key",KEYV()); body.set("data",JSON.stringify({speak}));
     const r=await fetch("api/lexicon.php",{method:"POST",body}); const j=await r.json();
-    if(j.ok){ setStat("✔ محفوظ — "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):"")+(badL?(" ("+badL+" سطریں سمجھ نہ آئیں)"):""), true); loadReq(); }
+    if(j.ok){ try{ if(QTTS && QTTS.refreshLughat) await QTTS.refreshLughat(); }catch(e){}
+      setStat("✔ محفوظ — "+j.count+" اندراج"+(j.cleared?("، "+j.cleared+" درخواست خود صاف"):"")+(badL?(" ("+badL+" سطریں سمجھ نہ آئیں)"):""), true); loadReq(); }
     else setStat(j.err==="noconfig"?"سرور پر uz-config.php نہیں ہے — اوپر «🔑 نئی چابی بنائیے» دیکھیے":(j.err==="key"?"چابی غلط ہے":"محفوظ نہ ہو سکا"), false);
   }catch(e){ setStat("server تک بات نہ پہنچی", false); }
 };
