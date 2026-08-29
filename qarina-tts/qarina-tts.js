@@ -35,10 +35,19 @@ const LUG_TTL = 5*60*1000;
 let lugVal=null, lugAt=0, lugP=null;
 function applyLug(t, m){
   if(!m) return t;
-  return String(t).replace(/[\p{L}\p{M}]+/gu, w=>{
+  let s=String(t); const holds=[];
+  const esc=/[.*+?^${}()|[\]\\]/g;
+  for(const k of Object.keys(m).filter(x=>/\s/.test(x)).sort((a,b)=>b.length-a.length)){
+    try{
+      const pat=k.trim().split(/\s+/).map(w=>[...w].map(c=>c.replace(esc,'\\$&')+'[\\p{M}]*').join('')).join('[\\s\\p{M}]+');
+      s=s.replace(new RegExp(pat,'gu'), ()=>{ holds.push(m[k]); return '\u0001'+(holds.length-1)+'\u0001'; });
+    }catch{}
+  }
+  s=s.replace(/[\p{L}\p{M}]+/gu, w=>{
     const k=w.replace(/[^\p{L}]/gu,'');
     return (k && Object.prototype.hasOwnProperty.call(m,k)) ? m[k] : w;
   });
+  return s.replace(/\u0001(\d+)\u0001/g,(_,i)=>holds[+i]);
 }
 async function lughat(){
   if(lugVal && (Date.now()-lugAt) < LUG_TTL) return lugVal;

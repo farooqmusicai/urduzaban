@@ -72,12 +72,28 @@ export const keyOf = w => w.replace(/[^\p{L}]/gu,'');
 
 // Lughat lagao: har lafz dekho, agar lughat mein hai to us ki jagah
 // aap ka likha hua talaffuz bol do.
+// Pehle poore fiqre (do ya zyada lafz), phir tanha lafz.
+// Fiqre ki jagah pehle ek nishan rakha jata hai, taake lafz wala daur use dobara na chhue.
+const RX_ESC = /[.*+?^${}()|[\]\\]/g;
+function phraseRe(k){
+  const pat = k.trim().split(/\s+/)
+    .map(w => [...w].map(c => c.replace(RX_ESC, '\\$&') + '[\\p{M}]*').join(''))
+    .join('[\\s\\p{M}]+');
+  return new RegExp(pat, 'gu');
+}
 export function applyLughat(t, lughat){
   if(!lughat) return t;
-  return t.replace(/[\p{L}\p{M}]+/gu, w => {
+  let s = String(t);
+  const holds = [];
+  const multi = Object.keys(lughat).filter(k => /\s/.test(k)).sort((a,b) => b.length - a.length);
+  for(const k of multi){
+    try{ s = s.replace(phraseRe(k), () => { holds.push(lughat[k]); return '\u0001' + (holds.length-1) + '\u0001'; }); }catch{}
+  }
+  s = s.replace(/[\p{L}\p{M}]+/gu, w => {
     const k = keyOf(w);
     return (k && Object.prototype.hasOwnProperty.call(lughat,k)) ? lughat[k] : w;
   });
+  return s.replace(/\u0001(\d+)\u0001/g, (_,i) => holds[+i]);
 }
 
 export function makePhonemizer(ESpeakNG, wasmBinary, idMap){
