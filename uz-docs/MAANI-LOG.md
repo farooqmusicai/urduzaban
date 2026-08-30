@@ -1909,3 +1909,609 @@
 | آس پاس | as pas | around, nearby, in the vicinity | **قریب قریب، گرد و نواح** |
 | آفیسر | afeesar | officer | **افسر، عہدے دار** |
 | آمدنی | amdani | gross income, earning; revenue (of a business); arrival, com | **آمدن، کمائی** |
+
+## بیچ 19 — 96 الفاظ (30 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| آنسو | ansu | tear | **آنکھ سے بہنے والا پانی کا قطرہ — «آنسو بہانا»** |
+| ابتدا | ibtida | initiation, threshold, beginning, commencement, inception, i | **آغاز، شروعات** |
+| ابتدا کرنا | ibtida karna | commence, initiate, launch | **شروع کرنا، آغاز کرنا** |
+| ابتدا ہونا | ibtida hona | to commence | **شروع ہونا** |
+| ابن آدم | ibn adam | son of man; human | **آدم کی اولاد، انسان** |
+| اتار | utar | descent, fall; decline, decrease; decay, wane | **نیچے آنا؛ کمی، زوال — «اتار چڑھاؤ»** |
+| ادائیگی | adaeegi | fulfilment; fulfilment of debt, or loan; collection of levie | **ادا کرنے کا عمل؛ قرض یا رقم چکانا** |
+| ارادہ کرنا | iradah karna | contemplate | **نیت کرنا، ٹھاننا** |
+| اسلامی جمہوریہ پاکستان | islami jamhooriya-yi pakistan | Islamic Republic of Pakistan (official name of Pakistan: a c | **پاکستان کا سرکاری نام** |
+| اسلحہ خانہ | aslahah khanah | arsenal | **ہتھیار رکھنے کی جگہ** |
+| اشارہ گر | isarah gar | pointer | **اشارہ کرنے والا (شخص یا آلہ)** |
+| اصلاح کن | islah kun | corrective | **اصلاح کرنے والا، درستی لانے والا** |
+| اضافی | izafi | additional, odd; adventitious, prosthetic; possessively | **زائد، فالتو؛ مزید** |
+| اطلاع نامہ | ittelaa namah | monition, newsletter, notice | **خبر دینے کی تحریر، نوٹس** |
+| اطلاع وفات | ittela-e-vafat | necrology; an obituary | **کسی کے انتقال کی خبر** |
+| اغوا | ighva | abduction, kidnapping | **کسی کو زبردستی اٹھا لے جانا — «اغوا برائے تاوان»** |
+| الہ آباد | ilah abad | Allahabad (a city in Uttar Pradesh, India) | **بھارت کے صوبے اتر پردیش کا شہر (اب پریاگ راج)** |
+| امارات | imarat | the Emirates, short for the United Arab Emirates | **متحدہ عرب امارات کا مختصر نام** |
+| امتیاز | imtiyaz | a surname | **مردانہ نام؛ اصل معنی: فرق، برتری** |
+| امراض | amraz | Formal plural of مَرْض (marz) | **«مرض» کی جمع — بیماریاں** |
+| انتظامی | intizami | administrative | **انتظام سے متعلق — «انتظامی امور»** |
+| اولین | avvaleen | foremost, very first, earliest; firstly | **سب سے پہلا، اوّل** |
+| اچانک چل دینا | acanak cal deyna | walk off | **بغیر بتائے یکدم روانہ ہو جانا** |
+| اگلی | agli | feminine of اَگْلا (aglā, “next”) | **«اگلا» کی مؤنث — «اگلی بار»** |
+| ایام | iyyam | days (plural of یوم (yom)) | **«یوم» کی جمع — دن** |
+| بالآخر | bil-akhir | at last, finally; ultimately, consequently | **آخرکار، انجامِ کار** |
+| بحران | buhran | crisis; delirium | **سخت مشکل کا وقت — «معاشی بحران»** |
+| بد اخلاق | bad akhlaq | bad manners | **برے اخلاق والا، بدتمیز** |
+| بدن | badan | body | **جسم** |
+| برطانیہ عظمی | bartaniya-yi uzma | Great Britain (a large island (sometimes also including some | **برطانیہ کا بڑا جزیرہ؛ عظیم برطانیہ** |
+| برکت | barkat | blessing (good fortune); a female given name from Arabic | **بھلائی، فراوانی؛ ایک نام بھی** |
+| بلند دروازہ | buland darvaza | A historic monument in Agra, Uttar Pradesh, India to commemo | **آگرہ کے قریب فتح پور سیکری کا عظیم تاریخی دروازہ** |
+| بندوں | bandon | oblique plural of بَنْدَہ (banda). | **«بندہ» کی جمع، حالتِ جر — «بندوں سے»** |
+| بنگلہ دیش | bangla desh | Bangladesh (a country in South Asia) | **جنوبی ایشیا کا ملک، دارالحکومت ڈھاکہ** |
+| بنی آدم | bani adam | sons of Adam, human being | **آدم کی اولاد، انسان** |
+| بھاگ | bhag | Bhag (a city in Kachhi district, Balochistan, Pakistan); des | **قسمت، نصیب؛ حصہ؛ بلوچستان کا ایک شہر** |
+| بے جوڑ | be jor | unsuitable, inharmonious; unique, incomparable, unmatched; d | **جو جڑتا نہ ہو، بے میل؛ بے مثال** |
+| بے غرض | be-gharaz | selfless, unselfish, disinterested | **بغیر مطلب کے، بے لوث** |
+| بے قابو | be-qabu | uncontrolled, out of hand | **قابو سے باہر — «بے قابو ہجوم»** |
+| تاج | taj | crown | **بادشاہ کے سر کا زیور — «تاج محل»** |
+| تبادلہ | tabadilah | exchange, transfer | **بدل، ادلا بدلی؛ جگہ کی تبدیلی — «خیالات کا تبادلہ»** |
+| تبصرہ | tabsirah | review, comment; criticism | **رائے، جائزہ — «کتاب پر تبصرہ»** |
+| تجارتی ادارہ | tijarati idarah | commercial enterprise, company | **کاروباری کمپنی** |
+| تخت | takht | throne | **بادشاہ کے بیٹھنے کی مسند — «تخت و تاج»** |
+| تعارف | taaruf | introduction; acquaintancy, acquaintanceship; preface | **پہچان کرانا؛ کتاب کا ابتدائی حصہ** |
+| توقع | tavaqqo | hope, expectation; wish, desire | **امید، آس — «توقع رکھنا»** |
+| ثقافتی | saqafati | cultural | **ثقافت (تہذیب) سے متعلق** |
+| ثواب | savab | requital, reward; good deed | **نیکی کا اجر** |
+| جشن | jashn | banquet, feast; festival, celebration | **خوشی کی تقریب — «جشنِ آزادی»** |
+| جل | jal | water | **پانی (سنسکرت) — «جل تھل»** |
+| جلدی جلدی | jaldi jaldi | quick; quickly; fast | **تیزی سے، عجلت میں** |
+| جلسے | jalse | inflection of جَلْسہ: direct plural; inflection of جَلْسہ: o | **«جلسہ» کی جمع — «جلسے جلوس»** |
+| جنوب | janoob | south | **چار سمتوں میں سے ایک، شمال کے مقابل** |
+| جنگل | jangal | jungle, forest, wilderness | **درختوں سے بھرا وسیع علاقہ، بن** |
+| جواز | javaz | justification (ie. lawfulness) | **دلیل جس سے کوئی بات درست ٹھہرے** |
+| جوڑ | jor | joint, connect | **ملانے کی جگہ؛ رشتہ؛ برابر کا ساتھی — «گھٹنوں کے جوڑ»** |
+| جہلم | jihlam | Jhelum (a city in Jhelum district, province of Punjab, Pakis | **پاکستانی پنجاب کا شہر اور دریا** |
+| حادثہ | hadisa | accident | **اچانک پیش آنے والا سانحہ — «سڑک کا حادثہ»** |
+| حادثے | hadise | inflection of حَادِثَہ (hādisa, “accident”): direct plural;  | **«حادثہ» کی جمع — «حادثے رونما ہوئے»** |
+| حاضری | haziri | presence, attendance, appearance; breakfast; audience | **موجود ہونا؛ آمد کا اندراج — «حاضری لگانا»** |
+| حالیہ | haliya | recent (having happened a short while ago); participle | **ابھی کا، تازہ — «حالیہ خبریں»** |
+| حرف | harf | letter, character (of an alphabet); particle | **ہجے کی اکائی — «حروفِ تہجی»؛ قواعد کی ایک قسمِ کلمہ** |
+| حقائق | haqaiq | formal plural of حَقِیقَت (haqīqat) | **«حقیقت» کی جمع — سچی باتیں** |
+| حلال | halal | halal; lawful, permissible; rightful | **شرعاً جائز — حرام کی ضد** |
+| حوالہ جات | havaleh jat | references | **«حوالہ» کی جمع — ماخذ کی فہرست** |
+| خادم | khadim | domestic servant or (male) manservant; employee, volunteer;  | **خدمت کرنے والا، نوکر** |
+| خاقان | khaqan | khagan | **قدیم ترک اور منگول بادشاہوں کا لقب** |
+| خشک | khushk | dry; parched; withered | **سوکھا ہوا — «خشک موسم»** |
+| خطرناک | khatarnak | dangerous | **خطرے والا، جان لیوا** |
+| خطرے | khatre | inflection of خَطْرہ (“risk, danger”): direct plural; inflec | **«خطرہ» کی جمع — «خطرے میں»** |
+| خود غرض | khud gharaz | selfish, self-centered | **صرف اپنا مطلب دیکھنے والا** |
+| خوراک | khorak | victuals, meal, food (for humans, animals, or plants etc.);  | **کھانا، غذا؛ دوا کی مقررہ مقدار** |
+| دائرہ | daira | circumference, limit; extent, reach; circle, ring, orbit | **گول لکیر، حلقہ؛ حد — «دائرۂ کار»** |
+| داخلی | dakhili | internal, domestic, of or pertaining to the interior | **اندر کا، اندرونی — خارجی کی ضد** |
+| دامن | daman | hem of a garment; skirt, petticoat; outskirts, edges; foothi | **قمیص کا نچلا حصہ؛ پہاڑ کا نچلا علاقہ — «دامنِ کوہ»** |
+| دراز | daraz | drawer; long, tall | **لمبا، طویل — «عمر دراز»؛ میز وغیرہ کا کھسکنے والا خانہ** |
+| درجہ حرارت | darja-e-hararat | temperature | **گرمی سردی کی پیمائش** |
+| درد ناک | dard nak | painful, hurtful; sad, piteous, pathetic, piteous, sorrowful | **درد بھرا، غم انگیز** |
+| دست | dast | hand; power, authority; diarrhoea | **ہاتھ (فارسی) — «دستِ شفقت»؛ اجابت، پتلا پاخانہ** |
+| دستور | dastoor | command, order; constitution; guideline, rule | **قاعدہ، رواج؛ ملک کا آئین** |
+| دشمنوں | dushmanon | oblique plural of دُشْمَن (duśman) | **«دشمن» کی جمع، حالتِ جر — «دشمنوں سے»** |
+| دشمنی | dushmani | enmity; hatred; hate | **عداوت، بیر** |
+| دفن | dafn | burial, interment; covering, concealment | **زمین میں گاڑنا، تدفین** |
+| دلی | dilli | alternative form of دِہْلی (dihlī): Delhi (a megacity and un | **دہلی کا عام بولی نام — بھارت کا دارالحکومت** |
+| دھاندلی | dhandli | deceptive manipulation, rigging; dishonesty, cheating; fraud | **بے ایمانی، ہیر پھیر — «انتخابی دھاندلی»** |
+| دھماکہ | dhamakah | explosion, boom | **زوردار پھٹنے کی آواز** |
+| دہ | dih | village | **گاؤں (فارسی) — «دہقان»** |
+| راضی | razi | willing to comply; compliant; pleased, satisfied; happy | **رضامند، خوش** |
+| رسم | rasm | tradition, custom; manner, way; practice | **رواج، دستور — «رسم و رواج»** |
+| رشتے | rishte | inflection of رِشْتَہ (riśta): direct plural; inflection of  | **«رشتہ» کی جمع — «خونی رشتے»** |
+| رقص | raqs | dance, dancing | **ناچ** |
+| رواں | ravan | flowing; fluent, well-versed; en route, set off (of a vehicl | **بہتا ہوا؛ جاری — «رواں دواں»** |
+| رکاوٹ | rukavat | obstruction; barricade; stoppage | **روک، اڑچن** |
+| ریڈیو | rediyo | radio | **نشریات سننے کا آلہ** |
+| زبانوں | zabanon | oblique plural of زُبان (zubān) | **«زبان» کی جمع، حالتِ جر — «زبانوں میں»** |
+| زراعت | ziraat | agriculture | **کھیتی باڑی** |
+
+## بیچ 20 — 96 الفاظ (30 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| زندہ باد | zinda bad | long live | **جیتا رہے — نعرۂ تحسین** |
+| زیارت | ziyarat | a holy visitation, pilgrimage; ziyarat | **مقدس مقام کی حاضری؛ دیدار** |
+| سائنسی | sainsi | scientific | **سائنس سے متعلق** |
+| سائیکل | saeekil | bicycle | **دو پہیوں کی پیروں سے چلنے والی سواری** |
+| ساز و سامان | saz-o-saman | equipment, gear | **ضروری چیزیں، سامان** |
+| سانس لینا | sans lena | to breathe | **دم لینا — «کھل کر سانس لینا»** |
+| سبز | sabz | green; raw; unripe | **ہرا — «سبز پرچم»؛ کچا، ناپختہ** |
+| ستر | sattar | seventy | **گنتی میں 70** |
+| سرگرم | sargarm | active, working | **جوش سے کام کرنے والا، فعال** |
+| سری لنکا | siri lanka | Sri Lanka (a country in South Asia) | **جنوبی ایشیا کا جزیرہ ملک** |
+| سری نگر | siri nagar | Srinagar (a city and district, the summer capital of Jammu a | **جموں و کشمیر کا مشہور شہر، گرمائی دارالحکومت** |
+| سفارت | sifarat | embassy; consulate; diplomacy | **سفیر کا کام یا دفتر — «سفارت خانہ»** |
+| سفر ناموں | safar namon | oblique plural of سَفَر نامَہ (safar nāma) | **«سفر نامہ» کی جمع، حالتِ جر** |
+| سلطان بازار | sultan bazar | Sultan Bazar (a neighbourhood of Hyderabad, Telangana, India | **حیدرآباد دکن (بھارت) کا ایک محلہ** |
+| سکھ | sukh | peace; happiness; comfort; Sikh, a follower of Sikhism (سکھ  | **چین، آرام — «سکھ چین»؛ سکھ مذہب کا پیروکار** |
+| سیاستدان | siyasatdan | politician | **سیاست کرنے والا، سیاسی رہنما** |
+| سیر | sair | tour; journey | **گھومنا پھرنا — «باغ کی سیر»** |
+| سینے | seene | inflection of سِینَہ (sīna): direct plural; inflection of سِ | **«سینہ» کی جمع — «سینے میں»** |
+| شرط | shart | condition, term; wager, bet; provision, wage | **قید، لازمی بات؛ بازی — «شرط لگانا»** |
+| شمال | shumal | north | **چار سمتوں میں سے ایک، جنوب کے مقابل** |
+| شہر سبز | shahr-i sabz | Shahrisabz (a city in Uzbekistan) | **ازبکستان کا تاریخی شہر** |
+| صد | sad | hundred | **سو (فارسی) — «صد سالہ»** |
+| صدیوں | sadiyon | oblique plural of صَدی (sadī) | **«صدی» کی جمع، حالتِ جر — «صدیوں سے»** |
+| ضد | zid | contrary; opposite; stubbornness (connoted with ego; anger); | **ہٹ، اڑ جانا — «ضد کرنا»؛ الٹ، مخالف — «اِس کی ضد»** |
+| ضمنی انتخابات | zimni intikhabat | by-election | **خالی نشست پر الگ سے ہونے والے الیکشن** |
+| طاقتور | taqatvar | strong, stout, powerful | **طاقت والا، زورآور** |
+| طاقتوں | taqaton | oblique plural of طَاقَت (tāqat) | **«طاقت» کی جمع، حالتِ جر — «بڑی طاقتوں نے»** |
+| طبقہ | tabaqa | rank; status; surface, layer (ie. of the Earth) | **درجہ؛ لوگوں کا گروہ — «متوسط طبقہ»؛ تہہ** |
+| طبیعت | tabiat | temperament, mind, disposition, mood, character, behavior; h | **مزاج، فطرت؛ صحت کا حال — «طبیعت کیسی ہے؟»** |
+| طلاق | talaq | talaq, divorce (initiated by husband and not wife); divorce | **نکاح ختم کرنا (شوہر کی طرف سے)** |
+| ظہور | zuhoor | manifestation (ie. appearance); emergence, arising; auspicio | **ظاہر ہونا، نمودار ہونا؛ مردانہ نام بھی** |
+| عارضی | arizi | temporary | **تھوڑی مدت کا، غیر مستقل** |
+| عارف والا | arif vala | Arif Wala (a city in Pakpattan district, Punjab, Pakistan) | **پاکستانی پنجاب (ضلع پاکپتن) کا شہر** |
+| علیحدگی | alaihdagi | separation, dismissal; condition being separated or apart | **الگ ہونا، جدائی** |
+| عمارت گر | imarat-gar | builder | **عمارت بنانے والا، معمار** |
+| عموما | umooman | generally, usually | **عام طور پر، اکثر** |
+| عورتیں | auraten | direct plural of عَوْرَت (ʻaurat, “woman”) | **«عورت» کی جمع — «عورتیں اور مرد»** |
+| عہد نامہ جدید | ahd-nama jadeed | New Testament | **عیسائیوں کی مقدس کتاب کا دوسرا حصہ** |
+| غائب ہونا | ghaib hona | to disappear; to vanish; to become invisible | **نظر سے اوجھل ہو جانا، کھو جانا** |
+| غرض | gharaz | desire, purpose, intention; desire, selfishness; in short, i | **مطلب، مقصد — «غرض یہ کہ»** |
+| فرانسیسی | faranseesi | French; French person; French language | **فرانس کا؛ فرانس کی زبان یا باشندہ** |
+| فساد | fasad | riot, feud, outbreak | **جھگڑا، بلوہ — «فساد برپا ہونا»** |
+| فضا | faza | air, atmosphere; ambience; space | **ہوا کا ماحول؛ خلا؛ ماحول — «خوشگوار فضا»** |
+| فطرت | fitrat | disposition; temperament; nature | **قدرتی مزاج، سرشت؛ قدرت** |
+| فعل | fel | verb; act, action, deed, work | **کام؛ قواعد میں وہ کلمہ جو کام ظاہر کرے — «فعلِ ماضی»** |
+| قابو | qabo | control | **بس، اختیار — «قابو میں رکھنا»** |
+| قابو کرنا | qabu karna | to control | **بس میں لانا** |
+| قاتل | qatil | killer, murderer, assassin | **قتل کرنے والا، جان لینے والا** |
+| قاری | qari | qari, one who recites the Quran; reader | **قرآن خوش الحانی سے پڑھنے والا؛ پڑھنے والا** |
+| قدرت | qudrat | nature; destiny, providence; power, force, potency | **فطرت؛ خدا کی طاقت؛ بس، اختیار** |
+| قربان | qurban | corban; sacrifice, giving up; sacrificial offering | **نثار، صدقے — «قربان جاؤں»** |
+| قطر | qatar | Qatar (a country in West Asia in the Middle East) | **خلیج کا عرب ملک، دارالحکومت دوحہ** |
+| قلب | qalb | heart (the seat of emotions) | **دل (عربی) — «امراضِ قلب»** |
+| قلعہ | qila | fort, fortress, castle; castle (rook); a type of firework wh | **فصیل والی محفوظ عمارت — «لال قلعہ»؛ شطرنج کا رخ** |
+| لاش | lash | corpse | **مردہ جسم، نعش** |
+| لال سلام | lal salam | hello, greetings! | **سرخ سلام — اشتراکی انداز کا سلام** |
+| لیاقت آباد | liyaqat abad | Liaqatabad (a neighbourhood of Karachi, Sindh, Pakistan) | **کراچی کا ایک علاقہ** |
+| مان جانا | man jana | to give in; to yield | **راضی ہو جانا، بات تسلیم کر لینا** |
+| ماننے والا | maanane wala | believer, one who believes | **یقین رکھنے والا، معتقد** |
+| مایوس | mayoos | despondent, despirited, downcast, heartsick | **ناامید، دل شکستہ** |
+| مبارکباد | mubarakbad | congratulations | **خوشی پر دی جانے والی دعا — «مبارک ہو!»** |
+| متعلق فعل | mutaalliq e fel | adverb | **قواعد: وہ کلمہ جو فعل کی کیفیت بتائے — «آہستہ چلو» میں «آہستہ»** |
+| مجموعہ | majmua | sum, total; group; a crowd; assembly | **کئی چیزوں کا جوڑ، ذخیرہ — «کلام کا مجموعہ»** |
+| محسن | muhsin | beneficent; benefactor, patron; a male given name, Mohsin, f | **احسان کرنے والا؛ مردانہ نام بھی** |
+| مدارس | madaris | plural of مدرسہ (madrasa) | **«مدرسہ» کی جمع — دینی درسگاہیں** |
+| مذاق | mazaq | fun, joke | **ہنسی، ٹھٹھا — «مذاق اڑانا»** |
+| مذاکرات | muzakarat | formal plural of مُذَاکَرَہ (muzākara) | **باہمی بات چیت (خصوصاً سرکاری سطح پر)** |
+| مردہ | murda | dead, deceased; dead; the dead (ie. a corpse) | **مرا ہوا؛ بے جان** |
+| مساجد | masajid | formal plural of مَسْجِد (masjid) | **«مسجد» کی جمع** |
+| مستحکم | mustahkam | firm, stable, established, solid | **مضبوط، پکا، قائم** |
+| مشرق وسطی | mashriq-i vusta | Middle East (the geopolitical region at the intersection of  | **عرب اور آس پاس کے ملکوں کا خطہ** |
+| مشرقی ایشیا | mashriqi eshiya | East Asia (a geographic region comprising the eastern part o | **ایشیا کا مشرقی خطہ — چین، جاپان، کوریا وغیرہ** |
+| مصیبت | museebat | trouble, distress; calamity, disaster, catastrophe (a sudden | **تکلیف، آفت — «مصیبت میں پڑنا»** |
+| مطمئن | mutmain | satisfied; assured, confident; safe, secure | **جس کا دل جم گیا ہو، بے فکر** |
+| مظفر آباد | muzaffar abad | Muzaffarabad (a city, the capital of the autonomous territor | **آزاد کشمیر کا دارالحکومت** |
+| مظلوم | mazloom | oppressed, treated unjustly; an oppressed person | **جس پر ظلم ہوا ہو** |
+| معیاری | meyari | qualitative, standard | **اچھے معیار کا — «معیاری چیز»** |
+| مفہوم | mafhoom | concept; context; meaning | **مطلب، مراد** |
+| مقبولیت | maqbooliyyat | popularity; agreeableness, acceptableness; orthodoxy | **مقبول ہونا، ہر دلعزیزی** |
+| ملاحظہ | mulahazah | attention, regard; consideration, inspection, review | **دیکھنا، نظر ڈالنا — «ملاحظہ فرمائیں»** |
+| ملکیت | milikiyyat | ownership; property; possession | **مالک ہونا؛ جائیداد** |
+| منفرد | munfarid | unique, singular, apart, alone, separate, isolated | **سب سے الگ، یکتا** |
+| مواقع | mavaqi | plural of مَوْقِع (mauqaʻ) | **«موقع» کی جمع — «مواقع ملے»** |
+| موسیقی | mooseeqi | music | **سُر اور ساز کا فن، سنگیت** |
+| موضوعات | mauzuat | plural of مَوضُوع (mauzū') | **«موضوع» کی جمع** |
+| مہاجر | muhajir | refugee, immigrant; a muhajir: Urdu-speaking Muslim that mov | **ہجرت کر کے آنے والا؛ تقسیم کے بعد پاکستان آنے والے اردو گو** |
+| مہاجرین | muhajireen | plural of مہاجر (muhājir, “refugee”) | **«مہاجر» کی جمع** |
+| مہارت | maharat | skill, expertness, proficiency, excellency (in a profession) | **کسی کام میں کمال، استادی** |
+| مہر و ماہ | mehr-o-mah | sun and moon (in contrast to special people) | **سورج اور چاند** |
+| مہمان داری | mehman dari | misspelling of مہمان داری; hospitality; entertainment | **مہمان نوازی، خاطر تواضع** |
+| ناراض | naraz | upset, angry | **خفا، غصے میں** |
+| نازک | nazuk | tender, delicate; weak, fragile; thin, slender, slim | **ملائم، کومل؛ کمزور — «نازک مزاج»؛ باریک** |
+| نام نہاد | nam-nihad | so-called, assumed | **جو صرف کہنے کو ہو، جعلی — «نام نہاد لیڈر»** |
+| نسل کشی | nasl-kushi | genocide | **کسی قوم یا نسل کا قتلِ عام** |
+| نظر ثانی | nazar-e sani | reconsideration, review (such as of a decision), second opin | **دوبارہ غور — «فیصلے پر نظر ثانی»** |
+| نعرہ | narah | slogan; battle cry | **بلند آواز سے لگایا جانے والا کلمہ — «نعرۂ تکبیر»** |
+
+## بیچ 21 — 96 الفاظ (30 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| نواب | navab | nabob, nawab (a rich Mughal ruler) | **مغل دور کا امیر حاکم؛ بڑا رئیس** |
+| نوکری | naukri | job, employment, service | **ملازمت، روزگار** |
+| نہاد | nihad | disposition, nature; base, foundation, root; birth; race; ge | **سرشت، بنیاد (فارسی) — «نیک نہاد»** |
+| نیا عہد نامہ | naya ahd-nama | New Testament | **عیسائیوں کی مقدس کتاب کا دوسرا حصہ** |
+| نیوزی لینڈ | nyoozi laind | New Zealand (a country in Oceania; capital: Wellington) | **بحرالکاہل کا جزیرہ ملک، دارالحکومت ویلنگٹن** |
+| واقف | vaqif | aware of, knowing, conversant, informed, sensible, experienc | **جاننے والا، آگاہ — «واقف کار»** |
+| وعدے | vade | inflection of وَعْدَہ (va'da, “promise; vow; pledge”): direc | **«وعدہ» کی جمع — «وعدے نبھانا»** |
+| وفاق | vifaq | federal, federation; unanimity, harmony, agreement | **مرکز اور صوبوں کا ملاپ؛ مرکزی حکومت — «وفاقی»** |
+| وفد | vafd | delegation; deputation; an ambassador | **کسی ملک یا ادارے کی نمائندہ جماعت** |
+| وقف | vaqf | devoted; devotion; devotee; charity, charitable endowment | **اللہ کی راہ میں وقف کی گئی جائیداد؛ نذر کرنا** |
+| پرواز | parvaz | flight (a trip on a plane); departure (of a flight); access, | **اڑان — «پرواز بھرنا»** |
+| پروردگار | parvardigar | an appellation or epithet of God (or Lord); providence; cher | **پالنے والا — اللہ کا صفاتی نام** |
+| پلیٹ | plait | plate | **کھانے کی رکابی** |
+| پچاس | pachas | fifty | **گنتی میں 50** |
+| پھل | phal | fruit; reward; consequence | **درخت کا میوہ؛ نتیجہ، صلہ — «محنت کا پھل»** |
+| پیش گوئی | pesh goi | prediction; foretelling; forecast; prophecy | **پہلے سے بتا دینا — «موسم کی پیش گوئی»** |
+| پیغمبر | paighambar | prophet, messenger; ambassador, envoy | **اللہ کا پیغام لانے والا، رسول** |
+| چائے خانہ | chae khana | teahouse | **چائے پینے کی دکان** |
+| چور | chor | thief; an untrustable; evil person; ulcer | **چوری کرنے والا** |
+| چوک | chauk | square; chowk; crossroad, intersection; courtyard | **چوراہا؛ بازار کا کھلا مرکز — «چاندنی چوک»** |
+| چکر | chakkar | round, perimeter; vertigo; love affair | **گھماؤ، پھیرا — «چکر لگانا»؛ سر گھومنا** |
+| چیت | chait | Chaitra | **ہندی سال کا پہلا مہینہ (مارچ–اپریل)** |
+| چیزوں | cheezon | oblique plural of چِیز (cīz, “thing”) | **«چیز» کی جمع، حالتِ جر — «چیزوں میں»** |
+| ڈیڑھ | derh | one and a half; 1.5; half past one; 1:30 | **ایک اور آدھا (1.5) — «ڈیڑھ گھنٹہ»** |
+| کابل | kabul | Kabul (the capital city of Afghanistan); Kabul (a province o | **افغانستان کا دارالحکومت** |
+| کثرت | kasrat | plenty, excess | **زیادتی، بہتات — «کثرت سے»** |
+| کشتی | kashti | boat, ship; wrestling | **ناؤ، جہاز؛ پہلوانی کا دنگل — «کشتی لڑنا»** |
+| کوٹ | kot | fortress, fort, castle; citadel, stronghold; barracks | **قلعہ، گڑھ — کئی شہروں کے نام میں** |
+| کپڑے | kapre | inflection of کَپْڑا (kapṛā, “cloth”): oblique/vocative sing | **«کپڑا» کی جمع — «کپڑے پہننا»** |
+| کھاتے | khate | inflection of کھاتا (khātā, “account”): direct plural; infle | **«کھاتا» کی جمع — «کھاتے کھولنا»** |
+| گائے | gae | cow | **دودھ دینے والا مویشی — «گائے بھینس»** |
+| گانے | gane | inflection of گانَا (gānā, “song”): direct plural; inflectio | **«گانا» کی جمع — «گانے سننا»** |
+| گرام | gram | gram (unit of mass) | **وزن کی اکائی — کلو کا ہزارواں حصہ** |
+| گرم خانہ | garm khana | hothouse, greenhouse, glasshouse | **پودوں کے لیے شیشے کا گرم کمرہ** |
+| گنا | ganna | sugar cane | **مٹھاس والا لمبا پودا جس سے چینی بنتی ہے** |
+| گوجرانوالہ | gojranvala | Gujranwala (a city in Punjab, Pakistan) | **پاکستانی پنجاب کا بڑا شہر — پہلوانوں کا شہر** |
+| گول | gol | round, circular, spherical | **گھیرے دار، دائرے جیسا — «گول روٹی»** |
+| گھریلو | gharelu | domestic; household, familial | **گھر کا، گھر سے متعلق — «گھریلو استعمال»** |
+| گھنٹوں | ghanton | oblique plural of گَھنْٹَہ (ghanṭa) | **«گھنٹہ» کی جمع، حالتِ جر — «گھنٹوں انتظار»** |
+| ہاتھ میں صفائی ہونا | hath men safai hona | to have sleight of hand; for one to have craftsmanship / ski | **ہاتھ میں صفائی ہونا — کام میں مہارت ہونا** |
+| ہارون آباد | haroon-abad | Haroonabad (a city in Bahawalnagar district, Punjab, Pakista | **ضلع بہاولنگر (پاکستانی پنجاب) کا شہر** |
+| ہفتہ | hafta | week, sennight (a period of seven days); Saturday; Sabbath,  | **سات دنوں کی مدت؛ سنیچر کا دن** |
+| ہفتے | hafte | inflection of ہَفْتَہ (hafta, “week; Saturday”): direct plur | **«ہفتہ» کی جمع — «دو ہفتے»** |
+| ہم عصر | ham asar | contemporary, concurrent | **ایک ہی زمانے کا — «ہم عصر شعراء»** |
+| ہندی | hindi | belonging or relating to India, anything Indian; Indian; nat | **ہند سے متعلق؛ بھارت کی قومی زبان** |
+| یسوع | yasu | Jesus; Jesus of Nazareth | **حضرت عیسیٰؑ کا عیسائی روایت میں نام** |
+| یک | yak | one | **ایک (فارسی) — «یک زبان»** |
+| کیسی | kaisi | how; of what kind (f.) | **«کیسا» کی مؤنث — «کیسی بات؟»** |
+| اک | ik | one; a (poetic) | **«ایک» کی شاعرانہ شکل — «اک دن»** |
+| تجھ | tujh | you (intimate, oblique) | **«تو» کی حالتِ جر — «تجھ سے»** |
+| ستم | sitam | oppression; cruelty | **ظلم، زیادتی — «ستم ڈھانا»** |
+| سجدہ | sajda | prostration (in prayer) | **نماز میں ماتھا زمین پر رکھنا** |
+| حرم | haram | sanctuary; the holy precinct | **مقدس مقام — «حرمِ کعبہ»؛ زنان خانہ** |
+| محفل | mehfil | gathering; assembly; party | **لوگوں کا جمگھٹا، بزم — «محفلِ موسیقی»** |
+| جام | jaam | cup; goblet | **پیالہ، ساغر — «جامِ صحت»** |
+| بت | but | idol; statue; beloved | **مورتی، صنم؛ شاعری میں محبوب** |
+| ستارے | sitare | stars | **«ستارہ» کی جمع — «آسمان کے ستارے»** |
+| ساحل | sahil | shore; coast | **سمندر یا دریا کا کنارا** |
+| صحرا | sehra | desert | **ریت کا ویران میدان، ریگستان** |
+| خوشبو | khushboo | fragrance; scent | **اچھی مہک — «پھولوں کی خوشبو»** |
+| رہائی | rihai | release; freedom | **چھوٹنا، آزادی — «قید سے رہائی»** |
+| غیرت | ghairat | honour; self-respect; sense of shame | **عزت کا احساس، حمیت — «غیرت مند»** |
+| جاؤں | jaun | I (may) go | **«جانا» — «میں جاؤں؟»** |
+| کہو | kaho | say (imperative) | **«کہنا» کا امر — «سچ کہو»** |
+| چلتی | chalti | walks; goes; works (f.) | **«چلنا» کی مؤنث — «چلتی گاڑی»** |
+| بھرا | bhara | filled; full (m.) | **«بھرنا» کی ماضی — «بھرا ہوا»** |
+| بھرے | bhare | filled; full (pl.) | **«بھرا» کی جمع — «بھرے بازار»** |
+| چاہا | chaha | wanted; wished (m.) | **«چاہنا» کی ماضی — «جو چاہا، پایا»** |
+| لفظوں | lafzon | words (oblique) | **«لفظ» کی جمع، حالتِ جر — «لفظوں میں»** |
+| قصہ | qissa | tale; story; affair | **کہانی، داستان — «قصہ مختصر»** |
+| داستان | dastan | epic tale; saga | **لمبی کہانی، قصہ — «داستانِ امیر حمزہ»** |
+| سچا | sacha | true; truthful (m.) | **سچ بولنے والا؛ کھرا (مذکر)** |
+| سچی | sachi | true; truthful (f.) | **«سچا» کی مؤنث — «سچی بات»** |
+| پرانا | purana | old (things) (m.) | **بہت دنوں کا، قدیم — «پرانا مکان»** |
+| نرم | narm | soft; gentle | **ملائم؛ دھیما — «نرم لہجہ»** |
+| سرد | sard | cold | **ٹھنڈا — «سرد ہوا»** |
+| عکس | aks | reflection; image | **پرچھائیں، تصویر — «آئینے میں عکس»** |
+| بھروسہ | bharosa | trust; reliance | **اعتماد، یقین — «بھروسہ رکھنا»** |
+| بھٹی | bhatti | furnace; kiln | **آگ کی بڑی چولھا نما جگہ — «اینٹوں کی بھٹی»** |
+| لمحے | lamhe | moments | **«لمحہ» کی جمع — «چند لمحے»** |
+| رے | re | oh; hey (familiar address) | **اے، ارے — بے تکلف پکار** |
+| تیرا | tera | your; yours (intimate, m.) | **«تیرا» — تیری چیز (بے تکلف)** |
+| داغ | daagh | stain; scar; blemish | **دھبہ، نشان — «داغ لگنا»؛ صدمہ** |
+| چراغ | charagh | lamp | **روشنی کا دیا — «چراغ جلانا»** |
+| آب حیات | ab-e-hayat | elixir of life, aqua vitae | **حیات بخش پانی — کہانیوں کا امرت** |
+| آتش | atish | fire; flame; anger; rage; passion, zeal | **آگ (فارسی) — «آتش فشاں»؛ جوش** |
+| آغا | agha | Mr.; sir, gentleman; master | **جناب، صاحب (ترکی لقب) — «آغا خان»** |
+| آفتاب | aftab | Sun; sunshine; sunlight; wine; goblet | **سورج؛ مردانہ نام بھی** |
+| آگاہ | agah | informed, aware, known to; knowledgeable, knowing | **باخبر، جاننے والا — «آگاہ کرنا»** |
+| آہستہ آہستہ | ahista ahista | gradually; bit by bit | **دھیرے دھیرے، رفتہ رفتہ** |
+| ابلاغ کرنا | ablagh karna | to impart | **بات پہنچانا، آگاہ کرنا** |
+| احباب | ahbab | friends, companions, members | **«حبیب» کی جمع — دوست، پیارے** |
+| احتیاط | ihtiyat | prudence; precaution, care, caution, wariness | **چوکسی، بچاؤ کی تدبیر — «احتیاط برتیں»** |
+| احسان مند | ehsan mand | beholden, indebted | **شکر گزار، ممنون** |
+| احسان مند ہونا | ehsan mand hona | to owe | **ممنون ہونا، شکر گزار ہونا** |
+| اختلافات | ikhtilafat | formal plural of اِخْتِلاف (ixtilāf) | **«اختلاف» کی جمع — «اختلافات ختم ہوئے»** |
+
+## بیچ 22 — 96 الفاظ (30 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| ارادہ رکھنا | eradah rakhna | to wish | **نیت رکھنا، چاہنا** |
+| استحکام | istihkam | establishment, stability, firmness, corroboration, ratificat | **مضبوطی، پائیداری — «امن کا استحکام»** |
+| اسلحہ سازی | aslahah sazi | weaponry | **ہتھیار بنانے کا کام** |
+| اسلوب | usloob | high fashion, guise, manner, routine, style | **انداز، طرز — «اسلوبِ بیان»** |
+| اسکولوں | iskoolon | oblique plural of اِسْکُول (iskūl) | **«اسکول» کی جمع، حالتِ جر — «اسکولوں میں»** |
+| اصحاب | ashab | masters, lords | **«صاحب» کی جمع — ساتھی، والے — «اصحابِ کہف»** |
+| اصطلاح | istilah | idiom, term, vocable | **کسی علم کا مخصوص لفظ — «سائنسی اصطلاح»** |
+| اصلی | asli | original; fundamental; basic | **اصل کا، حقیقی — «اصلی گھی»** |
+| اصول عقائد | usol e aqaed | dogma | **عقیدے کے بنیادی اصول** |
+| اطراف | atraf | plural of طرف (taraf); vicinity | **«طرف» کی جمع — اطراف، ارد گرد** |
+| افسانے | afsane | inflection of اَفْسانَہ (afsāna, “tale; legend”): direct plu | **«افسانہ» کی جمع — «افسانے پڑھنا»** |
+| امی | ammi | alternative form of اَمّا (ammā, “mom; mum”) | **ماں — پیار کا لفظ — «امی جان»** |
+| انتظامی تقسیم | intizami taqseem | administrative division | **ملک کے حصوں کی سرکاری تقسیم** |
+| انجمن | anjuman | meeting, assembly, gathering; society | **محفل، مجلس؛ تنظیم — «انجمنِ ترقیِ اردو»** |
+| انگریز | angrez | Englishman; a Brit; the British; white person | **انگلستان کا باشندہ؛ برطانوی** |
+| انگلستان | inglistan | England, Inglistan (a constituent country of the United King | **انگریزوں کا ملک، برطانیہ کا بڑا حصہ** |
+| اچانک پن | acanak pan | unexpectedness | **اچانک ہونے کی کیفیت، ناگہانی** |
+| باغی | baghi | rebel, rebellious, disloyal; recalcitrant; traitor, rebel | **بغاوت کرنے والا، سرکش** |
+| بدلہ | badla | exchange; compensation; revenge | **عوض، معاوضہ؛ انتقام — «بدلہ لینا»** |
+| بدولت | badaulat | through (someone), due to; by the grace (of), by the generos | **کے سبب، کی وجہ سے — «آپ کی بدولت»** |
+| برباد | barbad | ruined; destroyed | **اجڑا ہوا، تباہ — «برباد ہونا»** |
+| برصغیر | barr-i sagheer | Indian subcontinent (a subcontinent in South Asia); subconti | **ہند و پاک اور آس پاس کا بڑا خطہ** |
+| برف | barf | ice; snow; the cold, frigid | **جمی ہوئی ٹھنڈی چیز؛ پہاڑوں پر گرنے والی برف** |
+| بیشک | beshak | undoubtedly, without a doubt, totally; could, maybe, perhaps | **بلا شبہ، یقیناً** |
+| بے شرم | be sarm | shameless | **جسے شرم نہ آئے، بے حیا** |
+| تارکین | tarikeen | immigrants; sacrificers | **چھوڑنے والے — «تارکینِ وطن»** |
+| تجربات | tajribat | formal plural of تَجْرِبَہ (tajriba) | **«تجربہ» کی جمع — «تجربات سے سیکھنا»** |
+| تجھ کو | tujh ko | dative of تم (tum) | **«تجھ» + «کو» — تجھے** |
+| تحفہ | tuhfa | gift, present; rarity; curiosity | **سوغات، ہدیہ — «تحفہ دینا»** |
+| ترجیح | tarjeeh | preference, precedence; priority | **فوقیت، اولیت — «ترجیح دینا»** |
+| تسلی | tasalli | contentment, satisfaction, consolation, comfort, solace, ass | **دل کا قرار، دلاسا — «تسلی دینا»** |
+| تشریح | tashreeh | exegesis; commentary; explanation | **کھول کر بیان کرنا، وضاحت** |
+| تلوار | talvar | a sword | **جنگ کا دھاری دار ہتھیار — «تلوار چلانا»** |
+| تین تلوار | teen talvar | A monument in Clifton, Karachi, Sindh, Pakistan consisting o | **کراچی (کلفٹن) کی تین تلواروں والی یادگار** |
+| جدا | juda | separate, apart, split; different, unrelated | **الگ، علیحدہ — «جدا ہونا»** |
+| جلوس | juloos | procession, sitting | **لوگوں کا قافلہ نما چلنا — «جلوس نکالنا»** |
+| جملہ | jumla | all; all, total, entire; phrase, saying | **سب، کل — «جملہ حقوق»؛ قواعد میں پورا فقرہ** |
+| جواز سفر | javaz-e-safar | passport | **پاسپورٹ، سفر کا اجازت نامہ** |
+| جوانوں | javanon | oblique plural of جَوان (javān) | **«جوان» کی جمع، حالتِ جر — «فوجی جوانوں نے»** |
+| جوہر | jauhar | jewel, gem; essence, meaning; atom | **قیمتی پتھر؛ اصل خوبی — «جوہر دکھانا»** |
+| جگر | jigar | liver; heart; mind | **کلیجہ؛ دل — «جگری دوست»** |
+| خالق | khaliq | creator, an epithet for God | **پیدا کرنے والا — اللہ کا صفاتی نام** |
+| خطبہ | khutba | khutbah; sermon; discourse, speech | **جمعے یا اجتماع کی تقریر — «خطبہ دینا»** |
+| خودکش | khudkush | suicidal; of or relating to suicide | **خود کو مار لینے والا — «خودکش حملہ»** |
+| خورشید | khorsheed | sun; a male given name, Khurshid, from Persian | **سورج (فارسی)؛ مردانہ نام بھی** |
+| دادا | dada | paternal grandfather; respectful address for an older / elde | **باپ کا باپ؛ بزرگ آدمی کا احترامی خطاب** |
+| دربار | darbar | durbar, royal court, palace; royal audience (prominent citiz | **بادشاہ کا حضور، شاہی محفل — «دربار لگانا»** |
+| درس گاہ | dars-gah | school; college | **پڑھنے کی جگہ، مدرسہ یا کالج** |
+| درکار | darkar | needed, required; need | **جس کی ضرورت ہو، مطلوب — «رقم درکار ہے»** |
+| دریائے سندھ | darya-e-sindh | Indus river | **پاکستان کا سب سے بڑا دریا** |
+| دلچسپ | dilchasp | interesting | **دل کو بھانے والا — «دلچسپ کہانی»** |
+| دھمکی دینا | dhamki dena | to threaten | **ڈرانا — «دھمکی دینا»** |
+| ذخیرہ | zakherah | storehouse; outhouse | **جمع کیا ہوا مال، خزانہ — «ذخیرہ اندوزی»** |
+| ذوق | zavq | taste, flavor; taste, interest; pleasure, delight | **مزہ؛ شوق، لگاؤ — «ذوقِ مطالعہ»** |
+| رحمۃ اللہ علیہ | rahmatu llahi alaih | may God have mercy on him | **دعائیہ کلمہ: اللہ اُن پر رحم فرمائے** |
+| رزق | rizq | income, wages; allowance; daily bread, sustenance | **روزی، رزق — «رزقِ حلال»** |
+| رضا کاروں | raza karon | oblique plural of رَضا کَار (razā kār, “volunteer”) | **«رضا کار» کی جمع، حالتِ جر** |
+| رفتہ | rafta | gone; departed; deceased | **گزرا ہوا (فارسی) — «رفتہ رفتہ»** |
+| روزنامہ | roznama | newspaper | **روز چھپنے والا اخبار** |
+| روپ | roop | outward appearance, form, figure, shape, appearance, semblan | **شکل، صورت — «روپ بدلنا»** |
+| روپیہ | roopaya | rupee; a foreign currency of some kind.; wrought silver | **پیسہ، سکہ — «روپیہ پیسہ»** |
+| رویہ | ravaiya | attitude; behavior, conduct, manner; rule, procedure | **برتاؤ، طرزِ عمل — «اچھا رویہ»** |
+| زبردستی | zabardasti | forcefulness; coercion (act of forcing); oppression, injusti | **زور آوری، جبر — «زبردستی کرنا»** |
+| سبز انقلاب | sabz inqilab | Green Revolution | **زراعت کی بڑی ترقی کی تحریک** |
+| سبھا | sabha | assembly, council; meeting; association | **مجلس، سبھا — ہندی روایت کی انجمن** |
+| سرمایہ پرستی | sarmaya-parasti | money-idolatry, the worship and idolization of money and wea | **دولت کی پوجا؛ سرمایہ داری** |
+| سستی | susti | laziness, sloth; feminine of سَسْتَا (sastā, “cheap”) | **کاہلی، الکسی؛ «سستا» کی مؤنث** |
+| سفارت خانہ | sifarat khana | embassy; consulate | **سفیر کا دفتر — «پاکستانی سفارت خانہ»** |
+| سوالات | savalat | formal plural of سَوَال (savāl, “question”) | **«سوال» کی جمع — «سوالات کے جواب»** |
+| سونا | soona | empty; hollow; unoccupied | **ویران، خالی — «سونا گھر»** |
+| سپاہی | sipahi | soldier, fighter; sepoy; a Hindustani soldier (ie. a native  | **فوج کا جوان، لشکری** |
+| سچائی | sachchai | truth; reality; accuracy | **سچ ہونا، صداقت** |
+| سیلاب | sailab | flood, torrent, deluge, inundation | **پانی کا طوفان، طغیانی — «سیلاب آنا»** |
+| شر | sharr | evil, wickedness | **برائی، فساد — خیر کی ضد** |
+| شرم | sharm | shame | **لاج، حیا — «شرم آنا»** |
+| شہزادہ | shahzada | prince (a king's son, grandson or other male descendant) | **بادشاہ کا بیٹا — «شہزادہ سلیم»** |
+| شے | sai | object, thing; article, matter | **چیز، مادّہ — «ہر شے»** |
+| صارفین | sarifeen | plural of صارِف (sārif, “user”) | **«صارف» کی جمع — استعمال کرنے والے** |
+| صداقت | sadaqat | the truth; truthfulness; honesty; sincerity; friendship | **سچائی، راستی** |
+| صلاح | salah | advice, counsel | **مشورہ، رائے — «صلاح دینا»** |
+| ضبط | zabt | seized, confiscated; seizing, confiscation; control, composu | **قبضے میں لینا — «مال ضبط»؛ خود پر قابو — «ضبط کرنا»** |
+| ضبط کرنا | zabt karna | to confiscate | **سرکاری طور پر قبضے میں لے لینا** |
+| ضمیر | zameer | conscience; mind, heart; a kept secret; pronoun | **دل کی آواز — «ضمیر جاگنا»؛ قواعد میں اسم کی جگہ آنے والا کلمہ** |
+| طبقے | tabaqe | inflection of طَبَقَہ (tabaqa): direct plural; inflection of | **«طبقہ» کی جمع — «سب طبقے»** |
+| طیارے | tayyare | inflection of طَیَّارہ: direct plural; inflection of طَیَّار | **«طیارہ» کی جمع — ہوائی جہاز** |
+| عراقی | iraqi | Iraqi; Iraqi (person) | **عراق کا؛ عراق کا باشندہ** |
+| علما | ulama | plural of عالم (ālim) | **«عالم» کی جمع — دین کے جاننے والے** |
+| علیحدگی پسند | alehdgi pasand | separatist | **الگ ہونے کی تحریک والا، علیحدگی کا حامی** |
+| عمدہ | umda | excellent | **بہت اچھا، اعلیٰ — «عمدہ کھانا»** |
+| عمومی | umoomi | general | **عام، سب سے متعلق — «عمومی حالات»** |
+| عہد نامہ قدیم | ahd-nama qadeem | Old Testament | **عیسائیوں اور یہودیوں کی مقدس کتاب کا پہلا حصہ** |
+| عیسائی | eesai | Christian | **حضرت عیسیٰؑ کے ماننے والے؛ مسیحی** |
+| غالبا | ghaliban | probably, apparently, for the most part, mostly, chiefly | **شاید، بظاہر — «غالباً وہ آئیں گے»** |
+| غریبوں | ghareebon | oblique plural of غَرِیب (ġarīb) | **«غریب» کی جمع، حالتِ جر — «غریبوں کی مدد»** |
+| غیر حاضری | ghair haziri | absence | **موجود نہ ہونا — «اسکول سے غیر حاضری»** |
+| فارغ اوقات | farig auqat | free time, unoccupied time, break time | **فرصت کے لمحے، خالی وقت** |
+
+## بیچ 23 — 96 الفاظ (30 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| فرشتے | farishte | inflection of فَرِشْتَہ (fariśta, “angel”): direct plural; i | **«فرشتہ» کی جمع — «فرشتے اترے»** |
+| فقہ | fiqh | knowledge, understanding; fiqh, jurisprudence | **اسلامی قانون کا علم — «فقہِ حنفی»** |
+| فلسفہ | falsafa | philosophy | **عقل و وجود پر غور کا علم، حکمت** |
+| قانون نفاذ | qanoon nafaz | law enforcement | **قانون پر عمل کرانا** |
+| قبرستان | qabristan | cemetery; graveyard | **مُردوں کے دفن کی جگہ** |
+| قلعہ جانا | qila jana | to castle | **شطرنج میں بادشاہ اور رخ کی مخصوص چال** |
+| لال بیگ | lal beg | Valmiki; cockroach | **کاکروچ — گھروں کا بدبودار کیڑا** |
+| لاپتہ | lapata | missing; unknown | **جس کا پتا نہ ہو، گمشدہ — «لاپتہ افراد»** |
+| لعنت | lanat | curse, anathema, imprecation | **پھٹکار، نفرین — «لعنت بھیجنا»** |
+| لعنت ہو | lanat ho | damn it | **بیزاری کا کلمہ — «اِس پر لعنت ہو!»** |
+| لڑکا | larka | boy; son | **لڑکا، بیٹا** |
+| لکڑی کا پل | lakri ka pul | Lakdi ka pul (a neighbourhood of Hyderabad, Telangana, India | **حیدرآباد دکن کا ایک علاقہ** |
+| لگانا | lagana | to affix, attach, join; to place; install; setup (physical i | **جوڑنا، چپکانا؛ نصب کرنا — «تصویر دیوار پر لگانا»** |
+| مادہ | mada | female; matter | **مؤنث جانور؛ مادّہ، شے کا بنیادی جوہر** |
+| ماسٹر | mastar | master; teacher | **استاد؛ ماہر — «ماسٹر صاحب»** |
+| متحدہ عرب امارات | muttahida arab imarat | United Arab Emirates (a country in Asia) | **خلیج کے سات عرب امارتوں کا ملک، دارالحکومت ابوظبی** |
+| مدرسہ | madrasa | madrasa, an Islamic school; school, academy | **دینی تعلیم کی درسگاہ؛ اسکول** |
+| مزدور | mazdoor | labourer, worker; porter, carrier, coolly | **محنت کر کے کمانے والا — «مزدور کی اجرت»** |
+| مسئلے | masale | inflection of مَسْئَلَہ (masala, “problem”): direct plural;  | **«مسئلہ» کی جمع — «مسئلے حل کرنا»** |
+| مستحق | mustahaq | deserving, worthy; poor, bankrupt | **جو حق دار ہو — «مستحق طالب علم»** |
+| مسیحی | maseehi | Christian; relating to Christianity or Christ.; Anno Domini; | **عیسائی، حضرت مسیحؑ کا پیروکار** |
+| مشاہدہ | mushahida | observation; witnessing; beholding; contemplation | **غور سے دیکھنا — «فطرت کا مشاہدہ»** |
+| مشترکہ منڈی | mushtaraka mandi | a single market.; the Common Market. | **کئی ملکوں کی ایک ساجھی منڈی** |
+| معاشرہ | muashara | society; community | **لوگوں کا مل جل کر رہنے کا نظام، سماج** |
+| ملنا | milna | to be found; to be joined; to meet, encounter, mingle | **حاصل ہونا — «انعام ملنا»؛ ملاقات ہونا — «دوست سے ملنا»** |
+| مندر | mandir | a Hindu temple; temple, place or house of worship | **ہندوؤں کی عبادت گاہ** |
+| منسوخ | mansookh | cancelled, abolished, annulled, repealed, abrogated, erased | **رد کیا ہوا، ختم — «حکم منسوخ»** |
+| مچھلی | machhli | fish | **پانی کا جانور — «مچھلی پکڑنا»** |
+| میڈیکل سینٹر | medeekal sentar | medical center | **علاج کا مرکز، طبی مرکز** |
+| ناظم | nazim | secretary, manager, organizer; poet, composer | **انتظام چلانے والا، منتظم** |
+| نشر | nashar | broadcasting, telecasting, transmission, publishing, publica | **نشریات، پھیلانا — «نشر ہونا»** |
+| نصاب | nisab | syllabus, curriculum; capital, wealth | **تعلیم کا مقررہ کورس — «نصابِ تعلیم»** |
+| نصیحت | naseehat | advice, counsel, suggestion | **اچھی بات کی تلقین — «نصیحت کرنا»** |
+| نفاذ | nafaz | enforcement; promulgation | **لاگو کرنا — «قانون کا نفاذ»** |
+| نقاب | niqab | mask; veil; hood | **چہرے کا پردہ — «نقاب اوڑھنا»** |
+| واجب | vajib | appropriate, proper, necessary | **لازم، ضروری — «واجب الادا»** |
+| وادی سندھ کی تہذیب | vadi-e-sindh ki tehzeeb | Indus Valley Civilization | **ہڑپہ اور موئن جو دڑو کی قدیم تہذیب** |
+| وارث | varis | heir, inheritor | **میراث پانے والا — «جائیداد کا وارث»** |
+| وسعت | vusat | amplitude, space, extent, vastness; convenience, leisure, ea | **پھیلاؤ، کشادگی — «دل کی وسعت»** |
+| ویژن | veezhan | vision | **دور تک دیکھنے کی صلاحیت؛ تصور** |
+| ٹرک | trak | truck | **سامان ڈھونے کی بڑی گاڑی** |
+| پال | pal | a male given name from English, equivalent to English Paul | **انگریزی مردانہ نام (Paul)** |
+| پیرس | pairis | Paris (the capital and largest city of France) | **فرانس کا دارالحکومت** |
+| پیروی | pairavi | pleading; recommendation; pursuit, following, devotion, obed | **پیچھے چلنا، اتباع — «پیروی کرنا»؛ مقدمے کی نگرانی** |
+| پیشہ ور | pesa-war | professional, workman, tradesman; artisan, craftsman | **جو کام کو پیشہ بنائے — «پیشہ ور کاریگر»** |
+| چادر | chadar | covering; bedspread; bed sheet | **اوڑھنے یا بچھانے کا کپڑا — «چادر تاننا»** |
+| چودہ | chauda | fourteen | **گنتی میں 14** |
+| چپ | chup | silent, quiet; still | **خاموش — «چپ رہنا»** |
+| چھ گنا | chha-guna | sixfold, sextuple | **چھ گنا زیادہ** |
+| ڈرامہ | drama | drama; acting; play | **اسٹیج یا ٹی وی کا کھیل، ناٹک** |
+| ڈیرہ اسماعیل خان | dera ismaeel khan | Dera Ismail Khan (a city in Dera Ismail Khan district, Khybe | **خیبر پختونخوا (پاکستان) کا شہر** |
+| کالا | kala | black (color/colour); dark complexioned (derogatory term use | **سیاہ رنگ کا — «کالا بادل»** |
+| کاپی | kapi | copy; notebook; copybook; exercise book | **نقل؛ لکھنے کی مشق والی کتاب** |
+| کرسی | kursi | chair | **بیٹھنے کی نشست — «کرسی پر بیٹھیں»** |
+| کلمہ | kalima | word; speech; saying | **لفظ، بول؛ اسلام کا بنیادی کلمہ** |
+| کمر | kamar | waist; loin; girdle; sash; a sheath | **جسم کا درمیانی حصہ — «کمر سیدھی کریں»** |
+| کمرے | kamre | inflection of کَمْرَہ (kamra): oblique/vocative singular; in | **«کمرہ» کی جمع — «کمرے بند ہیں»** |
+| کور | kor | blind; cruel, harsh, vile, inauspicious; hurt, wounded | **اندھا (فارسی) — «کور چشم»** |
+| کینیڈا | kaineda | Canada (a country in North America) | **شمالی امریکا کا بڑا ملک، دارالحکومت اوٹاوا** |
+| گانا | gana | song; to sing | **سُر میں پڑھے جانے والے بول؛ گانا گانا** |
+| گردش | gardish | rotation; revolution; circulation | **گھومنا، چکر — «وقت کی گردش»** |
+| گردن | gardan | neck | **سر اور دھڑ کو ملانے والا حصہ** |
+| گرمی | garmi | heat; summer (season of the year); excitement, passion, ardo | **حرارت؛ گرمی کا موسم** |
+| گم | gum | lost, missing; absent, invisible; distracted, wanting, wande | **کھویا ہوا — «گم ہو جانا»** |
+| گمان | guman | mistrust, doubt; uncertainty | **خیال، قیاس؛ شک — «گمان کرنا»** |
+| گھنٹہ | ghanta | hour; bell; clock | **ساٹھ منٹ کا وقت؛ بجنے والا گھنٹا** |
+| گھڑی | ghari | clock, watch; hour, time | **وقت بتانے والا آلہ؛ پل — «مشکل گھڑی»** |
+| گہرا | gahra | deep | **جس کی تہ دور ہو — «گہرا پانی»؛ گاڑھا — «گہرا رنگ»** |
+| گیند | gend | ball | **کھیلنے کی گول چیز — «گیند بلا»** |
+| ہرگز | hargiz | ever, at any time | **کبھی بھی — «ہرگز نہ کرنا»** |
+| ہرگز نہیں | hargiz-naheen | never ever, by no means | **کبھی نہیں، بالکل نہیں** |
+| ہستی | hasti | existence, being; personality, entity | **وجود؛ شخصیت — «بڑی ہستی»** |
+| ہلاکتوں | halakaton | oblique plural of ہَلَاکَت (halākat) | **«ہلاکت» کی جمع، حالتِ جر — اموات** |
+| ہم جنس پرست | ham jins parast | homosexual, gay, lesbian, MLM, WLW | **اپنی ہی جنس کی طرف مائل** |
+| ہوائی جہاز | havai jahaz | aircraft, airplane | **اڑنے والی سواری، طیارہ** |
+| ہوٹل | hotal | hotel; restaurant | **قیام یا کھانے کی تجارتی جگہ** |
+| یوسف ثانی | yoosuf-e-sani | exceedingly beautiful, handsome | **نہایت حسین — حضرت یوسفؑ سے تشبیہ** |
+| لب | lab | lip | **ہونٹ — «لبوں پر مسکراہٹ»** |
+| قدموں | qadmon | steps; feet (oblique) | **«قدم» کی جمع، حالتِ جر — «قدموں میں»** |
+| زخم | zakhm | wound | **گھاؤ، چوٹ — «زخم بھرنا»** |
+| اقرار | iqrar | confession; admission; promise | **مان لینا؛ عہد — «اقرار کرنا»** |
+| تقدیر | taqdeer | destiny; fate | **نصیب، قسمت — «تقدیر کا لکھا»** |
+| مقدر | muqaddar | destiny; what is decreed | **جو نصیب میں لکھا ہو، قسمت** |
+| زاہد | zahid | ascetic; pious man | **عبادت گزار، پرہیزگار؛ شاعری میں واعظ** |
+| ستاروں | sitaron | stars (oblique) | **«ستارہ» کی جمع، حالتِ جر — «ستاروں سے آگے»** |
+| لہر | lehar | wave | **پانی کی موج؛ کیفیت کا اتار چڑھاؤ — «خوشی کی لہر»** |
+| پھولوں | phoolon | flowers (oblique) | **«پھول» کی جمع، حالتِ جر — «پھولوں کی خوشبو»** |
+| سایہ | saya | shade; shadow | **چھاؤں؛ پرچھائیں — «درخت کا سایہ»** |
+| دھوپ | dhoop | sunshine; sunlight | **سورج کی روشنی — «دھوپ میں بیٹھنا»** |
+| کرن | kiran | ray (of light) | **روشنی کی لکیر — «امید کی کرن»** |
+| جہان | jahan | world; universe | **دنیا، عالم — «دو جہان»** |
+| قیدی | qaidi | prisoner | **قید میں ڈالا ہوا شخص** |
+| ناز | naaz | coquetry; pride; airs and graces | **ادا، نخرہ — «ناز اٹھانا»؛ فخر** |
+| اونچی | oonchi | high; tall (f.) | **«اونچا» کی مؤنث — «اونچی دیوار»** |
+| سوچتے | sochte | think (pl.) | **«سوچنا» — «سوچتے رہ گئے»** |
+| چلو | chalo | let's go; come on | **«چلنا» کا امر — «چلو چلیں!»** |
+
+## بیچ 24 — 96 الفاظ (30 اگست 2026)
+
+| لفظ | رومن | English | اردو معنی |
+|---|---|---|---|
+| چلیں | chalein | let us go (polite) | **«چلنا» — «آئیے چلیں»** |
+| اٹھے | uthe | rose; got up (pl.) | **«اٹھنا» کی ماضی، جمع — «سب اٹھے»** |
+| گرا | gira | fell (m.) | **«گرنا» کی ماضی — «پتا گرا»** |
+| جڑ | jur | join; (n.) root | **پودے کی زمین والی بنیاد — «جڑ پکڑنا»؛ «جڑنا» کا مادہ** |
+| ڈوب | doob | sink; drown (stem) | **«ڈوبنا» کا مادہ — «ڈوب جانا»** |
+| گیت | geet | song | **نغمہ، سریلے بول — «گیت گانا»** |
+| جھوٹا | jhoota | false; liar (m.) | **جھوٹ بولنے والا؛ جعلی — «جھوٹا وعدہ»** |
+| تلخ | talkh | bitter; harsh | **کڑوا — «تلخ ذائقہ»؛ ناگوار — «تلخ تجربہ»** |
+| اذیت | aziyat | torment; agony | **سخت تکلیف، عذاب** |
+| ناممکن | namumkin | impossible | **جو ہو نہ سکے، محال** |
+| جوانی | jawani | youth | **جوان ہونے کا زمانہ، شباب** |
+| چھت | chhat | roof; ceiling | **مکان کا اوپری حصہ — «چھت پر چڑھنا»** |
+| جوں | jun | as; the moment that (juun hi) | **جیسے — «جوں ہی»، «جوں کا توں»** |
+| راتوں | raaton | nights (oblique) | **«رات» کی جمع، حالتِ جر — «راتوں کو جاگنا»** |
+| اشارے | ishare | signs; gestures; hints | **«اشارہ» کی جمع — «اشارے سمجھنا»** |
+| آوازیں | awaazein | voices; sounds | **«آواز» کی جمع — «آوازیں آنا»** |
+| آئینہ | aeena | mirror; glass; reflection; manifestation (of an attribute fr | **شیشہ جس میں صورت دکھے — «آئینہ دیکھنا»** |
+| آدھا | adha | half | **کسی چیز کا نصف حصہ — «آدھا حصہ»** |
+| آدھی | adhi | feminine of آدھا (ādhā) | **«آدھا» کی مؤنث — «آدھی روٹی»** |
+| آدھی رات | adhi rat | midnight | **رات کے بارہ بجے کا وقت، نصف شب** |
+| آزمائش | azmaeesh | test, trial; examination; experiment | **امتحان، پرکھ — «آزمائش میں ڈالنا»** |
+| آقا | aqa | Mr.; sir, gentleman; master | **مالک، صاحب — «آقا و مولا»** |
+| ابا | abba | father | **باپ — پیار کا لفظ — «ابا جان»** |
+| اتر پردیش | uttar pradesh | Uttar Pradesh (a state in northern India) | **شمالی بھارت کی بڑی ریاست، دارالحکومت لکھنؤ** |
+| اجتماع | ijtima | assemblage; convention, gathering | **لوگوں کا جمع ہونا — «جمعے کا اجتماع»** |
+| احاطہ | ahata | bawn, enclosure, fence, limitation, mew, pale, parvis, sept, | **گھری ہوئی جگہ، چار دیواری** |
+| احاطہ کرنا | ihatah karna | to enclose | **گھیر لینا، احاطے میں لے لینا** |
+| اختتام ہفتہ | ikhtatam-e-hafta | weekend, end of week | **ہفتے کا آخر — چھٹی کے دن** |
+| اداکاری | ada kari | acting | **فلم یا ڈرامے میں کردار نبھانے کا فن** |
+| اداکاری کرنا | ada kari karna | act | **فلم یا ڈرامے میں کردار نبھانا** |
+| ادھر کی ادھر لگانا | idhar ki udhar lagana | gossip | **چغلی کرنا، ایک کی بات دوسرے سے لگانا** |
+| ارد گرد | ird-gird | around, nearby, in the vicinity | **چاروں طرف، آس پاس** |
+| ارض | arz | land, earth, region, territory | **زمین (عربی) — «ارضِ پاک»** |
+| ازیں | azeen | hereto | **اِس سے (فارسی) — «بعد ازیں»** |
+| اسباب | asbab | causes, means, motives, appliance, materiel | **«سبب» کی جمع — وجوہ؛ سامان** |
+| اشتعال | ishteal | combustion, infuriation, agitation, ignition, provocation | **بھڑکنا، اکسایا جانا — «اشتعال دلانا»** |
+| اشتعال سے | ishteal se | infuriatingly | **بھڑک کر، غصے سے** |
+| اشتہار | ishtihar | advertisement, notification, poster, renown, reputation | **تشہیر کی تحریر — «اخبار میں اشتہار»** |
+| اصغر | asghar | junior | **چھوٹا (عربی) — «علی اصغر»؛ مردانہ نام** |
+| اصلاح پسندی | islah pasandi | reformism | **اصلاح کی راہ پسند کرنا، اصلاح پسندی** |
+| اطاعت | itaat | obedience; submission | **فرماں برداری — «اطاعت کرنا»** |
+| افریقی | afreeqi | an African; African | **افریقہ کا؛ افریقہ کا باشندہ** |
+| امامت | imamat | leadership; an office or jurisdiction of an imam. | **امام ہونا؛ نماز کی قیادت** |
+| امانت | amanat | trust; deposit or possession entrusted to someone for safeke | **کسی کے حوالے کی گئی چیز — «امانت میں خیانت نہیں»** |
+| انتقام | intiqam | revenge, vengeance | **بدلہ — «انتقام لینا»** |
+| انتہا پسندی | intiha pasandi | extremism | **حد سے بڑھی ہوئی سختی کا رویہ** |
+| انجیل | injeel | gospel | **حضرت عیسیٰؑ پر اتری کتاب** |
+| انسداد | insidad | eradication, prevention, hindrance; closure, blockage, obstr | **روک تھام — «انسدادِ دہشت گردی»** |
+| انگلی | ungli | finger | **ہاتھ کی پانچ شاخوں میں سے ایک — «انگلی اٹھانا»** |
+| اونٹ | oont | camel, dromedary; tall; fool, foolish | **ریگستان کا لمبی گردن والا جانور** |
+| اٹھارہ | atharah | eighteen | **گنتی میں 18** |
+| اٹھانا | uthana | to awaken (ie. from sleep); to lift up (weights etc.); to pi | **اوپر لے جانا — «بوجھ اٹھانا»؛ جگانا** |
+| اچانک ڈر | acanak dar | scare | **یکدم لگنے والا خوف، دہشت** |
+| ایجنٹ | ejant | agent | **کسی کا کام کرنے والا نمائندہ، کارندہ** |
+| ایشیائی | eshiyai | Asian | **ایشیا کا؛ ایشیا کا باشندہ** |
+| بائبل | baibil | the Bible | **عیسائیوں کی مقدس کتاب** |
+| بالی وڈ | bali vud | Bollywood | **بھارتی فلمی صنعت (ممبئی) کا نام** |
+| بت خانہ | but-khana | temple | **بتوں کی عبادت گاہ، مندر** |
+| بتانا | batana | to tell, to inform; to spend, pass, live out (said of time,  | **آگاہ کرنا — «بات بتانا»؛ گزارنا — «وقت بتانا»** |
+| بحریہ | bahriyah | navy | **سمندری فوج — «پاک بحریہ»** |
+| بد گمان | bad guman | to be suspicious (of), be mistrustful (of); suspicious, dist | **برا خیال رکھنے والا، شکی** |
+| بدقسمتی سے | badqismati se | unfortunately | **قسمت کی خرابی سے، افسوس کہ** |
+| بدنام | badnam | infamous | **جس کی شہرت خراب ہو — «بدنام ہونا»** |
+| برتن | bartan | crockery, dinnerware, tableware; any vessel used for eating | **کھانے پکانے کے ظروف — «برتن دھونا»** |
+| برصغیر ہند | barrisagheer-i hind | the Indian subcontinent | **ہند و پاک اور آس پاس کا بڑا خطہ** |
+| برقی | barqi | electric, electrical, electronic | **بجلی سے متعلق — «برقی رو»** |
+| بنگال | bangal | Bengal (a geographic region in the northeast of South Asia t | **مشرقی جنوبی ایشیا کا خطہ — بنگلہ دیش اور مغربی بنگال** |
+| بو | bu | smell, odor, scent; stink, stench | **مہک؛ بدبو — «بو آنا»** |
+| بو دار | bu-dar | scented, aromatic; giving off a (either good or bad) smell o | **جس میں سے بو آئے — خوشبودار یا بدبودار** |
+| بھائی چارہ | bhai chara | brotherhood (ie. friendship etc.) | **بھائیوں جیسا برتاؤ، اخوت** |
+| بہادری | bahaduri | bravery, heroism | **دلیری، شجاعت** |
+| بیدار | bedar | conscious, enlightened; awake, wakeful (not asleep); attenti | **جاگتا ہوا؛ ہوشیار — «بیدار مغز»** |
+| بیش | bes | more, greater; excess, too much, a lot | **زیادہ (فارسی) — «کم و بیش»** |
+| بیل | bel | creeper; progeny | **چڑھنے والا پودا — «بیل بوٹے»** |
+| بیٹوں | beton | oblique plural of بیٹا (beṭā, “boy; son”) | **«بیٹا» کی جمع، حالتِ جر — «بیٹوں کو»** |
+| بے نظیر | be nazeer | matchless | **جس جیسا کوئی نہ ہو، بے مثال** |
+| تائید | taeed | help; aid, support; corroboration; favour (ie. support) | **حمایت، توثیق — «تائید کرنا»** |
+| تاج محل | taj mahal | Taj Mahal (a monument in Agra, India, constructed between 16 | **آگرہ کی مشہور عمارت — محبت کی یادگار** |
+| تعبیر | tabeer | interpretation, elucidation (of a dream); explanation; putti | **خواب کا مطلب؛ مراد — «خواب کی تعبیر»** |
+| تلاوت | tilavat | tilawa, recitation (of the Holy Quran) | **قرآن شریف پڑھنا — «تلاوت کرنا»** |
+| تلنگانہ | tilangana | Telangana (a state in south-central India, created in 2014 b | **جنوبی بھارت کی ریاست، دارالحکومت حیدرآباد** |
+| تن | tan | body; straw; trunk | **جسم، بدن (فارسی) — «تن من دھن»** |
+| تنازع | tanazo | conflict, struggle | **جھگڑا، کھینچا تانی — «زمین کا تنازع»** |
+| توحید | tauheed | monotheism | **اللہ کے ایک ہونے کا عقیدہ** |
+| تہ | tah | bottom, underneath, depth, deepness; intent, meaning; origin | **نچلا حصہ، تلا — «تہ تک پہنچنا»؛ پرت — «تہ در تہ»** |
+| تہ دل | tah-e dil | inner self | **دل کی گہرائی — «تہِ دل سے شکریہ»** |
+| تہران | tahran | Tehran (the capital city of Iran); Tehran (a province of Ira | **ایران کا دارالحکومت** |
+| تیر انداز | teerandaz | archer | **تیر چلانے والا، کماندار** |
+| تیرہ | tera | thirteen | **گنتی میں 13** |
+| جائیداد | jaeedad | alternative spelling of جَائِداد (jāidād) | **مال و املاک — «جائیداد بنانا»** |
+| جادو | jadu | magic; enchantment; charm | **سحر، ٹونا — «جادو چلنا»** |
+| جانوں | janon | oblique plural of جَان (jān); first-person singular future s | **«جان» کی جمع، حالتِ جر — «جانوں کا نذرانہ»** |
+| جانیں | janen | direct plural of جان (jān, “life; soul”) | **«جان» کی جمع — «کئی جانیں گئیں»** |
+| جاپانی | japani | Japanese; a Japanese (person); Japanese (language) | **جاپان کا؛ جاپان کی زبان یا باشندہ** |
+| جنتا | janta | people, public, common folk – synonym of عَوَام ('avām); gro | **عوام، لوگ (ہندی)** |
+| جنوبی ایشیائی | janoobi eshiyai | South Asian | **جنوبی ایشیا کا — «جنوبی ایشیائی ممالک»** |
