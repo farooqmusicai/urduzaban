@@ -2515,3 +2515,81 @@
 | جاپانی | japani | Japanese; a Japanese (person); Japanese (language) | **جاپان کا؛ جاپان کی زبان یا باشندہ** |
 | جنتا | janta | people, public, common folk – synonym of عَوَام ('avām); gro | **عوام، لوگ (ہندی)** |
 | جنوبی ایشیائی | janoobi eshiyai | South Asian | **جنوبی ایشیا کا — «جنوبی ایشیائی ممالک»** |
+
+## بیچ R-1 — 71 نئے الفاظ (1 ستمبر 2026)
+
+> ماخذ: Rekhta لغت کی سرخیوں کی فہرست (صرف «کون سا لفظ موجود ہے») → فاروق کے corpus میں آنے والے چنے گئے → **معنی اپنے لکھے** (عہد UZ-AHD.md)۔ لغت 9,899 → 9,970۔
+
+| لفظ | رومن | اعراب | English | اردو معنی |
+|---|---|---|---|---|
+| عبث | abas | عَبَث | futile; in vain | **بے فائدہ، رائیگاں** |
+| اندوہ | andoh | اَنْدوہ | grief; sorrow | **غم، رنج (فارسی)** |
+| عرصہ | arsa | عَرْصَہ | period of time; open ground | **مدت — «عرصۂ دراز»؛ کھلا میدان** |
+| اوج | auj | اَوْج | zenith; height | **بلندی، عروج — «اوجِ کمال»** |
+| بادہ | baada | بادَہ | wine | **شراب (فارسی) — «بادہ خوار»** |
+| بست | bast | بَسْت | binding; sanctuary | **باندھنا؛ پناہ گاہ — «بست و کشاد»** |
+| بود | buud | بُود | being; existence | **ہونا، وجود (فارسی) — «بود و باش»** |
+| داب | daab | داب | pressure; awe | **دباؤ؛ رعب — «داب میں رکھنا»** |
+| داد | daad | داد | praise; justice | **تحسین — «داد دینا»؛ انصاف** |
+| دان | daan | دان | gift; charity (Sanskrit) | **خیرات، عطیہ (سنسکرت) — «دان کرنا»** |
+| داؤ | daav | داؤ | trick; stake; opportunity | **چال، حربہ — «داؤ لگانا»؛ بازی کی رقم** |
+| دھار | dhaar | دھار | edge (of a blade); stream | **تلوار کی باڑھ؛ بہاؤ — «دھار بہنا»** |
+| دود | duud | دُود | smoke | **دھواں (فارسی) — «دودِ دل»** |
+| فرد | fard | فَرْد | individual; a single sheet | **ایک شخص — «فردِ واحد»؛ کاغذ کی ایک شیٹ** |
+| فروش | farosh | فَروش | seller (suffix) | **بیچنے والا — «کتاب فروش»** |
+| فرق | farq | فَرْق | difference | **تفاوت، امتیاز — «فرق پڑنا»** |
+| گھات | ghaat | گھات | ambush; opportunity | **تاک، چھپ کر حملے کی جگہ — «گھات لگانا»** |
+| گریز | gurez | گُریز | flight; avoidance | **بھاگنا، کنارہ کشی — «گریزاں»** |
+| ہیچ | hech | ہیچ | nothing; worthless | **کچھ بھی نہیں، بے وقعت** |
+| حرمان | hirmaan | حِرْمان | deprivation | **محرومی، ناکامی** |
+| حرص | hirs | حِرْص | greed | **لالچ، طمع — «حرص و ہوس»** |
+| ہنر | hunar | ہُنَر | skill; craft | **فن، مہارت — «ہنر مند»** |
+| عجز | ijz | عَجْز | humility; helplessness | **انکسار؛ بے بسی — «عجز و نیاز»** |
+| عشوہ | ishva | عِشْوَہ | coquetry | **ناز و ادا — «عشوہ طرازی»** |
+| جادہ | jaada | جادَہ | path; road | **راستہ، شاہراہ — «جادۂ منزل»** |
+| جھاگ | jhaag | جھاگ | foam; froth | **بلبلوں کی تہ — «جھاگ اٹھنا»** |
+| جنس | jins | جِنْس | kind; gender; goods | **قسم، نوع؛ صنف؛ سودا — «جنسِ بازار»** |
+| جنبش | jumbish | جُنْبِش | movement; stir | **حرکت — «جنبشِ لب»** |
+| جز | juz | جُز | except; part | **سوائے؛ حصہ — «جزو لاینفک»** |
+| خلش | khalish | خَلِش | prick; pang | **چبھن، ٹیس — «دل میں خلش»** |
+| کشتہ | kushta | کُشْتَہ | slain; calcined medicine | **مارا ہوا؛ دوا کی جلی ہوئی شکل** |
+| لاگ | laag | لاگ | attachment; enmity; application | **لگاؤ؛ دشمنی — «لاگ ڈانٹ»؛ لگانے کا عمل** |
+| مار | maar | مار | beating; blow | **ضرب، پٹائی — «مار پیٹ»** |
+| ماش | maash | ماش | a lentil; livelihood | **ایک دال؛ گزارہ — «معاش»** |
+| محرم | mahram | مَحْرَم | confidant; kin (unmarriageable) | **رازدار؛ وہ رشتہ دار جس سے نکاح حرام ہو** |
+| محو | mahv | مَحْو | absorbed; erased | **کھویا ہوا — «محوِ خیال»؛ مٹا ہوا** |
+| مشرب | mashrab | مَشْرَب | creed; way of thinking | **مسلک، طریقہ — «ہم مشرب»** |
+| مصلحت | maslahat | مَصْلَحَت | expediency; prudence | **بھلائی کی تدبیر — «مصلحتاً خاموشی»** |
+| موجہ | mauja | مَوجَہ | wave | **لہر (فارسی)** |
+| میر | miir | مِیر | chief; leader; title | **سردار، پیشوا — «میرِ کارواں»؛ شاعروں کا لقب بھی** |
+| مفلس | muflis | مُفْلِس | destitute; poor | **نادار، غریب** |
+| مروت | muravvat | مُرَوَّت | kindness; consideration | **لحاظ، انسانی ہمدردی — «بے مروت»** |
+| مشت | musht | مُشْت | fist; handful | **مٹھی؛ مٹھی بھر — «مشتِ خاک»** |
+| ناش | naash | ناش | destruction | **تباہی، بربادی (سنسکرت)** |
+| نورد | navard | نَوَرْد | traverser (suffix) | **طے کرنے والا — «شب نورد»، «صحرا نورد»** |
+| نکھار | nikhaar | نِکھار | brightness; polish | **صفائی، چمک — «نکھار آنا»** |
+| نسبت | nisbat | نِسْبَت | relation; comparison | **تعلق، رشتہ؛ مقابلہ — «کی نسبت»** |
+| پریش | paresh | پَرِیش | distracted; scattered | **پریشان، منتشر (فارسی)** |
+| پرہیز | parhez | پَرْہیز | abstinence; diet | **بچاؤ، اجتناب — «پرہیزگار»** |
+| پیچ | pech | پیچ | twist; screw; complication | **بل، مروڑ؛ پیچیدگی — «پیچ و خم»** |
+| قصد | qasd | قَصْد | intention; aim | **ارادہ، نیت — «قصداً»** |
+| قرب | qurb | قُرْب | nearness | **نزدیکی — «قربِ الٰہی»** |
+| رنج | ranj | رَنْج | grief; sorrow | **دکھ، غم — «رنج و الم»** |
+| سائل | saail | سائِل | beggar; petitioner | **مانگنے والا، فریادی** |
+| شرر | sharar | شَرَر | spark | **چنگاری — «شرر بار»** |
+| شرمندہ | sharminda | شَرْمِنْدَہ | ashamed | **شرمسار، نادم** |
+| شکن | shikan | شِکَن | wrinkle; fold | **بل، سلوٹ — «پیشانی پر شکن»** |
+| شوم | shuum | شُوم | ill-omened; miserly | **منحوس؛ کنجوس** |
+| ستم گر | sitamgar | سِتَم گَر | tyrant; cruel | **ظلم کرنے والا، ظالم** |
+| سوز | soz | سوز | burning; pathos | **جلن؛ درد بھرا نغمہ — «سوز و گداز»** |
+| سوزاں | sozaan | سوزاں | burning | **جلتا ہوا — «دلِ سوزاں»** |
+| تکلف | takalluf | تَکَلُّف | formality; ceremony | **رسمی بناوٹ — «بے تکلف»** |
+| تپش | tapish | تَپِش | heat; restlessness | **گرمی؛ بے چینی — «دل کی تپش»** |
+| طرب | tarab | طَرَب | joy; delight | **خوشی، سرور — «طرب انگیز»** |
+| طلسم | tilism | طِلِسْم | magic; enchanted world | **جادو کا سماں — «طلسمِ ہوش ربا»** |
+| عقدہ | uqda | عُقْدَہ | knot; problem | **گرہ؛ مشکل — «عقدہ کھلنا»** |
+| وجد | vajd | وَجْد | ecstasy | **کیف کی حالت — «وجد میں آنا»** |
+| زائل | zaail | زائِل | vanished; removed | **ختم ہو جانے والا — «شک زائل ہونا»** |
+| زر | zar | زَر | gold; money | **سونا، دولت — «زر و مال»** |
+| ضعف | zof | ضَعْف | weakness | **کمزوری، نقاہت — «ضعفِ بصارت»** |
+| ظلمت | zulmat | ظُلْمَت | darkness | **اندھیرا — نور کی ضد** |
