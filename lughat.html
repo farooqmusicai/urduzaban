@@ -257,14 +257,45 @@ fetch('uz-lughat.json',{cache:'no-cache'}).catch(function(){return fetch('uz-lug
 /* ---- تلاش ---- */
 function detectMode(q){ if(mode!=='auto') return mode; if(URRANGE.test(q)) return 'ur'; return 'latin'; }
 function stripN(s){ return s.replace(/n$/,''); }
+/* ---- ہوشیار تلاش (1 ستمبر 2026): گردان → مادہ · متبادل املا · تخلص ---- */
+var UZ_ALT = [['ئ','ی'],['ۂ','ہ'],['ۃ','ہ'],['ة','ہ'],['ؤ','و'],['أ','ا'],['إ','ا'],['آ','ا'],['ں','ن'],['ے','ی']];
+function uzLoose(s){
+  s = T.bare(s);
+  for(var i=0;i<UZ_ALT.length;i++){ s = s.split(UZ_ALT[i][0]).join(UZ_ALT[i][1]); }
+  return s.replace(/\s+/g,'');
+}
+var UZ_SUF = ['تیاں','تیوں','ئیے','یئے','ئیں','اؤں','تے','تا','تی','یے','ئے','وں','یں','نا','نے','نی','کر','گا','گی','گے','ے','ا','ی','و','ں'];
+var UZ_ADD = ['نا','','ا','ی','ے','ہ','ت','نے'];
+function uzStems(q){
+  var b = T.bare(q), out = [b], seen = {}; seen[b]=1;
+  for(var i=0;i<UZ_SUF.length;i++){
+    var s = UZ_SUF[i];
+    if(b.length > s.length+1 && b.slice(-s.length)===s){
+      var root = b.slice(0, b.length-s.length);
+      for(var j=0;j<UZ_ADD.length;j++){
+        var c = root + UZ_ADD[j];
+        if(c.length>1 && !seen[c]){ seen[c]=1; out.push(c); }
+      }
+    }
+  }
+  return out;
+}
 function collect(q){
   var m=detectMode(q), hits=[], seen={};
   function add(x,score,how){ if(seen[x.i]!==undefined){ if(score<hits[seen[x.i]].s){ hits[seen[x.i]].s=score; hits[seen[x.i]].how=how; } return; } seen[x.i]=hits.length; hits.push({x:x,s:score,how:how}); }
   if(m==='ur'){
-    var qb=T.bare(q), qa=T.normalise(q);
+    var qb=T.bare(q), qa=T.normalise(q), qL=uzLoose(q), qS=uzStems(q), qSL={};
+    for(var si=qS.length-1; si>=0; si--){ qSL[uzLoose(qS[si])]=si; }
     E.forEach(function(x){
-      if(x.a===qa && qa!==qb) add(x,0,'اعراب'); else if(x.w===qb) add(x,1,'لفظ');
-      else if(x.w.indexOf(qb)===0) add(x,3,'آغاز'); else if(x.w.indexOf(qb)>0) add(x,5,'حصہ');
+      var xL = x.L || (x.L = uzLoose(x.w));
+      if(x.a===qa && qa!==qb) add(x,0,'اعراب');
+      else if(x.w===qb) add(x,1,'لفظ');
+      else if(xL===qL) add(x,2,'املا');
+      else if(qSL[xL]!==undefined) add(x, 2.5 + Math.min(qSL[xL],5)*0.1, 'مادہ');
+      else if(x.w.indexOf(qb)===0) add(x,3,'آغاز');
+      else if(qL.length>2 && xL.indexOf(qL)===0) add(x,3.5,'آغاز≈');
+      else if(x.w.indexOf(qb)>0) add(x,5,'حصہ');
+      else if(qL.length>2 && xL.indexOf(qL)>0) add(x,5.5,'حصہ≈');
     });
     /* اگر اردو لفظ لغت میں نہیں، تو رومن بنا کر بھی دیکھیے */
   } else {
