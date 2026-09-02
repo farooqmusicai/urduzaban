@@ -52,7 +52,7 @@ nav .in{max-width:1180px; margin:0 auto; padding:8px 20px; display:flex; align-i
 .navlinks a{color:var(--muted); text-decoration:none; padding:2px 4px;} .navlinks a:hover,.navlinks a.on{color:var(--accent);} .navlinks a.on{font-weight:700;}
 .langbtn{border:1.5px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; border-radius:999px; padding:4px 16px; font-size:14px; font-weight:700; font-family:var(--latin-ui); white-space:nowrap;}
 .langbtn:hover{background:var(--accent-soft);}
-@media(max-width:720px){ .navlinks{display:none} }
+@media(max-width:720px){ nav .in{flex-wrap:wrap; gap:6px 12px; padding:8px 12px;} .navlinks{order:3; flex:1 0 100%; flex-wrap:nowrap; overflow-x:auto; gap:0 14px; font-size:14px; padding:2px 0 4px; scrollbar-width:none; -webkit-overflow-scrolling:touch;} .navlinks::-webkit-scrollbar{display:none} .navlinks a{white-space:nowrap} }
 main{max-width:1180px; margin:0 auto; padding:26px 20px 90px;}
 h1{font-family:var(--nastaliq); font-size:clamp(30px,5vw,42px); font-weight:700; margin:0; line-height:1.9;
   background:linear-gradient(100deg,#7a5210 5%,var(--accent) 30%,var(--accent-hi) 55%,var(--accent) 90%); -webkit-background-clip:text; background-clip:text; color:transparent;}
@@ -154,6 +154,37 @@ body.en-mode h1.page{font-family:var(--latin);}
 .kh .x{color:var(--muted); font-size:14.5px; border-top:1px dashed var(--line); padding-top:8px; margin-top:10px;}
 .kh .rom{color:var(--muted); font-size:13.5px; direction:ltr; unicode-bidi:isolate; font-family:var(--latin-ui); margin-top:6px;}
 .kh .m.todo{color:var(--muted); font-style:italic; font-size:15px;}
+/* ہر لفظ چھونے کے قابل (2 ستمبر 2026) */
+.kh .txt .w{cursor:pointer; border-radius:6px; padding:0 2px; transition:background .12s, color .12s;}
+.kh .txt .w:hover,.kh .txt .w.on{background:var(--accent-soft); color:var(--accent);}
+.kh .txt .w.on{outline:1.5px solid var(--accent);}
+.kh .acts{display:flex; gap:6px; align-items:center; margin-top:8px; flex-wrap:wrap;}
+.kh .acts button{font-family:inherit; font-size:13.5px; cursor:pointer; border-radius:8px; border:1px solid var(--line); background:var(--card); color:var(--muted); padding:3px 10px; line-height:1.7;}
+.kh .acts button:hover{border-color:var(--accent); color:var(--accent);}
+.kh .hint{font-size:12px; color:var(--muted); margin-inline-start:auto; opacity:.8;}
+/* لفظ کا پرچہ (popup) */
+#veil{position:fixed; inset:0; background:rgba(22,16,8,.45); z-index:90; display:none; align-items:flex-end; justify-content:center; padding:0; overflow:auto;}
+#veil.open{display:flex;}
+@media(min-width:641px){ #veil{align-items:flex-start; padding:8vh 14px;} }
+.pw{background:var(--card); border:1.5px solid var(--accent); border-radius:18px 18px 0 0; box-shadow:var(--shadow); width:min(560px,100%); padding:12px 18px 16px; animation:up .18s ease-out;}
+@media(min-width:641px){ .pw{border-radius:16px;} }
+@keyframes up{from{transform:translateY(30px); opacity:0} to{transform:none; opacity:1}}
+.pw .hd{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+.pw h2{margin:0; font-family:var(--nastaliq); font-size:34px; line-height:1.7; color:var(--accent);}
+.pw .rom{font-family:var(--latin-ui); direction:ltr; unicode-bidi:isolate; font-size:16px; color:var(--ink); font-weight:600;}
+.pw .pos{font-size:11.5px; padding:0 9px; border-radius:999px; border:1px solid var(--accent); color:var(--accent); line-height:1.7;}
+.pw .x{margin-inline-start:auto; border:0; background:transparent; color:var(--muted); font-size:22px; cursor:pointer; line-height:1;}
+.pw .mn{font-size:17px; margin:6px 0 2px; line-height:1.9;}
+.pw .en{font-family:var(--latin-ui); direction:ltr; unicode-bidi:isolate; text-align:left; color:var(--muted); font-size:14.5px; line-height:1.5; display:block;}
+.pw .sense{border-top:1px dashed var(--line); padding:4px 0 2px; margin-top:4px;}
+.pw .sense .a{font-family:var(--nastaliq); font-size:20px; color:var(--ink); margin-inline-end:8px;}
+.pw .none{color:var(--muted); font-size:15px; line-height:1.9; margin:6px 0;}
+.pw .none b{color:var(--ink);}
+.pw .bt{display:flex; gap:6px; flex-wrap:wrap; margin-top:10px;}
+.pw .bt button,.pw .bt a{font-family:inherit; font-size:14.5px; cursor:pointer; border-radius:9px; border:1px solid var(--line); background:var(--card); color:var(--ink); padding:5px 13px; line-height:1.8; text-decoration:none;}
+.pw .bt button:hover,.pw .bt a:hover{border-color:var(--accent); color:var(--accent);}
+.pw .bt button.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
+.pw .st{font-size:13px; color:var(--muted); min-height:1.3em; margin-top:6px;}
 .more{margin:22px auto 0; display:block; padding:12px 26px; border-radius:12px; border:1px solid var(--line); background:var(--card); color:var(--accent); font-family:inherit; font-size:16px; cursor:pointer; font-weight:700;}
 .empty{padding:40px 20px; text-align:center; color:var(--muted);}
 .note{background:var(--card2); border:1px solid var(--line); border-radius:14px; padding:14px 18px; margin:22px 0 0; font-size:14.5px; color:var(--muted);}
@@ -192,6 +223,18 @@ body.en-mode h1.page{font-family:var(--latin);}
     <span class="L-en">This collection grows daily. The meanings are UrduZaban's own writing — expert review pending. Everything is free and open (CC BY 4.0): take it, share it, build on it — just credit "UrduZaban".</span>
   </div>
 </div>
+<div id="veil" role="dialog" aria-modal="true">
+  <div class="pw">
+    <div class="hd"><h2 id="pwWord"></h2><span class="rom" id="pwRom"></span><span class="pos" id="pwPos" hidden></span><button class="x" id="pwClose" aria-label="close">✕</button></div>
+    <div id="pwBody"></div>
+    <div class="bt">
+      <button class="primary" id="pwSpk">🔊 <span class="L-ur">سنیے</span><span class="L-en">Listen</span></button>
+      <a id="pwLug" href="lughat.html"><span class="L-ur">لغت میں کھولیے ↗</span><span class="L-en">Open in dictionary ↗</span></a>
+      <button id="pwAll">🔊 <span class="L-ur">پوری کہاوت</span><span class="L-en">Whole proverb</span></button>
+    </div>
+    <div class="st" id="pwSt"></div>
+  </div>
+</div>
 <footer><div class="in">
   <span><span class="L-ur">© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026</span><span class="L-en">© 2026 UrduZaban · urduzaban.com — founded 21 August 2026</span></span>
   <span><a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a> · <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a> · <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a> · <a href="kahawat.html"><span class="L-ur">کہاوت</span><span class="L-en">Proverbs</span></a> · <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a> · <a href="https://github.com/farooqmusicai/urduzaban/blob/main/LICENSE" target="_blank" rel="noopener"><span class="L-ur">اجازت نامہ</span><span class="L-en">License</span></a></span>
@@ -214,12 +257,23 @@ function loose(s){ s=(s||'').replace(MARKS,'').replace(/ي/g,'ی').replace(/ك/g
   for(var i=0;i<ALT.length;i++){ s=s.split(ALT[i][0]).join(ALT[i][1]); } return s; }
 function esc(s){ return (s||'').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
 
+function words(k){
+  /* ہر لفظ الگ span — اعراب سمیت؛ رموز (، ؛ ؟ !) الگ */
+  return k.split(/(\s+)/).map(function(t){
+    if(!t.trim()) return t;
+    var m=t.match(/^([،؛؟!٫.\-—]*)(.*?)([،؛؟!٫.\-—]*)$/);
+    if(!m||!m[2]) return esc(t);
+    return esc(m[1])+'<span class="w" data-w="'+esc(m[2])+'">'+esc(m[2])+'</span>'+esc(m[3]);
+  }).join('');
+}
 function card(e){
   var m = e.m ? '<div class="m">'+esc(e.m)+'</div>'
               : '<div class="m todo"><span class="L-ur">مطلب لکھا جانا باقی</span><span class="L-en">meaning to be written</span></div>';
-  return '<div class="kh"><div class="top"><div class="txt">'+esc(e.k)+'</div><div class="tag">'+esc(e.t)+'</div></div>'
+  return '<div class="kh" data-id="'+e.id+'"><div class="top"><div class="txt">'+words(e.k)+'</div><div class="tag">'+esc(e.t)+'</div></div>'
    + m + (e.x?'<div class="x">'+esc(e.x)+'</div>':'')
-   +'<div class="rom">'+esc(e.r)+'</div></div>';
+   +'<div class="rom">'+esc(e.r)+'</div>'
+   +'<div class="acts"><button class="spk" data-id="'+e.id+'">🔊 <span class="L-ur">سنیے</span><span class="L-en">Listen</span></button>'
+   +'<span class="hint"><span class="L-ur">کسی لفظ کو چھوئیے — مطلب اور آواز</span><span class="L-en">Tap any word — meaning &amp; voice</span></span></div></div>';
 }
 function render(){
   var q=(LAST||'').trim(), ql=loose(q).toLowerCase(), out=D;
@@ -244,6 +298,77 @@ function render(){
 $('q').addEventListener('input',function(){ LAST=this.value; SHOW=300; render(); });
 document.querySelectorAll('.pill').forEach(function(p){ p.addEventListener('click',function(){
   FILTER=p.dataset.t; SHOW=300; document.querySelectorAll('.pill').forEach(function(x){ x.classList.toggle('on',x===p); }); render(); }); });
+
+/* ---- ?q= سے آنا (لغت کے کمرے سے) ---- */
+(function(){ try{ var q=new URLSearchParams(location.search).get('q'); if(q){ $('q').value=q; LAST=q; } }catch(e){} })();
+
+/* ---- آواز: قرینہ (eSpeak) پہلے، پھر browser ---- */
+var QTTS=null; (async function(){ try{ var m=await import('./qarina-tts/qarina-tts.js'); if(await m.ready()) QTTS=m; }catch(e){} })();
+function isEn(){ return document.body.classList.contains('en-mode'); }
+function st(t,bad){ $('pwSt').textContent=t||''; $('pwSt').style.color=bad?'var(--bad)':'var(--muted)'; }
+function speak(text){
+  text=(text||'').trim(); if(!text) return;
+  if(QTTS){ if(QTTS.isSpeaking()){ QTTS.stop(); return; } QTTS.speak(text,{wpm:130},{}); return; }
+  if(!('speechSynthesis' in window)){ st(isEn()?'No speech engine in this browser':'اس browser میں آواز کا نظام نہیں',true); return; }
+  if(speechSynthesis.speaking){ speechSynthesis.cancel(); return; }
+  var u=new SpeechSynthesisUtterance(text); var vs=speechSynthesis.getVoices()||[];
+  var v=vs.find(function(x){return /^ur/i.test(x.lang);})||vs.find(function(x){return /^(hi|ar)/i.test(x.lang);});
+  if(v) u.voice=v; u.lang=v?v.lang:'ur-PK'; u.rate=.85; speechSynthesis.speak(u);
+}
+
+/* ---- لغت (uz-lughat.json) صرف پہلی چھوٹ پر لادیے ---- */
+var LUG=null, LUGP=null, BYW={}, POSL={}, POSE={};
+var SUF=['تیاں','تیوں','ئیے','یئے','ئیں','اؤں','تے','تا','تی','یے','ئے','وں','یں','نا','نے','نی','کر','گا','گی','گے','ے','ا','ی','و','ں'];
+var ADD=['نا','','ا','ی','ے','ہ','ت','نے'];
+function bare(w){ return (w||'').replace(MARKS,'').replace(/ي/g,'ی').replace(/ك/g,'ک'); }
+function lugLoad(){ if(LUG) return Promise.resolve(LUG); if(LUGP) return LUGP;
+  LUGP=fetch('uz-lughat.json',{cache:'no-cache'}).catch(function(){return fetch('uz-lughat.json',{cache:'force-cache'});}).then(function(r){return r.json();}).then(function(j){
+    LUG=j; POSL=j.pos_labels||{}; POSE=j.pos_labels_en||{};
+    (j.entries||[]).forEach(function(e){ var w=e.w; (BYW[w]=BYW[w]||[]).push(e); var l=loose(w); if(l!==w){ (BYW[l]=BYW[l]||[]).push(e); } });
+    return LUG; }).catch(function(){ LUG={entries:[]}; return LUG; }); return LUGP; }
+function lookup(w){
+  var b=bare(w), hits=BYW[b]||BYW[loose(b)]; if(hits&&hits.length) return {how:'', e:hits};
+  /* گردان → مادہ: کھاتا → کھانا، گھروں → گھر */
+  for(var i=0;i<SUF.length;i++){ var sf=SUF[i];
+    if(b.length>sf.length+1 && b.slice(-sf.length)===sf){ var root=b.slice(0,b.length-sf.length);
+      for(var j=0;j<ADD.length;j++){ var c=root+ADD[j]; var h=BYW[c]||BYW[loose(c)]; if(h&&h.length) return {how:'مادہ', e:h}; } } }
+  return null;
+}
+function posLab(e){ return isEn()?(POSE[e.pos]||e.pos||''):(POSL[e.pos]||e.pos||''); }
+var CURW='';
+function openWord(w){
+  CURW=w; var en=isEn();
+  $('pwWord').textContent=w; $('pwRom').textContent=''; $('pwPos').hidden=true;
+  $('pwLug').href='lughat.html?q='+encodeURIComponent(bare(w));
+  $('pwBody').innerHTML='<div class="none">'+(en?'Looking up…':'لغت میں دیکھ رہا ہوں…')+'</div>'; st('');
+  $('veil').classList.add('open');
+  lugLoad().then(function(){
+    if(CURW!==w) return;
+    var r=lookup(w);
+    if(!r){ $('pwBody').innerHTML='<div class="none"><b>'+(en?'Not in the dictionary yet.':'ابھی لغت میں نہیں۔')+'</b> '+(en?'You can still hear it — and suggest it from the dictionary page.':'پھر بھی سن سکتے ہیں — اور لغت کے صفحے سے تجویز بھیج سکتے ہیں۔')+'</div>'; return; }
+    var first=r.e[0]; $('pwWord').textContent=first.a||first.s||w; $('pwRom').textContent=first.r||'';
+    if(first.pos){ $('pwPos').hidden=false; $('pwPos').textContent=posLab(first)+(r.how?' · '+(en?'stem':r.how):''); }
+    $('pwBody').innerHTML=r.e.slice(0,4).map(function(e,i){
+      var h='<div class="'+(i?'sense':'')+'">'+(i?'<span class="a">'+esc(e.a||e.w)+'</span>':'');
+      if(e.ur) h+='<div class="mn">'+esc(e.ur)+'</div>';
+      if(e.en) h+='<span class="en">'+esc(e.en)+'</span>';
+      if(!e.ur&&!e.en) h+='<div class="none">'+(en?'meaning to be written':'معنی لکھا جانا باقی')+'</div>';
+      return h+'</div>'; }).join('');
+  });
+}
+function closeWord(){ $('veil').classList.remove('open'); document.querySelectorAll('.w.on').forEach(function(x){x.classList.remove('on');}); }
+$('pwClose').addEventListener('click',closeWord);
+$('veil').addEventListener('click',function(ev){ if(ev.target===$('veil')) closeWord(); });
+document.addEventListener('keydown',function(ev){ if(ev.key==='Escape') closeWord(); });
+$('pwSpk').addEventListener('click',function(){ speak($('pwWord').textContent); });
+var CURK='';
+$('pwAll').addEventListener('click',function(){ speak(CURK); });
+$('list').addEventListener('click',function(ev){
+  var w=ev.target.closest('.w');
+  if(w){ document.querySelectorAll('.w.on').forEach(function(x){x.classList.remove('on');}); w.classList.add('on');
+    var c=w.closest('.kh'); CURK=(D[+c.dataset.id]||{}).k||''; openWord(w.dataset.w); return; }
+  var b=ev.target.closest('.spk'); if(b){ speak((D[+b.dataset.id]||{}).k||''); }
+});
 
 fetch('uz-kahawat.json').then(function(r){return r.json();}).then(function(j){
   var rows=j.rows||[];

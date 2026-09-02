@@ -52,7 +52,7 @@ nav .in{max-width:1180px; margin:0 auto; padding:8px 20px; display:flex; align-i
 .navlinks a{color:var(--muted); text-decoration:none; padding:2px 4px;} .navlinks a:hover,.navlinks a.on{color:var(--accent);} .navlinks a.on{font-weight:700;}
 .langbtn{border:1.5px solid var(--accent); color:var(--accent); background:transparent; cursor:pointer; border-radius:999px; padding:4px 16px; font-size:14px; font-weight:700; font-family:var(--latin-ui); white-space:nowrap;}
 .langbtn:hover{background:var(--accent-soft);}
-@media(max-width:720px){ .navlinks{display:none} }
+@media(max-width:720px){ nav .in{flex-wrap:wrap; gap:6px 12px; padding:8px 12px;} .navlinks{order:3; flex:1 0 100%; flex-wrap:nowrap; overflow-x:auto; gap:0 14px; font-size:14px; padding:2px 0 4px; scrollbar-width:none; -webkit-overflow-scrolling:touch;} .navlinks::-webkit-scrollbar{display:none} .navlinks a{white-space:nowrap} }
 main{max-width:1180px; margin:0 auto; padding:26px 20px 90px;}
 h1{font-family:var(--nastaliq); font-size:clamp(30px,5vw,42px); font-weight:700; margin:0; line-height:1.9;
   background:linear-gradient(100deg,#7a5210 5%,var(--accent) 30%,var(--accent-hi) 55%,var(--accent) 90%); -webkit-background-clip:text; background-clip:text; color:transparent;}
@@ -91,6 +91,14 @@ button.x{border:1px solid var(--line); background:var(--card); color:var(--muted
 .card.two .wd::after{content:"2"; font-family:var(--latin-ui); font-size:10px; color:var(--warn); border:1px solid var(--warn); border-radius:999px; padding:0 5px; line-height:1.5; margin:0 6px; vertical-align:middle;}
 @media(max-width:640px){ .list{grid-template-columns:1fr 1fr; gap:6px;} .card{padding:4px 8px 5px;} .card .wd{font-size:19px;} .card .en{font-size:12px;} }
 @media(max-width:400px){ .list{grid-template-columns:1fr;} }
+/* کہاوتوں میں یہ لفظ (2 ستمبر 2026) */
+.khh{margin-top:16px; background:var(--card2); border:1px solid var(--line); border-radius:14px; padding:10px 14px 12px;}
+.khh h3{margin:0 0 4px; font-family:var(--nastaliq); font-size:19px; line-height:1.9; color:var(--accent);} body.en-mode .khh h3{font-family:var(--latin); font-size:17px;}
+.khh h3 a{color:var(--accent); text-decoration:none; font-size:14px; font-family:var(--naskh); margin:0 10px;}
+.khh .k{display:block; font-family:var(--nastaliq); font-size:19px; line-height:2; color:var(--ink); text-decoration:none; border-top:1px dashed var(--line); padding:2px 0;}
+.khh .k:first-of-type{border-top:0}
+.khh .k small{font-family:var(--naskh); font-size:13px; color:var(--muted); margin-inline-start:10px;}
+.khh .k:hover{color:var(--accent);}
 .empty{background:var(--card); border:1px dashed var(--line); border-radius:14px; padding:18px; color:var(--muted); text-align:center; line-height:2;}
 .empty b{color:var(--ink);} .empty .g{font-family:var(--nastaliq); font-size:26px; color:var(--accent); display:block;}
 /* حروف */
@@ -140,6 +148,7 @@ a:focus-visible,button:focus-visible,#q:focus-visible{outline:2px solid var(--ac
     <a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a>
     <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a>
     <a class="on here" href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
+    <a href="kahawat.html"><span class="L-ur">کہاوت</span><span class="L-en">Proverbs</span></a>
     <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a>
     <a href="index.html#contact"><span class="L-ur">رابطہ</span><span class="L-en">Contact</span></a>
   </div>
@@ -179,6 +188,7 @@ a:focus-visible,button:focus-visible,#q:focus-visible{outline:2px solid var(--ac
 
   <div class="meta"><span id="metaL"></span><span id="metaR"></span></div>
   <div class="list" id="list"></div>
+  <div class="khh" id="khh" hidden></div>
   <div class="status" id="status" aria-live="polite"></div>
 
   <section class="suggest">
@@ -212,7 +222,8 @@ a:focus-visible,button:focus-visible,#q:focus-visible{outline:2px solid var(--ac
 
 <footer><div class="in">
   <span><span class="L-ur">© 2026 اردو زبان · urduzaban.com — بنیاد: 21 اگست 2026 · Wiktionary کا مواد: CC BY-SA 3.0</span><span class="L-en">© 2026 UrduZaban · urduzaban.com — founded 21 August 2026 · Wiktionary data: CC BY-SA 3.0</span></span>
-  <span><a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a> · <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a> · <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a> · <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a></span>
+  <span><a href="qarina-aeraab.html"><span class="L-ur">قرینہ</span><span class="L-en">Qarina</span></a> · <a href="tarjuman.html"><span class="L-ur">ترجمان</span><span class="L-en">Tarjuman</span></a> · <a href="lughat.html"><span class="L-ur">لغت</span><span class="L-en">Dictionary</span></a>
+    <a href="kahawat.html"><span class="L-ur">کہاوت</span><span class="L-en">Proverbs</span></a> · <a href="sanad.html"><span class="L-ur">سند</span><span class="L-en">Sanad</span></a></span>
   <span><a href="https://www.farooqmusic.com" target="_blank" rel="noopener">Farooq Music</a> · <a href="https://www.farooqstars.com" target="_blank" rel="noopener">FarooqStars</a> · <a href="https://www.mymandoob.com" target="_blank" rel="noopener">MyMandoob</a></span>
 </div></footer>
 
@@ -334,6 +345,7 @@ function search(q0){
     got.sort(function(a,b){ return a.s-b.s; }); hits=got;
   }
   LAST={q:q, m:m, hits:hits.slice(0,60), total:hits.length}; render(LAST);
+  khSearch(q);
   try{ history.replaceState(null,'',location.pathname+'?q='+encodeURIComponent(q)); }catch(e){}
 }
 function lab(tbl,k,en){ var t=(LUG&&LUG[tbl]&&LUG[tbl][k])||null; return t?(en?t.en:t.ur):k; }
@@ -366,12 +378,35 @@ $('clearBtn').addEventListener('click',function(){ $('q').value=''; $('detect').
 document.querySelectorAll('.modes .pill').forEach(function(p){ p.addEventListener('click',function(){ mode=p.dataset.m; document.querySelectorAll('.modes .pill').forEach(function(x){x.classList.toggle('on',x===p);}); if($('q').value.trim()) search($('q').value); }); });
 document.querySelectorAll('.eg a[data-q]').forEach(function(a){ a.addEventListener('click',function(){ $('q').value=a.dataset.q; $('q').dispatchEvent(new Event('input')); clearTimeout(tm); search(a.dataset.q); }); });
 
+
+/* ---- کہاوتوں میں یہ لفظ (2 ستمبر 2026): لغت کی تلاش کہاوت کے کمرے تک پہنچے ---- */
+var KH=null, KHP=null, KH_MARKS=/[\u0610-\u061A\u0640\u064B-\u0670\u06D6-\u06ED]/g;
+function khLoose(x){ x=(x||'').replace(KH_MARKS,'').replace(/ي/g,'ی').replace(/ك/g,'ک'); for(var i=0;i<UZ_ALT.length;i++){ x=x.split(UZ_ALT[i][0]).join(UZ_ALT[i][1]); } return x; }
+function khLoad(){ if(KH) return Promise.resolve(KH); if(KHP) return KHP;
+  KHP=fetch('uz-kahawat.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():{rows:[]};}).then(function(j){ KH=(j.rows||[]).map(function(a){ return {k:a[0], b:khLoose(a[0]), t:a[1], r:(a[2]||'').toLowerCase(), m:a[3]||''}; }); return KH; }).catch(function(){ KH=[]; return KH; }); return KHP; }
+function khClear(){ var b=$('khh'); if(b){ b.hidden=true; b.innerHTML=''; } }
+function khSearch(q){
+  q=(q||'').trim(); if(q.length<2){ khClear(); return; }
+  khLoad().then(function(rows){
+    if(($('q').value||'').trim()!==q) return;
+    var en=isEn(), ur=URRANGE.test(q), ql=ur?khLoose(q):q.toLowerCase(), hits=[];
+    for(var i=0;i<rows.length&&hits.length<6;i++){ var r=rows[i];
+      if(ur ? (r.b.indexOf(ql)>=0) : (r.r.indexOf(ql)>=0)) hits.push(r); }
+    if(!hits.length){ khClear(); return; }
+    var box=$('khh'); box.hidden=false;
+    box.innerHTML='<h3>'+(en?'In proverbs &amp; idioms':'کہاوتوں اور محاوروں میں')+' «'+esc(q)+'»'
+      +'<a href="kahawat.html?q='+encodeURIComponent(q)+'">'+(en?'see all ↗':'سب دیکھیے ↗')+'</a></h3>'
+      +hits.map(function(r){ return '<a class="k" href="kahawat.html?q='+encodeURIComponent(q)+'">'+esc(r.k)+(r.m?'<small>'+esc(r.m)+'</small>':'')+'</a>'; }).join('');
+  });
+}
+
 /* ---- حروف سے دیکھیے ---- */
 var LETTERS='ا آ ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ہ ی ے'.split(' ');
 function buildLetters(){ $('letters').innerHTML=LETTERS.map(function(l){ return '<button data-l="'+l+'">'+l+'</button>'; }).join('');
   document.querySelectorAll('.letters button').forEach(function(b){ b.addEventListener('click',function(){ $('q').value=''; showLetter(b.dataset.l); }); }); }
 function showLetter(l){
   if(!E.length) return;
+  khClear();
   if(!l){ /* خالی: شروع کے 24 لفظ بطور نمونہ */
     var sample=E.filter(function(x,i){ return i%26===0; }).slice(0,36).map(function(x){return {x:x,s:0,how:''};});
     LAST={q:'',m:'ur',hits:sample,total:E.length,letter:'—'}; render(LAST);
