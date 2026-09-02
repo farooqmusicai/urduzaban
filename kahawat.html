@@ -143,6 +143,14 @@ body.en-mode h1.page{font-family:var(--latin);}
 .pill{padding:8px 14px; border-radius:999px; border:1px solid var(--line); background:var(--card);
       color:var(--muted); cursor:pointer; font-family:inherit; font-size:14.5px;}
 .pill.on{background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:700;}
+/* حروف کی پٹی (2 ستمبر 2026) */
+.letters{display:flex; gap:4px; flex-wrap:wrap; margin:0 0 12px;}
+@media(max-width:640px){ .letters{flex-wrap:nowrap; overflow-x:auto; padding-bottom:6px; -webkit-overflow-scrolling:touch; scrollbar-width:thin;} .letters button{flex:0 0 auto;} }
+.letters button{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:9px; min-width:38px; padding:2px 7px; font-family:var(--naskh); font-size:18px; cursor:pointer; line-height:1.8;}
+.letters button small{display:block; font-family:var(--latin-ui); font-size:9.5px; color:var(--muted); line-height:1; margin-top:-2px;}
+.letters button:hover,.letters button.on{border-color:var(--accent); color:var(--accent); background:var(--accent-soft);}
+.letters button.on{font-weight:700;}
+.letters button:disabled{opacity:.3; cursor:default;}
 .count{color:var(--muted); font-size:14px; margin:0 0 14px;}
 .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(310px,1fr));}
 .kh{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; box-shadow:var(--shadow);}
@@ -215,6 +223,7 @@ body.en-mode h1.page{font-family:var(--latin);}
     <button class="pill" data-t="محاورہ"><span class="L-ur">محاورے</span><span class="L-en">Idioms</span></button>
     <button class="pill" data-t="done"><span class="L-ur">مطلب والے</span><span class="L-en">With meaning</span></button>
   </div>
+  <div class="letters" id="letters" aria-label="حروف تہجی"></div>
   <p class="count" id="count"></p>
   <div class="grid" id="list"></div>
 
@@ -243,7 +252,7 @@ body.en-mode h1.page{font-family:var(--latin);}
 (function(){
 "use strict";
 var $=function(id){return document.getElementById(id);};
-var btn=$('langbtn'), D=[], FILTER='all', LAST='', SHOW=300;
+var btn=$('langbtn'), D=[], FILTER='all', LAST='', SHOW=120, LETTER='آ';
 function setLang(l,save){ var en=(l==='en'); document.body.classList.toggle('en-mode',en);
   document.documentElement.lang=en?'en':'ur'; document.documentElement.dir=en?'ltr':'rtl';
   btn.textContent=en?'اردو':'English'; btn.style.fontFamily=en?'var(--naskh)':'var(--latin-ui)';
@@ -275,8 +284,21 @@ function card(e){
    +'<div class="acts"><button class="spk" data-id="'+e.id+'">🔊 <span class="L-ur">سنیے</span><span class="L-en">Listen</span></button>'
    +'<span class="hint"><span class="L-ur">کسی لفظ کو چھوئیے — مطلب اور آواز</span><span class="L-en">Tap any word — meaning &amp; voice</span></span></div></div>';
 }
+/* ---- حروف تہجی ---- */
+var LETTERS='آ ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ہ ی ے'.split(' ');
+function firstLetter(b){ var c=b.charAt(0); if(c==='ء') c=b.charAt(1); return c; }
+function buildLetters(){
+  var cnt={}; D.forEach(function(e){ cnt[e.f]=(cnt[e.f]||0)+1; });
+  $('letters').innerHTML=LETTERS.map(function(l){ var n=cnt[l]||0;
+    return '<button data-l="'+l+'"'+(n?'':' disabled')+' title="'+n+'">'+l+'<small>'+n+'</small></button>'; }).join('');
+  $('letters').addEventListener('click',function(ev){ var b=ev.target.closest('button'); if(!b||b.disabled) return;
+    LETTER=b.dataset.l; LAST=''; $('q').value=''; SHOW=120; window.scrollTo({top:$('letters').offsetTop-70, behavior:'smooth'}); render(); });
+}
 function render(){
   var q=(LAST||'').trim(), ql=loose(q).toLowerCase(), out=D;
+  /* حرف: جب تلاش خالی ہو تو صرف چنے ہوئے حرف سے شروع ہونے والی */
+  if(!ql && LETTER) out=out.filter(function(e){ return e.f===LETTER; });
+  document.querySelectorAll('.letters button').forEach(function(b){ b.classList.toggle('on', !ql && b.dataset.l===LETTER); });
   if(FILTER==='done') out=out.filter(function(e){ return !!e.m; });
   else if(FILTER!=='all') out=out.filter(function(e){ return e.t===FILTER; });
   if(ql){ out=out.filter(function(e){
@@ -291,13 +313,13 @@ function render(){
   if(out.length>SHOW){
     var b=document.createElement('button'); b.className='more';
     b.textContent = en ? ('Show more ('+(out.length-SHOW)+' left)') : ('اور دکھائیے (' + (out.length-SHOW) + ' باقی)');
-    b.onclick=function(){ SHOW+=300; render(); };
+    b.onclick=function(){ SHOW+=120; render(); };
     $('list').parentNode.insertBefore(b, $('list').nextSibling);
   }
 }
-$('q').addEventListener('input',function(){ LAST=this.value; SHOW=300; render(); });
+$('q').addEventListener('input',function(){ LAST=this.value; SHOW=120; if(!LAST.trim()&&!LETTER) LETTER='آ'; render(); });
 document.querySelectorAll('.pill').forEach(function(p){ p.addEventListener('click',function(){
-  FILTER=p.dataset.t; SHOW=300; document.querySelectorAll('.pill').forEach(function(x){ x.classList.toggle('on',x===p); }); render(); }); });
+  FILTER=p.dataset.t; SHOW=120; document.querySelectorAll('.pill').forEach(function(x){ x.classList.toggle('on',x===p); }); render(); }); });
 
 /* ---- ?q= سے آنا (لغت کے کمرے سے) ---- */
 (function(){ try{ var q=new URLSearchParams(location.search).get('q'); if(q){ $('q').value=q; LAST=q; } }catch(e){} })();
@@ -373,8 +395,13 @@ $('list').addEventListener('click',function(ev){
 fetch('uz-kahawat.json').then(function(r){return r.json();}).then(function(j){
   var rows=j.rows||[];
   D=rows.map(function(a,i){
-    return { id:i, k:a[0], b:loose(a[0]), t:(a[1]==='k'?'کہاوت':'محاورہ'), r:a[2]||'', m:a[3]||'', x:a[4]||'' };
+    var b=loose(a[0]).trim();
+    return { id:i, k:a[0], b:b, f:firstLetter(a[0].replace(MARKS,'').trim()), t:(a[1]==='k'?'کہاوت':'محاورہ'), r:a[2]||'', m:a[3]||'', x:a[4]||'' };
   });
+  /* حرف کے اندر الف بائی ترتیب */
+  D.sort(function(p,q){ return p.b<q.b?-1:(p.b>q.b?1:0); });
+  buildLetters();
+  if((LAST||'').trim()){ LETTER=''; }
   render();
 }).catch(function(){ $('list').innerHTML='<div class="empty">کہاوتوں کی فائل نہیں ملی (uz-kahawat.json)</div>'; });
 })();
