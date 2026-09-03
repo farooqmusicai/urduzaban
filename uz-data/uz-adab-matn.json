@@ -1,0 +1,966 @@
+{
+ "name": "uz-adab-matn",
+ "v": 1,
+ "updated": "2026-09-03",
+ "note": "کتابوں اور تحریروں کی فہرست — متن ur.wikisource.org سے زندہ پڑھا جاتا ہے (عوامی ورثہ، {{PD-old}} / PD-Pakistan)، تعارف «اردو زبان» کا اپنا۔ اقوال کا متن یہیں ہے، ہر قول کے ساتھ اُس تحریر کا حوالہ جس سے لیا گیا۔ CC BY 4.0 (تعارف)؛ اصل متون: عوامی ورثہ",
+ "ws_base": "https://ur.wikisource.org/wiki/",
+ "kinds": {
+  "nasr": {
+   "ur": "نثر",
+   "en": "Prose"
+  },
+  "afsana": {
+   "ur": "افسانے / قصے",
+   "en": "Stories & tales"
+  },
+  "mazmoon": {
+   "ur": "مضامین",
+   "en": "Essays"
+  },
+  "tanz": {
+   "ur": "طنز و مزاح",
+   "en": "Humour & satire"
+  },
+  "qaul": {
+   "ur": "اقوال",
+   "en": "Sayings"
+  }
+ },
+ "matn": [
+  {
+   "id": "n01",
+   "kind": "nasr",
+   "by": "meeramman",
+   "title": "باغ و بہار — عرضی میر امن دلی والے کی",
+   "ws": "باغ و بہار/عرضی میر امن دلی والے کی",
+   "saal": 1801,
+   "taaruf": {
+    "ur": "اردو نثر کی پہلی مشہور کتاب کا دیباچہ — مصنف اپنی زبانی بتاتا ہے کہ دلی کی بولی کیوں چنی۔",
+    "en": "The preface of the first famous book of Urdu prose — the author explains in his own voice why he chose the speech of Delhi."
+   }
+  },
+  {
+   "id": "n02",
+   "kind": "nasr",
+   "by": "azad",
+   "title": "آبِ حیات — زبانِ اردو کی تاریخ",
+   "ws": "آب حیات/زبان اردو کی تاریخ",
+   "saal": 1880,
+   "taaruf": {
+    "ur": "اردو زبان کہاں سے آئی، کیسے بنی — آزادؔ کی رنگین نثر میں اردو کی پہلی تاریخ کا پہلا باب۔",
+    "en": "Where Urdu came from and how it formed — the opening chapter of the first history of Urdu, in Azad's vivid prose."
+   }
+  },
+  {
+   "id": "n03",
+   "kind": "nasr",
+   "by": "suroor",
+   "title": "فسانۂ عجائب — مقدمہ",
+   "ws": "فسانۂ عجائب/مقدمہ",
+   "saal": 1824,
+   "taaruf": {
+    "ur": "لکھنوی مقفّیٰ و مسجّع نثر کا نمونہ — سرورؔ کا دیباچہ جس میں لکھنؤ کی تعریف اور «باغ و بہار» پر چوٹ ہے۔",
+    "en": "A sample of Lucknow's rhymed, ornate prose — Suroor's preface praising Lucknow and needling 'Bagh-o-Bahar'."
+   }
+  },
+  {
+   "id": "n04",
+   "kind": "nasr",
+   "by": "sharar",
+   "title": "دہلی مرحوم",
+   "ws": "دہلی مرحوم",
+   "saal": 1900,
+   "taaruf": {
+    "ur": "پرانی دہلی کی تہذیب، دربار اور شہر کا مرثیہ — شررؔ کی تاریخی نثر۔",
+    "en": "An elegy for old Delhi's culture, court and city — Sharar's historical prose."
+   }
+  },
+  {
+   "id": "n05",
+   "kind": "nasr",
+   "by": "sharar",
+   "title": "شرر کے سفرنامے — ہمارا سفر پالن پور",
+   "ws": "شرر کے سفرنامے/ہمارا سفر پالن پور",
+   "taaruf": {
+    "ur": "سفرنامے کی نثر — راستے، لوگ، ریاست پالن پور کا حال۔",
+    "en": "Travel prose — the road, its people, and the state of Palanpur."
+   }
+  },
+  {
+   "id": "n06",
+   "kind": "nasr",
+   "by": "farhat",
+   "title": "ڈاکٹر نذیر احمد کی کہانی، کچھ میری اور کچھ ان کی زبانی",
+   "ws": "ڈاکٹر نذیر احمد کی کہانی، کچھ میری اور کچھ ان کی زبانی",
+   "saal": 1927,
+   "taaruf": {
+    "ur": "اردو خاکہ نگاری کا شاہکار — شاگرد اپنے استاد نذیر احمد کو ہنستے، ڈانٹتے، پڑھاتے دکھاتا ہے۔",
+    "en": "The masterpiece of the Urdu pen-portrait — a pupil shows his teacher Nazir Ahmad laughing, scolding, teaching."
+   }
+  },
+  {
+   "id": "n07",
+   "kind": "nasr",
+   "by": "farhat",
+   "title": "دہلی کی آخری شمع",
+   "ws": [
+    "دہلی کی آخری شمع/تمہید",
+    "دہلی کی آخری شمع/تدبیر",
+    "دہلی کی آخری شمع/ترتیب",
+    "دہلی کی آخری شمع/تکمیل",
+    "دہلی کی آخری شمع/تقدیر"
+   ],
+   "saal": 1928,
+   "taaruf": {
+    "ur": "1845ء کے ایک خیالی مشاعرے کی روداد — ذوقؔ، غالبؔ، مومنؔ اور دہلی کے سب شاعر ایک شام میں۔",
+    "en": "The account of an imagined mushaira of 1845 — Zauq, Ghalib, Momin and all of Delhi's poets in one evening."
+   },
+   "more": "دہلی کی آخری شمع"
+  },
+  {
+   "id": "n08",
+   "kind": "nasr",
+   "by": "farhat",
+   "title": "بہادر شاہ اور پھول والوں کی سیر",
+   "ws": "بہادر شاہ اور پھول والوں کی سیر",
+   "taaruf": {
+    "ur": "دہلی کے مشہور میلے «پھول والوں کی سیر» اور آخری بادشاہ کے زمانے کی تصویر۔",
+    "en": "A picture of Delhi's famous 'Phool Walon ki Sair' festival in the last emperor's days."
+   }
+  },
+  {
+   "id": "n09",
+   "kind": "nasr",
+   "by": "azad",
+   "title": "آبِ حیات — میر ضاحک",
+   "ws": "آب حیات/میر ضاحک",
+   "saal": 1880,
+   "taaruf": {
+    "ur": "«آبِ حیات» کا ایک خاکہ — میر ضاحک اور سوداؔ کی نوک جھونک؛ آزادؔ کا قصہ گو انداز۔",
+    "en": "A sketch from 'Aab-e Hayat' — the sparring of Mir Zahik and Sauda; Azad the storyteller."
+   }
+  },
+  {
+   "id": "n10",
+   "kind": "nasr",
+   "by": "haali",
+   "title": "سر سید احمد خاں اور ان کے کام",
+   "ws": "سر سید احمد خاں اور ان کے کام",
+   "taaruf": {
+    "ur": "حالیؔ اپنے رفیق سر سید کی زندگی اور تحریک پر — سوانحی نثر کی مثال۔",
+    "en": "Hali on his companion Sir Syed's life and movement — an example of biographical prose."
+   }
+  },
+  {
+   "id": "n11",
+   "kind": "nasr",
+   "by": "nazir",
+   "title": "فسانۂ مبتلا",
+   "ws": [
+    "فسانہء مبتلا/01",
+    "فسانہء مبتلا/02",
+    "فسانہء مبتلا/03",
+    "فسانہء مبتلا/04",
+    "فسانہء مبتلا/05",
+    "فسانہء مبتلا/06"
+   ],
+   "saal": 1885,
+   "taaruf": {
+    "ur": "نذیر احمد کا ناول — دو شادیوں کی مصیبت؛ اصلاحی ناول کی نثر اور محاورہ۔",
+    "en": "Nazir Ahmad's novel on the misery of a second marriage; the prose and idiom of the reformist novel."
+   },
+   "more": "فسانہء مبتلا"
+  },
+  {
+   "id": "a01",
+   "kind": "afsana",
+   "by": "manto",
+   "title": "ٹوبہ ٹیک سنگھ",
+   "ws": "ٹوبہ ٹیک سنگھ",
+   "saal": 1955,
+   "taaruf": {
+    "ur": "تقسیم کے بعد پاگلوں کا تبادلہ — بشن سنگھ پوچھتا رہتا ہے کہ ٹوبہ ٹیک سنگھ ہندوستان میں ہے یا پاکستان میں۔ اردو کا سب سے مشہور افسانہ۔",
+    "en": "The exchange of asylum inmates after Partition — Bishan Singh keeps asking whether Toba Tek Singh is in India or Pakistan. Urdu's most famous short story."
+   }
+  },
+  {
+   "id": "a02",
+   "kind": "afsana",
+   "by": "manto",
+   "title": "بادشاہت کا خاتمہ",
+   "ws": "بادشاہت کا خاتمہ (افسانہ)",
+   "taaruf": {
+    "ur": "ایک تنہا آدمی، ایک ٹیلی فون اور ایک انجانی آواز — منٹو کا نفسیاتی افسانہ۔",
+    "en": "A lonely man, a telephone and an unknown voice — Manto's psychological story."
+   }
+  },
+  {
+   "id": "a03",
+   "kind": "afsana",
+   "by": "manto",
+   "title": "دیکھ کبیرا رویا",
+   "ws": "دیکھ کبیرا رویا",
+   "taaruf": {
+    "ur": "کبیر شہر میں گھومتا ہے اور ہر جگہ منافقت دیکھ کر روتا ہے — منٹو کے طنزیہ خاکے۔",
+    "en": "Kabir walks the city and weeps at the hypocrisy he sees everywhere — Manto's satirical sketches."
+   }
+  },
+  {
+   "id": "a04",
+   "kind": "afsana",
+   "by": "yaldram",
+   "title": "حضرتِ دل کی سوانح عمری",
+   "ws": "حضرت دل کی سوانح عمری",
+   "taaruf": {
+    "ur": "«خیالستان» کا افسانہ — دل خود اپنی کہانی سناتا ہے؛ یلدرم کا رومانی، تمثیلی انداز۔",
+    "en": "From 'Khayalistan' — the heart tells its own life story; Yaldram's romantic, allegorical manner."
+   }
+  },
+  {
+   "id": "a05",
+   "kind": "afsana",
+   "by": "yaldram",
+   "title": "چڑیا چڑے کی کہانی",
+   "ws": "چڑیا چڑے کی کہانی",
+   "taaruf": {
+    "ur": "پرندوں کی زبانی ایک نرم، تمثیلی کہانی۔",
+    "en": "A gentle allegorical tale told through a pair of sparrows."
+   }
+  },
+  {
+   "id": "a06",
+   "kind": "afsana",
+   "by": "yaldram",
+   "title": "نشے کی پہلی ترنگ",
+   "ws": "نشے کی پہلی ترنگ",
+   "taaruf": {
+    "ur": "«خیالستان» سے — جوانی کے پہلے سرور کی کہانی۔",
+    "en": "From 'Khayalistan' — a story of youth's first intoxication."
+   }
+  },
+  {
+   "id": "a07",
+   "kind": "afsana",
+   "by": "azeem",
+   "title": "شاطر کی بیوی",
+   "ws": "شاطر کی بیوی",
+   "taaruf": {
+    "ur": "چغتائی کا گھریلو مزاحیہ افسانہ — شطرنج کا کھلاڑی اور اس کی بیوی۔",
+    "en": "Chughtai's domestic comic story — a chess player and his wife."
+   }
+  },
+  {
+   "id": "a08",
+   "kind": "afsana",
+   "by": "azeem",
+   "title": "خودمختار دوشیزہ",
+   "ws": "خودمختار دوشیزہ",
+   "taaruf": {
+    "ur": "نئے زمانے کی لڑکی اور پرانے گھر کی ٹکر — ہلکے پھلکے انداز میں۔",
+    "en": "A new-age girl meets an old household — told lightly."
+   }
+  },
+  {
+   "id": "a10",
+   "kind": "afsana",
+   "by": "rashid",
+   "title": "سارس کی تارکِ الوطنی",
+   "ws": "سارس کی تارک الوطنی",
+   "taaruf": {
+    "ur": "ایک پرندے کی زبانی وطن چھوڑنے کا دکھ — تمثیلی کہانی۔",
+    "en": "The grief of leaving one's homeland, told through a crane — an allegorical tale."
+   }
+  },
+  {
+   "id": "a11",
+   "kind": "afsana",
+   "by": "suroor",
+   "title": "فسانۂ عجائب",
+   "ws": [
+    "فسانۂ عجائب/حمد",
+    "فسانۂ عجائب/آغاز داستان",
+    "فسانۂ عجائب/جَولانی سَمَندِ تیز رفتار ِقلم کی",
+    "فسانۂ عجائب/بیانِ جلسۂ شادی اُس وطن آوارہ کا"
+   ],
+   "saal": 1824,
+   "taaruf": {
+    "ur": "شہزادہ جانِ عالم اور انجمن آرا کا داستانی قصہ — لکھنوی رنگین نثر میں۔",
+    "en": "The romance of Prince Jan-e Alam and Anjuman Ara — a dastan in Lucknow's ornate prose."
+   },
+   "more": "فسانۂ عجائب"
+  },
+  {
+   "id": "a12",
+   "kind": "afsana",
+   "by": "sharar",
+   "title": "فردوسِ بریں",
+   "ws": [
+    "فردوس بریں/پریوں کا غول",
+    "فردوس بریں/بہ مے سجادہ رنگنی کن گرت پرر مغاں گوید",
+    "فردوس بریں/ملاءِ اعلیٰ کا سفر",
+    "فردوس بریں/فردوس بریں",
+    "فردوس بریں/مردودِ ازلی",
+    "فردوس بریں/بلغان خاتون کا سفر",
+    "فردوس بریں/افشائے راز",
+    "فردوس بریں/انتقام"
+   ],
+   "saal": 1899,
+   "taaruf": {
+    "ur": "حسن بن صباح کی جعلی جنت — اردو کا پہلا کامیاب تاریخی ناول۔",
+    "en": "Hasan bin Sabbah's false paradise — Urdu's first successful historical novel."
+   },
+   "more": "فردوس بریں"
+  },
+  {
+   "id": "m01",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "تعصب",
+   "ws": "تعصب",
+   "taaruf": {
+    "ur": "تعصب انسان کی سب خوبیاں برباد کرتا ہے — سر سید کا ایک مختصر، سیدھا مضمون؛ مذہب میں پختہ ہونا اور متعصب ہونا الگ الگ باتیں ہیں۔",
+    "en": "Prejudice ruins all a person's virtues — a short, direct essay; being firm in faith and being bigoted are different things."
+   }
+  },
+  {
+   "id": "m02",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "کاہلی",
+   "ws": "کاہلی",
+   "taaruf": {
+    "ur": "کاہلی ہاتھ پاؤں کی سستی نہیں، دل و دماغ کو بے کار چھوڑ دینا ہے — سر سید کا مضمون۔",
+    "en": "Laziness is not idle limbs but an idle mind and heart — Sir Syed's essay."
+   }
+  },
+  {
+   "id": "m03",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "خوشامد",
+   "ws": "خوشامد (سید احمد خان)",
+   "taaruf": {
+    "ur": "خوشامد کی برائی اور اس کے نقصان پر۔",
+    "en": "On the vice of flattery and what it costs."
+   }
+  },
+  {
+   "id": "m04",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "اپنی مدد آپ",
+   "ws": "اپنی مدد آپ",
+   "taaruf": {
+    "ur": "قوم اپنی ترقی خود کرتی ہے، کوئی باہر سے نہیں کرتا — سر سید کا مشہور مضمون۔",
+    "en": "A community lifts itself; no one does it from outside — Sir Syed's famous essay on self-help."
+   }
+  },
+  {
+   "id": "m05",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "تعلیم",
+   "ws": "تعلیم",
+   "taaruf": {
+    "ur": "تعلیم کیا ہے اور کیوں ضروری ہے — تحریکِ علی گڑھ کی بنیادی سوچ۔",
+    "en": "What education is and why it matters — the founding thought of the Aligarh movement."
+   }
+  },
+  {
+   "id": "m06",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "آزادیِ رائے",
+   "ws": "آزادی رائے",
+   "taaruf": {
+    "ur": "رائے کی آزادی کے بغیر ترقی نہیں — سر سید کا مضمون۔",
+    "en": "No progress without freedom of opinion — Sir Syed's essay."
+   }
+  },
+  {
+   "id": "m07",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "بحث و تکرار",
+   "ws": "بحث و تکرار",
+   "taaruf": {
+    "ur": "بحث کس طرح کی جائے اور جھگڑے سے کیسے بچا جائے۔",
+    "en": "How to argue, and how to keep argument from becoming quarrel."
+   }
+  },
+  {
+   "id": "m08",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "امید کی خوشی",
+   "ws": "امید کی خوشی",
+   "taaruf": {
+    "ur": "امید انسان کو زندہ رکھتی ہے — ایک ہلکا، فکری مضمون۔",
+    "en": "Hope keeps a person alive — a light, reflective essay."
+   }
+  },
+  {
+   "id": "m09",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "ہمدردی",
+   "ws": "ہمدردی (سید احمد خان)",
+   "taaruf": {
+    "ur": "ہمدردی اخلاق کی جڑ ہے — سر سید کا مضمون۔",
+    "en": "Sympathy is the root of morals — Sir Syed's essay."
+   }
+  },
+  {
+   "id": "m10",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "رسم و رواج کی پابندی کے نقصانات",
+   "ws": "رسم و رواج کی پابندی کے نقصانات",
+   "taaruf": {
+    "ur": "اندھی رسموں کی پابندی قوم کو کیسے پیچھے رکھتی ہے۔",
+    "en": "How blind custom holds a community back."
+   }
+  },
+  {
+   "id": "m11",
+   "kind": "mazmoon",
+   "by": "sirsyed",
+   "title": "گزرا ہوا زمانہ",
+   "ws": "گزرا ہوا زمانہ",
+   "taaruf": {
+    "ur": "ماضی کی یاد اور اس سے سبق — سر سید کا مضمون۔",
+    "en": "Remembering the past and learning from it — Sir Syed's essay."
+   }
+  },
+  {
+   "id": "m12",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "انسان کسی حال میں خوش نہیں رہتا",
+   "ws": "انسان کسی حال میں خوش نہیں رہتا",
+   "taaruf": {
+    "ur": "«نیرنگِ خیال» کا تمثیلی مضمون — انسان کی ناشکری کی تصویر۔",
+    "en": "An allegorical essay from 'Nairang-e Khayal' — a picture of human discontent."
+   }
+  },
+  {
+   "id": "m13",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "سچ اور جھوٹ کا رزم نامہ",
+   "ws": "سچ اور جھوٹ کا رزم نامہ",
+   "taaruf": {
+    "ur": "سچ اور جھوٹ کی لڑائی کو ایک رزمیہ داستان کی شکل میں — آزادؔ کی تمثیل۔",
+    "en": "The war of truth and falsehood told as an epic — Azad's allegory."
+   }
+  },
+  {
+   "id": "m14",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "محنت کرو",
+   "ws": "محنت کرو",
+   "taaruf": {
+    "ur": "محنت کی برکت پر آزادؔ کا مضمون۔",
+    "en": "Azad's essay on the blessing of labour."
+   }
+  },
+  {
+   "id": "m15",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "علوم کی بدنصیبی",
+   "ws": "علوم کی بدنصیبی",
+   "taaruf": {
+    "ur": "علم کی قدر کیوں نہیں ہوتی — آزادؔ کی تمثیلی نثر۔",
+    "en": "Why learning goes unvalued — Azad's allegorical prose."
+   }
+  },
+  {
+   "id": "m16",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "شہرتِ عام اور بقائے دوام کا دربار",
+   "ws": "شہرت عام اور بقائے دوام کا دربار",
+   "taaruf": {
+    "ur": "«نیرنگِ خیال» کا سب سے مشہور مضمون — کون ہمیشہ زندہ رہتا ہے؟",
+    "en": "The most famous essay of 'Nairang-e Khayal' — who lives forever?"
+   }
+  },
+  {
+   "id": "m17",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "گلشنِ امید کی بہار",
+   "ws": "گلشن امید کی بہار",
+   "taaruf": {
+    "ur": "امید کے باغ کی تمثیل — آزادؔ۔",
+    "en": "The allegory of the garden of hope — Azad."
+   }
+  },
+  {
+   "id": "m18",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "اردو اور انگریزی انشا پردازی پر کچھ خیالات",
+   "ws": "اردو اور انگریزی انشاپردازی پر کچھ خیالات",
+   "taaruf": {
+    "ur": "اردو نثر کیسی ہونی چاہیے — آزادؔ کا تنقیدی لیکچر۔",
+    "en": "What Urdu prose should be — Azad's critical lecture."
+   }
+  },
+  {
+   "id": "m19",
+   "kind": "mazmoon",
+   "by": "haali",
+   "title": "اخبار نویسی اور اس کے فرائض",
+   "ws": "اخبار نویسی اور اس کے فرائض",
+   "taaruf": {
+    "ur": "صحافی کا فرض کیا ہے — حالیؔ کا مضمون، آج بھی تازہ۔",
+    "en": "What a journalist owes — Hali's essay, still fresh."
+   }
+  },
+  {
+   "id": "m20",
+   "kind": "mazmoon",
+   "by": "haali",
+   "title": "بدگمانی",
+   "ws": "بدگمانی",
+   "taaruf": {
+    "ur": "بدگمانی کیسے تعلق اور قوم دونوں کو کھاتی ہے — حالیؔ کا اخلاقی مضمون۔",
+    "en": "How suspicion eats away at relationships and community alike — Hali's moral essay."
+   }
+  },
+  {
+   "id": "m21",
+   "kind": "mazmoon",
+   "by": "haali",
+   "title": "مدعیانِ تہذیب کی بد اعمالیاں",
+   "ws": "مدعیان تہذیب کی بد اعمالیاں",
+   "taaruf": {
+    "ur": "تہذیب کا دعویٰ کرنے والوں کے کرتوت — حالیؔ کی تنقید۔",
+    "en": "The misdeeds of those who claim to be civilised — Hali's critique."
+   }
+  },
+  {
+   "id": "m22",
+   "kind": "mazmoon",
+   "by": "azad",
+   "title": "سیرِ زندگی",
+   "ws": "سیر زندگی",
+   "taaruf": {
+    "ur": "زندگی کی سیر — «نیرنگِ خیال» کی تمثیل۔",
+    "en": "A journey through life — an allegory from 'Nairang-e Khayal'."
+   }
+  },
+  {
+   "id": "m23",
+   "kind": "mazmoon",
+   "by": "shibli",
+   "title": "شاعری کی حقیقت اور ماہیت",
+   "ws": "شاعری کی حقیقت اور ماہیت",
+   "taaruf": {
+    "ur": "«شعر العجم» کا مشہور باب — شاعری کیا ہے، تخیل اور جذبات کا کیا کام ہے۔",
+    "en": "The famous chapter of 'Sher-ul-Ajam' — what poetry is, and the work of imagination and feeling."
+   }
+  },
+  {
+   "id": "m24",
+   "kind": "mazmoon",
+   "by": "shibli",
+   "title": "میر انیس اور مرزا دبیر کا موازنہ",
+   "ws": "میر انیس اور مرزا دبیر کا موازنہ",
+   "taaruf": {
+    "ur": "اردو تنقید کی پہلی باقاعدہ کتاب کا حصہ — دو مرثیہ گو استادوں کا مقابلہ۔",
+    "en": "From the first systematic book of Urdu criticism — the two masters of the marsiya compared."
+   }
+  },
+  {
+   "id": "m25",
+   "kind": "mazmoon",
+   "by": "shibli",
+   "title": "املا اور صحتِ الفاظ",
+   "ws": "املا اور صحت الفاظ",
+   "taaruf": {
+    "ur": "اردو املا کے مسائل — شبلیؔ کا مضمون؛ «اردو زبان» کے کام سے سیدھا تعلق۔",
+    "en": "The problems of Urdu spelling — Shibli's essay; directly relevant to UrduZaban's own work."
+   }
+  },
+  {
+   "id": "m26",
+   "kind": "mazmoon",
+   "by": "shibli",
+   "title": "بھاشا، زبان اور مسلمان",
+   "ws": "بھاشا، زبان اور مسلمان",
+   "taaruf": {
+    "ur": "زبان اور قوم کے تعلق پر شبلیؔ۔",
+    "en": "Shibli on the bond between language and community."
+   }
+  },
+  {
+   "id": "m27",
+   "kind": "mazmoon",
+   "by": "shibli",
+   "title": "سر سید مرحوم اور اردو لٹریچر",
+   "ws": "سر سید مرحوم اور اردو لٹریچر",
+   "taaruf": {
+    "ur": "سر سید نے اردو نثر کو کیا دیا — شبلیؔ کا خراجِ عقیدت۔",
+    "en": "What Sir Syed gave to Urdu prose — Shibli's tribute."
+   }
+  },
+  {
+   "id": "m28",
+   "kind": "mazmoon",
+   "by": "manto",
+   "title": "میں افسانہ کیونکر لکھتا ہوں",
+   "ws": "میں افسانہ کیونکر لکھتا ہوں",
+   "taaruf": {
+    "ur": "منٹو اپنے فن پر — «میں افسانہ نہیں لکھتا، افسانہ مجھے لکھتا ہے»۔",
+    "en": "Manto on his craft — 'I do not write the story; the story writes me.'"
+   }
+  },
+  {
+   "id": "m29",
+   "kind": "mazmoon",
+   "by": "manto",
+   "title": "لذتِ سنگ",
+   "ws": "لذت سنگ (مضمون)",
+   "taaruf": {
+    "ur": "فحاشی کے مقدموں پر منٹو کی روداد — ادیب اور عدالت۔",
+    "en": "Manto's account of his obscenity trials — the writer and the court."
+   }
+  },
+  {
+   "id": "m30",
+   "kind": "mazmoon",
+   "by": "azeem",
+   "title": "میں افسانہ کیسے لکھتا ہوں؟",
+   "ws": "میں افسانہ کیسے لکھتا ہوں؟",
+   "taaruf": {
+    "ur": "عظیم بیگ چغتائی اپنے مزاحیہ افسانوں کے طریقے پر۔",
+    "en": "Azeem Beg Chughtai on how he writes his comic stories."
+   }
+  },
+  {
+   "id": "t01",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "انجمنِ اصلاحِ حالِ بد معاشان",
+   "ws": "انجمن اصلاح حال بد معاشان",
+   "taaruf": {
+    "ur": "بدمعاشوں کی اصلاح کے لیے انجمن — فرحت اللہ بیگ کا شگفتہ طنز۔",
+    "en": "A society for the reform of scoundrels — Farhatullah Beg's light satire."
+   }
+  },
+  {
+   "id": "t02",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "ایڈیٹر صاحب کا کمرہ",
+   "ws": "ایڈیٹر صاحب کا کمرہ",
+   "taaruf": {
+    "ur": "اخبار کے دفتر کا مزاحیہ خاکہ۔",
+    "en": "A comic sketch of a newspaper editor's room."
+   }
+  },
+  {
+   "id": "t03",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "ایک نواب صاحب کی ڈائری کے چند پراگندہ صفحے",
+   "ws": "ایک نواب صاحب کی ڈائری کے چند پراگندہ صفحے",
+   "taaruf": {
+    "ur": "نواب صاحب کی ڈائری — بے فکری اور رئیسی پر طنز۔",
+    "en": "Pages from a nawab's diary — satire on idle aristocracy."
+   }
+  },
+  {
+   "id": "t04",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "ایک وصیت کی تعمیل",
+   "ws": "ایک وصیت کی تعمیل",
+   "taaruf": {
+    "ur": "ایک عجیب وصیت اور اس پر عمل کی مصیبت۔",
+    "en": "A strange will and the trouble of carrying it out."
+   }
+  },
+  {
+   "id": "t05",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "مہینے کی پہلی تاریخ",
+   "ws": "مہینے کی پہلی تاریخ",
+   "taaruf": {
+    "ur": "تنخواہ کا دن اور گھر کا بجٹ — ہر ملازم پیشہ کی کہانی۔",
+    "en": "Payday and the household budget — every salaried man's story."
+   }
+  },
+  {
+   "id": "t06",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "کل کا گھوڑا",
+   "ws": "کل کا گھوڑا",
+   "taaruf": {
+    "ur": "نئی ایجاد (موٹر) پر پرانے آدمی کی نظر — مزاح۔",
+    "en": "An old-timer looks at the new invention, the motor car — humour."
+   }
+  },
+  {
+   "id": "t07",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "ہم اور ہمارا امتحان",
+   "ws": "ہم اور ہمارا امتحان",
+   "taaruf": {
+    "ur": "امتحان کے دنوں کی مصیبت — طالب علم کی زبانی۔",
+    "en": "The misery of exam days — in a student's voice."
+   }
+  },
+  {
+   "id": "t08",
+   "kind": "tanz",
+   "by": "farhat",
+   "title": "پرانی اور نئی تہذیب کی ٹکر",
+   "ws": "پرانی اور نئی تہذیب کی ٹکر",
+   "taaruf": {
+    "ur": "پرانے اور نئے رہن سہن کا ٹکراؤ — ہنستے ہوئے۔",
+    "en": "Old ways collide with new — with a smile."
+   }
+  },
+  {
+   "id": "t09",
+   "kind": "tanz",
+   "by": "azeem",
+   "title": "انگوٹھی کی مصیبت",
+   "ws": "انگوٹھی کی مصیبت",
+   "taaruf": {
+    "ur": "ایک انگوٹھی اور شوہر کی جان پر بنی — چغتائی کا مشہور مزاحیہ افسانہ۔",
+    "en": "One ring, and a husband's life turned upside down — Chughtai's famous comic story."
+   }
+  },
+  {
+   "id": "t10",
+   "kind": "tanz",
+   "by": "azeem",
+   "title": "ممتحن کا پان",
+   "ws": "ممتحن کا پان",
+   "taaruf": {
+    "ur": "امتحان لینے والے صاحب اور ان کا پان — مزاح۔",
+    "en": "The examiner and his paan — humour."
+   }
+  },
+  {
+   "id": "t11",
+   "kind": "tanz",
+   "by": "azeem",
+   "title": "تیمارداری",
+   "ws": "تیمارداری",
+   "taaruf": {
+    "ur": "بیمار کی خدمت کے نام پر جو ہوتا ہے — چغتائی۔",
+    "en": "What passes for nursing the sick — Chughtai."
+   }
+  },
+  {
+   "id": "t12",
+   "kind": "tanz",
+   "by": "azeem",
+   "title": "بڑے شرم کی بات",
+   "ws": "بڑے شرم کی بات",
+   "taaruf": {
+    "ur": "شرم کی بات کیا ہے اور کیا نہیں — ہلکا طنز۔",
+    "en": "What is shameful and what is not — light satire."
+   }
+  },
+  {
+   "id": "t13",
+   "kind": "tanz",
+   "by": "azeem",
+   "title": "رساکشی",
+   "ws": "رساکشی",
+   "taaruf": {
+    "ur": "میاں بیوی کی کھینچا تانی — چغتائی کا مزاح۔",
+    "en": "The tug of war between husband and wife — Chughtai's humour."
+   }
+  },
+  {
+   "id": "t14",
+   "kind": "tanz",
+   "by": "azeem",
+   "title": "افسانہ نگاروں کی قسمیں",
+   "ws": "افسانہ نگاروں کی قسمیں",
+   "taaruf": {
+    "ur": "ادیبوں پر ادیب کا طنز — افسانہ نگار کتنی قسم کے ہوتے ہیں۔",
+    "en": "A writer's satire on writers — the species of story-writers."
+   }
+  },
+  {
+   "id": "t15",
+   "kind": "tanz",
+   "by": "azeem",
+   "title": "نیکی کرنا جرم ہے",
+   "ws": "نیکی کرنا جرم ہے",
+   "taaruf": {
+    "ur": "نیکی کر کے پچھتانے والے کی کہانی۔",
+    "en": "The tale of a man who did a good deed and lived to regret it."
+   }
+  },
+  {
+   "id": "t16",
+   "kind": "tanz",
+   "by": "sarshar",
+   "title": "ہوٹل",
+   "ws": "ہوٹل",
+   "taaruf": {
+    "ur": "سرشارؔ کا مزاحیہ مضمون — نئے زمانے کا ہوٹل اور لکھنؤ والے۔",
+    "en": "Sarshar's comic piece — the new-fangled hotel and the people of Lucknow."
+   }
+  },
+  {
+   "id": "t17",
+   "kind": "tanz",
+   "by": "sarshar",
+   "title": "آٹھوں کا میلہ",
+   "ws": "آٹھوں کا میلہ",
+   "taaruf": {
+    "ur": "لکھنؤ کے میلے کی چہل پہل — سرشارؔ کی پھبتیاں۔",
+    "en": "The bustle of a Lucknow fair — Sarshar's banter."
+   }
+  },
+  {
+   "id": "t18",
+   "kind": "tanz",
+   "by": "azad",
+   "title": "جنت الحمقاء",
+   "ws": "جنت الحمقاء",
+   "taaruf": {
+    "ur": "بے وقوفوں کی جنت — آزادؔ کا تمثیلی طنز۔",
+    "en": "The paradise of fools — Azad's allegorical satire."
+   }
+  },
+  {
+   "id": "t19",
+   "kind": "tanz",
+   "by": "akbar",
+   "title": "اکبرؔ الہ آبادی کے طنزیہ اشعار",
+   "sher": "akbar",
+   "taaruf": {
+    "ur": "اردو کے سب سے بڑے طنزیہ شاعر کے 388 اشعار «شعر» کے کمرے میں — نئی تہذیب، انگریزی تعلیم اور کالج کے نوجوانوں پر چوٹیں۔",
+    "en": "388 couplets of Urdu's greatest satirical poet in the Sher room — needling the new culture, English education and college youth."
+   }
+  },
+  {
+   "id": "q01",
+   "kind": "qaul",
+   "by": "sirsyed",
+   "matn": "دلی قوی کو بے کار چھوڑ دینا سب سے بڑی کاہلی ہے۔",
+   "src": {
+    "title": "کاہلی",
+    "ws": "کاہلی"
+   },
+   "tashreeh": {
+    "ur": "کاہلی ہاتھ پاؤں کی نہیں، دل و دماغ کی ہوتی ہے۔",
+    "en": "Laziness is of the mind and heart, not the limbs."
+   }
+  },
+  {
+   "id": "q02",
+   "kind": "qaul",
+   "by": "sirsyed",
+   "matn": "کسی شخص کے دل کو بے کار پڑے رہنا نہ چاہیے۔ کسی نہ کسی بات کی فکر و کوشش میں رہنا لازم ہے۔",
+   "src": {
+    "title": "کاہلی",
+    "ws": "کاہلی"
+   },
+   "tashreeh": {
+    "ur": "ہر وقت کسی مقصد کی فکر اور کوشش میں لگے رہو۔",
+    "en": "Always keep some purpose before you, and work at it."
+   }
+  },
+  {
+   "id": "q03",
+   "kind": "qaul",
+   "by": "sirsyed",
+   "matn": "انسان کی خصلتوں میں سے تعصب ایک بدترین خصلت ہے۔ یہ ایسی بدخصلت ہے کہ انسان کی تمام نیکیوں اور اس کی تمام خوبیوں کو غارت اور برباد کرتی ہے۔",
+   "src": {
+    "title": "تعصب",
+    "ws": "تعصب"
+   },
+   "tashreeh": {
+    "ur": "تعصب باقی سب خوبیوں کو کھا جاتا ہے۔",
+    "en": "Prejudice devours every other virtue."
+   }
+  },
+  {
+   "id": "q04",
+   "kind": "qaul",
+   "by": "sirsyed",
+   "matn": "اپنے مذہب میں پختہ ہونا جدا بات ہے اور یہ ایک نہایت عمدہ صفت ہے … اور تعصب، گو کہ وہ مذہبی باتوں میں کیوں نہ ہو، نہایت برا اور خود مذہب کو نہایت نقصان پہنچانے والا ہے۔",
+   "src": {
+    "title": "تعصب",
+    "ws": "تعصب"
+   },
+   "tashreeh": {
+    "ur": "ایمان کی پختگی اور تعصب دو الگ چیزیں ہیں — ایک خوبی، دوسری خرابی۔",
+    "en": "Firmness of faith and bigotry are two different things — one a virtue, the other a vice."
+   }
+  },
+  {
+   "id": "q05",
+   "kind": "qaul",
+   "by": "sirsyed",
+   "matn": "دنیا میں کوئی قوم ایسی نہیں ہے جس نے خود ہی تمام کمالات اور تمام خوبیاں اور خوشیاں حاصل کی ہوں، بلکہ ہمیشہ ایک قوم نے دوسری قوم سے فائدہ اٹھایا ہے۔",
+   "src": {
+    "title": "تعصب",
+    "ws": "تعصب"
+   },
+   "tashreeh": {
+    "ur": "ہر قوم دوسری قوموں سے سیکھ کر آگے بڑھی ہے۔",
+    "en": "Every nation has risen by learning from others."
+   }
+  },
+  {
+   "id": "q06",
+   "kind": "qaul",
+   "by": "sirsyed",
+   "matn": "تمام بنی نوع انسان ہمارے بھائی ہیں، ہم کو سب سے محبت اور سچا معاملہ رکھنا اور سب سے سچی دوستی اور سب کی سچی خیر خواہی کرنا ہمارا قدرتی فرض ہے۔",
+   "src": {
+    "title": "تعصب",
+    "ws": "تعصب"
+   },
+   "tashreeh": {
+    "ur": "سب انسان بھائی ہیں — سب کی خیر خواہی فطری فرض ہے۔",
+    "en": "All humankind are our brothers — goodwill to all is a natural duty."
+   }
+  },
+  {
+   "id": "q07",
+   "kind": "qaul",
+   "by": "sirsyed",
+   "matn": "جب تک ہماری قوم سے کاہلی یعنی دل کو بے کار پڑے رہنا نہ چھوٹے گا، اس وقت تک ہم کو اپنی قوم کی بہتری کی توقع کچھ نہیں ہے۔",
+   "src": {
+    "title": "کاہلی",
+    "ws": "کاہلی"
+   },
+   "tashreeh": {
+    "ur": "قوم کی بہتری ذہنی کاہلی چھوڑنے سے شروع ہوتی ہے۔",
+    "en": "A community's improvement begins when it gives up mental idleness."
+   }
+  },
+  {
+   "id": "q08",
+   "kind": "qaul",
+   "by": "manto",
+   "matn": "ادھر خار دار تاروں کے پیچھے ہندوستان تھا … ادھر ویسے ہی تاروں کے پیچھے پاکستان۔ درمیان میں زمین کے اس ٹکڑے پر جس کا کوئی نام نہیں تھا، ٹوبہ ٹیک سنگھ پڑا تھا۔",
+   "src": {
+    "title": "ٹوبہ ٹیک سنگھ",
+    "ws": "ٹوبہ ٹیک سنگھ"
+   },
+   "tashreeh": {
+    "ur": "افسانے کا آخری جملہ — تقسیم کے دکھ کی سب سے مشہور سطر۔",
+    "en": "The story's last sentence — the most famous line about Partition's pain."
+   }
+  }
+ ]
+}

@@ -1,0 +1,1035 @@
+{
+ "name": "uz-adab-log",
+ "v": 1,
+ "updated": "2026-09-03",
+ "title": {
+  "ur": "اردو ادب کے لوگ — شاعر، نثر نگار، افسانہ نگار، مضمون نگار، طنز و مزاح نگار",
+  "en": "People of Urdu literature — poets, prose writers, storytellers, essayists, humorists"
+ },
+ "note": "زندگی اور کارنامے «اردو زبان» کے اپنے لکھے ہیں (تاریخیں اور حقائق عام مآخذ سے)۔ صرف وہ لوگ جن کی وفات کو 70 سال گزر چکے — سب کا کام عوامی ورثہ (PD)۔ روز بڑھتا ہے۔ CC BY 4.0",
+ "kirdar": {
+  "shair": {
+   "ur": "شاعر",
+   "en": "Poet"
+  },
+  "nasr": {
+   "ur": "نثر نگار",
+   "en": "Prose writer"
+  },
+  "afsana": {
+   "ur": "افسانہ / قصہ",
+   "en": "Fiction"
+  },
+  "mazmoon": {
+   "ur": "مضمون نگار",
+   "en": "Essayist"
+  },
+  "tanz": {
+   "ur": "طنز و مزاح",
+   "en": "Humour & satire"
+  },
+  "qaul": {
+   "ur": "اقوال",
+   "en": "Sayings"
+  }
+ },
+ "adwaar": {
+  "hindavi": {
+   "ur": "ہندوی دور",
+   "en": "Early Hindavi",
+   "span": "c. 1250–1350"
+  },
+  "dakkani": {
+   "ur": "دکنی دور",
+   "en": "Deccani",
+   "span": "c. 1600–1750"
+  },
+  "klasiki": {
+   "ur": "کلاسیکی دور",
+   "en": "Classical",
+   "span": "c. 1750–1905"
+  },
+  "jadeed": {
+   "ur": "جدید دور",
+   "en": "Modern",
+   "span": "c. 1870–1955"
+  }
+ },
+ "log": [
+  {
+   "id": "khusrau",
+   "u": "امیر خسرو دہلوی",
+   "t": "خسروؔ",
+   "e": "Amir Khusrau",
+   "paida": 1253,
+   "wafat": 1325,
+   "jagah": "پٹیالی / دہلی",
+   "daur": "hindavi",
+   "kirdar": [
+    "shair"
+   ],
+   "corpus": "khusrau",
+   "zindagi": {
+    "ur": "دہلی سلطنت کے درباری شاعر، موسیقار اور صوفی؛ حضرت نظام الدین اولیاء کے مرید۔ فارسی کے بڑے شاعر مگر ہندوی (پرانی اردو) میں بھی پہیلیاں، دوہے اور گیت کہے جو آج تک زبان پر ہیں۔",
+    "en": "Court poet, musician and Sufi of the Delhi Sultanate; a disciple of Nizamuddin Auliya. A master of Persian who also wrote riddles, dohas and songs in Hindavi (early Urdu) that people still sing."
+   },
+   "karname": {
+    "ur": "اردو کے پہلے بڑے نام — «زحال مسکیں» جیسی ملی جلی زبان کی مثال؛ خیال گائیکی اور قوالی کی روایت سے جڑا نام۔",
+    "en": "The first great name of Urdu — his mixed Persian-Hindavi verse is the earliest well-known sample; his name is tied to the traditions of khayal and qawwali."
+   },
+   "tasaneef": [
+    "خمسۂ خسرو (فارسی)",
+    "پہیلیاں و مکرنیاں",
+    "غرۃ الکمال"
+   ]
+  },
+  {
+   "id": "wali",
+   "u": "ولی محمد ولی دکنی",
+   "t": "ولیؔ",
+   "e": "Wali Dakani",
+   "paida": 1667,
+   "wafat": 1707,
+   "jagah": "اورنگ آباد / احمد آباد",
+   "daur": "dakkani",
+   "kirdar": [
+    "shair"
+   ],
+   "corpus": "wali",
+   "zindagi": {
+    "ur": "دکن کے شاعر جن کا دیوان 1700ء کے لگ بھگ دہلی پہنچا تو وہاں کے فارسی گو شعراء نے اردو (ریختہ) میں غزل کہنا شروع کی۔",
+    "en": "A poet of the Deccan whose diwan reached Delhi around 1700 and moved the city's Persian poets to write ghazal in Urdu (Rekhta)."
+   },
+   "karname": {
+    "ur": "اردو غزل کا نقطۂ آغاز — انہی سے شمالی ہند میں ریختہ کی شاعری کا سلسلہ چلا۔",
+    "en": "The starting point of the Urdu ghazal — Rekhta poetry in North India begins with his example."
+   },
+   "tasaneef": [
+    "دیوانِ ولی"
+   ]
+  },
+  {
+   "id": "sauda",
+   "u": "مرزا محمد رفیع سودا",
+   "t": "سوداؔ",
+   "e": "Mirza Rafi Sauda",
+   "paida": 1713,
+   "wafat": 1781,
+   "jagah": "دہلی / لکھنؤ",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair",
+    "tanz"
+   ],
+   "zindagi": {
+    "ur": "دہلی کے شاعر، بعد میں لکھنؤ میں نواب آصف الدولہ کے دربار سے وابستہ۔ میرؔ کے ہم عصر اور قصیدے اور ہجو کے سب سے بڑے استاد۔",
+    "en": "A Delhi poet who later joined Nawab Asaf-ud-Daula's court in Lucknow. Mir's contemporary and the greatest master of the qasida and the satirical hajv."
+   },
+   "karname": {
+    "ur": "اردو قصیدے کو بلندی دی؛ ہجو اور طنز میں بے مثال — اردو کے پہلے بڑے طنز نگار کہے جا سکتے ہیں۔",
+    "en": "Raised the Urdu qasida to its height; unmatched in satire — arguably Urdu's first great satirist."
+   },
+   "tasaneef": [
+    "کلیاتِ سودا",
+    "قصائد",
+    "ہجویات"
+   ]
+  },
+  {
+   "id": "dard",
+   "u": "خواجہ میر درد",
+   "t": "دردؔ",
+   "e": "Khwaja Mir Dard",
+   "paida": 1721,
+   "wafat": 1785,
+   "jagah": "دہلی",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "zindagi": {
+    "ur": "دہلی کے صوفی شاعر؛ پوری زندگی دہلی میں گزاری اور تباہیوں کے باوجود شہر نہ چھوڑا۔ ان کا گھر شعر و موسیقی کی محفلوں کا مرکز تھا۔",
+    "en": "A Sufi poet of Delhi who never left the city despite its calamities. His house was a centre of poetry and music gatherings."
+   },
+   "karname": {
+    "ur": "اردو کے سب سے بڑے صوفی غزل گو — مختصر دیوان مگر ہر شعر تصوف کی روشنی سے بھرا۔",
+    "en": "Urdu's greatest Sufi ghazal poet — a small diwan, every couplet lit by mysticism."
+   },
+   "tasaneef": [
+    "دیوانِ درد",
+    "علم الکتاب (فارسی)"
+   ]
+  },
+  {
+   "id": "mir",
+   "u": "میر تقی میر",
+   "t": "میرؔ",
+   "e": "Mir Taqi Mir",
+   "paida": 1723,
+   "wafat": 1810,
+   "jagah": "آگرہ / دہلی / لکھنؤ",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "corpus": "mir",
+   "zindagi": {
+    "ur": "آگرہ میں پیدا ہوئے، دہلی میں شاعری کی، اور شہر کی بربادی دیکھ کر بڑھاپے میں لکھنؤ چلے گئے۔ چھ دیوانوں کے مالک — اردو کے «خدائے سخن»۔",
+    "en": "Born in Agra, made in Delhi, and driven to Lucknow in old age after watching his city ruined. Author of six diwans — Urdu's 'Khuda-e Sukhan', the god of poetry."
+   },
+   "karname": {
+    "ur": "اردو غزل کو درد، سادگی اور گہرائی کا وہ رنگ دیا جس پر غالبؔ تک نے سر جھکایا: «ریختے کے تمہیں استاد نہیں ہو غالب»۔",
+    "en": "Gave the Urdu ghazal its depth of grief and simplicity — even Ghalib bowed: 'You are not the only master of Rekhta, Ghalib.'"
+   },
+   "tasaneef": [
+    "کلیاتِ میر (چھ دیوان)",
+    "ذکرِ میر (خود نوشت، فارسی)",
+    "نکات الشعرا (تذکرہ)"
+   ]
+  },
+  {
+   "id": "nazeer",
+   "u": "نظیر اکبر آبادی",
+   "t": "نظیرؔ",
+   "e": "Nazeer Akbarabadi",
+   "paida": 1735,
+   "wafat": 1830,
+   "jagah": "دہلی / آگرہ",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "zindagi": {
+    "ur": "آگرہ کے عوامی شاعر — معلم رہے، دربار سے دور، بازار اور میلوں کی زبان میں نظمیں کہیں: بنجارا نامہ، روٹی نامہ، آدمی نامہ، ہولی، دیوالی۔",
+    "en": "Agra's people's poet — a schoolteacher who stayed away from courts and wrote in the language of markets and fairs: Banjara-nama, Roti-nama, Aadmi-nama, Holi, Diwali."
+   },
+   "karname": {
+    "ur": "اردو نظم کے بانی — عوامی موضوعات، سب مذاہب کے تہوار، اور روزمرہ کی زبان کو شاعری کا درجہ دیا۔",
+    "en": "The founder of the Urdu nazm — gave everyday life, every community's festivals and plain speech the status of poetry."
+   },
+   "tasaneef": [
+    "کلیاتِ نظیر",
+    "بنجارا نامہ",
+    "آدمی نامہ"
+   ]
+  },
+  {
+   "id": "insha",
+   "u": "انشاء اللہ خان انشا",
+   "t": "انشاؔ",
+   "e": "Insha Allah Khan Insha",
+   "paida": 1756,
+   "wafat": 1817,
+   "jagah": "مرشد آباد / دہلی / لکھنؤ",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair",
+    "nasr",
+    "tanz"
+   ],
+   "zindagi": {
+    "ur": "دہلی اور پھر لکھنؤ کے شاعر، شوخ طبیعت، کئی زبانوں پر قادر۔ «رانی کیتکی کی کہانی» لکھی جس میں عربی فارسی کا ایک لفظ نہیں۔",
+    "en": "A poet of Delhi and then Lucknow, witty and multilingual. Wrote 'Rani Ketki ki Kahani' without a single Arabic or Persian word."
+   },
+   "karname": {
+    "ur": "اردو کی پہلی قواعد «دریائے لطافت» (فارسی میں) اور خالص ہندی اردو نثر کا تجربہ۔",
+    "en": "Author of the first grammar of Urdu, 'Darya-e Latafat' (in Persian), and the first experiment in pure Hindi-Urdu prose."
+   },
+   "tasaneef": [
+    "دریائے لطافت",
+    "رانی کیتکی کی کہانی",
+    "کلیاتِ انشا"
+   ]
+  },
+  {
+   "id": "mushafi",
+   "u": "غلام ہمدانی مصحفی",
+   "t": "مصحفیؔ",
+   "e": "Ghulam Hamdani Mus'hafi",
+   "paida": 1750,
+   "wafat": 1824,
+   "jagah": "امروہہ / دہلی / لکھنؤ",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "zindagi": {
+    "ur": "دہلی سے لکھنؤ آئے؛ انشاؔ سے مشہور معرکے ہوئے۔ نہایت کثیر الکلام — آٹھ اردو دیوان اور تین فارسی۔",
+    "en": "Moved from Delhi to Lucknow; famous for his poetic feuds with Insha. Enormously prolific — eight Urdu diwans and three Persian."
+   },
+   "karname": {
+    "ur": "دہلی اور لکھنؤ کے رنگ کے درمیان پُل؛ تذکرے (عقدِ ثریا، ریاض الفصحا) اردو ادب کی تاریخ کا ماخذ ہیں۔",
+    "en": "A bridge between the Delhi and Lucknow styles; his tazkiras are a key source for the history of Urdu literature."
+   },
+   "tasaneef": [
+    "کلیاتِ مصحفی",
+    "تذکرۂ ہندی",
+    "عقدِ ثریا"
+   ]
+  },
+  {
+   "id": "meeramman",
+   "u": "میر امن دہلوی",
+   "t": "",
+   "e": "Mir Amman Dehlvi",
+   "paida": 1748,
+   "wafat": 1806,
+   "jagah": "دہلی / کلکتہ",
+   "daur": "klasiki",
+   "kirdar": [
+    "nasr",
+    "afsana"
+   ],
+   "zindagi": {
+    "ur": "دہلی کے تباہ حال خاندان سے کلکتہ پہنچے اور فورٹ ولیم کالج میں ملازم ہوئے۔ وہاں 1801ء میں «قصۂ چہار درویش» کو سادہ اردو میں «باغ و بہار» کے نام سے لکھا۔",
+    "en": "Came from a ruined Delhi family to Calcutta and joined Fort William College, where in 1801 he retold the Tale of the Four Dervishes in plain Urdu as 'Bagh-o-Bahar'."
+   },
+   "karname": {
+    "ur": "اردو نثر کی بنیاد — «باغ و بہار» وہ کتاب ہے جس سے سادہ، بولتی ہوئی اردو نثر کا آغاز مانا جاتا ہے۔",
+    "en": "The foundation of Urdu prose — 'Bagh-o-Bahar' is where plain, spoken Urdu prose is said to begin."
+   },
+   "tasaneef": [
+    "باغ و بہار",
+    "گنجِ خوبی"
+   ],
+   "ws": "میر امن"
+  },
+  {
+   "id": "zauq",
+   "u": "محمد ابراہیم ذوق",
+   "t": "ذوقؔ",
+   "e": "Mohammad Ibrahim Zauq",
+   "paida": 1789,
+   "wafat": 1854,
+   "jagah": "دہلی",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "zindagi": {
+    "ur": "بہادر شاہ ظفر کے استاد اور «خاقانیِ ہند» کا خطاب پانے والے ملک الشعرا۔ دہلی کے دربار میں غالبؔ کے حریف۔",
+    "en": "Bahadur Shah Zafar's poetry teacher and poet laureate, titled 'Khaqani of India'. Ghalib's rival at the Delhi court."
+   },
+   "karname": {
+    "ur": "قصیدے اور زبان کی صفائی کے استاد؛ کئی شعر ضرب المثل بن گئے («اب تو گھبرا کے یہ کہتے ہیں کہ مر جائیں گے»)۔",
+    "en": "A master of the qasida and of polished idiom; several of his couplets became proverbs."
+   },
+   "tasaneef": [
+    "دیوانِ ذوق"
+   ]
+  },
+  {
+   "id": "ghalib",
+   "u": "مرزا اسد اللہ خان غالب",
+   "t": "غالبؔ",
+   "e": "Mirza Ghalib",
+   "paida": 1797,
+   "wafat": 1869,
+   "jagah": "آگرہ / دہلی",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair",
+    "nasr"
+   ],
+   "corpus": "ghalib",
+   "ws": "مرزا اسد اللہ خان غالب",
+   "zindagi": {
+    "ur": "آگرہ میں پیدا ہوئے، دہلی میں رہے؛ پنشن کے مقدمے، 1857ء کی تباہی اور تنگ دستی سب دیکھی۔ فارسی کو اپنا اصل میدان سمجھتے تھے مگر شہرت اردو دیوان سے ملی۔",
+    "en": "Born in Agra, lived in Delhi; saw pension litigation, the ruin of 1857 and lifelong hardship. Thought Persian his real field, but fame came from his Urdu diwan."
+   },
+   "karname": {
+    "ur": "اردو غزل کا سب سے بڑا فکری شاعر؛ خطوط نے اردو نثر کو گفتگو کا انداز سکھایا — «مکتوب نگاری کو مکالمہ بنا دیا»۔",
+    "en": "The greatest intellectual poet of the Urdu ghazal; his letters taught Urdu prose to talk — he turned letter-writing into conversation."
+   },
+   "tasaneef": [
+    "دیوانِ غالب",
+    "عودِ ہندی (خطوط)",
+    "اردوئے معلیٰ (خطوط)",
+    "دستنبو (فارسی)"
+   ]
+  },
+  {
+   "id": "momin",
+   "u": "مومن خان مومن",
+   "t": "مومنؔ",
+   "e": "Momin Khan Momin",
+   "paida": 1800,
+   "wafat": 1852,
+   "jagah": "دہلی",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "zindagi": {
+    "ur": "دہلی کے حکیم، نجومی اور شاعر؛ غالبؔ اور ذوقؔ کے ہم عصر۔ غالبؔ نے ان کے ایک شعر پر اپنا پورا دیوان دینے کی بات کہی۔",
+    "en": "A Delhi physician, astrologer and poet, contemporary of Ghalib and Zauq. Ghalib is said to have offered his whole diwan for one of Momin's couplets."
+   },
+   "karname": {
+    "ur": "عاشقانہ غزل کا نازک ترین رنگ — «تم میرے پاس ہوتے ہو گویا / جب کوئی دوسرا نہیں ہوتا»۔",
+    "en": "The most delicate voice of the love ghazal — 'You are with me, as it were, when no one else is.'"
+   },
+   "tasaneef": [
+    "دیوانِ مومن",
+    "مثنویاں"
+   ]
+  },
+  {
+   "id": "zafar",
+   "u": "بہادر شاہ ظفر",
+   "t": "ظفرؔ",
+   "e": "Bahadur Shah Zafar",
+   "paida": 1775,
+   "wafat": 1862,
+   "jagah": "دہلی / رنگون",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "corpus": "zafar",
+   "ws": "بہادر شاہ ظفر",
+   "zindagi": {
+    "ur": "آخری مغل بادشاہ اور شاعر؛ ذوقؔ اور پھر غالبؔ کے شاگرد۔ 1857ء کے بعد رنگون جلا وطن کیے گئے اور وہیں انتقال ہوا۔",
+    "en": "The last Mughal emperor and a poet; pupil of Zauq and later Ghalib. Exiled to Rangoon after 1857 and died there."
+   },
+   "karname": {
+    "ur": "غم، بے بسی اور قید کی شاعری — «لگتا نہیں ہے جی مرا اجڑے دیار میں» اُن کی زندگی کا آئینہ۔",
+    "en": "Poetry of grief, helplessness and captivity — 'My heart finds no rest in this ruined land' mirrors his life."
+   },
+   "tasaneef": [
+    "کلیاتِ ظفر"
+   ]
+  },
+  {
+   "id": "anees",
+   "u": "میر ببر علی انیس",
+   "t": "انیسؔ",
+   "e": "Mir Anees",
+   "paida": 1803,
+   "wafat": 1874,
+   "jagah": "فیض آباد / لکھنؤ",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "corpus": "anees",
+   "ws": "میر انیس",
+   "zindagi": {
+    "ur": "لکھنؤ کے مرثیہ گو، شاعروں کے خاندان سے (میر حسن کے پوتے)۔ مرزا دبیرؔ کے ساتھ مرثیے کا سنہری دور بنایا۔",
+    "en": "Lucknow's master of the marsiya, from a family of poets (grandson of Mir Hasan). With Mirza Dabeer he made the golden age of the elegy."
+   },
+   "karname": {
+    "ur": "مرثیے کو رزم، منظر نگاری اور کردار نگاری کا مکمل فن بنایا — اردو کی طویل نظم کا عروج۔",
+    "en": "Turned the marsiya into a complete art of battle, scene and character — the summit of the long Urdu poem."
+   },
+   "tasaneef": [
+    "مراثیِ انیس",
+    "رباعیات",
+    "سلام"
+   ]
+  },
+  {
+   "id": "suroor",
+   "u": "رجب علی بیگ سرور",
+   "t": "سرورؔ",
+   "e": "Rajab Ali Beg Suroor",
+   "paida": 1787,
+   "wafat": 1867,
+   "jagah": "لکھنؤ",
+   "daur": "klasiki",
+   "kirdar": [
+    "nasr",
+    "afsana"
+   ],
+   "ws": "رجب علی بیگ سرور",
+   "zindagi": {
+    "ur": "لکھنؤ کے انشا پرداز؛ «فسانۂ عجائب» (1824ء) لکھا — مقفّیٰ، مسجّع، رنگین نثر کی سب سے مشہور مثال، جو «باغ و بہار» کی سادگی کے مقابل تھی۔",
+    "en": "A Lucknow stylist; wrote 'Fasana-e Ajaib' (1824), the most famous example of rhymed, ornate prose — the counterpart to the plainness of 'Bagh-o-Bahar'."
+   },
+   "karname": {
+    "ur": "لکھنوی نثر کا نمائندہ — زبان کی زیبائش اور محاورے کا خزانہ۔",
+    "en": "The representative of the Lucknow prose style — a treasury of ornament and idiom."
+   },
+   "tasaneef": [
+    "فسانۂ عجائب",
+    "شگوفۂ محبت"
+   ]
+  },
+  {
+   "id": "sirsyed",
+   "u": "سر سید احمد خان",
+   "t": "",
+   "e": "Sir Syed Ahmad Khan",
+   "paida": 1817,
+   "wafat": 1898,
+   "jagah": "دہلی / علی گڑھ",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "mazmoon",
+    "qaul"
+   ],
+   "ws": "سید احمد خان",
+   "zindagi": {
+    "ur": "دہلی میں پیدا ہوئے، انگریزی عدالت میں ملازم رہے، 1857ء کے بعد قوم کی اصلاح اور تعلیم کو زندگی کا مقصد بنایا۔ علی گڑھ کالج (1875ء) اور رسالہ «تہذیب الاخلاق» (1870ء) قائم کیا۔",
+    "en": "Born in Delhi, served in the British courts, and after 1857 made the reform and education of his community his life's work. Founded the Aligarh college (1875) and the journal 'Tahzib-ul-Akhlaq' (1870)."
+   },
+   "karname": {
+    "ur": "جدید اردو مضمون کے بانی — سادہ، دلیل والی، مقصدی نثر؛ «آثار الصنادید» اور قرآن کی تفسیر بھی۔",
+    "en": "Founder of the modern Urdu essay — plain, reasoned, purposeful prose; also 'Asar-us-Sanadid' and a Quran commentary."
+   },
+   "tasaneef": [
+    "مقالاتِ سر سید",
+    "آثار الصنادید",
+    "اسبابِ بغاوتِ ہند",
+    "تہذیب الاخلاق (رسالہ)"
+   ]
+  },
+  {
+   "id": "azad",
+   "u": "محمد حسین آزاد",
+   "t": "آزادؔ",
+   "e": "Muhammad Husain Azad",
+   "paida": 1830,
+   "wafat": 1910,
+   "jagah": "دہلی / لاہور",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "mazmoon",
+    "tanz"
+   ],
+   "ws": "محمد حسین آزاد",
+   "zindagi": {
+    "ur": "دہلی میں ذوقؔ کے شاگرد؛ 1857ء میں باپ کی شہادت اور شہر کی تباہی کے بعد لاہور آئے۔ انجمنِ پنجاب کے مشاعروں سے جدید نظم کی تحریک چلائی۔",
+    "en": "Zauq's pupil in Delhi; after his father's execution and the city's ruin in 1857 he moved to Lahore, where the Anjuman-e Punjab mushairas launched the modern nazm."
+   },
+   "karname": {
+    "ur": "«آبِ حیات» — اردو شاعری کی پہلی تاریخ؛ «نیرنگِ خیال» — تمثیلی مضامین؛ اردو نثر کا سب سے رنگین، تصویری اسلوب۔",
+    "en": "'Aab-e Hayat', the first history of Urdu poetry; 'Nairang-e Khayal', allegorical essays; the most pictorial style in Urdu prose."
+   },
+   "tasaneef": [
+    "آبِ حیات",
+    "نیرنگِ خیال",
+    "دربارِ اکبری",
+    "سخندانِ فارس"
+   ]
+  },
+  {
+   "id": "nazir",
+   "u": "ڈپٹی نذیر احمد",
+   "t": "",
+   "e": "Deputy Nazir Ahmad",
+   "paida": 1830,
+   "wafat": 1912,
+   "jagah": "بجنور / دہلی",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "afsana"
+   ],
+   "ws": "ڈپٹی نذیر احمد",
+   "zindagi": {
+    "ur": "دہلی کالج کے پڑھے، ڈپٹی کلکٹر رہے، عربی کے عالم۔ بیٹیوں کی تعلیم کے لیے 1869ء میں «مراۃ العروس» لکھی — اردو کا پہلا ناول۔",
+    "en": "Educated at Delhi College, a deputy collector and Arabic scholar. Wrote 'Mirat-ul-Uroos' (1869) for his daughters' education — the first Urdu novel."
+   },
+   "karname": {
+    "ur": "اردو ناول کے بانی؛ اصلاحی کہانیاں (بنات النعش، توبۃ النصوح، ابن الوقت) اور قرآن کا بامحاورہ ترجمہ۔",
+    "en": "Founder of the Urdu novel; reformist tales (Banat-un-Nash, Taubat-un-Nasuh, Ibn-ul-Waqt) and an idiomatic Quran translation."
+   },
+   "tasaneef": [
+    "مراۃ العروس",
+    "توبۃ النصوح",
+    "ابن الوقت",
+    "فسانۂ مبتلا"
+   ]
+  },
+  {
+   "id": "daagh",
+   "u": "داغ دہلوی",
+   "t": "داغؔ",
+   "e": "Daagh Dehlvi",
+   "paida": 1831,
+   "wafat": 1905,
+   "jagah": "دہلی / رام پور / حیدرآباد",
+   "daur": "klasiki",
+   "kirdar": [
+    "shair"
+   ],
+   "corpus": "daagh",
+   "ws": "داغ دہلوی",
+   "zindagi": {
+    "ur": "لال قلعے میں پلے، ذوقؔ کے شاگرد؛ 1857ء کے بعد رام پور اور پھر حیدرآباد دکن کے دربار میں۔ ہزاروں شاگرد — اقبالؔ بھی ابتدا میں ان سے اصلاح لیتے رہے۔",
+    "en": "Raised in the Red Fort, a pupil of Zauq; after 1857 at the courts of Rampur and then Hyderabad. Thousands of pupils — even the young Iqbal sent him verses for correction."
+   },
+   "karname": {
+    "ur": "محاورے اور روزمرہ کی صاف، شوخ غزل — «زبانِ داغ» ایک معیار بن گئی۔",
+    "en": "The clean, playful ghazal of idiom and everyday speech — 'the tongue of Daagh' became a standard."
+   },
+   "tasaneef": [
+    "گلزارِ داغ",
+    "آفتابِ داغ",
+    "مہتابِ داغ",
+    "یادگارِ داغ"
+   ]
+  },
+  {
+   "id": "haali",
+   "u": "الطاف حسین حالی",
+   "t": "حالیؔ",
+   "e": "Altaf Husain Hali",
+   "paida": 1837,
+   "wafat": 1914,
+   "jagah": "پانی پت / دہلی",
+   "daur": "jadeed",
+   "kirdar": [
+    "shair",
+    "nasr",
+    "mazmoon"
+   ],
+   "corpus": "haali",
+   "ws": "الطاف حسین حالی",
+   "zindagi": {
+    "ur": "پانی پت کے شاعر؛ غالبؔ کے شاگرد اور سر سید کے ساتھی۔ «مسدسِ حالی» (1879ء) قوم کی حالت پر لکھا جسے سر سید نے اپنی نجات کا سبب کہا۔",
+    "en": "A poet of Panipat; Ghalib's pupil and Sir Syed's companion. Wrote the 'Musaddas' (1879) on the community's decline — Sir Syed called it his own salvation."
+   },
+   "karname": {
+    "ur": "«مقدمۂ شعر و شاعری» — اردو تنقید کی پہلی کتاب؛ «یادگارِ غالب» اور «حیاتِ جاوید» — سوانح نگاری کی بنیاد۔",
+    "en": "'Muqaddama-e Sher-o-Shairi', the first book of Urdu criticism; 'Yadgar-e Ghalib' and 'Hayat-e Javed', the foundation of biography."
+   },
+   "tasaneef": [
+    "مسدسِ حالی",
+    "مقدمۂ شعر و شاعری",
+    "یادگارِ غالب",
+    "حیاتِ جاوید"
+   ]
+  },
+  {
+   "id": "sarshar",
+   "u": "رتن ناتھ سرشار",
+   "t": "سرشارؔ",
+   "e": "Ratan Nath Sarshar",
+   "paida": 1846,
+   "wafat": 1903,
+   "jagah": "لکھنؤ / حیدرآباد",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "afsana",
+    "tanz"
+   ],
+   "ws": "رتن ناتھ سرشار",
+   "zindagi": {
+    "ur": "لکھنؤ کے کشمیری پنڈت، «اودھ اخبار» کے مدیر۔ «فسانۂ آزاد» قسط وار اخبار میں چھپا — لکھنؤ کی زندگی، بازار، پھبتیاں، خوجی کا کردار۔",
+    "en": "A Kashmiri Pandit of Lucknow, editor of 'Avadh Akhbar'. 'Fasana-e Azad' ran as a serial — Lucknow's life, bazaars, banter, and the immortal Khoji."
+   },
+   "karname": {
+    "ur": "اردو کا پہلا بڑا معاشرتی ناول اور مزاح کا زندہ کردار (خوجی)؛ لکھنوی بول چال کا خزانہ۔",
+    "en": "Urdu's first great social novel and its first living comic character (Khoji); a treasury of Lucknow speech."
+   },
+   "tasaneef": [
+    "فسانۂ آزاد",
+    "سیرِ کہسار",
+    "جامِ سرشار"
+   ]
+  },
+  {
+   "id": "akbar",
+   "u": "اکبر الہ آبادی",
+   "t": "اکبرؔ",
+   "e": "Akbar Allahabadi",
+   "paida": 1846,
+   "wafat": 1921,
+   "jagah": "الہ آباد",
+   "daur": "jadeed",
+   "kirdar": [
+    "shair",
+    "tanz"
+   ],
+   "corpus": "akbar",
+   "ws": "اکبر الہ آبادی",
+   "zindagi": {
+    "ur": "الہ آباد کے سیشن جج؛ نئی تہذیب، انگریزی تعلیم اور کالج کے نوجوانوں پر ہنستے ہوئے چوٹ کرتے رہے۔",
+    "en": "A sessions judge of Allahabad who laughed at, and needled, the new culture, English education and the college youth."
+   },
+   "karname": {
+    "ur": "اردو کے سب سے بڑے طنزیہ و مزاحیہ شاعر — «لسان العصر»؛ ہر شعر میں لطیفہ اور نشتر ساتھ ساتھ۔",
+    "en": "Urdu's greatest satirical poet — 'the tongue of the age'; a joke and a lancet in every couplet."
+   },
+   "tasaneef": [
+    "کلیاتِ اکبر (چار حصے)",
+    "گاندھی نامہ"
+   ]
+  },
+  {
+   "id": "sajjadhusain",
+   "u": "منشی سجاد حسین",
+   "t": "",
+   "e": "Munshi Sajjad Husain",
+   "paida": 1856,
+   "wafat": 1915,
+   "jagah": "لکھنؤ",
+   "daur": "jadeed",
+   "kirdar": [
+    "tanz",
+    "nasr"
+   ],
+   "zindagi": {
+    "ur": "1877ء میں لکھنؤ سے «اودھ پنچ» نکالا — اردو کا پہلا مزاحیہ اخبار، جس نے ایک پوری نسل کے طنز نگار پیدا کیے۔",
+    "en": "Launched 'Avadh Punch' from Lucknow in 1877 — Urdu's first comic paper, which raised a whole generation of satirists."
+   },
+   "karname": {
+    "ur": "اردو طنز و مزاح کی صحافت کے بانی؛ «حاجی بغلول» اور «کایا پلٹ» جیسے مزاحیہ ناول۔",
+    "en": "Founder of humour journalism in Urdu; comic novels such as 'Haji Baghlol' and 'Kaya Palat'."
+   },
+   "tasaneef": [
+    "اودھ پنچ (اخبار)",
+    "حاجی بغلول",
+    "کایا پلٹ",
+    "طرح دار لونڈی"
+   ]
+  },
+  {
+   "id": "shibli",
+   "u": "شبلی نعمانی",
+   "t": "شبلیؔ",
+   "e": "Shibli Nomani",
+   "paida": 1857,
+   "wafat": 1914,
+   "jagah": "اعظم گڑھ / علی گڑھ / لکھنؤ",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "mazmoon"
+   ],
+   "ws": "شبلی نعمانی",
+   "zindagi": {
+    "ur": "علی گڑھ میں سر سید کے ساتھی، پھر ندوۃ العلما اور دار المصنفین (اعظم گڑھ) کے بانی۔ مؤرخ، سوانح نگار، نقاد اور شاعر۔",
+    "en": "Sir Syed's colleague at Aligarh, later founder of Nadwat-ul-Ulama and the Dar-ul-Musannifin at Azamgarh. Historian, biographer, critic and poet."
+   },
+   "karname": {
+    "ur": "«شعر العجم» اور «موازنۂ انیس و دبیر» — اردو تنقید کی بنیادی کتابیں؛ «سیرت النبی» اور «الفاروق»۔",
+    "en": "'Sher-ul-Ajam' and 'Muwazana-e Anis-o-Dabeer', founding works of Urdu criticism; 'Seerat-un-Nabi' and 'Al-Farooq'."
+   },
+   "tasaneef": [
+    "شعر العجم",
+    "موازنۂ انیس و دبیر",
+    "الفاروق",
+    "سیرت النبی"
+   ]
+  },
+  {
+   "id": "ruswa",
+   "u": "مرزا محمد ہادی رسوا",
+   "t": "رسواؔ",
+   "e": "Mirza Hadi Ruswa",
+   "paida": 1857,
+   "wafat": 1931,
+   "jagah": "لکھنؤ / حیدرآباد",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "afsana"
+   ],
+   "ws": "مرزا محمد ہادی رسوا",
+   "zindagi": {
+    "ur": "لکھنؤ کے عالم، ریاضی و فلسفے کے استاد، شاعر۔ 1899ء میں «امراؤ جان ادا» لکھا — ایک طوائف کی زبانی لکھنؤ کی زوال پذیر تہذیب کی کہانی۔",
+    "en": "A Lucknow scholar, teacher of mathematics and philosophy, and poet. Wrote 'Umrao Jaan Ada' (1899) — a courtesan's own account of a declining Lucknow."
+   },
+   "karname": {
+    "ur": "اردو کا پہلا فن کارانہ، نفسیاتی ناول — کردار کی زبانی بیان کا پہلا کامیاب تجربہ۔",
+    "en": "Urdu's first artistically complete, psychological novel — the first successful first-person narrative."
+   },
+   "tasaneef": [
+    "امراؤ جان ادا",
+    "ذاتِ شریف",
+    "شریف زادہ"
+   ]
+  },
+  {
+   "id": "sharar",
+   "u": "عبد الحلیم شرر",
+   "t": "شررؔ",
+   "e": "Abdul Halim Sharar",
+   "paida": 1860,
+   "wafat": 1926,
+   "jagah": "لکھنؤ / حیدرآباد",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "afsana"
+   ],
+   "ws": "عبد الحلیم شرر",
+   "zindagi": {
+    "ur": "لکھنؤ کے صحافی اور ناول نگار؛ رسالہ «دلگداز» نکالا۔ اسلامی تاریخ پر درجنوں ناول اور «گزشتہ لکھنؤ» — پرانے لکھنؤ کی تہذیب کا مکمل نقشہ۔",
+    "en": "A Lucknow journalist and novelist; ran the journal 'Dilgudaz'. Dozens of historical novels and 'Guzashta Lucknow' — a complete portrait of old Lucknow's culture."
+   },
+   "karname": {
+    "ur": "اردو تاریخی ناول کے بانی («فردوسِ بریں») اور تہذیبی تاریخ نگاری کے علمبردار۔",
+    "en": "Founder of the Urdu historical novel ('Firdaus-e Bareen') and pioneer of cultural history."
+   },
+   "tasaneef": [
+    "فردوسِ بریں",
+    "گزشتہ لکھنؤ",
+    "منصور موہنا",
+    "دہلی مرحوم"
+   ]
+  },
+  {
+   "id": "nazmt",
+   "u": "نظم طباطبائی",
+   "t": "نظمؔ",
+   "e": "Nazm Tabatabai",
+   "paida": 1852,
+   "wafat": 1933,
+   "jagah": "لکھنؤ / حیدرآباد",
+   "daur": "jadeed",
+   "kirdar": [
+    "shair",
+    "nasr"
+   ],
+   "corpus": "nazm",
+   "zindagi": {
+    "ur": "لکھنؤ کے عالم، حیدرآباد کے کالج میں پروفیسر۔ گرےؔ کی «ایلیجی» کا ترجمہ «گورِ غریباں» اردو کے بہترین منظوم تراجم میں ہے۔",
+    "en": "A Lucknow scholar and professor at Hyderabad. His 'Gor-e Ghariban', a translation of Gray's 'Elegy', is among Urdu's finest verse translations."
+   },
+   "karname": {
+    "ur": "«شرحِ دیوانِ غالب» — غالب فہمی کی بنیادی کتاب؛ ترجمے کی شاعری کا معیار۔",
+    "en": "'Sharh-e Diwan-e Ghalib', a foundational commentary; set the standard for translated verse."
+   },
+   "tasaneef": [
+    "شرحِ دیوانِ غالب",
+    "گورِ غریباں",
+    "دیوانِ نظم"
+   ]
+  },
+  {
+   "id": "rashid",
+   "u": "علامہ راشد الخیری",
+   "t": "",
+   "e": "Rashid-ul-Khairi",
+   "paida": 1868,
+   "wafat": 1936,
+   "jagah": "دہلی",
+   "daur": "jadeed",
+   "kirdar": [
+    "nasr",
+    "afsana"
+   ],
+   "ws": "راشد الخیری",
+   "zindagi": {
+    "ur": "دہلی کے ناول نگار، ڈپٹی نذیر احمد کے شاگرد؛ رسالہ «عصمت» نکالا۔ عورتوں کے دکھوں پر اتنے ناول لکھے کہ «مصورِ غم» کہلائے۔",
+    "en": "A Delhi novelist and pupil of Nazir Ahmad; ran the women's journal 'Ismat'. Wrote so many novels of women's sorrows that he was called 'the painter of grief'."
+   },
+   "karname": {
+    "ur": "عورتوں کی تعلیم اور حقوق کے لیے قلم — «صبحِ زندگی»، «شامِ زندگی»، «گوہرِ مقصود»۔",
+    "en": "A pen for women's education and rights — 'Subh-e Zindagi', 'Sham-e Zindagi', 'Gohar-e Maqsood'."
+   },
+   "tasaneef": [
+    "صبحِ زندگی",
+    "شامِ زندگی",
+    "گوہرِ مقصود",
+    "عصمت (رسالہ)"
+   ]
+  },
+  {
+   "id": "iqbal",
+   "u": "علامہ محمد اقبال",
+   "t": "اقبالؔ",
+   "e": "Allama Muhammad Iqbal",
+   "paida": 1877,
+   "wafat": 1938,
+   "jagah": "سیالکوٹ / لاہور",
+   "daur": "jadeed",
+   "kirdar": [
+    "shair",
+    "mazmoon"
+   ],
+   "corpus": "iqbal",
+   "ws": "محمد اقبال",
+   "zindagi": {
+    "ur": "سیالکوٹ میں پیدا ہوئے، لاہور، کیمبرج اور میونخ میں پڑھے، وکالت کی۔ اردو اور فارسی دونوں میں فکر و فلسفے کی شاعری — «شاعرِ مشرق»۔",
+    "en": "Born in Sialkot, studied at Lahore, Cambridge and Munich, practised law. Philosophical poetry in both Urdu and Persian — 'the Poet of the East'."
+   },
+   "karname": {
+    "ur": "خودی، عمل اور امت کا پیغام؛ «بانگِ درا»، «بالِ جبریل»، «ضربِ کلیم» — اردو نظم کا عروج۔",
+    "en": "The message of selfhood, action and community; 'Bang-e Dara', 'Bal-e Jibril', 'Zarb-e Kaleem' — the summit of the Urdu nazm."
+   },
+   "tasaneef": [
+    "بانگِ درا",
+    "بالِ جبریل",
+    "ضربِ کلیم",
+    "ارمغانِ حجاز",
+    "اسرارِ خودی (فارسی)"
+   ]
+  },
+  {
+   "id": "premchand",
+   "u": "منشی پریم چند",
+   "t": "",
+   "e": "Munshi Premchand",
+   "paida": 1880,
+   "wafat": 1936,
+   "jagah": "لمہی (بنارس) / لکھنؤ",
+   "daur": "jadeed",
+   "kirdar": [
+    "afsana",
+    "nasr"
+   ],
+   "zindagi": {
+    "ur": "دھنپت رائے، بنارس کے پاس گاؤں لمہی میں پیدا ہوئے؛ استاد اور محکمۂ تعلیم کے ملازم رہے۔ پہلے اردو میں لکھا (نواب رائے کے نام سے)، پھر ہندی میں بھی۔",
+    "en": "Dhanpat Rai, born in Lamhi near Benares; a schoolteacher and education officer. Wrote first in Urdu (as Nawab Rai), later in Hindi too."
+   },
+   "karname": {
+    "ur": "اردو افسانے کے بانی — «سوزِ وطن» (1908ء) پہلا مجموعہ؛ «کفن»، «عیدگاہ»، «پوس کی رات» اور ناول «گؤدان» — گاؤں اور غریب کی سچی تصویر۔",
+    "en": "Founder of the Urdu short story — 'Soz-e Watan' (1908) the first collection; 'Kafan', 'Eidgah', 'Poos ki Raat' and the novel 'Godaan' — the true picture of village and poor."
+   },
+   "tasaneef": [
+    "سوزِ وطن",
+    "پریم پچیسی",
+    "کفن",
+    "گؤدان",
+    "بازارِ حسن"
+   ]
+  },
+  {
+   "id": "yaldram",
+   "u": "سجاد حیدر یلدرم",
+   "t": "",
+   "e": "Sajjad Haider Yaldram",
+   "paida": 1880,
+   "wafat": 1943,
+   "jagah": "نہٹور / علی گڑھ",
+   "daur": "jadeed",
+   "kirdar": [
+    "afsana",
+    "nasr"
+   ],
+   "ws": "سجاد حیدر یلدرم",
+   "zindagi": {
+    "ur": "علی گڑھ کے پڑھے، ترکی زبان جانتے تھے اور ترک ادب سے اردو کو رومانی افسانہ دیا۔ قرۃ العین حیدر کے والد۔",
+    "en": "Aligarh-educated, fluent in Turkish, he brought the romantic short story into Urdu from Turkish literature. Father of Qurratulain Hyder."
+   },
+   "karname": {
+    "ur": "«خیالستان» — رومانی، تخیلی افسانے؛ پریم چند کی حقیقت نگاری کے مقابل دوسرا دھارا۔",
+    "en": "'Khayalistan' — romantic, imaginative stories; the second stream beside Premchand's realism."
+   },
+   "tasaneef": [
+    "خیالستان",
+    "حکایاتِ ترک (ترجمے)"
+   ]
+  },
+  {
+   "id": "farhat",
+   "u": "مرزا فرحت اللہ بیگ",
+   "t": "",
+   "e": "Mirza Farhatullah Beg",
+   "paida": 1883,
+   "wafat": 1947,
+   "jagah": "دہلی / حیدرآباد",
+   "daur": "jadeed",
+   "kirdar": [
+    "tanz",
+    "nasr",
+    "mazmoon"
+   ],
+   "ws": "مرزا فرحت اللہ بیگ",
+   "zindagi": {
+    "ur": "دہلی کے پڑھے، نذیر احمد کے شاگرد، حیدرآباد میں جج۔ خاکہ نگاری اور ہلکے پھلکے مزاح کے استاد۔",
+    "en": "Delhi-educated, a pupil of Nazir Ahmad, later a judge in Hyderabad. A master of the pen-portrait and gentle humour."
+   },
+   "karname": {
+    "ur": "«دہلی کی آخری شمع» (1857ء سے پہلے کا خیالی مشاعرہ) اور «نذیر احمد کی کہانی، کچھ میری اور کچھ ان کی زبانی» — اردو خاکے کی بنیاد۔",
+    "en": "'Dehli ki Aakhri Shama' (an imagined last mushaira of old Delhi) and 'Nazir Ahmad ki Kahani' — the foundations of the Urdu pen-portrait."
+   },
+   "tasaneef": [
+    "دہلی کی آخری شمع",
+    "نذیر احمد کی کہانی",
+    "مضامینِ فرحت (کئی حصے)"
+   ]
+  },
+  {
+   "id": "azeem",
+   "u": "مرزا عظیم بیگ چغتائی",
+   "t": "",
+   "e": "Azeem Beg Chughtai",
+   "paida": 1898,
+   "wafat": 1941,
+   "jagah": "جودھ پور / آگرہ",
+   "daur": "jadeed",
+   "kirdar": [
+    "tanz",
+    "afsana"
+   ],
+   "ws": "مرزا عظیم بیگ چغتائی",
+   "zindagi": {
+    "ur": "عصمت چغتائی کے بڑے بھائی؛ بیماری میں لیٹے لیٹے لکھتے رہے۔ گھریلو زندگی اور شوہر بیوی کے مزاحیہ افسانے۔",
+    "en": "Ismat Chughtai's elder brother; wrote through long illness. Comic stories of home life and of husbands and wives."
+   },
+   "karname": {
+    "ur": "«شریر بیوی»، «کولتار»، «انگوٹھی کی مصیبت» — اردو کے پہلے مقبول مزاحیہ افسانہ نگار۔",
+    "en": "'Shareer Biwi', 'Koltar', 'Angoothi ki Musibat' — Urdu's first popular writer of comic fiction."
+   },
+   "tasaneef": [
+    "شریر بیوی",
+    "کولتار",
+    "خانم",
+    "رساکشی"
+   ]
+  },
+  {
+   "id": "ramoozi",
+   "u": "ملا رموزی",
+   "t": "",
+   "e": "Mulla Ramoozi",
+   "paida": 1897,
+   "wafat": 1951,
+   "jagah": "بھوپال",
+   "daur": "jadeed",
+   "kirdar": [
+    "tanz"
+   ],
+   "zindagi": {
+    "ur": "بھوپال کے مزاح نگار (غلام احمد خان)؛ «گلابی اردو» ایجاد کی — ایسی اردو جس میں انگریزی، فارسی اور مقامی بولی گڈ مڈ ہو۔",
+    "en": "Bhopal's humorist (Ghulam Ahmad Khan); invented 'gulabi Urdu' — a deliberately mangled mix of Urdu, English, Persian and dialect."
+   },
+   "karname": {
+    "ur": "زبان سے مزاح پیدا کرنے کا منفرد تجربہ — «گلابی اردو»، «شرابی»۔",
+    "en": "A unique experiment in humour through language itself — 'Gulabi Urdu', 'Sharabi'."
+   },
+   "tasaneef": [
+    "گلابی اردو",
+    "شرابی",
+    "خیالی اردو"
+   ]
+  },
+  {
+   "id": "manto",
+   "u": "سعادت حسن منٹو",
+   "t": "",
+   "e": "Saadat Hasan Manto",
+   "paida": 1912,
+   "wafat": 1955,
+   "jagah": "سمرالہ / امرتسر / بمبئی / لاہور",
+   "daur": "jadeed",
+   "kirdar": [
+    "afsana",
+    "mazmoon"
+   ],
+   "ws": "سعادت حسن منٹو",
+   "zindagi": {
+    "ur": "امرتسر میں پلے، بمبئی میں فلمی دنیا کے لیے لکھا، تقسیم کے بعد لاہور آئے اور 42 برس کی عمر میں انتقال ہوا۔ فحاشی کے چھ مقدمے بھگتے۔",
+    "en": "Raised in Amritsar, wrote for Bombay's film world, moved to Lahore after Partition and died at 42. Faced six obscenity trials."
+   },
+   "karname": {
+    "ur": "اردو افسانے کا سب سے بے خوف قلم — «ٹوبہ ٹیک سنگھ»، «کھول دو»، «ٹھنڈا گوشت»؛ تقسیم کے دکھ کی سب سے سچی گواہی۔",
+    "en": "The most fearless pen of the Urdu short story — 'Toba Tek Singh', 'Khol Do', 'Thanda Gosht'; the truest witness of Partition's pain."
+   },
+   "tasaneef": [
+    "آتش پارے",
+    "سیاہ حاشیے",
+    "ٹوبہ ٹیک سنگھ",
+    "گنجے فرشتے (خاکے)"
+   ]
+  }
+ ]
+}
