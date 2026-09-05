@@ -260,7 +260,7 @@ fetch('uz-lughat.json',{cache:'no-cache'}).catch(function(){return fetch('uz-lug
   var words={}; E.forEach(function(x){ words[x.w]=1; });
   var n=Object.keys(words).length; $('nWords').textContent=n; $('nWordsEn').textContent=n;
   $('nEntries').textContent=E.length; $('nEntriesEn').textContent=E.length; $('updated').textContent=j.updated; $('updatedEn').textContent=j.updated;
-  var nn=E.filter(function(x){return x.e.g==='name';}).length; $('nNames').textContent=nn; $('nNamesEn').textContent=nn;
+  var nn=E.filter(function(x){return x.e.g==='name'||x.e.nm;}).length; $('nNames').textContent=nn; $('nNamesEn').textContent=nn;
   T.loadLughat(j);
   buildLetters();
   var q=new URLSearchParams(location.search).get('q'); if(q){ $('q').value=q; search(q); } else { showLetter(null); }
@@ -455,7 +455,7 @@ function openShajra(e){
   h+=field(en?'Word (bare)':'لفظ (بے اعراب)', e.w, 'ar');
   h+=field(en?'Meaning (English)':'معنی (English)', e.en, 'en');
   h+=field(en?'Meaning / hint (Urdu)':'معنی / اشارہ (اردو)', e.ur||(en?'— not yet (filled a little every day)':'— ابھی نہیں (روز تھوڑا بھرتا ہے)'));
-  if(e.g==='name'){ h+=field(en?'Gender':'صنف', lab('gender_labels',e.gen,en)); h+=field(en?'Origin (language)':'اصل زبان', lab('origin_labels',e.org,en)); }
+  if(e.g==='name'||e.nm){ if(e.nm) h+=field(en?'Also a given name':'نام کے طور پر بھی', (e.nen||e.en)); h+=field(en?'Gender (as a name)':'صنف (نام میں)', lab('gender_labels',e.gen,en)); h+=field(en?'Origin (language)':'اصل زبان', lab('origin_labels',e.org,en)); }
   if(e.asl) h+=field(en?'Origin (etymology)':'اصل (اشتقاق)', e.asl, 'ar');
   if(e.re) h+=field(en?'Roman':'رومن', en?'made by the Tarjuman engine — not yet checked by a human':'ترجمان انجن کا بنایا ہوا — جانچ باقی', 'en');
   if(e.alt&&e.alt.length) h+=field(en?'Other Roman spellings':'رومن کے دوسرے املا', e.alt.join(' · '), 'en');
