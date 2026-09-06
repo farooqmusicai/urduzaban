@@ -197,6 +197,7 @@ body.en-mode h1.page{font-family:var(--latin);}
 .empty{padding:40px 20px; text-align:center; color:var(--muted);}
 .note{background:var(--card2); border:1px solid var(--line); border-radius:14px; padding:14px 18px; margin:22px 0 0; font-size:14.5px; color:var(--muted);}
 </style>
+<link rel="stylesheet" href="uz-ui.css">
 </head>
 <body>
 <nav><div class="in">
@@ -407,5 +408,6 @@ fetch('uz-kahawat.json').then(function(r){return r.json();}).then(function(j){
 }).catch(function(){ $('list').innerHTML='<div class="empty">کہاوتوں کی فائل نہیں ملی (uz-kahawat.json)</div>'; });
 })();
 </script>
+<script src="uz-preferences.js"></script>
 </body>
 </html>
