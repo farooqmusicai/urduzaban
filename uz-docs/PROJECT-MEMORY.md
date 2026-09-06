@@ -131,18 +131,57 @@ Voice assets بدلنے والا:
 
 ---
 
+## 6 ستمبر 2026 — Schema foundation مکمل
+
+**Branch:** `docs/repo-foundation-2026-09-06`  
+**Files changed:**
+
+- `uz-docs/SCHEMA-LUGHAT-v1.md`
+- `uz-docs/SCHEMA-KAHAWAT-v1.md`
+- `uz-docs/SCHEMA-ADAB-v1.md`
+- `uz-docs/PROJECT-MEMORY.md`
+
+### کیا کیا
+
+- موجودہ لغت fields کو UI/code سے document کیا۔
+- `uz-lughat-ext.json` کی الگ heavy-detail layer کو محفوظ pattern کے طور پر نوٹ کیا۔
+- کہاوت کے موجودہ compact row format کو document کیا اور future source-schema + production-build model تجویز کیا۔
+- ادب کے موجودہ People IDs اور Work IDs کو نئی architecture کی بنیاد قرار دیا۔
+- غزل/نظم کو future first-class work records بنانے کا backward-compatible راستہ لکھا۔
+
+### کیا نہیں چھیڑا
+
+- `main`
+- live HTML
+- `uz-lughat.json`
+- `uz-kahawat.json`
+- corpus
+- ادب data
+- API
+- workflows
+- Hostinger deployment
+
+### Validation
+
+Documentation-only commits؛ production data count یا live path میں کوئی تبدیلی نہیں۔
+
+### نتیجہ
+
+Foundation کے پہلے تین schema documents تیار ہیں۔ اب اگلا محفوظ technical مرحلہ validation scripts اور smoke checks ہے۔
+
+---
+
 ## اگلا منظور شدہ کام
 
 Foundation phase میں اگلی ترتیب:
 
-1. لغت schema document
-2. کہاوت schema document
-3. ادب people/work schema document
-4. validation plan
-5. JSON/link smoke checks
-6. پھر غزل/نظم کے first-class work records
-7. پھر unified search prototype
-8. پھر Shajra v2 کا 20-word sample
+1. validation plan اور executable checks
+2. JSON/link smoke checks
+3. workflows کے direct-main writes کے لیے safety proposal
+4. غزل/نظم کے 5–10 sample first-class work records — production میں نہیں، پہلے sample data
+5. شاعر profile deep-link prototype
+6. unified search prototype
+7. Shajra v2 کا 20-word sample
 
 ---
 
