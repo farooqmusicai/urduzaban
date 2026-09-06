@@ -1,0 +1,79 @@
+name: Feature UI live integration
+
+on:
+  push:
+    branches:
+      - feature/ui-live-2026-09-06
+    paths:
+      - uz-ui.css
+      - uz-preferences.js
+      - .github/workflows/feature-ui-live-integrate.yml
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: feature/ui-live-2026-09-06
+
+      - name: Add shared UI assets to public pages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          pages = [
+            'index.html','about.html','lughat.html','kahawat.html','adab.html',
+            'shair.html','sher.html','nasr.html','afsana.html','mazameen.html',
+            'tanz.html','aqwal.html','qarina-aeraab.html','qarina-neural.html',
+            'tarjuman.html','sanad.html'
+          ]
+          css = '<link rel="stylesheet" href="uz-ui.css">'
+          js = '<script src="uz-preferences.js"></script>'
+          for name in pages:
+              p=Path(name)
+              if not p.exists():
+                  raise SystemExit(f'missing page: {name}')
+              s=p.read_text(encoding='utf-8')
+              if css not in s:
+                  if '</head>' not in s:
+                      raise SystemExit(f'no </head>: {name}')
+                  s=s.replace('</head>', css+'\n</head>', 1)
+              if js not in s:
+                  if '</body>' not in s:
+                      raise SystemExit(f'no </body>: {name}')
+                  s=s.replace('</body>', js+'\n</body>', 1)
+              p.write_text(s,encoding='utf-8')
+          PY
+
+      - name: Sanity checks
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          pages=['index.html','about.html','lughat.html','kahawat.html','adab.html','shair.html','sher.html','nasr.html','afsana.html','mazameen.html','tanz.html','aqwal.html','qarina-aeraab.html','qarina-neural.html','tarjuman.html','sanad.html']
+          for f in pages:
+              s=Path(f).read_text(encoding='utf-8')
+              assert s.count('href="uz-ui.css"')==1, (f,'css')
+              assert s.count('src="uz-preferences.js"')==1, (f,'js')
+              assert '<html' in s and '</html>' in s, f
+              assert '<body' in s and '</body>' in s, f
+          js=Path('uz-preferences.js').read_text(encoding='utf-8')
+          css=Path('uz-ui.css').read_text(encoding='utf-8')
+          for needle in ['uz-prefs-v1','theme','font','spacing','motion']:
+              assert needle in js, needle
+          for needle in ['data-uz-theme','data-uz-font','#uzPrefsBtn','#uzPrefsPanel']:
+              assert needle in css, needle
+          print('UI integration checks: OK on',len(pages),'pages')
+          PY
+
+      - name: Commit feature branch integration
+        run: |
+          git config user.name "urduzaban-bot"
+          git config user.email "urduzaban-bot@users.noreply.github.com"
+          git add index.html about.html lughat.html kahawat.html adab.html shair.html sher.html nasr.html afsana.html mazameen.html tanz.html aqwal.html qarina-aeraab.html qarina-neural.html tarjuman.html sanad.html
+          git diff --cached --quiet && { echo "already integrated"; exit 0; }
+          git commit -m "ui: enable font and theme controls across public pages"
+          git push origin HEAD:feature/ui-live-2026-09-06
