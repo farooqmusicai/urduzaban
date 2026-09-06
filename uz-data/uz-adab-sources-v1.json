@@ -1,0 +1,79 @@
+{
+  "name": "uz-adab-sources",
+  "v": 1,
+  "updated": "2026-09-06",
+  "purpose": "Reviewed source catalog for public-domain / openly available Urdu literature. Metadata only; no bulk copyrighted text is copied into this file.",
+  "sources": [
+    {
+      "id": "ws-ghalib-diwan",
+      "author_id": "ghalib",
+      "author": "مرزا اسد اللہ خان غالب",
+      "kind": "collection",
+      "title": "دیوان غالب",
+      "url": "https://ur.wikisource.org/wiki/دیوان_غالب",
+      "provider": "Urdu Wikisource",
+      "rights_note": "Author died 1869; classical work is public domain. Wikisource page text is available under Wikimedia terms/CC BY-SA for the transcription layer.",
+      "review": "verified-2026-09-06",
+      "children": [
+        {
+          "kind": "ghazal_index",
+          "title": "غزلیات",
+          "url": "https://ur.wikisource.org/wiki/دیوان_غالب/غزلیات"
+        },
+        {
+          "kind": "ghazal_group",
+          "title": "ردیف الف",
+          "url": "https://ur.wikisource.org/wiki/دیوان_غالب/غزلیات/ردیف_الف"
+        },
+        {
+          "kind": "ghazal_group",
+          "title": "ردیف ن",
+          "url": "https://ur.wikisource.org/wiki/دیوان_غالب/غزلیات/ردیف_ن"
+        }
+      ]
+    },
+    {
+      "id": "ws-iqbal-author",
+      "author_id": "iqbal",
+      "author": "محمد اقبال",
+      "kind": "author_catalog",
+      "title": "مصنف: محمد اقبال",
+      "url": "https://ur.wikisource.org/wiki/مصنف:محمد_اقبال",
+      "provider": "Urdu Wikisource",
+      "rights_note": "Author died 1938; works are out of copyright in jurisdictions using life+70 by 2009 and are treated here only after source-level rights review. Wikisource transcription layer follows Wikimedia terms.",
+      "review": "verified-2026-09-06",
+      "children": [
+        {"kind":"poem","title":"ہمالہ","collection":"بانگ درا"},
+        {"kind":"poem","title":"مرزا غالب","collection":"بانگ درا"},
+        {"kind":"poem","title":"ایک مکڑا اور مکھی","collection":"بانگ درا"},
+        {"kind":"poem","title":"ایک پہاڑ اور گلہری","collection":"بانگ درا"},
+        {"kind":"poem","title":"بچے کی دعا","collection":"بانگ درا"},
+        {"kind":"poem","title":"پرندے کی فریاد","collection":"بانگ درا"},
+        {"kind":"poem","title":"شمع و پروانہ","collection":"بانگ درا"},
+        {"kind":"poem","title":"عقل و دل","collection":"بانگ درا"}
+      ]
+    },
+    {
+      "id": "ws-mir-saqinama",
+      "author_id": "mir",
+      "author": "میر تقی میر",
+      "kind": "poem",
+      "title": "ساقی نامہ",
+      "url": "https://ur.wikisource.org/wiki/ساقی_نامہ_(میر_تقی_میر)",
+      "provider": "Urdu Wikisource",
+      "rights_note": "Author died 1810; work is public domain. Wikisource transcription layer follows Wikimedia terms/CC BY-SA.",
+      "review": "verified-2026-09-06"
+    },
+    {
+      "id": "ws-mir-jangnama",
+      "author_id": "mir",
+      "author": "میر تقی میر",
+      "kind": "poem",
+      "title": "جنگ نامہ",
+      "url": "https://ur.wikisource.org/wiki/جنگ_نامہ_(میر_تقی_میر)",
+      "provider": "Urdu Wikisource",
+      "rights_note": "Author died 1810; work is public domain. Wikisource transcription layer follows Wikimedia terms/CC BY-SA.",
+      "review": "verified-2026-09-06"
+    }
+  ]
+}
