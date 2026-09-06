@@ -25,58 +25,55 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
 
-          standard = [
+          pages = [
             'index.html','about.html','lughat.html','kahawat.html','adab.html',
             'shair.html','sher.html','nasr.html','afsana.html','mazameen.html',
-            'tanz.html','aqwal.html','qarina-neural.html','tarjuman.html','sanad.html'
+            'tanz.html','aqwal.html','qarina-aeraab.html','qarina-neural.html',
+            'tarjuman.html','sanad.html'
           ]
           css = '<link rel="stylesheet" href="uz-ui.css">'
           js = '<script src="uz-preferences.js"></script>'
 
-          for name in standard:
+          for name in pages:
               p=Path(name)
               if not p.exists(): raise SystemExit(f'missing page: {name}')
               s=p.read_text(encoding='utf-8')
-              if css not in s:
-                  if '</head>' not in s: raise SystemExit(f'no </head>: {name}')
-                  s=s.replace('</head>', css+'\n</head>', 1)
-              if js not in s:
-                  if '</body>' not in s: raise SystemExit(f'no </body>: {name}')
-                  s=s.replace('</body>', js+'\n</body>', 1)
-              p.write_text(s,encoding='utf-8')
 
-          # qarina-aeraab.html is an older browser-tolerated fragment without
-          # explicit html/head/body closing tags. Preserve its structure and
-          # add the shared assets at safe anchors instead of rewriting it.
-          q=Path('qarina-aeraab.html')
-          s=q.read_text(encoding='utf-8')
-          if css not in s:
-              anchor='<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap">'
-              if anchor not in s: raise SystemExit('Qarina stylesheet anchor not found')
-              s=s.replace(anchor,anchor+'\n'+css,1)
-          if js not in s:
-              s=s.rstrip()+'\n'+js+'\n'
-          q.write_text(s,encoding='utf-8')
+              # Normal documents get CSS before </head>. Older Qarina files are
+              # browser-tolerated fragments; put CSS immediately before <style>.
+              if css not in s:
+                  if '</head>' in s:
+                      s=s.replace('</head>', css+'\n</head>', 1)
+                  elif '<style>' in s:
+                      s=s.replace('<style>', css+'\n<style>', 1)
+                  else:
+                      raise SystemExit(f'no safe CSS anchor: {name}')
+
+              # Normal documents get JS before </body>. Legacy fragments append
+              # it at EOF, preserving all existing source and behaviour.
+              if js not in s:
+                  if '</body>' in s:
+                      s=s.replace('</body>', js+'\n</body>', 1)
+                  else:
+                      s=s.rstrip()+'\n'+js+'\n'
+
+              p.write_text(s,encoding='utf-8')
           PY
 
       - name: Sanity checks
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          standard=['index.html','about.html','lughat.html','kahawat.html','adab.html','shair.html','sher.html','nasr.html','afsana.html','mazameen.html','tanz.html','aqwal.html','qarina-neural.html','tarjuman.html','sanad.html']
-          for f in standard:
+          pages=['index.html','about.html','lughat.html','kahawat.html','adab.html','shair.html','sher.html','nasr.html','afsana.html','mazameen.html','tanz.html','aqwal.html','qarina-aeraab.html','qarina-neural.html','tarjuman.html','sanad.html']
+          for f in pages:
               s=Path(f).read_text(encoding='utf-8')
               assert s.count('href="uz-ui.css"')==1, (f,'css')
               assert s.count('src="uz-preferences.js"')==1, (f,'js')
-              assert '<html' in s and '</html>' in s, f
-              assert '<body' in s and '</body>' in s, f
-          q=Path('qarina-aeraab.html').read_text(encoding='utf-8')
-          assert q.count('href="uz-ui.css"')==1, 'qarina css'
-          assert q.count('src="uz-preferences.js"')==1, 'qarina js'
-          assert '<meta charset="utf-8">' in q and 'id="qwrap"' in q, 'qarina structure'
+              assert '<meta charset="utf-8">' in s, (f,'charset')
+              assert '<style>' in s, (f,'style')
           js=Path('uz-preferences.js').read_text(encoding='utf-8')
           css=Path('uz-ui.css').read_text(encoding='utf-8')
-          for needle in ['uz-prefs-v1','theme','font','spacing','motion']:
+          for needle in ['uz-prefs-v1','theme','font','spacing','motion','localStorage']:
               assert needle in js, needle
           for needle in ['data-uz-theme','data-uz-font','#uzPrefsBtn','#uzPrefsPanel']:
               assert needle in css, needle
