@@ -1,0 +1,73 @@
+{
+  "name": "urduzaban-source-registry",
+  "version": 1,
+  "updated": "2026-09-06",
+  "principle": "Keep source datasets separate from canonical UrduZaban data. Import only under compatible rights and with attribution/provenance.",
+  "sources": [
+    {
+      "id": "open-english-wordnet",
+      "area": "lexicon",
+      "language": "en",
+      "name": "Open English WordNet",
+      "url": "https://en-word.net/",
+      "license": "CC BY 4.0 + underlying WordNet notice",
+      "status": "approved-for-ingest",
+      "use": ["English headwords", "senses", "synsets", "synonyms", "semantic relations"],
+      "notes": "License is compatible with UrduZaban's CC BY 4.0 data direction when required attribution and WordNet notices are preserved."
+    },
+    {
+      "id": "kaikki-arabic",
+      "area": "lexicon-source",
+      "language": "ar",
+      "name": "Kaikki / English Wiktionary — Arabic",
+      "url": "https://kaikki.org/dictionary/Arabic/",
+      "license": "Wiktionary CC BY-SA 4.0 + GFDL",
+      "status": "approved-as-separated-source",
+      "use": ["Arabic headwords", "roots when present", "pronunciation", "English glosses", "etymology discovery"],
+      "notes": "Do not blindly merge copyrighted expression into the main CC BY 4.0 Urdu dictionary. Keep source/provenance separated; reviewed factual links may feed Shajra."
+    },
+    {
+      "id": "kaikki-persian",
+      "area": "lexicon-source",
+      "language": "fa",
+      "name": "Kaikki / English Wiktionary — Persian",
+      "url": "https://kaikki.org/dictionary/Persian/",
+      "license": "Wiktionary CC BY-SA 4.0 + GFDL",
+      "status": "approved-as-separated-source",
+      "use": ["Persian headwords", "romanization", "pronunciation", "English glosses", "etymology discovery"],
+      "notes": "Keep source data separate and preserve attribution/share-alike obligations for redistributed derived Wiktionary text."
+    },
+    {
+      "id": "kaikki-urdu",
+      "area": "lexicon-source",
+      "language": "ur",
+      "name": "Kaikki / English Wiktionary — Urdu",
+      "url": "https://kaikki.org/dictionary/Urdu/",
+      "license": "Wiktionary CC BY-SA 4.0 + GFDL",
+      "status": "discovery-and-crosscheck",
+      "use": ["cross-check headwords", "etymology candidates", "pronunciation", "English gloss discovery"],
+      "notes": "UrduZaban's own canonical Urdu meanings remain independently authored/reviewed."
+    },
+    {
+      "id": "urdu-wikisource",
+      "area": "literature",
+      "language": "ur",
+      "name": "Urdu Wikisource",
+      "url": "https://ur.wikisource.org/",
+      "license": "Page/transcription under Wikimedia terms; underlying works require per-work public-domain/rights review",
+      "status": "approved-with-work-level-rights-check",
+      "use": ["public-domain poetry", "public-domain prose", "source scans", "work metadata"],
+      "notes": "Every work gets author/death-date/source/rights metadata before text ingest."
+    },
+    {
+      "id": "platts-urdu",
+      "area": "historical-lexicon",
+      "language": "ur",
+      "name": "Platts historical Urdu/Hindustani dictionary",
+      "license": "public-domain historical work; verify edition/source scan",
+      "status": "approved-for-historical-reference",
+      "use": ["historical spellings", "roman/transliteration", "etymology evidence", "older meanings"],
+      "notes": "Use as a source/reference; canonical UrduZaban wording remains independently written."
+    }
+  ]
+}
