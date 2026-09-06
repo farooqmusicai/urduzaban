@@ -5,8 +5,8 @@
 
 **Repository:** `farooqmusicai/urduzaban`  
 **Live site:** https://www.urduzaban.com  
-**Production branch کا محفوظ مفروضہ:** `main`  
-**موجودہ development/docs branch:** `docs/repo-foundation-2026-09-06`
+**Production branch:** `main` (Hostinger deployment screenshot سے تصدیق، 6 ستمبر 2026)  
+**موجودہ feature branch:** `feature/adab-community-foundation-2026-09-06`
 
 ---
 
@@ -16,11 +16,12 @@
 2. بڑی تبدیلی الگ branch میں ہو، diff/review کے بعد merge ہو۔
 3. live HTML/JSON paths صرف repository صاف دکھانے کے لیے move نہ کیے جائیں۔
 4. bulk data change سے پہلے count/schema/link validation ہو۔
-5. فارسی، عربی اور English source dictionaries کو `uz-lughat.json` میں merge نہ کیا جائے۔
+5. فارسی، عربی اور English source dictionaries کو `uz-lughat.json` میں merge نہ کیا جائے؛ ہر زبان الگ dataset، تعلق الگ shajra graph میں۔
 6. معنی اپنے لفظوں میں لکھے جائیں؛ تیسرے فریق کا copyrighted متن جوں کا توں نہ اٹھایا جائے۔
-7. ادب میں public-domain / واضح اجازت والے متن ہی استعمال ہوں۔
+7. ادب میں public-domain / واضح اجازت والے متن پہلے شامل ہوں۔
 8. generated files اور ہاتھ سے edit ہونے والے source data کو آئندہ واضح طور پر الگ کرنا ہے۔
 9. ہر مکمل کام کا خلاصہ اسی فائل میں شامل کیا جائے۔
+10. عوامی contribution مستقبل میں moderated، traceable اور reversible ہو؛ public user کبھی production JSON براہِ راست edit نہ کرے۔
 
 ---
 
@@ -41,7 +42,7 @@
 
 `docs/repo-foundation-2026-09-06`
 
-اس branch پر documentation-only تبدیلیاں رکھی گئی ہیں تاکہ live website متاثر نہ ہو۔
+اس branch پر documentation-only تبدیلیاں رکھی گئیں تاکہ live website متاثر نہ ہو۔
 
 ### شامل کی گئی documentation
 
@@ -133,61 +134,95 @@ Voice assets بدلنے والا:
 
 ## 6 ستمبر 2026 — Schema foundation مکمل
 
-**Branch:** `docs/repo-foundation-2026-09-06`  
-**Files changed:**
+**Branch:** `docs/repo-foundation-2026-09-06`
+
+### Files
 
 - `uz-docs/SCHEMA-LUGHAT-v1.md`
 - `uz-docs/SCHEMA-KAHAWAT-v1.md`
 - `uz-docs/SCHEMA-ADAB-v1.md`
+
+### نتیجہ
+
+- موجودہ لغت fields document کیے گئے۔
+- کہاوت کے compact production format کے لیے future readable source-schema تجویز ہوا۔
+- ادب کے People IDs اور Work IDs کو future architecture کی بنیاد بنایا گیا۔
+- غزل/نظم کو first-class work record بنانے کا راستہ طے ہوا۔
+
+---
+
+## 6 ستمبر 2026 — Community + multilingual + literature-source foundation
+
+**Branch:** `feature/adab-community-foundation-2026-09-06`
+
+### Files changed
+
+- `uz-docs/COMMUNITY-PLATFORM-PLAN.md`
+- `uz-docs/MULTILINGUAL-SHAJRA-PLAN.md`
+- `uz-data/uz-adab-sources-v1.json`
 - `uz-docs/PROJECT-MEMORY.md`
 
 ### کیا کیا
 
-- موجودہ لغت fields کو UI/code سے document کیا۔
-- `uz-lughat-ext.json` کی الگ heavy-detail layer کو محفوظ pattern کے طور پر نوٹ کیا۔
-- کہاوت کے موجودہ compact row format کو document کیا اور future source-schema + production-build model تجویز کیا۔
-- ادب کے موجودہ People IDs اور Work IDs کو نئی architecture کی بنیاد قرار دیا۔
-- غزل/نظم کو future first-class work records بنانے کا backward-compatible راستہ لکھا۔
+- Wikipedia-style مگر moderated contribution architecture لکھی: reader → contributor → reviewer۔
+- ہر public edit کو pending change → validation → human review → approved canonical data flow سے گزارنے کا اصول رکھا۔
+- contributor history, review roles, alternative readings اور reversible version history کی بنیاد لکھی۔
+- multilingual architecture طے کی: Urdu, Arabic, Persian, English lexicons الگ؛ ان کے تعلق `uz-shajra-v2.json` میں۔
+- Roman Urdu کو الگ زبان نہیں بلکہ Urdu transliteration layer قرار دیا۔
+- etymology میں قطعی "لفظ کب ایجاد ہوا" کے بجائے evidence-based "قدیم ترین معلوم شہادت" model تجویز کیا۔
+- public-domain/open literature کے لیے پہلا reviewed source catalog بنایا۔
+
+### پہلے verified literature sources
+
+`uz-data/uz-adab-sources-v1.json` میں metadata/source links درج کیے گئے:
+
+- مرزا غالب — `دیوان غالب`، غزلیات index اور چند ردیف groups
+- محمد اقبال — Wikisource author catalog، `بانگ درا` کی متعدد نظموں کی فہرست
+- میر تقی میر — `ساقی نامہ`
+- میر تقی میر — `جنگ نامہ`
+
+یہ catalog metadata اور source discovery کے لیے ہے؛ bulk copyrighted text repo میں copy نہیں کیا گیا۔
 
 ### کیا نہیں چھیڑا
 
 - `main`
-- live HTML
+- live Hostinger files
 - `uz-lughat.json`
 - `uz-kahawat.json`
-- corpus
-- ادب data
+- موجودہ adab production JSON
 - API
+- TTS
 - workflows
-- Hostinger deployment
 
-### Validation
+### Validation / source discipline
 
-Documentation-only commits؛ production data count یا live path میں کوئی تبدیلی نہیں۔
+- Hostinger screenshot سے deployment branch `main` کی تصدیق ہوئی۔
+- Wikisource source pages browser/search سے verify کیے گئے۔
+- source catalog میں rights/source notes رکھی گئیں۔
 
 ### نتیجہ
 
-Foundation کے پہلے تین schema documents تیار ہیں۔ اب اگلا محفوظ technical مرحلہ validation scripts اور smoke checks ہے۔
+اب project کے پاس صرف roadmap نہیں بلکہ تین future pillars کی عملی foundation موجود ہے:
+
+1. عوامی شراکت
+2. کثیر لسانی شجرہ
+3. public-domain literature source ingestion
 
 ---
 
 ## اگلا منظور شدہ کام
 
-Foundation phase میں اگلی ترتیب:
-
-1. validation plan اور executable checks
-2. JSON/link smoke checks
-3. workflows کے direct-main writes کے لیے safety proposal
-4. غزل/نظم کے 5–10 sample first-class work records — production میں نہیں، پہلے sample data
-5. شاعر profile deep-link prototype
-6. unified search prototype
-7. Shajra v2 کا 20-word sample
+1. validation scripts اور JSON/link smoke checks
+2. literature source catalog کو درجنوں verified public-domain works تک بڑھانا
+3. غزل/نظم کے 5–10 first-class sample work records
+4. شاعر profile deep-links
+5. unified search prototype
+6. `uz-shajra-v2.json` کا 20-word reviewed sample
+7. community change-record JSON schema + prototype moderation queue
 
 ---
 
 ## کام درج کرنے کا سانچہ
-
-آئندہ ہر کام کے بعد یہ مختصر block شامل کیا جائے:
 
 ```text
 ### YYYY-MM-DD — کام کا نام
