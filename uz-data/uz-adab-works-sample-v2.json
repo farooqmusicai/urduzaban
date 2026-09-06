@@ -1,0 +1,19 @@
+{
+  "name": "uz-adab-works-sample-v2",
+  "v": 2,
+  "updated": "2026-09-06",
+  "status": "prototype-not-production-text",
+  "note": "First-class work metadata for testing poet → work → source architecture. No literary body text is ingested by this file.",
+  "works": [
+    {"id":"iqbal-bang-e-dara-himala","author_id":"iqbal","kind":"nazm","title":"ہمالہ","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"ہمالہ","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["فطرت","ہندوستان","پہاڑ"]},
+    {"id":"iqbal-bang-e-dara-mirza-ghalib","author_id":"iqbal","kind":"nazm","title":"مرزا غالب","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"مرزا غالب","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["غالب","شاعر","خراج"]},
+    {"id":"iqbal-bang-e-dara-makra-makhi","author_id":"iqbal","kind":"nazm","title":"ایک مکڑا اور مکھی","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"ایک مکڑا اور مکھی","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["بچوں کا ادب","تمثیل"]},
+    {"id":"iqbal-bang-e-dara-pahar-gilahri","author_id":"iqbal","kind":"nazm","title":"ایک پہاڑ اور گلہری","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"ایک پہاڑ اور گلہری","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["بچوں کا ادب","تمثیل"]},
+    {"id":"iqbal-bang-e-dara-bachay-ki-dua","author_id":"iqbal","kind":"nazm","title":"بچے کی دعا","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"بچے کی دعا","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["بچوں کا ادب","دعا","اخلاق"]},
+    {"id":"iqbal-bang-e-dara-parinday-ki-faryad","author_id":"iqbal","kind":"nazm","title":"پرندے کی فریاد","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"پرندے کی فریاد","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["آزادی","پرندہ","بچوں کا ادب"]},
+    {"id":"iqbal-bang-e-dara-shama-parwana","author_id":"iqbal","kind":"nazm","title":"شمع و پروانہ","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"شمع و پروانہ","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["عشق","تمثیل"]},
+    {"id":"iqbal-bang-e-dara-aql-o-dil","author_id":"iqbal","kind":"nazm","title":"عقل و دل","collection":"بانگ درا","collection_year":1924,"source_id":"ws-iqbal-author","source_locator":"عقل و دل","rights_status":"work-level-review-required","text_ingest_allowed":false,"language":"ur","tags":["عقل","دل","فلسفہ"]},
+    {"id":"mir-saqi-nama","author_id":"mir","kind":"nazm","title":"ساقی نامہ","source_id":"ws-mir-saqinama","source_locator":"page","rights_status":"public-domain-author; transcription-license-applies","text_ingest_allowed":true,"language":"ur","tags":["ساقی نامہ","کلاسیکی شاعری"]},
+    {"id":"mir-jang-nama","author_id":"mir","kind":"nazm","title":"جنگ نامہ","source_id":"ws-mir-jangnama","source_locator":"page","rights_status":"public-domain-author; transcription-license-applies","text_ingest_allowed":true,"language":"ur","tags":["جنگ","تاریخی شاعری","کلاسیکی شاعری"]}
+  ]
+}

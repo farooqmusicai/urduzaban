@@ -1,0 +1,85 @@
+{
+  "name": "urduzaban-source-registry",
+  "version": 1,
+  "updated": "2026-09-06",
+  "principle": "Keep external source datasets separate from canonical UrduZaban data. Import or derive only under compatible rights with explicit attribution and provenance.",
+  "sources": [
+    {
+      "id": "open-english-wordnet",
+      "area": "lexicon",
+      "language": "en",
+      "name": "Open English WordNet",
+      "url": "https://en-word.net/",
+      "license": "CC BY 4.0",
+      "license_url": "https://en-word.net/downloads",
+      "reviewed_on": "2026-09-06",
+      "status": "approved-for-bounded-ingest",
+      "use": ["English headwords", "senses", "synsets", "synonyms", "semantic relations"],
+      "notes": "Keep OEWN identifiers and attribution. English data remains a separate language layer and is never bulk-merged into uz-lughat.json."
+    },
+    {
+      "id": "kaikki-arabic",
+      "area": "lexicon-source",
+      "language": "ar",
+      "name": "Kaikki / English Wiktionary — Arabic",
+      "url": "https://kaikki.org/dictionary/Arabic/",
+      "license": "Wiktionary CC BY-SA 4.0 + GFDL",
+      "license_url": "https://kaikki.org/dictionary/",
+      "reviewed_on": "2026-09-06",
+      "status": "approved-as-separated-source",
+      "use": ["Arabic headwords", "roots when present", "pronunciation", "English glosses", "etymology discovery"],
+      "notes": "Source text and derived redistributable material must retain the applicable share-alike/attribution obligations. Reviewed linguistic facts may support Shajra links without copying definitions into canonical Urdu wording."
+    },
+    {
+      "id": "kaikki-persian",
+      "area": "lexicon-source",
+      "language": "fa",
+      "name": "Kaikki / English Wiktionary — Persian",
+      "url": "https://kaikki.org/dictionary/Persian/",
+      "license": "Wiktionary CC BY-SA 4.0 + GFDL",
+      "license_url": "https://kaikki.org/dictionary/",
+      "reviewed_on": "2026-09-06",
+      "status": "approved-as-separated-source",
+      "use": ["Persian headwords", "romanization", "pronunciation", "English glosses", "etymology discovery"],
+      "notes": "Keep source records in a separate Persian layer. Do not copy Wiktionary prose into UrduZaban's independently authored Urdu meanings."
+    },
+    {
+      "id": "kaikki-urdu",
+      "area": "lexicon-source",
+      "language": "ur",
+      "name": "Kaikki / English Wiktionary — Urdu",
+      "url": "https://kaikki.org/dictionary/Urdu/",
+      "license": "Wiktionary CC BY-SA 4.0 + GFDL",
+      "license_url": "https://kaikki.org/dictionary/",
+      "reviewed_on": "2026-09-06",
+      "status": "discovery-and-crosscheck",
+      "use": ["cross-check headwords", "etymology candidates", "pronunciation", "English gloss discovery"],
+      "notes": "Canonical Urdu meanings remain independently authored/reviewed in UrduZaban."
+    },
+    {
+      "id": "urdu-wikisource",
+      "area": "literature",
+      "language": "ur",
+      "name": "Urdu Wikisource",
+      "url": "https://ur.wikisource.org/",
+      "license": "Public-domain or CC BY-SA works/transcriptions; work-level review required",
+      "license_url": "https://wikisource.org/wiki/Wikisource:Copyright_policy",
+      "reviewed_on": "2026-09-06",
+      "status": "approved-with-work-level-rights-check",
+      "use": ["public-domain poetry", "public-domain prose", "source scans", "work metadata"],
+      "notes": "A source page being on Wikisource is not sufficient by itself: every work record keeps its own rights status, source locator and review date."
+    },
+    {
+      "id": "platts-urdu",
+      "area": "historical-lexicon",
+      "language": "ur",
+      "name": "Platts historical Urdu/Hindustani dictionary",
+      "url": "https://dsal.uchicago.edu/dictionaries/platts/",
+      "license": "Historical reference; edition/source rights must be checked before redistribution",
+      "reviewed_on": "2026-09-06",
+      "status": "approved-for-reference",
+      "use": ["historical spellings", "roman/transliteration", "etymology evidence", "older meanings"],
+      "notes": "Use as evidence/reference. Canonical UrduZaban wording remains independently written."
+    }
+  ]
+}
