@@ -1,0 +1,41 @@
+/* UrduZaban shared appearance layer — loaded after each page's own CSS */
+:root{
+  --uz-reading-font:var(--naskh,"Noto Naskh Arabic",serif);
+  --uz-display-font:var(--nastaliq,"Noto Nastaliq Urdu",serif);
+  --uz-font-scale:1;
+  --uz-line-scale:1;
+}
+
+/* Themes */
+html[data-uz-theme="paper"]{--paper:#faf6ed;--card:#fffdf8;--card2:#f4eddc;--ink:#251f14;--muted:#7c7060;--line:#e6ddc9;--accent:#a8731d;--accent-hi:#d9a441;--accent-ink:#fff8ec;--accent-soft:rgba(168,115,29,.08)}
+html[data-uz-theme="night"]{--paper:#111316;--card:#191c20;--card2:#20252b;--ink:#f2eee6;--muted:#ada79d;--line:#323840;--accent:#e0ad52;--accent-hi:#f1c873;--accent-ink:#211807;--accent-soft:rgba(224,173,82,.12);--shadow:0 1px 2px rgba(0,0,0,.32),0 12px 36px rgba(0,0,0,.36)}
+html[data-uz-theme="emerald"]{--paper:#f4f8f5;--card:#fff;--card2:#eaf2ed;--ink:#17251d;--muted:#65736a;--line:#d5e2d9;--accent:#287553;--accent-hi:#3b9a6d;--accent-ink:#fff;--accent-soft:rgba(40,117,83,.09)}
+html[data-uz-theme="sapphire"]{--paper:#f5f7fb;--card:#fff;--card2:#eaf0f8;--ink:#182235;--muted:#687387;--line:#d9e0ea;--accent:#315f9c;--accent-hi:#4b78b6;--accent-ink:#fff;--accent-soft:rgba(49,95,156,.09)}
+html[data-uz-theme="plain"]{--paper:#fff;--card:#fff;--card2:#f5f5f5;--ink:#181818;--muted:#666;--line:#ddd;--accent:#805d20;--accent-hi:#a8731d;--accent-ink:#fff;--accent-soft:rgba(128,93,32,.07);--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06)}
+
+/* Font families */
+html[data-uz-font="nastaliq"]{--uz-reading-font:var(--nastaliq,"Noto Nastaliq Urdu",serif);--uz-display-font:var(--nastaliq,"Noto Nastaliq Urdu",serif)}
+html[data-uz-font="naskh"]{--uz-reading-font:var(--naskh,"Noto Naskh Arabic",serif);--uz-display-font:var(--naskh,"Noto Naskh Arabic",serif)}
+html[data-uz-font="gulzar"]{--uz-reading-font:"Gulzar",var(--nastaliq,serif);--uz-display-font:"Gulzar",var(--nastaliq,serif)}
+html[data-uz-font="lateef"]{--uz-reading-font:"Lateef",var(--naskh,serif);--uz-display-font:"Lateef",var(--naskh,serif)}
+html[data-uz-font="amiri"]{--uz-reading-font:"Amiri",var(--naskh,serif);--uz-display-font:"Amiri",var(--naskh,serif)}
+html[data-uz-font="sans"]{--uz-reading-font:"Noto Sans Arabic",var(--naskh,sans-serif);--uz-display-font:"Noto Sans Arabic",var(--naskh,sans-serif)}
+
+html[dir="rtl"] body:not(.en-mode){font-family:var(--uz-reading-font)!important}
+html[dir="rtl"] body:not(.en-mode) h1,html[dir="rtl"] body:not(.en-mode) h2,html[dir="rtl"] body:not(.en-mode) h3,html[dir="rtl"] body:not(.en-mode) .brand,html[dir="rtl"] body:not(.en-mode) .always-ur,html[dir="rtl"] body:not(.en-mode) .wd,html[dir="rtl"] body:not(.en-mode) .word,html[dir="rtl"] body:not(.en-mode) .tagline,html[dir="rtl"] body:not(.en-mode) .nm{font-family:var(--uz-display-font)!important}
+
+/* Reading controls */
+html[data-uz-size="sm"]{--uz-font-scale:.92}html[data-uz-size="md"]{--uz-font-scale:1}html[data-uz-size="lg"]{--uz-font-scale:1.10}html[data-uz-size="xl"]{--uz-font-scale:1.22}
+html[data-uz-spacing="compact"]{--uz-line-scale:.90}html[data-uz-spacing="comfortable"]{--uz-line-scale:1}html[data-uz-spacing="airy"]{--uz-line-scale:1.14}
+html[dir="rtl"] body:not(.en-mode){font-size:calc(16.5px * var(--uz-font-scale))}
+html[dir="rtl"] body:not(.en-mode) p,html[dir="rtl"] body:not(.en-mode) li,html[dir="rtl"] body:not(.en-mode) td{line-height:calc(2em * var(--uz-line-scale))}
+html[data-uz-motion="reduced"] *,html[data-uz-motion="reduced"] *::before,html[data-uz-motion="reduced"] *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+:where(a,button,input,textarea,select,[tabindex]):focus-visible{outline:3px solid color-mix(in srgb,var(--accent,#a8731d) 65%,white);outline-offset:3px}
+
+/* Floating appearance control */
+#uzPrefsBtn{position:fixed;inset-inline-end:18px;bottom:18px;z-index:9000;height:48px;min-width:54px;padding:0 14px;border-radius:999px;border:1px solid var(--line,#ddd);background:color-mix(in srgb,var(--card,#fff) 94%,transparent);color:var(--ink,#222);box-shadow:var(--shadow,0 8px 26px rgba(0,0,0,.14));backdrop-filter:blur(12px);font:700 15px/1 system-ui,sans-serif;cursor:pointer}
+#uzPrefsBtn:hover{border-color:var(--accent);color:var(--accent)}
+#uzPrefsVeil{position:fixed;inset:0;z-index:8998;background:rgba(12,12,12,.30);opacity:0;pointer-events:none;transition:opacity .18s ease}#uzPrefsVeil.open{opacity:1;pointer-events:auto}
+#uzPrefsPanel{position:fixed;z-index:8999;inset-inline-end:18px;bottom:78px;width:min(390px,calc(100vw - 28px));max-height:min(76vh,720px);overflow:auto;background:var(--card,#fff);color:var(--ink,#222);border:1px solid var(--line,#ddd);border-radius:20px;box-shadow:0 24px 70px rgba(0,0,0,.22);padding:18px;opacity:0;transform:translateY(10px) scale(.985);pointer-events:none;transition:.18s ease;direction:rtl;font-family:var(--naskh,"Noto Naskh Arabic",serif)}
+#uzPrefsPanel.open{opacity:1;transform:none;pointer-events:auto}.uzp-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.uzp-title{font-family:var(--nastaliq,"Noto Nastaliq Urdu",serif);font-size:22px;font-weight:700}.uzp-close{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--muted);cursor:pointer}.uzp-group{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.uzp-label{font-weight:700;margin-bottom:7px}.uzp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.uzp-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.uzp-choice{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:11px;padding:8px 7px;min-height:42px;font-family:inherit;cursor:pointer}.uzp-choice:hover{border-color:var(--accent)}.uzp-choice.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.uzp-font{font-size:19px}.uzp-note{color:var(--muted);font-size:12px;line-height:1.7;margin-top:7px}.uzp-reset{width:100%;margin-top:14px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:11px;padding:9px;font-family:inherit;cursor:pointer}
+@media(max-width:620px){#uzPrefsBtn{inset-inline-end:12px;bottom:12px}#uzPrefsPanel{inset-inline:10px;bottom:68px;width:auto;max-height:76vh}#uzPrefsVeil{background:rgba(12,12,12,.40)}}
