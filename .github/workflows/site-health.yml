@@ -1,0 +1,21 @@
+name: UrduZaban site health
+
+on:
+  push:
+    branches:
+      - main
+      - chore/repo-health-check-2026-09-06
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Validate repository data and links
+        run: python3 tools/validate_repo.py
