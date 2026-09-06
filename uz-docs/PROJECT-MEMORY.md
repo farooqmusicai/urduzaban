@@ -245,15 +245,61 @@ Voice assets بدلنے والا:
 
 ---
 
+## 6 ستمبر 2026 — UI modernization + font/theme personalization foundation
+
+**Branch:** `feature/adab-community-foundation-2026-09-06`
+
+### Files changed
+
+- `uz-docs/UI-PERSONALIZATION-PLAN.md`
+- `uz-ui.css`
+- `uz-preferences.js`
+- `uz-ui-demo.html`
+- `uz-docs/PROJECT-MEMORY.md`
+
+### کیا کیا
+
+- پورے site کے لیے reusable theme/font preference layer بنائی۔
+- themes: auto، paper، night، emerald، sapphire، plain۔
+- Urdu fonts: local Noto Nastaliq + Noto Naskh؛ optional lazy-loaded Gulzar، Lateef، Amiri، Noto Sans Arabic۔
+- user controls: font size، line spacing، reduced motion، reset۔
+- preferences `localStorage` میں cosmetic settings کے طور پر محفوظ ہوتی ہیں۔
+- `Aa ⚙` settings panel desktop اور mobile دونوں کے لیے بنایا۔
+- keyboard focus اور reduced-motion accessibility شامل کی۔
+- نئی homepage direction دکھانے کے لیے الگ `uz-ui-demo.html` prototype بنایا: global search، daily discovery، live stats، room cards اور modern responsive layout۔
+
+### کیا نہیں چھیڑا
+
+- `main`
+- live `index.html`
+- live لغت/کہاوت/adab pages
+- production JSON
+- Hostinger deployment
+
+### موجودہ fonts کی تصدیق
+
+repository کے `fonts/` folder میں local files موجود ہیں:
+
+- `noto-nastaliq-urdu-400.woff2`
+- `noto-naskh-arabic-400.woff2`
+- `noto-naskh-arabic-700.woff2`
+
+### نتیجہ
+
+اب font/theme personalization صرف plan نہیں بلکہ working shared CSS/JS prototype کی صورت میں موجود ہے۔ اگلا محفوظ قدم اسے پہلے homepage branch copy پر integrate کر کے visual/regression check کرنا ہے، پھر لغت/کہاوت اور ادب rooms تک rollout کرنا ہے۔
+
+---
+
 ## اگلا منظور شدہ کام
 
 1. validation scripts اور JSON/link smoke checks
-2. literature source catalog کو درجنوں verified public-domain works تک بڑھانا
-3. prototype works کی schema validation
-4. شاعر profile deep-links
-5. unified search prototype
-6. `uz-shajra-v2.json` کا 20-word reviewed sample
-7. community change-record JSON schema + prototype moderation queue
+2. UI preference layer کو branch کے homepage copy میں integrate کر کے regression check
+3. literature source catalog کو درجنوں verified public-domain works تک بڑھانا
+4. prototype works کی schema validation
+5. شاعر profile deep-links
+6. unified search prototype
+7. `uz-shajra-v2.json` کا 20-word reviewed sample
+8. community change-record JSON schema + prototype moderation queue
 
 ---
 
