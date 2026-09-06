@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ur" dir="rtl" data-uz-theme="paper" data-uz-font="nastaliq" data-uz-size="md" data-uz-spacing="comfortable" data-uz-motion="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UrduZaban UI Demo</title>
+<style>
+@font-face{font-family:"UZ Nastaliq";src:url("fonts/noto-nastaliq-urdu-400.woff2") format("woff2");font-display:swap}@font-face{font-family:"UZ Naskh";src:url("fonts/noto-naskh-arabic-400.woff2") format("woff2");font-display:swap}
+:root{--paper:#faf6ed;--card:#fffdf8;--card2:#f4eddc;--ink:#251f14;--muted:#7c7060;--line:#e6ddc9;--accent:#a8731d;--accent-hi:#d9a441;--accent-ink:#fff8ec;--accent-soft:rgba(168,115,29,.08);--shadow:0 1px 2px rgba(60,45,20,.06),0 12px 36px rgba(60,45,20,.09);--nastaliq:"UZ Nastaliq",serif;--naskh:"UZ Naskh",serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--naskh);font-size:17px;line-height:2}nav{position:sticky;top:0;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}.in{max-width:1100px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:18px}.brand{font-family:var(--nastaliq);font-size:24px;font-weight:700}.navlinks{display:flex;gap:18px;color:var(--muted);font-size:14px;margin-inline-start:auto}.wrap{max-width:1100px;margin:auto;padding:58px 20px 100px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center}.hero h1{font-family:var(--nastaliq);font-size:clamp(54px,8vw,94px);line-height:1.55;margin:0;background:linear-gradient(100deg,var(--accent),var(--accent-hi));background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px}.search{background:var(--card);border:1.5px solid var(--accent);border-radius:18px;padding:12px 16px;box-shadow:var(--shadow);font-size:20px;color:var(--muted)}.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}.card h3{font-family:var(--nastaliq);font-size:24px;margin:0}.card p{color:var(--muted);font-size:14px;margin:6px 0}.sample{margin-top:34px;background:var(--card2);border:1px solid var(--line);border-radius:18px;padding:18px 22px}.sample b{font-family:var(--nastaliq);font-size:26px;color:var(--accent)}@media(max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.navlinks{display:none}}@media(max-width:480px){.grid{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="uz-ui.css">
+</head>
+<body>
+<nav><div class="in"><div class="brand">اردو زبان</div><div class="navlinks"><span>گھر</span><span>لغت</span><span>کہاوت</span><span>ادب</span><span>قرینہ</span></div></div></nav>
+<main class="wrap">
+<section class="hero"><div><h1>اردو زبان</h1><p>اپنی زبان کا اپنا گھر — لغت، کہاوت، ادب، اعراب، آواز اور شجرہ۔</p><div class="search">🔎 لفظ، شاعر، غزل یا کہاوت تلاش کیجیے…</div></div><aside class="panel"><b>آج کی دریافت</b><h2>دل</h2><p>معنی، تلفظ، کہاوتیں، اشعار اور اصل زبان ایک جگہ۔</p></aside></section>
+<section class="grid"><article class="card"><h3>لغت</h3><p>اردو، رومن اور English میں تلاش۔</p></article><article class="card"><h3>ادب</h3><p>شاعر، غزل، نظم، نثر اور افسانہ۔</p></article><article class="card"><h3>کہاوت</h3><p>محاورہ، مطلب، موقع اور آواز۔</p></article><article class="card"><h3>قرینہ</h3><p>اعراب اور درست پڑھنے میں مدد۔</p></article><article class="card"><h3>شجرہ</h3><p>لفظ کہاں سے آیا اور کن زبانوں سے جڑا ہے۔</p></article><article class="card"><h3>عوامی شراکت</h3><p>آگے چل کر تجاویز، edits اور review۔</p></article></section>
+<section class="sample"><b>فونٹ اور رنگ آزمائیے</b><p>نیچے موجود <strong>Aa ⚙</strong> سے پوری demo site کا theme، اردو فونٹ، متن کا سائز اور سطروں کا فاصلہ تبدیل کریں۔ یہ preference browser میں محفوظ رہتی ہے۔</p></section>
+</main>
+<script src="uz-preferences.js"></script>
+</body></html>
