@@ -210,11 +210,46 @@ Voice assets بدلنے والا:
 
 ---
 
+## 6 ستمبر 2026 — Poetry work records کا پہلا عملی نمونہ
+
+**Branch:** `feature/adab-community-foundation-2026-09-06`
+
+### File
+
+- `uz-data/uz-adab-works-sample-v2.json`
+
+### کیا کیا
+
+10 first-class poetry work records بنائے گئے، production سے الگ prototype کے طور پر:
+
+- اقبال: ہمالہ
+- اقبال: مرزا غالب
+- اقبال: ایک مکڑا اور مکھی
+- اقبال: ایک پہاڑ اور گلہری
+- اقبال: بچے کی دعا
+- اقبال: پرندے کی فریاد
+- اقبال: شمع و پروانہ
+- اقبال: عقل و دل
+- میر: ساقی نامہ
+- میر: جنگ نامہ
+
+ہر record میں stable work ID، `author_id`، صنف، collection/source linkage، rights status اور tags شامل کیے گئے۔
+
+### کیا نہیں چھیڑا
+
+موجودہ `uz-adab-matn.json` یا live ادب pages میں کوئی تبدیلی نہیں۔
+
+### نتیجہ
+
+اب شاعر → work → source architecture صرف document نہیں بلکہ testable JSON prototype کی شکل میں موجود ہے۔
+
+---
+
 ## اگلا منظور شدہ کام
 
 1. validation scripts اور JSON/link smoke checks
 2. literature source catalog کو درجنوں verified public-domain works تک بڑھانا
-3. غزل/نظم کے 5–10 first-class sample work records
+3. prototype works کی schema validation
 4. شاعر profile deep-links
 5. unified search prototype
 6. `uz-shajra-v2.json` کا 20-word reviewed sample
