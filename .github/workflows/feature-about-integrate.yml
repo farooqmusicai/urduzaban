@@ -1,0 +1,81 @@
+name: Feature About integration
+
+on:
+  push:
+    branches:
+      - feature/about-roadmap-2026-09-06
+    paths:
+      - about.html
+      - .github/workflows/feature-about-integrate.yml
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: feature/about-roadmap-2026-09-06
+
+      - name: Add About links safely
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          changed=False
+
+          nav='''    <a href="about.html"><span class="L-ur">ہمارے بارے میں</span><span class="L-en">About</span></a>\n'''
+          if 'href="about.html"' not in s:
+              needle='''    <a href="#contact"><span class="L-ur">رابطہ</span><span class="L-en">Contact</span></a>'''
+              if needle not in s:
+                  raise SystemExit('nav anchor not found — refusing to modify index.html')
+              s=s.replace(needle,nav+needle,1)
+              changed=True
+
+          footer_about='''<a href="about.html"><span class="L-ur">ہمارے بارے میں</span><span class="L-en">About</span></a> · '''
+          license_anchor='''<a href="https://github.com/farooqmusicai/urduzaban/blob/main/LICENSE" target="_blank" rel="noopener"><span class="L-ur">اجازت نامہ</span><span class="L-en">License</span></a>'''
+          if footer_about not in s:
+              if license_anchor not in s:
+                  raise SystemExit('footer license anchor not found — refusing to modify index.html')
+              s=s.replace(license_anchor,footer_about+license_anchor,1)
+              changed=True
+
+          if changed:
+              p.write_text(s,encoding='utf-8')
+
+          sm=Path('sitemap.xml')
+          x=sm.read_text(encoding='utf-8')
+          if 'https://www.urduzaban.com/about.html' not in x:
+              block='''  <url>\n    <loc>https://www.urduzaban.com/about.html</loc>\n    <lastmod>2026-09-06</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n'''
+              if '</urlset>' not in x:
+                  raise SystemExit('sitemap closing tag not found')
+              x=x.replace('</urlset>',block+'</urlset>')
+              sm.write_text(x,encoding='utf-8')
+          PY
+
+      - name: Sanity checks
+        run: |
+          test -f about.html
+          grep -q 'href="about.html"' index.html
+          grep -q 'https://www.urduzaban.com/about.html' sitemap.xml
+          python3 - <<'PY'
+          from pathlib import Path
+          for f in ['index.html','about.html']:
+              s=Path(f).read_text(encoding='utf-8')
+              assert '<html' in s and '</html>' in s, f
+              assert '<body' in s and '</body>' in s, f
+          print('About integration sanity checks: OK')
+          PY
+
+      - name: Commit feature-branch integration
+        run: |
+          git config user.name "urduzaban-bot"
+          git config user.email "urduzaban-bot@users.noreply.github.com"
+          git add index.html sitemap.xml
+          git diff --cached --quiet && { echo "already integrated"; exit 0; }
+          git commit -m "site: link About page from home and sitemap"
+          git push origin HEAD:feature/about-roadmap-2026-09-06
