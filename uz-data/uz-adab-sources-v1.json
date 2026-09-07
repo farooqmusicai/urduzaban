@@ -1,7 +1,7 @@
 {
   "name": "uz-adab-sources",
   "v": 1,
-  "updated": "2026-09-06",
+  "updated": "2026-09-07",
   "purpose": "Reviewed source catalog for public-domain/open Urdu literature. Metadata only; no bulk literary text is copied here.",
   "sources": [
     {
@@ -72,6 +72,21 @@
       "rights_status": "public-domain-author; transcription-license-applies",
       "rights_note": "Classical work is public domain by author age; preserve source/transcription attribution when using Wikisource text.",
       "reviewed_on": "2026-09-06"
+    },
+    {
+      "id": "ws-ghalib-radeef-alif-01-15",
+      "author_id": "ghalib",
+      "author": "مرزا اسد اللہ خان غالب",
+      "kind": "ghazal_group",
+      "title": "دیوان غالب — غزلیات — ردیف الف — غزل 1 تا 15",
+      "url": "https://ur.wikisource.org/wiki/دیوان_غالب/غزلیات/ردیف_الف/ردیف_الف_غزل_1_تا_15",
+      "provider": "Urdu Wikisource",
+      "author_death_year": 1869,
+      "rights_status": "public-domain-author; transcription-license-cc-by-sa",
+      "transcription_license": "CC BY-SA 4.0",
+      "rights_note": "Ghalib died in 1869, so the underlying poems are public-domain by author age. The Wikisource transcription page states CC BY-SA availability; retain source attribution for any transcribed text.",
+      "reviewed_on": "2026-09-07",
+      "review_evidence": "Page verified 2026-09-07; numbered sections 1–15 are present and the page footer states Creative Commons Attribution/Share-Alike availability."
     }
   ]
 }
