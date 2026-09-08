@@ -49,16 +49,21 @@ def main() -> int:
     registry = load("uz-data/source-registry-v1.json")
     adab_sources = load("uz-data/uz-adab-sources-v1.json")
     works_doc = load("uz-data/uz-adab-works-sample-v2.json")
-    linkage_doc = load("uz-data/uz-adab-linkage-sample-v1.json")
+    linkage_docs = [
+        ("uz-data/uz-adab-linkage-sample-v1.json", load("uz-data/uz-adab-linkage-sample-v1.json")),
+        ("uz-data/uz-adab-linkage-batch-02.json", load("uz-data/uz-adab-linkage-batch-02.json")),
+    ]
     people_doc = load("uz-data/uz-adab-log.json")
-    if any(x is None for x in (registry, adab_sources, works_doc, linkage_doc, people_doc)):
+    if any(x is None for x in (registry, adab_sources, works_doc, people_doc)):
+        return finish()
+    if any(doc is None for _, doc in linkage_docs):
         return finish()
 
     registry_rows = registry.get("sources") if isinstance(registry, dict) else None
     source_rows = adab_sources.get("sources") if isinstance(adab_sources, dict) else None
     work_rows = works_doc.get("works") if isinstance(works_doc, dict) else None
-    link_rows = linkage_doc.get("links") if isinstance(linkage_doc, dict) else None
     people_rows = people_doc.get("log") if isinstance(people_doc, dict) else None
+    link_rows = []
 
     if not isinstance(registry_rows, list):
         ERRORS.append("source-registry-v1.json: sources is not a list")
@@ -69,9 +74,12 @@ def main() -> int:
     if not isinstance(work_rows, list):
         ERRORS.append("uz-adab-works-sample-v2.json: works is not a list")
         work_rows = []
-    if not isinstance(link_rows, list):
-        ERRORS.append("uz-adab-linkage-sample-v1.json: links is not a list")
-        link_rows = []
+    for rel, doc in linkage_docs:
+        rows = doc.get("links") if isinstance(doc, dict) else None
+        if not isinstance(rows, list):
+            ERRORS.append(f"{rel}: links is not a list")
+            continue
+        link_rows.extend(rows)
     if not isinstance(people_rows, list):
         ERRORS.append("uz-adab-log.json: log is not a list")
         people_rows = []
@@ -152,6 +160,8 @@ def main() -> int:
             ERRORS.append(f"literature link {lid}: author_id does not match work")
         if work and work.get("source_id") != sid:
             ERRORS.append(f"literature link {lid}: source_id does not match work")
+        if work and work.get("text_ingest_allowed") is not True:
+            ERRORS.append(f"literature link {lid}: linked work is not approved for bounded text ingest")
         if not str(row.get("source_locator") or "").strip():
             ERRORS.append(f"literature link {lid}: missing source_locator")
 
@@ -215,10 +225,12 @@ def main() -> int:
     if missing:
         ERRORS.append(f"source registry missing required foundation sources: {missing}")
 
-    if len(work_ids) < 25:
-        ERRORS.append(f"literature work reviewed batch too small: {len(work_ids)} < 25")
-    if len(link_ids) < 5:
-        ERRORS.append(f"literature linkage sample too small: {len(link_ids)} < 5")
+    if len(literature_source_ids) < 6:
+        ERRORS.append(f"literature source reviewed batch too small: {len(literature_source_ids)} < 6")
+    if len(work_ids) < 40:
+        ERRORS.append(f"literature work reviewed batch too small: {len(work_ids)} < 40")
+    if len(link_ids) < 10:
+        ERRORS.append(f"literature linkage sample too small: {len(link_ids)} < 10")
 
     STATS.append(f"source registry: {len(registry_ids)} sources")
     STATS.append(f"literature source catalog: {len(literature_source_ids)} sources")
