@@ -1,0 +1,166 @@
+{
+  "name": "uz-adab-linkage-batch-02",
+  "v": 1,
+  "updated": "2026-09-08",
+  "status": "reviewed-linkage-sample",
+  "purpose": "Second bounded poet → work → verse-unit → word linkage batch. It adds five public-domain/open-source Ghalib couplets while keeping literary ingestion small and reviewable.",
+  "source_policy": "Underlying Ghalib poems are public-domain by author age; transcribed sample lines are linked to Urdu Wikisource and retain the source's CC BY-SA attribution requirement.",
+  "word_link_policy": "Each word unit has a stable local ID and a lookup_key suitable for future dictionary/corpus matching. No canonical uz-lughat.json IDs are created or changed here.",
+  "links": [
+    {
+      "id": "ghalib-diwan-radeef-alif-16-link-v01",
+      "author_id": "ghalib",
+      "work_id": "ghalib-diwan-radeef-alif-16",
+      "source_id": "ws-ghalib-radeef-alif-16-30",
+      "source_locator": "غزل 16",
+      "verse_units": [{
+        "id": "ghalib-diwan-radeef-alif-16-v01",
+        "unit_kind": "sher",
+        "unit_number": 1,
+        "lines": ["شب کہ برقِ سوزِ دل سے زہرۂ ابر آب تھا", "شعلۂ جوّالہ ہر اک حلقۂ گرداب تھا"],
+        "word_units": [
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w01","position":1,"line":1,"surface":"شب","lookup_key":"شب"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w02","position":2,"line":1,"surface":"کہ","lookup_key":"کہ"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w03","position":3,"line":1,"surface":"برقِ","lookup_key":"برق"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w04","position":4,"line":1,"surface":"سوزِ","lookup_key":"سوز"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w05","position":5,"line":1,"surface":"دل","lookup_key":"دل"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w06","position":6,"line":1,"surface":"سے","lookup_key":"سے"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w07","position":7,"line":1,"surface":"زہرۂ","lookup_key":"زہرہ"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w08","position":8,"line":1,"surface":"ابر","lookup_key":"ابر"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w09","position":9,"line":1,"surface":"آب","lookup_key":"آب"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w10","position":10,"line":1,"surface":"تھا","lookup_key":"تھا"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w11","position":11,"line":2,"surface":"شعلۂ","lookup_key":"شعلہ"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w12","position":12,"line":2,"surface":"جوّالہ","lookup_key":"جوالہ"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w13","position":13,"line":2,"surface":"ہر","lookup_key":"ہر"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w14","position":14,"line":2,"surface":"اک","lookup_key":"اک"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w15","position":15,"line":2,"surface":"حلقۂ","lookup_key":"حلقہ"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w16","position":16,"line":2,"surface":"گرداب","lookup_key":"گرداب"},
+          {"id":"ghalib-diwan-radeef-alif-16-v01-w17","position":17,"line":2,"surface":"تھا","lookup_key":"تھا"}
+        ]
+      }]
+    },
+    {
+      "id": "ghalib-diwan-radeef-alif-19-link-v01",
+      "author_id": "ghalib",
+      "work_id": "ghalib-diwan-radeef-alif-19",
+      "source_id": "ws-ghalib-radeef-alif-16-30",
+      "source_locator": "غزل 19",
+      "verse_units": [{
+        "id": "ghalib-diwan-radeef-alif-19-v01",
+        "unit_kind": "sher",
+        "unit_number": 1,
+        "lines": ["بسکہ دشوار ہے ہر کام کا آساں ہونا", "آدمی کو بھی میسر نہیں انساں ہونا"],
+        "word_units": [
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w01","position":1,"line":1,"surface":"بسکہ","lookup_key":"بسکہ"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w02","position":2,"line":1,"surface":"دشوار","lookup_key":"دشوار"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w03","position":3,"line":1,"surface":"ہے","lookup_key":"ہے"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w04","position":4,"line":1,"surface":"ہر","lookup_key":"ہر"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w05","position":5,"line":1,"surface":"کام","lookup_key":"کام"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w06","position":6,"line":1,"surface":"کا","lookup_key":"کا"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w07","position":7,"line":1,"surface":"آساں","lookup_key":"آساں"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w08","position":8,"line":1,"surface":"ہونا","lookup_key":"ہونا"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w09","position":9,"line":2,"surface":"آدمی","lookup_key":"آدمی"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w10","position":10,"line":2,"surface":"کو","lookup_key":"کو"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w11","position":11,"line":2,"surface":"بھی","lookup_key":"بھی"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w12","position":12,"line":2,"surface":"میسر","lookup_key":"میسر"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w13","position":13,"line":2,"surface":"نہیں","lookup_key":"نہیں"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w14","position":14,"line":2,"surface":"انساں","lookup_key":"انساں"},
+          {"id":"ghalib-diwan-radeef-alif-19-v01-w15","position":15,"line":2,"surface":"ہونا","lookup_key":"ہونا"}
+        ]
+      }]
+    },
+    {
+      "id": "ghalib-diwan-radeef-alif-21-link-v01",
+      "author_id": "ghalib",
+      "work_id": "ghalib-diwan-radeef-alif-21",
+      "source_id": "ws-ghalib-radeef-alif-16-30",
+      "source_locator": "غزل 21",
+      "verse_units": [{
+        "id": "ghalib-diwan-radeef-alif-21-v01",
+        "unit_kind": "sher",
+        "unit_number": 1,
+        "lines": ["دوست غمخواری میں میری سعی فرمائیں گے کیا", "زخم کے بھرنے تلک ناخن نہ بڑھ جائیں گے کیا"],
+        "word_units": [
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w01","position":1,"line":1,"surface":"دوست","lookup_key":"دوست"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w02","position":2,"line":1,"surface":"غمخواری","lookup_key":"غمخواری"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w03","position":3,"line":1,"surface":"میں","lookup_key":"میں"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w04","position":4,"line":1,"surface":"میری","lookup_key":"میری"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w05","position":5,"line":1,"surface":"سعی","lookup_key":"سعی"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w06","position":6,"line":1,"surface":"فرمائیں","lookup_key":"فرمائیں"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w07","position":7,"line":1,"surface":"گے","lookup_key":"گے"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w08","position":8,"line":1,"surface":"کیا","lookup_key":"کیا"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w09","position":9,"line":2,"surface":"زخم","lookup_key":"زخم"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w10","position":10,"line":2,"surface":"کے","lookup_key":"کے"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w11","position":11,"line":2,"surface":"بھرنے","lookup_key":"بھرنے"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w12","position":12,"line":2,"surface":"تلک","lookup_key":"تلک"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w13","position":13,"line":2,"surface":"ناخن","lookup_key":"ناخن"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w14","position":14,"line":2,"surface":"نہ","lookup_key":"نہ"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w15","position":15,"line":2,"surface":"بڑھ","lookup_key":"بڑھ"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w16","position":16,"line":2,"surface":"جائیں","lookup_key":"جائیں"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w17","position":17,"line":2,"surface":"گے","lookup_key":"گے"},
+          {"id":"ghalib-diwan-radeef-alif-21-v01-w18","position":18,"line":2,"surface":"کیا","lookup_key":"کیا"}
+        ]
+      }]
+    },
+    {
+      "id": "ghalib-diwan-radeef-alif-28-link-v01",
+      "author_id": "ghalib",
+      "work_id": "ghalib-diwan-radeef-alif-28",
+      "source_id": "ws-ghalib-radeef-alif-16-30",
+      "source_locator": "غزل 28",
+      "verse_units": [{
+        "id": "ghalib-diwan-radeef-alif-28-v01",
+        "unit_kind": "sher",
+        "unit_number": 1,
+        "lines": ["درد مِنّت کشِ دوا نہ ہوا", "میں نہ اچھا ہوا، برا نہ ہوا"],
+        "word_units": [
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w01","position":1,"line":1,"surface":"درد","lookup_key":"درد"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w02","position":2,"line":1,"surface":"مِنّت","lookup_key":"منت"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w03","position":3,"line":1,"surface":"کشِ","lookup_key":"کش"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w04","position":4,"line":1,"surface":"دوا","lookup_key":"دوا"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w05","position":5,"line":1,"surface":"نہ","lookup_key":"نہ"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w06","position":6,"line":1,"surface":"ہوا","lookup_key":"ہوا"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w07","position":7,"line":2,"surface":"میں","lookup_key":"میں"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w08","position":8,"line":2,"surface":"نہ","lookup_key":"نہ"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w09","position":9,"line":2,"surface":"اچھا","lookup_key":"اچھا"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w10","position":10,"line":2,"surface":"ہوا","lookup_key":"ہوا"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w11","position":11,"line":2,"surface":"برا","lookup_key":"برا"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w12","position":12,"line":2,"surface":"نہ","lookup_key":"نہ"},
+          {"id":"ghalib-diwan-radeef-alif-28-v01-w13","position":13,"line":2,"surface":"ہوا","lookup_key":"ہوا"}
+        ]
+      }]
+    },
+    {
+      "id": "ghalib-diwan-radeef-alif-29-link-v01",
+      "author_id": "ghalib",
+      "work_id": "ghalib-diwan-radeef-alif-29",
+      "source_id": "ws-ghalib-radeef-alif-16-30",
+      "source_locator": "غزل 29",
+      "verse_units": [{
+        "id": "ghalib-diwan-radeef-alif-29-v01",
+        "unit_kind": "sher",
+        "unit_number": 1,
+        "lines": ["گلہ ہے شوق کو دل میں بھی تنگئ جا کا", "گہر میں محو ہوا اضطراب دریا کا"],
+        "word_units": [
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w01","position":1,"line":1,"surface":"گلہ","lookup_key":"گلہ"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w02","position":2,"line":1,"surface":"ہے","lookup_key":"ہے"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w03","position":3,"line":1,"surface":"شوق","lookup_key":"شوق"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w04","position":4,"line":1,"surface":"کو","lookup_key":"کو"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w05","position":5,"line":1,"surface":"دل","lookup_key":"دل"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w06","position":6,"line":1,"surface":"میں","lookup_key":"میں"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w07","position":7,"line":1,"surface":"بھی","lookup_key":"بھی"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w08","position":8,"line":1,"surface":"تنگئ","lookup_key":"تنگئ"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w09","position":9,"line":1,"surface":"جا","lookup_key":"جا"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w10","position":10,"line":1,"surface":"کا","lookup_key":"کا"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w11","position":11,"line":2,"surface":"گہر","lookup_key":"گہر"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w12","position":12,"line":2,"surface":"میں","lookup_key":"میں"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w13","position":13,"line":2,"surface":"محو","lookup_key":"محو"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w14","position":14,"line":2,"surface":"ہوا","lookup_key":"ہوا"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w15","position":15,"line":2,"surface":"اضطراب","lookup_key":"اضطراب"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w16","position":16,"line":2,"surface":"دریا","lookup_key":"دریا"},
+          {"id":"ghalib-diwan-radeef-alif-29-v01-w17","position":17,"line":2,"surface":"کا","lookup_key":"کا"}
+        ]
+      }]
+    }
+  ]
+}
