@@ -13,7 +13,8 @@ Current data-expansion foundation continued with a second bounded public-domain 
 - Work metadata commit: `d1ff11af628bf634423444feede64bb4f823d690`
 - Linkage shard commit: `f63f5729ce3a932616f4350e4e61dfc3af4040cf`
 - Validator commit: `642dc6944d85a1a6b054850c1222256b496c9fbe`
-- Production merge: only after the final PR health run and diff review succeed.
+- Final feature-branch head: `e6feae1ab3acdc0706c31cddc8f62e3fce848cb9`
+- Production squash merge: `a0c008e6876893da9660f9b364771bfcda5902da`
 
 ## Verified source / rights
 
@@ -46,9 +47,9 @@ No bulk literary ingestion was performed. Only **five first couplets** were adde
 
 ## Validation results
 
-GitHub Actions **UrduZaban site health run #21** validated the data/code head `642dc6944d85a1a6b054850c1222256b496c9fbe` successfully before this documentation-only commit.
+GitHub Actions **UrduZaban site health run #21** first validated the data/code head `642dc6944d85a1a6b054850c1222256b496c9fbe`. After the worklog was added, **run #22** validated the complete PR head `e6feae1ab3acdc0706c31cddc8f62e3fce848cb9`. Both runs completed successfully.
 
-### `tools/validate_repo.py`
+### `tools/validate_repo.py` — final PR run #22
 
 - required files checked: **18**
 - lughat: **10,731 entries / 10,683 distinct words / 3,939 Urdu meanings**
@@ -59,7 +60,7 @@ GitHub Actions **UrduZaban site health run #21** validated the data/code head `6
 - appearance controls checked: **16 public pages**
 - result: **0 errors / 0 warnings**
 
-### `tools/validate_expansion.py`
+### `tools/validate_expansion.py` — final PR run #22
 
 - source registry: **6 sources**
 - literature source catalog: **6 sources**
@@ -68,11 +69,9 @@ GitHub Actions **UrduZaban site health run #21** validated the data/code head `6
 - canonical literature people available for references: **35**
 - result: **0 errors**
 
-A fresh PR health run is required after this worklog commit before production merge.
+## Diff review and merge decision
 
-## Diff review
-
-PR #9 data/code diff was reviewed before this worklog commit. Scope is limited to the literature source catalog, work metadata, a new bounded linkage shard, and expansion validation. There are no dictionary/proverb/corpus/UI changes in the data/code diff.
+The complete PR #9 diff was reviewed before production merge. Scope was limited to the literature source catalog, work metadata, one bounded linkage shard, the expansion validator, and this worklog. No unexpected dictionary/proverb/corpus/UI files appeared in the diff. With final health run #22 green, PR #9 was squash-merged safely to `main` as `a0c008e6876893da9660f9b364771bfcda5902da`.
 
 ## Intentionally untouched
 
