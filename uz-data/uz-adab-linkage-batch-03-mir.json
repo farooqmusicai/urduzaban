@@ -1,0 +1,109 @@
+{
+  "name": "uz-adab-linkage-batch-03-mir",
+  "v": 1,
+  "updated": "2026-09-09",
+  "status": "reviewed-linkage-sample",
+  "purpose": "Bounded Mir Taqi Mir nazm linkage batch extending poet → work → verse-unit → word coverage beyond Ghalib without bulk literary ingestion.",
+  "source_policy": "Mir Taqi Mir died in 1810, so the underlying poems are public-domain by author age. The four transcribed couplets in this shard are linked to reviewed Urdu Wikisource pages whose footer states CC BY-SA availability; the linked license reference resolves to CC BY-SA 3.0.",
+  "word_link_policy": "Each word unit has a stable local ID and lookup_key for future dictionary/corpus matching. No canonical uz-lughat.json IDs are created or changed here.",
+  "links": [
+    {
+      "id": "mir-saqi-nama-link-v01",
+      "author_id": "mir",
+      "work_id": "mir-saqi-nama",
+      "source_id": "ws-mir-saqinama",
+      "source_locator": "opening couplets 1-2",
+      "verse_units": [
+        {
+          "id": "mir-saqi-nama-v01",
+          "unit_kind": "sher",
+          "unit_number": 1,
+          "lines": ["ہے قابل حمد وہ سرانداز", "جو سب میں ہوا ہے جلوہ پرداز"],
+          "word_units": [
+            {"id":"mir-saqi-nama-v01-w01","position":1,"line":1,"surface":"ہے","lookup_key":"ہے"},
+            {"id":"mir-saqi-nama-v01-w02","position":2,"line":1,"surface":"قابل","lookup_key":"قابل"},
+            {"id":"mir-saqi-nama-v01-w03","position":3,"line":1,"surface":"حمد","lookup_key":"حمد"},
+            {"id":"mir-saqi-nama-v01-w04","position":4,"line":1,"surface":"وہ","lookup_key":"وہ"},
+            {"id":"mir-saqi-nama-v01-w05","position":5,"line":1,"surface":"سرانداز","lookup_key":"سرانداز"},
+            {"id":"mir-saqi-nama-v01-w06","position":6,"line":2,"surface":"جو","lookup_key":"جو"},
+            {"id":"mir-saqi-nama-v01-w07","position":7,"line":2,"surface":"سب","lookup_key":"سب"},
+            {"id":"mir-saqi-nama-v01-w08","position":8,"line":2,"surface":"میں","lookup_key":"میں"},
+            {"id":"mir-saqi-nama-v01-w09","position":9,"line":2,"surface":"ہوا","lookup_key":"ہوا"},
+            {"id":"mir-saqi-nama-v01-w10","position":10,"line":2,"surface":"ہے","lookup_key":"ہے"},
+            {"id":"mir-saqi-nama-v01-w11","position":11,"line":2,"surface":"جلوہ","lookup_key":"جلوہ"},
+            {"id":"mir-saqi-nama-v01-w12","position":12,"line":2,"surface":"پرداز","lookup_key":"پرداز"}
+          ]
+        },
+        {
+          "id": "mir-saqi-nama-v02",
+          "unit_kind": "sher",
+          "unit_number": 2,
+          "lines": ["اس کو مئے حسن نے چھکایا", "ہستی کا نشہ اسی سے آیا"],
+          "word_units": [
+            {"id":"mir-saqi-nama-v02-w01","position":1,"line":1,"surface":"اس","lookup_key":"اس"},
+            {"id":"mir-saqi-nama-v02-w02","position":2,"line":1,"surface":"کو","lookup_key":"کو"},
+            {"id":"mir-saqi-nama-v02-w03","position":3,"line":1,"surface":"مئے","lookup_key":"مے"},
+            {"id":"mir-saqi-nama-v02-w04","position":4,"line":1,"surface":"حسن","lookup_key":"حسن"},
+            {"id":"mir-saqi-nama-v02-w05","position":5,"line":1,"surface":"نے","lookup_key":"نے"},
+            {"id":"mir-saqi-nama-v02-w06","position":6,"line":1,"surface":"چھکایا","lookup_key":"چھکایا"},
+            {"id":"mir-saqi-nama-v02-w07","position":7,"line":2,"surface":"ہستی","lookup_key":"ہستی"},
+            {"id":"mir-saqi-nama-v02-w08","position":8,"line":2,"surface":"کا","lookup_key":"کا"},
+            {"id":"mir-saqi-nama-v02-w09","position":9,"line":2,"surface":"نشہ","lookup_key":"نشہ"},
+            {"id":"mir-saqi-nama-v02-w10","position":10,"line":2,"surface":"اسی","lookup_key":"اسی"},
+            {"id":"mir-saqi-nama-v02-w11","position":11,"line":2,"surface":"سے","lookup_key":"سے"},
+            {"id":"mir-saqi-nama-v02-w12","position":12,"line":2,"surface":"آیا","lookup_key":"آیا"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mir-jang-nama-link-v01",
+      "author_id": "mir",
+      "work_id": "mir-jang-nama",
+      "source_id": "ws-mir-jangnama",
+      "source_locator": "opening couplets 1-2",
+      "verse_units": [
+        {
+          "id": "mir-jang-nama-v01",
+          "unit_kind": "sher",
+          "unit_number": 1,
+          "lines": ["اب کے نواب رام پور آیا", "ناگہاں اس طرف خدا لایا"],
+          "word_units": [
+            {"id":"mir-jang-nama-v01-w01","position":1,"line":1,"surface":"اب","lookup_key":"اب"},
+            {"id":"mir-jang-nama-v01-w02","position":2,"line":1,"surface":"کے","lookup_key":"کے"},
+            {"id":"mir-jang-nama-v01-w03","position":3,"line":1,"surface":"نواب","lookup_key":"نواب"},
+            {"id":"mir-jang-nama-v01-w04","position":4,"line":1,"surface":"رام","lookup_key":"رام"},
+            {"id":"mir-jang-nama-v01-w05","position":5,"line":1,"surface":"پور","lookup_key":"پور"},
+            {"id":"mir-jang-nama-v01-w06","position":6,"line":1,"surface":"آیا","lookup_key":"آیا"},
+            {"id":"mir-jang-nama-v01-w07","position":7,"line":2,"surface":"ناگہاں","lookup_key":"ناگہاں"},
+            {"id":"mir-jang-nama-v01-w08","position":8,"line":2,"surface":"اس","lookup_key":"اس"},
+            {"id":"mir-jang-nama-v01-w09","position":9,"line":2,"surface":"طرف","lookup_key":"طرف"},
+            {"id":"mir-jang-nama-v01-w10","position":10,"line":2,"surface":"خدا","lookup_key":"خدا"},
+            {"id":"mir-jang-nama-v01-w11","position":11,"line":2,"surface":"لایا","lookup_key":"لایا"}
+          ]
+        },
+        {
+          "id": "mir-jang-nama-v02",
+          "unit_kind": "sher",
+          "unit_number": 2,
+          "lines": ["آگے آتا تھا بہر سیر و شکار", "بازی یکسر روہیلی ہے اس بار"],
+          "word_units": [
+            {"id":"mir-jang-nama-v02-w01","position":1,"line":1,"surface":"آگے","lookup_key":"آگے"},
+            {"id":"mir-jang-nama-v02-w02","position":2,"line":1,"surface":"آتا","lookup_key":"آتا"},
+            {"id":"mir-jang-nama-v02-w03","position":3,"line":1,"surface":"تھا","lookup_key":"تھا"},
+            {"id":"mir-jang-nama-v02-w04","position":4,"line":1,"surface":"بہر","lookup_key":"بہر"},
+            {"id":"mir-jang-nama-v02-w05","position":5,"line":1,"surface":"سیر","lookup_key":"سیر"},
+            {"id":"mir-jang-nama-v02-w06","position":6,"line":1,"surface":"و","lookup_key":"و"},
+            {"id":"mir-jang-nama-v02-w07","position":7,"line":1,"surface":"شکار","lookup_key":"شکار"},
+            {"id":"mir-jang-nama-v02-w08","position":8,"line":2,"surface":"بازی","lookup_key":"بازی"},
+            {"id":"mir-jang-nama-v02-w09","position":9,"line":2,"surface":"یکسر","lookup_key":"یکسر"},
+            {"id":"mir-jang-nama-v02-w10","position":10,"line":2,"surface":"روہیلی","lookup_key":"روہیلی"},
+            {"id":"mir-jang-nama-v02-w11","position":11,"line":2,"surface":"ہے","lookup_key":"ہے"},
+            {"id":"mir-jang-nama-v02-w12","position":12,"line":2,"surface":"اس","lookup_key":"اس"},
+            {"id":"mir-jang-nama-v02-w13","position":13,"line":2,"surface":"بار","lookup_key":"بار"}
+          ]
+        }
+      ]
+    }
+  ]
+}
