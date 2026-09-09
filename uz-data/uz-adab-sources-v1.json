@@ -1,7 +1,7 @@
 {
   "name": "uz-adab-sources",
   "v": 1,
-  "updated": "2026-09-08",
+  "updated": "2026-09-09",
   "purpose": "Reviewed source catalog for public-domain/open Urdu literature. Metadata only; no bulk literary text is copied here.",
   "sources": [
     {
@@ -56,9 +56,11 @@
       "url": "https://ur.wikisource.org/wiki/ساقی_نامہ_(میر_تقی_میر)",
       "provider": "Urdu Wikisource",
       "author_death_year": 1810,
-      "rights_status": "public-domain-author; transcription-license-applies",
-      "rights_note": "Classical work is public domain by author age; preserve source/transcription attribution when using Wikisource text.",
-      "reviewed_on": "2026-09-06"
+      "rights_status": "public-domain-author; transcription-license-cc-by-sa",
+      "transcription_license": "CC BY-SA 3.0",
+      "rights_note": "Mir Taqi Mir died in 1810, so the underlying classical work is public-domain by author age. The reviewed Urdu Wikisource page footer states Creative Commons Attribution/Share-Alike availability, and its linked BY-SA license reference resolves to CC BY-SA 3.0; retain source attribution for transcribed text.",
+      "reviewed_on": "2026-09-09",
+      "review_evidence": "Page verified 2026-09-09; the poem text is present, the footer states Creative Commons Attribution/Share-Alike availability, and the linked license reference resolves to CC BY-SA 3.0."
     },
     {
       "id": "ws-mir-jangnama",
@@ -69,9 +71,11 @@
       "url": "https://ur.wikisource.org/wiki/جنگ_نامہ_(میر_تقی_میر)",
       "provider": "Urdu Wikisource",
       "author_death_year": 1810,
-      "rights_status": "public-domain-author; transcription-license-applies",
-      "rights_note": "Classical work is public domain by author age; preserve source/transcription attribution when using Wikisource text.",
-      "reviewed_on": "2026-09-06"
+      "rights_status": "public-domain-author; transcription-license-cc-by-sa",
+      "transcription_license": "CC BY-SA 3.0",
+      "rights_note": "Mir Taqi Mir died in 1810, so the underlying classical work is public-domain by author age. The reviewed Urdu Wikisource page footer states Creative Commons Attribution/Share-Alike availability, and its linked BY-SA license reference resolves to CC BY-SA 3.0; retain source attribution for transcribed text.",
+      "reviewed_on": "2026-09-09",
+      "review_evidence": "Page verified 2026-09-09; the poem text is present, the footer states Creative Commons Attribution/Share-Alike availability, and the linked license reference resolves to CC BY-SA 3.0."
     },
     {
       "id": "ws-ghalib-radeef-alif-01-15",
@@ -83,10 +87,11 @@
       "provider": "Urdu Wikisource",
       "author_death_year": 1869,
       "rights_status": "public-domain-author; transcription-license-cc-by-sa",
-      "transcription_license": "CC BY-SA 4.0",
+      "transcription_license": "CC BY-SA 3.0",
       "rights_note": "Ghalib died in 1869, so the underlying poems are public-domain by author age. The Wikisource transcription page states CC BY-SA availability; retain source attribution for any transcribed text.",
       "reviewed_on": "2026-09-07",
-      "review_evidence": "Page verified 2026-09-07; numbered sections 1–15 are present and the page footer states Creative Commons Attribution/Share-Alike availability."
+      "license_rechecked_on": "2026-09-09",
+      "review_evidence": "Page verified 2026-09-07; numbered sections 1–15 are present and the page footer states Creative Commons Attribution/Share-Alike availability. License link rechecked 2026-09-09 and recorded as CC BY-SA 3.0."
     },
     {
       "id": "ws-ghalib-radeef-alif-16-30",
@@ -98,10 +103,11 @@
       "provider": "Urdu Wikisource",
       "author_death_year": 1869,
       "rights_status": "public-domain-author; transcription-license-cc-by-sa",
-      "transcription_license": "CC BY-SA 4.0",
+      "transcription_license": "CC BY-SA 3.0",
       "rights_note": "Ghalib died in 1869, so the underlying poems are public-domain by author age. The reviewed Wikisource transcription page states Creative Commons Attribution/Share-Alike availability; retain source attribution for transcribed text.",
       "reviewed_on": "2026-09-08",
-      "review_evidence": "Page verified 2026-09-08; numbered sections 16–30 are present and the page footer states Creative Commons Attribution/Share-Alike availability."
+      "license_rechecked_on": "2026-09-09",
+      "review_evidence": "Page verified 2026-09-08; numbered sections 16–30 are present and the page footer states Creative Commons Attribution/Share-Alike availability. License link rechecked 2026-09-09 and recorded as CC BY-SA 3.0."
     }
   ]
 }
