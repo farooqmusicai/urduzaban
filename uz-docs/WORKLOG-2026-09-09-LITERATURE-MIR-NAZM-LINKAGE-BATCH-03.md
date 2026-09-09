@@ -15,7 +15,7 @@ Priority 2 (public-domain literature) continued with a bounded Mir Taqi Mir nazm
 - Feature-branch worklog commit / final PR head: `e58807378e84ebcc5765104dc0094305a6076084`
 - Production squash merge: `5481c7fa79317e2fc650f782a9bc988d830d74ac`
 - Docs-finalization branch: `docs/finalize-worklog-mir-batch-03-2026-09-09`
-- Docs-finalization PR: pending creation at the time of this edit
+- Docs-finalization pull request: **#12 — docs: finalize 9 Sep Mir literature batch worklog**
 
 ## Verified sources / rights
 
