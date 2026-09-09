@@ -52,6 +52,7 @@ def main() -> int:
     linkage_docs = [
         ("uz-data/uz-adab-linkage-sample-v1.json", load("uz-data/uz-adab-linkage-sample-v1.json")),
         ("uz-data/uz-adab-linkage-batch-02.json", load("uz-data/uz-adab-linkage-batch-02.json")),
+        ("uz-data/uz-adab-linkage-batch-03-mir.json", load("uz-data/uz-adab-linkage-batch-03-mir.json")),
     ]
     people_doc = load("uz-data/uz-adab-log.json")
     if any(x is None for x in (registry, adab_sources, works_doc, people_doc)):
@@ -89,6 +90,11 @@ def main() -> int:
     work_ids = unique_ids(work_rows, "literature works")
     link_ids = unique_ids(link_rows, "literature links")
     author_ids = {str(p.get("id")) for p in people_rows if isinstance(p, dict) and p.get("id")}
+    linked_author_ids = {
+        str(row.get("author_id"))
+        for row in link_rows
+        if isinstance(row, dict) and row.get("author_id")
+    }
     works_by_id = {
         str(row.get("id")): row
         for row in work_rows
@@ -121,6 +127,13 @@ def main() -> int:
                 ERRORS.append(f"literature source {sid}: missing {key}")
         if not str(row.get("url") or "").startswith("https://"):
             ERRORS.append(f"literature source {sid}: source URL must be https")
+        rights_status = str(row.get("rights_status") or "")
+        if "transcription-license-cc-by-sa" in rights_status:
+            license_name = str(row.get("transcription_license") or "").strip()
+            if not license_name.startswith("CC BY-SA"):
+                ERRORS.append(f"literature source {sid}: CC BY-SA source missing explicit transcription_license")
+            if not str(row.get("review_evidence") or "").strip():
+                ERRORS.append(f"literature source {sid}: CC BY-SA source missing review_evidence")
 
     for row in work_rows:
         if not isinstance(row, dict):
@@ -229,13 +242,16 @@ def main() -> int:
         ERRORS.append(f"literature source reviewed batch too small: {len(literature_source_ids)} < 6")
     if len(work_ids) < 40:
         ERRORS.append(f"literature work reviewed batch too small: {len(work_ids)} < 40")
-    if len(link_ids) < 10:
-        ERRORS.append(f"literature linkage sample too small: {len(link_ids)} < 10")
+    if len(link_ids) < 12:
+        ERRORS.append(f"literature linkage sample too small: {len(link_ids)} < 12")
+    if len(linked_author_ids) < 2:
+        ERRORS.append(f"literature linkage author coverage too small: {len(linked_author_ids)} < 2")
 
     STATS.append(f"source registry: {len(registry_ids)} sources")
     STATS.append(f"literature source catalog: {len(literature_source_ids)} sources")
     STATS.append(f"literature reviewed work batch: {len(work_ids)} works")
     STATS.append(f"literature linkage: {len(link_ids)} links · {verse_count} verse units · {word_count} word units")
+    STATS.append(f"literature authors with bounded linkage: {len(linked_author_ids)}")
     STATS.append(f"canonical literature people available for references: {len(author_ids)}")
     return finish()
 
